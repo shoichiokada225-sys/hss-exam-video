@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>HSS動画試験 監修ページ（社内用）</title>
+<style>
+  :root { --bg:#0e1a2e; --card:#fff; --text:#1a2634; --muted:#5b6b7c; --ok:#2e9e5b; --fix:#d98a00; --del:#c73a3a; --line:#d8e1ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:"Hiragino Sans","Yu Gothic UI","Segoe UI",Meiryo,sans-serif; }
+  header { position:sticky; top:0; z-index:5; background:#0e1a2e; color:#fff; padding:12px 16px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-bottom:1px solid #2b4f7d; }
+  header h1 { font-size:1.05rem; margin:0 12px 0 0; }
+  header .stat { font-size:.85rem; opacity:.9; }
+  header button, header select { font-size:.9rem; padding:6px 12px; border-radius:8px; border:1px solid #6fa3d4; background:#1c3557; color:#fff; cursor:pointer; }
+  main { max-width:1100px; margin:0 auto; padding:16px; display:grid; gap:14px; }
+  .q { background:var(--card); border-radius:14px; padding:14px 16px; display:grid; grid-template-columns: 340px 1fr; gap:14px; }
+  @media (max-width:760px){ .q { grid-template-columns:1fr; } }
+  .q.st-ok { border-left:8px solid var(--ok); } .q.st-fix { border-left:8px solid var(--fix); } .q.st-del { border-left:8px solid var(--del); opacity:.75; }
+  video { width:100%; aspect-ratio:16/9; background:#000; border-radius:10px; }
+  .meta { font-size:.8rem; color:var(--muted); margin-top:6px; line-height:1.5; }
+  .qid { font-weight:800; font-size:1rem; }
+  .cat { display:inline-block; font-size:.75rem; padding:2px 8px; border-radius:999px; background:#e8f0fa; color:#2b4f7d; margin-left:6px; }
+  .qtext { font-weight:700; font-size:1.05rem; margin:4px 0 8px; }
+  ol { margin:0 0 8px 0; padding-left:22px; }
+  ol li { padding:2px 0; } ol li.ans { font-weight:800; color:var(--ok); }
+  .expl { font-size:.9rem; color:#33475b; background:#f4f7fb; border-radius:8px; padding:8px 10px; }
+  .langs { display:flex; gap:6px; margin:8px 0 4px; flex-wrap:wrap; }
+  .langs button { font-size:.8rem; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:#fff; cursor:pointer; }
+  .langs button.on { background:#1c3557; color:#fff; border-color:#1c3557; }
+  .judge { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; border-top:1px solid var(--line); padding-top:10px; }
+  .judge label { font-size:.9rem; cursor:pointer; padding:6px 12px; border-radius:8px; border:1px solid var(--line); }
+  .judge input[type=radio] { margin-right:4px; }
+  .judge textarea { flex:1 1 260px; min-height:44px; font-size:.9rem; padding:6px 8px; border:1px solid var(--line); border-radius:8px; font-family:inherit; }
+  .note { color:#fff; font-size:.85rem; opacity:.85; }
+</style>
+</head>
+<body>
+<header>
+  <h1>HSS動画試験 監修ページ</h1>
+  <span class="stat" id="stat"></span>
+  <select id="filter"><option value="">すべて</option><option value="none">未判定</option><option value="ok">OK</option><option value="fix">修正</option><option value="del">削除</option></select>
+  <button id="export">判定をダウンロード(JSON)</button>
+  <button id="clear">判定を消す</button>
+  <span class="note">判定はこの端末のブラウザに自動保存。ダウンロードしたJSONを <code>python tools/apply_review.py review-*.json</code> で Excel に反映。</span>
+</header>
+<main id="main"></main>
+<script>
+(function(){
+  "use strict";
+  var KEY = "hssv_review_v1";
+  var LANGS = [["ja","日本語"],["en","EN"],["vi","VI"],["ind","ID"],["es","ES"]];
+  var state = {}; try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e){ state = {}; }
+  var all = [];
+  function esc(s){ var d=document.createElement("div"); d.textContent=s==null?"":String(s); return d.innerHTML; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} updateStat(); }
+  function updateStat(){
+    var c={ok:0,fix:0,del:0,none:0};
+    all.forEach(function(q){ var s=(state[q.id]||{}).status||"none"; c[s]++; });
+    document.getElementById("stat").textContent = "全"+all.length+"問｜未判定 "+c.none+"｜OK "+c.ok+"｜修正 "+c.fix+"｜削除 "+c.del;
+  }
+  function textOf(q, lang){
+    if(lang==="ja" || !q[lang]) return { question:q.question, options:q.options, fallback: lang!=="ja" };
+    return { question:q[lang].question, options:q[lang].options, fallback:false };
+  }
+  function render(){
+    var f = document.getElementById("filter").value;
+    var main = document.getElementById("main"); main.innerHTML = "";
+    all.forEach(function(q){
+      var st = (state[q.id]||{}).status || "none";
+      if(f && f!==st) return;
+      var card = document.createElement("section");
+      card.className = "q st-"+st; card.dataset.id = q.id;
+      var lang = (state[q.id]||{}).lang || "ja";
+      var t = textOf(q, lang);
+      var ansIdx = q.options.indexOf(q.answer);
+      var opts = t.options.map(function(o,i){ return '<li class="'+(i===ansIdx?"ans":"")+'">'+esc(o)+(i===ansIdx?' ✔':'')+'</li>'; }).join("");
+      var langBtns = LANGS.map(function(l){ var has = l[0]==="ja" || !!q[l[0]]; return '<button data-lang="'+l[0]+'" class="'+(l[0]===lang?"on":"")+'" '+(has?"":'title="未翻訳(日本語で表示)"')+'>'+l[1]+(has?"":"*")+'</button>'; }).join("");
+      card.innerHTML =
+        '<div><video src="'+esc(q.video)+'" controls loop playsinline preload="none"></video>'+
+        '<div class="meta">'+esc(q.video)+(q.placeholder?' ・ <b>未監修</b>':' ・ 監修済')+(q.required?' ・ 必出':'')+'</div></div>'+
+        '<div><span class="qid">'+esc(q.id)+'</span><span class="cat">'+esc(q.category)+'</span>'+
+        (q._set==="demo"?'<span class="cat">デモ</span>':'')+
+        '<div class="langs">'+langBtns+'</div>'+
+        '<div class="qtext">'+esc(t.question)+(t.fallback?' <small style="color:#c73a3a">(未翻訳: 日本語表示)</small>':'')+'</div>'+
+        '<ol type="A">'+opts+'</ol>'+
+        '<div class="expl">解説: '+esc(q.explanation||"(なし)")+'</div>'+
+        '<div class="judge">'+
+          ['ok','fix','del'].map(function(v){ var lb={ok:"OK",fix:"要修正",del:"削除"}[v]; return '<label><input type="radio" name="st-'+q.id+'" value="'+v+'" '+(st===v?"checked":"")+'>'+lb+'</label>'; }).join("")+
+          '<textarea placeholder="メモ（直す内容・理由）">'+esc((state[q.id]||{}).memo||"")+'</textarea>'+
+        '</div></div>';
+      card.querySelectorAll('input[type=radio]').forEach(function(r){ r.addEventListener("change", function(){ state[q.id] = Object.assign(state[q.id]||{}, {status:this.value}); card.className="q st-"+this.value; save(); }); });
+      card.querySelector("textarea").addEventListener("input", function(){ state[q.id] = Object.assign(state[q.id]||{}, {memo:this.value}); save(); });
+      card.querySelectorAll(".langs button").forEach(function(b){ b.addEventListener("click", function(){ state[q.id] = Object.assign(state[q.id]||{}, {lang:this.dataset.lang}); save(); render(); }); });
+      main.appendChild(card);
+    });
+    updateStat();
+  }
+  document.getElementById("filter").addEventListener("change", render);
+  document.getElementById("export").addEventListener("click", function(){
+    var out = { exportedAt: new Date().toISOString(), items: all.map(function(q){ var s=state[q.id]||{}; return { id:q.id, set:q._set, status:s.status||"", memo:s.memo||"" }; }) };
+    var blob = new Blob([JSON.stringify(out,null,2)], {type:"application/json"});
+    var a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+    a.download = "review-"+new Date().toISOString().slice(0,10)+".json"; a.click();
+  });
+  document.getElementById("clear").addEventListener("click", function(){ if(confirm("この端末に保存した判定をすべて消しますか？")){ state={}; save(); render(); } });
+  Promise.all([fetch("data/questions.json").then(function(r){return r.json();}), fetch("data/demo-questions.json").then(function(r){return r.json();})])
+    .then(function(res){
+      res[0].forEach(function(q){ q._set="exam"; }); res[1].forEach(function(q){ q._set="demo"; });
+      all = res[0].concat(res[1]); render();
+    })
+    .catch(function(e){ document.getElementById("main").innerHTML = '<p style="color:#fff">問題データを読めません: '+esc(e)+'（file:// では動きません。python -m http.server などで開いてください）</p>'; });
+})();
+</script>
+</body>
+</html>

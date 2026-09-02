@@ -54,6 +54,9 @@ def rows_to_questions(ws, sheet_label):
             return cell(row[idx[h]]) if idx[h] < len(row) else ""
         if not g("question_ja") and not g("video"):
             continue  # 空行
+        if "review_status" in idx and g("review_status") == "del":
+            print(f"  [{sheet_label}] {r}行目 {g('id')}: review_status=del のため除外")
+            continue
         opts = [g(f"opt{i}_ja") for i in range(1, 5)]
         opts = [o for o in opts if o]
         try:

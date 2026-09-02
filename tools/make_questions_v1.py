@@ -143,7 +143,70 @@ Q = [
       "en": ("What is the person in the video doing?", ["Wearing a coverall and walking through the house to check the pigs", "Cleaning the pig house", "Driving the pigs out", "Giving feed"]),
       "vi": ("Người trong video đang làm gì?", ["Mặc đồ bảo hộ, đi trong chuồng để quan sát heo", "Dọn dẹp chuồng", "Lùa heo ra ngoài", "Phát thức ăn"]),
       "id": ("Apa yang dilakukan orang dalam video?", ["Memakai baju pelindung dan berjalan di kandang untuk memeriksa babi", "Membersihkan kandang", "Mengusir babi keluar", "Membagikan pakan"])}),
+    # ---- 第2版で追加(q21〜q30)。q27〜q30 は既存の動画に別の角度の問いを付けたもの ----
+    ("q21", "繁殖・分娩", 1,
+     "分娩柵（母豚が入る柵）のまわりに小さい子豚がいて、子豚用の給餌皿があります。母豚と生まれた子豚がいる分娩舎です。",
+     {"ja": ("動画の豚舎はどれですか？", ["母豚と生まれた子豚がいる分娩舎", "子豚だけの離乳舎", "出荷前の大きい豚の豚舎", "えさをためる倉庫"]),
+      "en": ("Which kind of pig house is shown in the video?", ["A farrowing house with sows and their newborn piglets", "A nursery with piglets only", "A house for large pigs before shipping", "A feed storage room"]),
+      "vi": ("Chuồng trong video là loại nào?", ["Chuồng đẻ có heo mẹ và heo con mới sinh", "Chuồng cai sữa chỉ có heo con", "Chuồng heo lớn trước khi xuất bán", "Kho chứa thức ăn"]),
+      "id": ("Kandang jenis apa yang terlihat dalam video?", ["Kandang beranak dengan induk dan anak babi baru lahir", "Kandang sapih hanya anak babi", "Kandang babi besar sebelum dijual", "Gudang pakan"])}),
+    ("q22", "肉豚・出荷・肉", 1,
+     "1つの豚房に大きい豚が何頭もまとめて入っています（群飼）。母豚を1頭ずつ入れるストールとはちがいます。",
+     {"ja": ("動画の豚は、どのように飼われていますか？", ["1つの豚房に何頭もまとめて入っている", "1頭ずつ柵（ストール）に入っている", "母豚と子豚がいっしょに入っている", "1頭ずつ外につながれている"]),
+      "en": ("How are the pigs in the video kept?", ["Several pigs together in one pen", "One pig per stall", "A sow together with her piglets", "Each pig tied outside"]),
+      "vi": ("Heo trong video được nuôi như thế nào?", ["Nhiều con chung một ô chuồng", "Mỗi con một ô (chuồng cũi)", "Heo mẹ ở cùng heo con", "Mỗi con buộc riêng ngoài trời"]),
+      "id": ("Bagaimana babi dalam video dipelihara?", ["Beberapa ekor bersama dalam satu kandang", "Satu ekor per sekat (stall)", "Induk bersama anak-anaknya", "Tiap ekor diikat di luar"])}),
+    ("q23", "衛生・防疫", 1,
+     "使い終わった注射器を道具のケースに戻しています。床や柵の上に置きっぱなしにすると、汚れたり、なくしたり、豚がかんだりします。",
+     {"ja": ("動画では、注射のあとに何をしていますか？", ["注射器を道具のケースにしまっている", "注射器を床に置いている", "注射器を豚房に投げている", "注射器を水につけている"]),
+      "en": ("What is being done after the injection in the video?", ["Putting the syringe back into the tool case", "Leaving the syringe on the floor", "Throwing the syringe into the pen", "Putting the syringe in water"]),
+      "vi": ("Sau khi tiêm, trong video làm gì?", ["Cất ống tiêm vào hộp dụng cụ", "Để ống tiêm trên sàn", "Ném ống tiêm vào ô chuồng", "Ngâm ống tiêm vào nước"]),
+      "id": ("Apa yang dilakukan setelah menyuntik dalam video?", ["Menyimpan alat suntik ke kotak peralatan", "Meletakkan alat suntik di lantai", "Melempar alat suntik ke kandang", "Merendam alat suntik dalam air"])}),
+    ("q24", "飼養環境・施設", 1,
+     "通路の床がぬれています。ぬれた床はすべりやすく、転んでけがをします。急がず、足もとを見て歩きます。",
+     {"ja": ("動画の通路で、歩くときに気をつけることは何ですか？", ["床がぬれていてすべりやすいので、足もとを見てゆっくり歩く", "暗いので走って通る", "豚がいないので何も気をつけなくてよい", "柵の上を歩く"]),
+      "en": ("What should you be careful about when walking in the aisle shown?", ["The floor is wet and slippery, so watch your step and walk slowly", "It is dark, so run through", "There are no pigs, so nothing to worry about", "Walk on top of the rails"]),
+      "vi": ("Khi đi trong lối đi ở video cần chú ý gì?", ["Sàn ướt, dễ trượt nên nhìn chân và đi chậm", "Tối nên chạy qua", "Không có heo nên không cần chú ý", "Đi trên thanh chắn"]),
+      "id": ("Apa yang harus diperhatikan saat berjalan di lorong dalam video?", ["Lantai basah dan licin, jadi perhatikan langkah dan berjalan pelan", "Gelap, jadi lari saja", "Tidak ada babi, jadi tidak perlu hati-hati", "Berjalan di atas pagar"])}),
+    ("q25", "衛生・防疫", 1,
+     "外から来た人は、豚舎に入る前、農場の敷地を歩くときから防護服と長靴を着けています。豚舎の前で着るのではなく、農場に入るときに着ます。",
+     {"ja": ("動画の人は、いつから防護服を着ていますか？", ["豚舎に入る前、農場の道を歩くときから", "豚舎の中に入ってから", "豚にさわる直前だけ", "着ていない"]),
+      "en": ("Since when has the person in the video been wearing the coverall?", ["Before entering the pig house, already while walking on the farm road", "Only after entering the pig house", "Only just before touching a pig", "Not wearing one"]),
+      "vi": ("Người trong video mặc đồ bảo hộ từ khi nào?", ["Từ trước khi vào chuồng, ngay khi đi trên đường trong trại", "Chỉ sau khi vào trong chuồng", "Chỉ ngay trước khi chạm vào heo", "Không mặc"]),
+      "id": ("Sejak kapan orang dalam video memakai baju pelindung?", ["Sebelum masuk kandang, sudah sejak berjalan di jalan peternakan", "Hanya setelah masuk kandang", "Hanya sesaat sebelum menyentuh babi", "Tidak memakai"])}),
+    ("q26", "衛生・防疫", 1,
+     "水道と桶、かごがある洗い場です。使った道具をここで洗います。（社長確認: この場所の実際の用途）",
+     {"ja": ("動画の場所は何をする所ですか？", ["使った道具を洗う所", "豚にえさをやる所", "薬をしまう所", "豚を運ぶ所"]),
+      "en": ("What is the place in the video used for?", ["Washing used tools", "Feeding pigs", "Storing medicine", "Loading pigs"]),
+      "vi": ("Nơi trong video dùng để làm gì?", ["Rửa dụng cụ đã dùng", "Cho heo ăn", "Cất thuốc", "Chuyển heo"]),
+      "id": ("Tempat dalam video digunakan untuk apa?", ["Mencuci peralatan bekas pakai", "Memberi makan babi", "Menyimpan obat", "Memuat babi"])}),
+    ("q27", "子豚・育成", 1,
+     "赤いスプレーは子豚の背中にかけています。背中は上から見えるので、群れの中でも印がすぐ分かります。",
+     {"ja": ("動画で、赤いスプレーは子豚のどこにかけていますか？", ["背中", "足", "しっぽ", "おなか"]),
+      "en": ("Where on the piglet is the red spray applied in the video?", ["On the back", "On the legs", "On the tail", "On the belly"]),
+      "vi": ("Trong video, sơn đỏ được xịt vào đâu trên heo con?", ["Lưng", "Chân", "Đuôi", "Bụng"]),
+      "id": ("Di bagian mana anak babi disemprot merah dalam video?", ["Punggung", "Kaki", "Ekor", "Perut"])}),
+    ("q28", "肉豚・出荷・肉", 1,
+     "動画の豚は大きく、手や体でおさえることができません。だから鼻にワイヤーをかける道具（鼻保定器）で動かないようにします。小さい子豚は手でおさえます。",
+     {"ja": ("動画のように鼻にワイヤーをかけて保定するのは、どんな豚ですか？", ["手ではおさえられない大きい豚", "生まれたばかりの子豚", "死んだ豚", "寝ている豚"]),
+      "en": ("Which pigs are restrained with a wire snare on the snout, as in the video?", ["Large pigs that cannot be held by hand", "Newborn piglets", "Dead pigs", "Sleeping pigs"]),
+      "vi": ("Loại heo nào được cố định bằng dây thòng lọng ở mũi như trong video?", ["Heo lớn không thể giữ bằng tay", "Heo con mới sinh", "Heo đã chết", "Heo đang ngủ"]),
+      "id": ("Babi mana yang ditahan dengan jerat kawat di hidung seperti dalam video?", ["Babi besar yang tidak bisa dipegang dengan tangan", "Anak babi baru lahir", "Babi mati", "Babi yang tidur"])}),
+    ("q29", "衛生・防疫", 1,
+     "長靴の裏（底）を見て、汚れがないか確認しています。長靴の底のみぞには汚れがたまりやすく、病気のもとを運びます。",
+     {"ja": ("動画の人は、長靴の裏を見て何を確認していますか？", ["汚れが残っていないか", "サイズが合っているか", "色がきれいか", "値段"]),
+      "en": ("What is the person checking by looking at the sole of the boot?", ["Whether any dirt is left", "Whether the size fits", "Whether the color is nice", "The price"]),
+      "vi": ("Người trong video nhìn đế ủng để kiểm tra gì?", ["Còn dính bẩn hay không", "Cỡ có vừa không", "Màu có đẹp không", "Giá tiền"]),
+      "id": ("Apa yang diperiksa orang itu dengan melihat sol sepatu bot?", ["Apakah masih ada kotoran", "Apakah ukurannya pas", "Apakah warnanya bagus", "Harganya"])}),
+    ("q30", "衛生・防疫", 1,
+     "とった血は病気の検査に使います。豚が病気にかかっていないか、ワクチンが効いているかを調べます。",
+     {"ja": ("動画でとった豚の血は、何に使いますか？", ["病気の検査", "豚のえさ", "肥料", "捨てる"]),
+      "en": ("What is the blood taken from the pig in the video used for?", ["Disease testing", "Pig feed", "Fertilizer", "It is thrown away"]),
+      "vi": ("Máu lấy từ heo trong video dùng để làm gì?", ["Xét nghiệm bệnh", "Làm thức ăn cho heo", "Làm phân bón", "Vứt bỏ"]),
+      "id": ("Darah yang diambil dari babi dalam video digunakan untuk apa?", ["Pemeriksaan penyakit", "Pakan babi", "Pupuk", "Dibuang"])}),
 ]
+# q27〜q30 は既存クリップを使う（id と動画名の対応）
+VIDEO_OF = {"q27": "q06", "q28": "q12", "q29": "q01", "q30": "q13"}
 
 DEMO = [
     ("demo01", "子豚・育成", 1,
@@ -171,7 +234,7 @@ def row(item):
     qid, cat, ans, expl, langs = item
     ja_q, ja_o = langs["ja"]
     assert len(ja_o) == 4
-    r = [qid, f"videos/{qid}.mp4", cat, 0, 1, ja_q, *ja_o, ans, expl]
+    r = [qid, f"videos/{VIDEO_OF.get(qid, qid)}.mp4", cat, 0, 1, ja_q, *ja_o, ans, expl]
     for lang in ("en", "vi", "id", "es"):
         if lang in langs:
             q, o = langs[lang]

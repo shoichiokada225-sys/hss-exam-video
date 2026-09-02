@@ -56,6 +56,22 @@ data/questions.json / data/demo-questions.json
 
 仮問題を作り直したい時: `python tools/make_placeholder_xlsx.py --force` → `build_from_xlsx.py` → `python tools/make_dummy_videos.py`
 
+## 監修の流れ（review.html）
+
+1. ローカルで開く: `python -m http.server 8790` → http://localhost:8790/review.html （file:// では動かない。ホームからはリンクしていない社内用）
+2. 各問の動画を見て **OK / 要修正 / 削除** を押し、メモを書く（この端末のブラウザに自動保存。言語ボタンで vi/id の訳も確認できる）
+3. 「判定をダウンロード(JSON)」→ `python tools/apply_review.py ~/Downloads/review-YYYY-MM-DD.json`
+   - OK → xlsx の placeholder が 0 に（監修済み）
+   - 要修正 → メモが xlsx の review_memo 列に入る。Excel で本文を直す
+   - 削除 → review_status=del が入り、build で除外される（行は残る）
+4. `python tools/build_from_xlsx.py` → `python validate.py` → `sw.js` の CACHE_NAME を上げる
+
+※ review.html も data/*.json も静的ファイルなので、公開後はURLを知っていれば誰でも正解を見られる（学科版と同じ前提）。公開リポジトリに含めたくなければ review.html を .gitignore に入れる。
+
+## 試験後の分析（GAS）
+
+エディタで `itemAnalysis()` を実行すると「設問分析」シートに設問ごとの正答率・未回答数・誤答者の平均再生回数が出る。正答率が極端な設問、未回答が多い設問（動画が見にくい等）の見直しに使う。
+
 ## 本番前チェックリスト
 
 - [ ] `config.js` の `webhookUrl` に **新しいGAS** の /exec を設定（`gas/DEPLOY.md`）。学科版のGASを流用しない

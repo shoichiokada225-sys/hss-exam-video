@@ -23,7 +23,7 @@
 
 // 再デプロイが本当に反映されたかを外部から確認するための版マーカー。
 // Code.gsを更新したらこの日付も更新し、再デプロイ後に /exec を開いて version を照合する。
-var CODE_VERSION = "2026-09-02-video";
+var CODE_VERSION = "2026-09-02-video2";
 
 var ADMIN_EMAIL = "so@oikk.co.jp";
 var SHEET_ID = ""; // 任意: 既存スプレッドシートID。空なら自動作成しIDを保存
@@ -286,6 +286,40 @@ function purgeTestRows() {
     }
   });
   Logger.log("削除したテスト行数: " + removed);
+}
+
+// ---- 設問別の正答率(項目分析)を「設問分析」シートに出す（エディタで実行・何度でも上書き） ----
+// 回答詳細には不正解・未回答だけが記録されるので、正答数 = 受験者数 - 不正解数 - 未回答数 で求める。
+// 正答率が低すぎる/高すぎる設問、未回答が多い設問（動画が見にくい等）を見つける用途。
+function itemAnalysis() {
+  var ss = getSpreadsheet_();
+  var res = ss.getSheetByName("本試験結果");
+  var det = ss.getSheetByName("回答詳細");
+  if (!res || res.getLastRow() < 2) { Logger.log("本試験結果がありません"); return; }
+  var n = res.getLastRow() - 1;
+  var stats = {};   // key=問題文 → {wrong, blank, video, plays}
+  if (det && det.getLastRow() > 1) {
+    var rows = det.getRange(2, 1, det.getLastRow() - 1, 10).getDisplayValues();
+    rows.forEach(function (r) {
+      var q = r[4]; if (!q) return;
+      var s = stats[q] || (stats[q] = { wrong: 0, blank: 0, video: r[8] || "", plays: 0, playsN: 0 });
+      if (r[7] === "未回答") s.blank++; else s.wrong++;
+      var p = Number(r[9]); if (!isNaN(p) && r[9] !== "") { s.plays += p; s.playsN++; }
+    });
+  }
+  var out = [["問題", "動画", "受験者数", "正答数", "不正解", "未回答", "正答率", "平均再生回数(誤答者)", "集計日時"]];
+  var now = formatDateTime_(new Date());
+  Object.keys(stats).sort(function (a, b) {
+    var ra = (n - stats[a].wrong - stats[a].blank) / n, rb = (n - stats[b].wrong - stats[b].blank) / n; return ra - rb;
+  }).forEach(function (q) {
+    var s = stats[q]; var correct = n - s.wrong - s.blank;
+    out.push([q, s.video, n, correct, s.wrong, s.blank, Math.round(correct / n * 100) + "%",
+              s.playsN ? Math.round(s.plays / s.playsN * 10) / 10 : "", now]);
+  });
+  var sh = ss.getSheetByName("設問分析") || ss.insertSheet("設問分析");
+  sh.clear();
+  sh.getRange(1, 1, out.length, out[0].length).setValues(out);
+  Logger.log("設問分析: " + (out.length - 1) + "問（※全員正解の設問は回答詳細に出ないため一覧に載らない）");
 }
 
 // ---- 日次サマリーを停止（トリガー削除・エディタで1回実行） ----

@@ -35,7 +35,7 @@ var CONFIG = {
 
   // === 試験設定 ===
   test: {
-    questionsPerTest: 20,   // 1回の試験で出題する問題数（第1版は素材20問。30問に増やしたらここも30に）。data/questions.json がこれより多ければ required=true を必ず含めてランダム抽出
+    questionsPerTest: 30,   // 1回の試験で出題する問題数。data/questions.json がこれより多ければ required=true を必ず含めてランダム抽出
     timeLimit: 30,          // 制限時間（分）※動画の準備(ダウンロード)中は時計を動かさない
     passRate: 70,           // 合格基準（%）
   },
