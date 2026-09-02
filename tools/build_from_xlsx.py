@@ -11,7 +11,7 @@
   question_en | opt1_en .. opt4_en | question_vi | opt1_vi .. | question_id | opt1_id .. | question_es | opt1_es ..
   - answer は 1〜4 の番号(日本語選択肢の何番目が正解か)。全言語の選択肢はこの並びに揃える(順序を崩すと採点事故)
   - required=1 の問題は毎回必ず出題(問題数より多いプールから抽出する場合のみ意味を持つ)
-  - placeholder=1 は仮問題。validate.py が本番前に検出して止める
+  - placeholder=1 は仮問題または未監修の問題。validate.py --release が本番前に検出して止める（社長・獣医の確認後に0にする）
   - 翻訳セルが空なら、その言語は日本語で表示される(アプリ側フォールバック)
 """
 import json

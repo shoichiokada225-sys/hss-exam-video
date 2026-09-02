@@ -5,7 +5,22 @@
 hss-exam には一切手を入れていない（別リポジトリ・別GAS・別スプレッドシート）。
 
 - 公開予定URL: https://shoichiokada225-sys.github.io/hss-exam-video/ （未デプロイ）
-- 現状: **骨組み完成**。問題30問＋デモ3問は全部「仮問題」、動画33本は全部「ダミー動画」（`videos/dummy-*.mp4`）
+- 現状（2026-09-02）: **第1版デモ完成**。ウェアラブルカメラ素材（2026-08-07撮影・24本41分）から5秒クリップ23本を切り出し、本試験20問＋デモ3問を ja/en/vi/id で作成。**全問「未監修」**（`placeholder=1`）＝社長・獣医の確認前。動画は無音
+- 出題数は素材に合わせて `questionsPerTest: 20`。30問に増やしたら config.js も30に戻す
+
+## 素材から5秒動画を作る（第1版の作り方）
+
+```
+raw/temp_video_*.mp4   ← 元動画（git管理外・9.3GB。Downloads の zip を展開したもの）
+   │ ffmpeg で 5〜10秒ごとのコンタクトシート → raw/sheets/ を目で見て場面を選ぶ
+   ▼
+tools/clips.json       ← 台帳: id / 元動画 / 開始秒 / 場面メモ
+   │ python tools/cut_clips.py [--sheet]   （--sheet で1秒ごとの確認画像 raw/sheets/clips_check.jpg）
+   ▼
+videos/q01.mp4 …       ← 960x540 H.264 無音 1本1MB前後
+```
+
+問題文は `tools/make_questions_v1.py`（第1版の原稿。--force で xlsx を作り直す）→ 以後は `tools/questions.xlsx` を直接編集する。
 
 ## 出題の流れ
 

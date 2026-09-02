@@ -397,6 +397,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
   .app { max-width: 100%; padding: 0; }
   .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
 }
+/* ベトナム語: Yu Gothic UI は精密ラテン(ố ắ 等)を持たずWindowsで分解表示されるため、vi表示中はSegoe UIを優先 */
+html[lang="vi"] { --font: "Segoe UI", "Hiragino Sans", "Noto Sans", Roboto, sans-serif; }
 /* ==== 動画出題（hss-exam-video で追加） ==== */
 .video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;margin:6px 0 14px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .video-wrap video{width:100%;height:100%;display:block;object-fit:contain;background:#000}

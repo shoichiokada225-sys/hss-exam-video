@@ -84,7 +84,8 @@ async function enterAndStart(page, mode, pw, name){
     await page.goto(URL, { waitUntil: 'networkidle0' });
     check('タイトルが動画試験', (await page.title()).includes('HSS動画試験'));
     check('ホーム見出しが動画試験', (await page.$eval('#home-title', e => e.textContent)) === 'HSS動画試験');
-    check('本試験カードに30問', (await page.$eval('#meta-q', e => e.textContent)).includes('30'));
+    const N = parseInt(fs.readFileSync(path.join(ROOT, 'config.js'), 'utf8').match(/questionsPerTest:\s*(\d+)/)[1], 10);
+    check(`本試験カードに${N}問`, (await page.$eval('#meta-q', e => e.textContent)).includes(String(N)));
     check('デモカードに3問', (await page.$eval('#meta-demo-q', e => e.textContent)).includes('3'));
 
     // ---------- 2. デモ: 動画ゲート ----------
@@ -150,7 +151,7 @@ async function enterAndStart(page, mode, pw, name){
     const h = await sha256(page, 'e2e-pass');
     await page.evaluate((h) => { CONFIG.passwordHash = h; }, h);
     await enterAndStart(page, 'exam', 'e2e-pass', '復帰 花子');
-    check('本試験: 30問', (await page.$eval('#step-current', e => e.textContent)).trim() === '1 / 30');
+    check(`本試験: ${N}問`, (await page.$eval('#step-current', e => e.textContent)).trim() === `1 / ${N}`);
     g = await gated(page);
     check('本試験: あと2回', /あと2回/.test(g.plays), g);
     await playToEnd(page);
@@ -172,7 +173,7 @@ async function enterAndStart(page, mode, pw, name){
     await page.click('#resume-btn');
     await page.waitForFunction(() => document.querySelector('.screen.active').id === 'quiz-screen', { timeout: 30000 });
     await sleep(300);
-    check('復帰位置は2問目', (await page.$eval('#step-current', e => e.textContent)).trim() === '2 / 30');
+    check('復帰位置は2問目', (await page.$eval('#step-current', e => e.textContent)).trim() === `2 / ${N}`);
     g = await gated(page);
     check('復帰後: 2問目は視聴済み→選択肢あり・あと1回', !g.gated && g.btns === 4 && /あと1回/.test(g.plays), g);
     await page.click('#prev-btn'); await sleep(300);

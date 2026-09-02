@@ -1,73 +1,127 @@
 [
   {
     "id": "demo01",
-    "video": "videos/dummy-demo01.mp4",
-    "category": "繁殖・分娩",
-    "question": "【仮問題1】動画の作業で、正しくないのはどれですか？",
+    "video": "videos/demo01.mp4",
+    "category": "子豚・育成",
+    "question": "動画で子豚の頭に青いスプレーをかけているのはなぜですか？",
     "options": [
-      "【仮】誤っている手順A",
-      "【仮】正しい手順B",
-      "【仮】正しい手順C",
-      "【仮】正しい手順D"
+      "処置がすんだ印をつけるため",
+      "体をひやすため",
+      "虫をよけるため",
+      "きれいにするため"
     ],
-    "answer": "【仮】誤っている手順A",
-    "explanation": "【仮】解説1。本物の動画ができたらここに根拠を書く。",
+    "answer": "処置がすんだ印をつけるため",
+    "explanation": "青いスプレーの印は「処置がすんだ」しるしです。印を見て、まだの豚とすんだ豚を見分けます。",
     "placeholder": true,
     "en": {
-      "question": "[Placeholder 1] Which action in the video is NOT correct?",
+      "question": "Why is blue spray put on the piglet's head in the video?",
       "options": [
-        "[TBD] wrong step A",
-        "[TBD] correct step B",
-        "[TBD] correct step C",
-        "[TBD] correct step D"
+        "To mark that the treatment is done",
+        "To cool the body",
+        "To keep insects away",
+        "To clean it"
+      ]
+    },
+    "vi": {
+      "question": "Vì sao xịt sơn xanh lên đầu heo con trong video?",
+      "options": [
+        "Để đánh dấu đã xử lý xong",
+        "Để làm mát cơ thể",
+        "Để đuổi côn trùng",
+        "Để làm sạch"
+      ]
+    },
+    "ind": {
+      "question": "Mengapa kepala anak babi disemprot biru dalam video?",
+      "options": [
+        "Untuk menandai bahwa tindakan sudah selesai",
+        "Untuk mendinginkan badan",
+        "Untuk mengusir serangga",
+        "Untuk membersihkan"
       ]
     }
   },
   {
     "id": "demo02",
-    "video": "videos/dummy-demo02.mp4",
-    "category": "子豚・育成",
-    "question": "【仮問題2】動画の豚に見られる異常はどれですか？",
+    "video": "videos/demo02.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "動画では豚に何をしていますか？",
     "options": [
-      "【仮】異常なし",
-      "【仮】異常の候補B",
-      "【仮】異常の候補C",
-      "【仮】異常の候補D"
+      "鼻をワイヤーでおさえて（保定して）、首から血をとっている",
+      "鼻に薬をぬっている",
+      "口の中を見ている",
+      "歯を切っている"
     ],
-    "answer": "【仮】異常の候補B",
-    "explanation": "【仮】解説2。本物の動画ができたらここに根拠を書く。",
+    "answer": "鼻をワイヤーでおさえて（保定して）、首から血をとっている",
+    "explanation": "鼻にワイヤーをかけて豚を動かないようにし（鼻保定）、首から注射器で血をとっています（採血）。",
     "placeholder": true,
     "en": {
-      "question": "[Placeholder 2] What abnormality is seen in the pig in the video?",
+      "question": "What is being done to the pig in the video?",
       "options": [
-        "[TBD] nothing abnormal",
-        "[TBD] candidate B",
-        "[TBD] candidate C",
-        "[TBD] candidate D"
+        "Holding the snout with a wire snare and taking blood from the neck",
+        "Putting medicine on the snout",
+        "Looking inside the mouth",
+        "Clipping the teeth"
+      ]
+    },
+    "vi": {
+      "question": "Trong video đang làm gì với con heo?",
+      "options": [
+        "Giữ mũi bằng dây thòng lọng (cố định) và lấy máu ở cổ",
+        "Bôi thuốc lên mũi",
+        "Xem bên trong miệng",
+        "Cắt răng"
+      ]
+    },
+    "ind": {
+      "question": "Apa yang dilakukan pada babi dalam video?",
+      "options": [
+        "Menahan hidung dengan jerat kawat dan mengambil darah dari leher",
+        "Mengoles obat di hidung",
+        "Melihat bagian dalam mulut",
+        "Memotong gigi"
       ]
     }
   },
   {
     "id": "demo03",
-    "video": "videos/dummy-demo03.mp4",
+    "video": "videos/demo03.mp4",
     "category": "衛生・防疫",
-    "question": "【仮問題3】動画の場面で、次にすべき行動はどれですか？",
+    "question": "動画の人は豚舎に入る前に何をしましたか？",
     "options": [
-      "【仮】行動A",
-      "【仮】行動B",
-      "【仮】行動C",
-      "【仮】行動D"
+      "豚舎用の長靴にはきかえた",
+      "手を消毒した",
+      "マスクをつけた",
+      "帽子をかぶった"
     ],
-    "answer": "【仮】行動C",
-    "explanation": "【仮】解説3。本物の動画ができたらここに根拠を書く。",
+    "answer": "豚舎用の長靴にはきかえた",
+    "explanation": "入口で豚舎用の長靴にはきかえてから中に入っています。外の汚れを持ち込まないためです。",
     "placeholder": true,
     "en": {
-      "question": "[Placeholder 3] In the situation shown, what should be done next?",
+      "question": "What did the person do before entering the pig house?",
       "options": [
-        "[TBD] action A",
-        "[TBD] action B",
-        "[TBD] action C",
-        "[TBD] action D"
+        "Changed into boots for the pig house",
+        "Disinfected the hands",
+        "Put on a mask",
+        "Put on a hat"
+      ]
+    },
+    "vi": {
+      "question": "Người trong video đã làm gì trước khi vào chuồng heo?",
+      "options": [
+        "Thay sang ủng dành cho chuồng",
+        "Khử trùng tay",
+        "Đeo khẩu trang",
+        "Đội mũ"
+      ]
+    },
+    "ind": {
+      "question": "Apa yang dilakukan orang itu sebelum masuk kandang?",
+      "options": [
+        "Mengganti sepatu bot khusus kandang",
+        "Mendisinfeksi tangan",
+        "Memakai masker",
+        "Memakai topi"
       ]
     }
   }
