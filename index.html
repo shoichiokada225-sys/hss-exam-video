@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HSS認定試験">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0e1a2e">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>HSS動画試験｜株式会社ヒラノ</title>
+<style>
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* 新パレット: ダークネイビー×スチールブルー（エンブレムと統一・UXレビュー承認値）
+     --primary #1b3a5c は白地で約11.5:1(AAA)のため本文・見出し両用可 */
+  --primary: #1b3a5c; --primary-light: #4a7fa8; --primary-dark: #0d2038;
+  --accent: #27ae60; --accent-light: #2ecc71;
+  --danger: #c0392b; --danger-light: #e74c3c;
+  --warning: #f39c12; --warning-light: #f1c40f;
+  --warning-bg: #fef9e7; --warning-text: #7d6608;
+  --bg: #eef1f5; --bg-gradient: linear-gradient(160deg, #16263f 0%, #0d1a2e 55%, #080f1c 100%);
+  --card: #ffffff; --card-hover: #f5f8fb;
+  --text: #1c2b3a; --text-light: #5c7185; --text-muted: #8a9bab;
+  --border: #d5dee6;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 8px 32px rgba(0,0,0,0.12); --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font: "Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
+  --cat-breeding: #e74c3c; --cat-piglet: #3498db; --cat-hygiene: #2ecc71;
+  --cat-feeding: #f39c12; --cat-stage: #9b59b6; --cat-class: #1abc9c;
+  --cat-facility: #e67e22; --cat-disease: #8e44ad; --cat-motto: #2c3e50;
+}
+[data-theme="dark"] {
+  --bg: #0a1420; --bg-gradient: linear-gradient(160deg, #101c30 0%, #0a1322 55%, #060b14 100%);
+  --card: #101d2e; --card-hover: #16253a;
+  --text: #e4eaf0; --text-light: #94a7b8; --text-muted: #64798c;
+  --border: #22334a;
+  --shadow: 0 4px 20px rgba(0,0,0,0.3); --shadow-lg: 0 8px 32px rgba(0,0,0,0.4); --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --primary: #6fa3d1; --primary-light: #8fbbe0; --primary-dark: #3a6690;
+  --warning-bg: rgba(243,156,18,0.08); --warning-text: #f0b555;
+}
+body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.7; transition: background var(--transition), color var(--transition); }
+.app-bg { min-height: 100vh; background: var(--bg-gradient); padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+.app { max-width: 720px; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) 16px 16px; min-height: 100vh; }
+
+/* Language & Theme */
+.lang-selector { position: fixed; top: 16px; right: 76px; z-index: 50; background: var(--card); border: 2px solid var(--border); border-radius: 24px; padding: 4px 28px 4px 12px; font-size: 0.85rem; color: var(--text); box-shadow: var(--shadow-sm); cursor: pointer; font-family: inherit; transition: all var(--transition); appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237f8c8d' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+.lang-selector:hover { box-shadow: var(--shadow); }
+.theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 50; width: 48px; height: 48px; border-radius: 50%; background: var(--card); border: 2px solid var(--border); box-shadow: var(--shadow-sm); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: all var(--transition); }
+.theme-toggle:hover { transform: scale(1.1); box-shadow: var(--shadow); }
+
+/* Header */
+.header { text-align: center; padding: 24px 0 16px; }
+.header .logo { margin-bottom: 10px; }
+.header .logo svg { width: 88px; height: 88px; filter: drop-shadow(0 6px 18px rgba(46,111,184,0.5)); }
+.header h1 { font-size: 1.3rem; color: #e8f1fa; font-weight: 700; letter-spacing: 0.12em; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+.header .subtitle { font-size: 0.85rem; color: #9db8d4; margin-top: 5px; letter-spacing: 0.08em; }
+.header .badge { display: inline-block; background: var(--primary); color: #fff; font-size: 0.7rem; padding: 3px 14px; border-radius: 20px; margin-top: 8px; letter-spacing: 0.08em; }
+
+/* Cards */
+.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; margin-bottom: 16px; transition: background var(--transition), box-shadow var(--transition); }
+.card:hover { box-shadow: var(--shadow-lg); }
+
+/* Entry cards (home screen) */
+.entry-card { display: block; text-decoration: none; color: var(--text); background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 52px 22px 22px; margin-bottom: 18px; transition: all var(--transition); cursor: pointer; border: 2px solid transparent; border-left: 8px solid var(--card-accent, var(--primary)); position: relative; overflow: hidden; }
+.entry-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--primary-light); border-left-color: var(--card-accent, var(--primary)); }
+.entry-card .card-icon { font-size: 2rem; margin-bottom: 12px; }
+.kind-confirm { --card-accent: var(--accent); }
+.kind-demo { --card-accent: #2980b9; }
+.kind-exam { --card-accent: var(--danger); }
+[data-theme="dark"] .kind-confirm { --card-accent: var(--accent-light); }
+[data-theme="dark"] .kind-demo { --card-accent: #5dade2; }
+[data-theme="dark"] .kind-exam { --card-accent: var(--danger-light); }
+.entry-card .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.entry-card .card-step { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--card-accent); color: #fff; font-size: 1.05rem; font-weight: 800; display: flex; align-items: center; justify-content: center; line-height: 1; }
+.entry-card .card-badge { display: block; font-size: 1.35rem; font-weight: 800; letter-spacing: 0.05em; line-height: 1.3; color: var(--card-accent); background: none; padding: 0; margin: 0; border-radius: 0; }
+.review-answer { font-size: 0.85rem; color: var(--text); margin-top: 6px; }
+.review-expl { font-size: 0.8rem; color: var(--text-light); margin-top: 4px; line-height: 1.7; }
+.entry-card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.entry-card .card-desc { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
+.entry-card .card-meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--text-muted); }
+.entry-card .card-arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--primary-light); transition: transform var(--transition); }
+.entry-card:hover .card-arrow { transform: translateY(-50%) translateX(4px); }
+
+/* Screens */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* Confirm screen */
+.confirm-inner { text-align: center; max-width: 400px; margin: 0 auto; }
+.confirm-inner h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+.confirm-inner p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+.confirm-buttons { display: flex; gap: 12px; margin-top: 20px; }
+.confirm-btn { flex: 1; padding: 16px; border: none; border-radius: var(--radius-sm); font-size: 1.1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); }
+.confirm-btn.yes { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: #fff; box-shadow: 0 4px 15px rgba(39,174,96,0.3); }
+.confirm-btn.yes:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(39,174,96,0.4); }
+.confirm-btn.no { background: linear-gradient(135deg, var(--danger), var(--danger-light)); color: #fff; box-shadow: 0 4px 15px rgba(192,57,43,0.3); }
+.confirm-btn.no:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,0.4); }
+.confirm-result { text-align: center; padding: 40px 20px; }
+.confirm-result .result-icon { font-size: 3rem; margin-bottom: 16px; }
+.confirm-result h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 8px; }
+.confirm-result p { color: var(--text-light); font-size: 0.9rem; }
+
+/* Password screen */
+.password-inner { text-align: center; max-width: 400px; margin: 0 auto; }
+.password-inner h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+.password-inner p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+.password-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1.1rem; font-family: inherit; color: var(--text); background: var(--card); transition: border-color var(--transition), box-shadow var(--transition); text-align: center; letter-spacing: 0.1em; }
+.password-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(74,127,168,0.25); }
+.password-input.error { border-color: var(--danger); }
+.password-error { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
+.password-error.show { display: block; }
+
+/* Name input */
+.name-screen-inner { text-align: center; max-width: 400px; margin: 0 auto; }
+.name-screen-inner h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+.name-screen-inner p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+.name-input-group { margin-bottom: 24px; text-align: left; }
+.name-label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.name-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1.1rem; font-family: inherit; color: var(--text); background: var(--card); transition: border-color var(--transition), box-shadow var(--transition); }
+.name-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(74,127,168,0.25); }
+.name-input.error { border-color: var(--danger); }
+.name-note { font-size: 0.78rem; color: var(--text-light); margin-top: 6px; line-height: 1.6; }
+.name-error { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
+.name-error.show { display: block; }
+.start-btn { width: 100%; padding: 16px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1.1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); box-shadow: 0 4px 15px rgba(26,82,118,0.3); }
+.start-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,82,118,0.4); }
+.start-btn:active { transform: translateY(0); }
+
+/* Test info */
+.test-info { background: var(--card-hover); border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 24px; font-size: 0.85rem; color: var(--text-light); text-align: left; border: 1px solid var(--border); }
+.test-info div { margin-bottom: 4px; }
+.test-info strong { color: var(--text); }
+.notice-box { background: var(--warning-bg); border: 2px solid var(--warning); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; font-size: 0.85rem; color: var(--warning-text); text-align: left; }
+.notice-box ul { list-style: none; margin: 0; padding: 0; }
+.notice-box li { display: flex; gap: 8px; align-items: flex-start; padding: 3px 0; }
+.notice-box li .ni { flex-shrink: 0; }
+[data-theme="dark"] .notice-box { background: rgba(243,156,18,0.08); color: var(--warning); }
+
+/* Timer */
+.timer-section { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; background: var(--card); border-radius: var(--radius); padding: 12px 20px; box-shadow: var(--shadow-sm); transition: background var(--transition); }
+.timer-circle-wrap { position: relative; width: 56px; height: 56px; flex-shrink: 0; }
+.timer-circle-wrap svg { transform: rotate(-90deg); width: 56px; height: 56px; }
+.timer-circle-bg { fill: none; stroke: var(--border); stroke-width: 4; }
+.timer-circle-fg { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1s linear, stroke 0.3s; }
+.timer-circle-fg.warning { stroke: var(--warning); }
+.timer-circle-fg.danger { stroke: var(--danger); animation: pulse 1s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+.timer-circle-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 0.7rem; font-weight: 700; color: var(--text); }
+.timer-circle-text.warning { color: var(--warning); }
+.timer-circle-text.danger { color: var(--danger); }
+.timer-right { flex: 1; }
+.timer-label { font-size: 0.75rem; color: var(--text-light); margin-bottom: 2px; }
+.timer-display { font-size: 1.4rem; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.timer-display.warning { color: var(--warning); }
+.timer-display.danger { color: var(--danger); }
+
+/* Progress */
+.progress-section { margin-bottom: 20px; }
+.step-indicator { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.step-info { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
+.step-current { color: var(--primary); font-size: 1.1rem; font-weight: 700; }
+.step-dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto; }
+.step-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: all var(--transition); flex-shrink: 0; cursor: pointer; }
+.step-dot.answered { background: var(--primary-light); }
+.step-dot.current { background: var(--primary-light); transform: scale(1.3); box-shadow: 0 0 6px rgba(74,127,168,0.5); }
+
+.progress-bar-wrap { margin-top: 8px; }
+.progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary-light), var(--primary)); border-radius: 3px; transition: width 0.4s; }
+
+/* Question */
+.category-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; margin-bottom: 12px; letter-spacing: 0.03em; }
+/* バッジ文字はライトでは暗色(淡色地でWCAG AA確保)、ダークでは明色に切替 */
+.cat-breeding { background: rgba(231,76,60,0.12); color: #a93226; }
+.cat-piglet { background: rgba(52,152,219,0.12); color: #21618c; }
+.cat-hygiene { background: rgba(46,204,113,0.12); color: #1e8449; }
+.cat-feeding { background: rgba(243,156,18,0.12); color: #9c640c; }
+.cat-stage { background: rgba(155,89,182,0.12); color: #6c3483; }
+.cat-class { background: rgba(26,188,156,0.12); color: #117864; }
+.cat-facility { background: rgba(230,126,34,0.12); color: #a04000; }
+.cat-disease { background: rgba(142,68,173,0.12); color: #5b2c6f; }
+.cat-motto { background: rgba(44,62,80,0.12); color: #2c3e50; }
+[data-theme="dark"] .cat-breeding { color: #e74c3c; }
+[data-theme="dark"] .cat-piglet { color: #3498db; }
+[data-theme="dark"] .cat-hygiene { color: #2ecc71; }
+[data-theme="dark"] .cat-feeding { color: #f39c12; }
+[data-theme="dark"] .cat-stage { color: #9b59b6; }
+[data-theme="dark"] .cat-class { color: #1abc9c; }
+[data-theme="dark"] .cat-facility { color: #e67e22; }
+[data-theme="dark"] .cat-disease { color: #a569bd; }
+[data-theme="dark"] .cat-motto { color: #aeb6bf; }
+.question-section-title { font-size: 0.85rem; color: var(--primary-light); font-weight: 700; margin-bottom: 12px; }
+.question-label { font-weight: 700; font-size: 1.05rem; margin-bottom: 18px; color: var(--text); line-height: 1.8; }
+.options { display: flex; flex-direction: column; gap: 10px; }
+.option-btn { display: flex; align-items: center; width: 100%; background: var(--card); border: 2px solid var(--border); border-radius: var(--radius-sm); padding: 16px; font-size: 0.95rem; font-family: inherit; cursor: pointer; transition: all var(--transition); text-align: left; color: var(--text); line-height: 1.5; min-height: 54px; user-select: none; -webkit-tap-highlight-color: transparent; }
+.option-btn:hover:not(:disabled) { border-color: var(--primary-light); background: var(--card-hover); transform: translateX(4px); }
+.option-btn:active:not(:disabled) { transform: scale(0.99); }
+.option-btn .option-letter { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--bg); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; margin-right: 14px; color: var(--primary); transition: all var(--transition); }
+.option-btn.selected { border-color: var(--primary-light); background: rgba(74,127,168,0.1); }
+.option-btn.selected .option-letter { background: var(--primary-light); color: #fff; }
+.option-btn:disabled { cursor: default; opacity: 0.6; }
+
+/* Nav buttons */
+.nav-buttons { display: flex; gap: 10px; margin-top: 20px; }
+.nav-btn { flex: 1; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600; font-family: inherit; cursor: pointer; background: var(--card); color: var(--text); transition: all var(--transition); min-height: 48px; user-select: none; }
+.nav-btn:hover:not(:disabled) { border-color: var(--primary-light); background: var(--card-hover); }
+.nav-btn:disabled { opacity: 0.4; cursor: default; }
+.nav-btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.nav-btn.primary:hover:not(:disabled) { background: var(--primary-dark); }
+
+/* Timeout overlay */
+.timeout-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 100; justify-content: center; align-items: center; }
+.timeout-overlay.show { display: flex; }
+.timeout-card { background: var(--card); border-radius: var(--radius); padding: 40px; text-align: center; max-width: 400px; box-shadow: var(--shadow-lg); animation: fadeIn 0.3s ease; }
+.timeout-card h2 { color: var(--danger); font-size: 1.4rem; margin-bottom: 8px; }
+.timeout-card p { color: var(--text-light); font-size: 0.95rem; }
+/* 終了確認ダイアログ */
+.finish-card h2 { color: var(--primary); }
+.finish-card .finish-summary { color: var(--text); font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.finish-card .finish-unanswered { color: var(--danger); font-weight: 700; }
+.finish-card .finish-warn { color: var(--text-light); font-size: 0.88rem; margin-top: 10px; }
+.finish-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
+.btn-review-back { padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); min-height: 52px; }
+.btn-review-back:hover { background: var(--primary-dark); }
+.btn-finish-quiet { padding: 12px; background: var(--card); color: var(--danger); border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); min-height: 48px; }
+.btn-finish-quiet:hover { border-color: var(--danger-light); }
+/* 離脱警告バナー */
+.away-warning { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 120; background: #f5b041; color: #4a3305; padding: 14px 18px; font-size: 0.9rem; font-weight: 700; text-align: center; line-height: 1.5; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.away-warning.show { display: block; animation: fadeIn 0.25s ease; }
+
+/* Results */
+.results-card { text-align: center; }
+.exam-done { padding: 48px 20px 32px; }
+.exam-done-icon { font-size: 3.4rem; line-height: 1; margin-bottom: 20px; }
+.exam-done-title { font-size: 1.45rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.exam-done-msg { font-size: 1.05rem; color: var(--text-light); }
+.resume-waiting { display: inline-block; background: var(--warning-bg); color: var(--warning-text); border: 1px solid var(--warning); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; }
+.exam-done-keep { font-size: 0.88rem; color: var(--warning-text); background: var(--warning-bg); border: 1px solid var(--warning); border-radius: var(--radius-sm); padding: 10px 14px; margin-top: 18px; display: inline-block; }
+.submit-notice.sent-ok { color: #1e8449; font-weight: 700; font-size: 1rem; }
+.score-circle { width: 170px; height: 170px; border-radius: 50%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; transition: transform 0.5s; }
+.score-circle:hover { transform: scale(1.05); }
+.score-circle .score-pct { font-size: 2.8rem; line-height: 1; }
+.score-circle .score-label { font-size: 0.85rem; margin-top: 4px; }
+.score-pass { background: linear-gradient(135deg, #eafaf1, #d5f5e3); color: #1e8449; border: 4px solid var(--accent); }
+.score-fail { background: linear-gradient(135deg, #fdedec, #fadbd8); color: #922b21; border: 4px solid var(--danger); }
+.score-detail { font-size: 1.1rem; color: var(--text); margin-bottom: 8px; }
+.score-msg { font-size: 0.95rem; color: var(--text-light); margin-bottom: 24px; }
+.results-meta { background: var(--card-hover); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; font-size: 0.85rem; color: var(--text-light); text-align: left; border: 1px solid var(--border); }
+.results-meta div { margin-bottom: 4px; }
+.results-meta strong { color: var(--text); }
+.submit-notice { background: #eafaf1; border: 2px solid var(--accent); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 20px; color: #1e8449; font-weight: 600; font-size: 0.9rem; }
+[data-theme="dark"] .submit-notice { background: rgba(39,174,96,0.1); color: var(--accent-light); }
+
+/* Category stats */
+.category-stats { text-align: left; margin-bottom: 20px; }
+.category-stats h3 { font-size: 0.95rem; color: var(--primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.cat-stat-row { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+.cat-stat-row:last-child { border-bottom: none; }
+.cat-stat-name { font-weight: 600; color: var(--text); min-width: 90px; flex-shrink: 0; }
+.cat-stat-bar { flex: 1; margin: 0 14px; height: 20px; background: var(--border); border-radius: 10px; overflow: hidden; position: relative; }
+.cat-stat-fill { height: 100%; border-radius: 10px; transition: width 0.8s; position: relative; }
+.cat-stat-fill.good { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+.cat-stat-fill.mid { background: linear-gradient(90deg, var(--warning), var(--warning-light)); }
+.cat-stat-fill.bad { background: linear-gradient(90deg, var(--danger), var(--danger-light)); }
+.cat-stat-pct { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-size: 0.7rem; font-weight: 700; color: #fff; }
+.cat-stat-score { font-weight: 700; min-width: 50px; text-align: right; color: var(--text); }
+
+/* Review section */
+.review-section { text-align: left; margin-top: 20px; }
+.review-section h3 { font-size: 0.95rem; color: var(--primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.review-item { padding: 14px 16px; border-radius: var(--radius-sm); margin-bottom: 10px; font-size: 0.85rem; line-height: 1.7; transition: transform var(--transition); }
+.review-item:hover { transform: translateX(4px); }
+.review-correct { background: #eafaf1; border-left: 4px solid var(--accent); }
+.review-wrong { background: #fdedec; border-left: 4px solid var(--danger); }
+.review-unanswered { background: #fef9e7; border-left: 4px solid var(--warning); }
+[data-theme="dark"] .review-correct { background: rgba(39,174,96,0.1); }
+[data-theme="dark"] .review-wrong { background: rgba(192,57,43,0.1); }
+[data-theme="dark"] .review-unanswered { background: rgba(243,156,18,0.1); }
+.review-q { font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.review-a { color: var(--text-light); }
+.review-a span { font-weight: 600; }
+.review-a .correct-mark { color: var(--accent); }
+.review-a .wrong-mark { color: var(--danger); }
+
+/* Action buttons */
+.results-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.btn-submit { padding: 14px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); box-shadow: 0 4px 15px rgba(39,174,96,0.3); }
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(39,174,96,0.4); }
+.btn-submit:disabled { background: #bdc3c7; cursor: default; transform: none; box-shadow: none; }
+.btn-retry { padding: 14px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); box-shadow: 0 4px 15px rgba(26,82,118,0.3); }
+.btn-retry:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,82,118,0.4); }
+.btn-home { padding: 14px; background: var(--card); color: var(--text); border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); }
+.btn-home:hover { border-color: var(--primary-light); background: var(--card-hover); }
+
+/* Install Banner */
+.install-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: var(--card); border-top: 2px solid var(--primary-light); box-shadow: 0 -4px 20px rgba(0,0,0,0.15); padding: 16px; animation: slideUp 0.4s ease; }
+.install-banner.show { display: block; }
+@keyframes slideUp { from{transform:translateY(100%);opacity:0} to{transform:translateY(0);opacity:1} }
+.install-banner-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+.install-banner-icon { font-size: 2rem; flex-shrink: 0; }
+.install-banner-text { flex: 1; }
+.install-banner-title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.install-banner-desc { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; }
+.install-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.install-btn { padding: 10px 18px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); white-space: nowrap; }
+.install-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,82,118,0.3); }
+.install-dismiss { padding: 10px; background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer; transition: color var(--transition); }
+.install-dismiss:hover { color: var(--text); }
+/* iOS install guide overlay */
+.ios-guide-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 200; justify-content: center; align-items: flex-end; padding: 20px; }
+.ios-guide-overlay.show { display: flex; }
+.ios-guide-card { background: var(--card); border-radius: var(--radius); padding: 28px; text-align: center; max-width: 360px; width: 100%; box-shadow: var(--shadow-lg); animation: slideUp 0.3s ease; margin-bottom: env(safe-area-inset-bottom, 20px); }
+.ios-guide-card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 16px; }
+.ios-guide-steps { text-align: left; font-size: 0.88rem; color: var(--text); line-height: 2; margin-bottom: 20px; }
+.ios-guide-steps .step-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: var(--primary); color: #fff; border-radius: 50%; font-size: 0.75rem; font-weight: 700; margin-right: 8px; }
+.ios-guide-arrow { font-size: 2rem; color: var(--primary); margin-top: 8px; animation: bounce 1.5s infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+.ios-guide-close { padding: 12px 24px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 700; font-family: inherit; cursor: pointer; width: 100%; }
+
+/* Loading */
+.loading-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; justify-content: center; align-items: center; }
+.loading-overlay.show { display: flex; }
+.loading-card { background: var(--card); border-radius: var(--radius); padding: 40px; text-align: center; box-shadow: var(--shadow-lg); }
+.spinner { width: 40px; height: 40px; border: 4px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Keyboard & swipe hints */
+.keyboard-hint { text-align: center; margin-top: 12px; font-size: 0.75rem; color: var(--text-muted); }
+.kbd { display: inline-block; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-family: monospace; font-size: 0.7rem; margin: 0 2px; }
+.swipe-hint { text-align: center; margin-top: 8px; font-size: 0.72rem; color: var(--text-muted); display: none; }
+@media (max-width: 768px) { .swipe-hint { display: block; } .keyboard-hint { display: none; } }
+@media (min-width: 769px) { .swipe-hint { display: none; } }
+
+/* Lang note */
+.lang-note { text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 16px; }
+
+/* Footer */
+.footer { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 24px; padding: 16px 0; }
+
+/* Animations */
+.fade-in { animation: fadeIn 0.3s ease; }
+.fade-in-delay { animation: fadeIn 0.3s ease 0.1s both; }
+.fade-in-delay2 { animation: fadeIn 0.3s ease 0.2s both; }
+@keyframes fadeIn { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
+
+/* Skip link */
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--primary); color: #fff; padding: 8px 16px; z-index: 100; font-size: 0.85rem; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .app { padding: 8px; }
+  .card { padding: 16px; border-radius: 12px; }
+  .entry-card { padding: 16px 40px 16px 16px; border-left-width: 7px; }
+  .entry-card .card-badge { font-size: 1.15rem; }
+  .entry-card .card-step { width: 30px; height: 30px; font-size: 0.95rem; }
+  .header h1 { font-size: 1.1rem; }
+  .header .badge { font-size: 0.65rem; }
+  .name-screen-inner h2, .password-inner h2, .confirm-inner h2 { font-size: 1.15rem; }
+  .name-input, .password-input { font-size: 16px; padding: 12px 14px; }
+  .option-btn { padding: 14px 12px; font-size: 0.9rem; border-radius: 8px; }
+  .option-btn .option-letter { width: 30px; height: 30px; font-size: 0.8rem; margin-right: 10px; }
+  .nav-buttons { gap: 8px; margin-top: 16px; }
+  .nav-btn { padding: 14px 8px; font-size: 0.85rem; border-radius: 8px; }
+  .question-label { font-size: 0.95rem; margin-bottom: 14px; }
+  .timer-section { padding: 8px 12px; gap: 10px; border-radius: 12px; }
+  .timer-circle-wrap { width: 48px; height: 48px; }
+  .timer-circle-wrap svg { width: 48px; height: 48px; }
+  .timer-display { font-size: 1.2rem; }
+  .score-circle { width: 140px; height: 140px; }
+  .score-circle .score-pct { font-size: 2.2rem; }
+  .theme-toggle { top: 8px; right: 8px; width: 36px; height: 36px; font-size: 1rem; }
+  .lang-selector { top: 8px; right: 52px; font-size: 0.78rem; padding: 3px 8px; border-radius: 18px; }
+  .step-dots { display: none; }
+}
+@media (max-width: 360px) {
+  .app { padding: 6px; }
+  .card { padding: 14px; }
+  .option-btn { padding: 12px 10px; font-size: 0.85rem; }
+  .option-btn .option-letter { width: 26px; height: 26px; font-size: 0.75rem; margin-right: 8px; }
+  .header h1 { font-size: 1rem; }
+  .lang-selector { right: 48px; font-size: 0.72rem; padding: 2px 6px; }
+  .theme-toggle { width: 32px; height: 32px; font-size: 0.9rem; }
+}
+
+/* Print */
+@media print {
+  body, .app-bg { background: #fff !important; }
+  .theme-toggle, .lang-selector, .timer-section, .nav-buttons, .results-actions, .submit-notice, .notice-box, .keyboard-hint, .btn-submit, .btn-retry, .btn-home, .timeout-overlay, .loading-overlay, .away-warning, .swipe-hint, .ios-guide-overlay, .skip-link, .install-banner { display: none !important; }
+  .app { max-width: 100%; padding: 0; }
+  .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+}
+/* ==== 動画出題（hss-exam-video で追加） ==== */
+.video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;margin:6px 0 14px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.video-wrap video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+.video-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(6,14,28,.62);backdrop-filter:blur(2px);transition:opacity .2s}
+.video-overlay.hidden{opacity:0;pointer-events:none}
+.video-play-btn{font-size:1.15rem;font-weight:800;padding:14px 28px;border-radius:999px;border:0;background:#fff;color:#0e1a2e;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35);min-width:200px}
+.video-play-btn:active{transform:scale(.97)}
+.video-play-btn:disabled{opacity:.55;cursor:not-allowed}
+.video-plays{color:#e6eefa;font-size:.9rem;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.video-gate-note{text-align:center;color:var(--text-light);font-size:.92rem;font-weight:600;padding:14px 10px;border:2px dashed var(--border, #c7d3e3);border-radius:12px;margin-bottom:10px}
+.video-gate-note.hidden{display:none}
+#q-options.gated{display:none}
+.video-badge{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:999px;background:#1c3557;color:#fff;margin-left:8px;vertical-align:middle}
+.preload-bar{width:100%;height:8px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden;margin-top:12px}
+.preload-fill{height:100%;width:0;background:#6fa3d4;transition:width .2s}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" id="skip-link">本文にスキップ</a>
+<select class="lang-selector" id="lang-selector" aria-label="Language">
+  <option value="ja">JP</option>
+  <option value="en">EN</option>
+  <option value="vi">VI</option>
+  <option value="id">ID</option>
+  <option value="es">ES</option>
+</select>
+<button class="theme-toggle" id="theme-toggle" aria-label="ダークモード切替" title="ダークモード切替">☾</button>
+
+<div class="app-bg">
+<div class="app" id="main-content" role="main">
+
+  <!-- HOME SCREEN -->
+  <div id="home-screen" class="screen active" role="region" aria-label="ホーム">
+    <div class="header fade-in">
+      <div class="logo" aria-hidden="true"><svg viewBox="76 76 360 360" role="img" aria-label="HSS認定エンブレム">
+        <defs>
+          <linearGradient id="emb-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9fc4e8"/><stop offset="30%" stop-color="#4a7fb5"/><stop offset="55%" stop-color="#2b4f7d"/><stop offset="80%" stop-color="#6fa3d4"/><stop offset="100%" stop-color="#35608f"/>
+          </linearGradient>
+          <linearGradient id="emb-steelDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3a5f8c"/><stop offset="50%" stop-color="#1c3557"/><stop offset="100%" stop-color="#2c4d78"/>
+          </linearGradient>
+          <linearGradient id="emb-letter" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#eaf4ff"/><stop offset="45%" stop-color="#bcd8f2"/><stop offset="70%" stop-color="#7fb0dd"/><stop offset="100%" stop-color="#5b8fc4"/>
+          </linearGradient>
+          <radialGradient id="emb-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#5eb2ff" stop-opacity="0.5"/><stop offset="60%" stop-color="#2f6fb8" stop-opacity="0.15"/><stop offset="100%" stop-color="#2f6fb8" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="emb-page" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#dcebfa"/><stop offset="100%" stop-color="#8fb6dd"/>
+          </linearGradient>
+        </defs>
+        <circle cx="256" cy="256" r="172" fill="#0c1830"/>
+        <circle cx="256" cy="256" r="172" fill="none" stroke="url(#emb-steel)" stroke-width="9"/>
+        <circle cx="256" cy="256" r="158" fill="none" stroke="url(#emb-steelDark)" stroke-width="3" opacity="0.9"/>
+        <circle cx="256" cy="236" r="120" fill="url(#emb-glow)"/>
+        <polygon points="256,116 378,186 378,326 256,396 134,326 134,186" fill="#0c1830" stroke="url(#emb-steel)" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="256,136 361,196 361,316 256,376 151,316 151,196" fill="none" stroke="url(#emb-steelDark)" stroke-width="3.5" stroke-linejoin="round" opacity="0.95"/>
+        <path d="M 222 168 L 256 142 L 290 168" fill="none" stroke="url(#emb-steel)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="url(#emb-letter)" stroke="#0c1830" stroke-width="3" paint-order="stroke" transform="translate(256 240) scale(0.76) translate(-256 -238)">
+          <path transform="translate(-16 0)" d="M 143 186 h 24 v 40 h 32 v -40 h 24 v 104 h -24 v -42 h -32 v 42 h -24 Z"/>
+          <path transform="translate(-34 0)" d="M 293 186 q -20 0 -31 10 q -11 10 -11 26 q 0 14 8.5 21.5 q 8.5 7.5 26.5 12 q 12 3 16 6 q 4 3 4 8 q 0 6 -5 9 q -5 3 -14 3 q -10 0 -16.5 -4 q -6.5 -4 -8 -11 l -23 7 q 3 14 15 22 q 12 8 31.5 8 q 21 0 32.5 -9.5 q 11.5 -9.5 11.5 -25.5 q 0 -14 -9 -21.5 q -9 -7.5 -27 -12 q -12 -3 -16 -6 q -4 -3 -4 -8 q 0 -5.5 4.5 -8.5 q 4.5 -3 12.5 -3 q 8.5 0 14 3.5 q 5.5 3.5 7.5 10 l 23 -6.5 q -4 -14.5 -15.5 -22 q -11.5 -7.5 -26.5 -7.5 Z"/>
+          <path transform="translate(55 0)" d="M 293 186 q -20 0 -31 10 q -11 10 -11 26 q 0 14 8.5 21.5 q 8.5 7.5 26.5 12 q 12 3 16 6 q 4 3 4 8 q 0 6 -5 9 q -5 3 -14 3 q -10 0 -16.5 -4 q -6.5 -4 -8 -11 l -23 7 q 3 14 15 22 q 12 8 31.5 8 q 21 0 32.5 -9.5 q 11.5 -9.5 11.5 -25.5 q 0 -14 -9 -21.5 q -9 -7.5 -27 -12 q -12 -3 -16 -6 q -4 -3 -4 -8 q 0 -5.5 4.5 -8.5 q 4.5 -3 12.5 -3 q 8.5 0 14 3.5 q 5.5 3.5 7.5 10 l 23 -6.5 q -4 -14.5 -15.5 -22 q -11.5 -7.5 -26.5 -7.5 Z"/>
+        </g>
+        <g>
+          <path d="M 256 314 q -30 -16 -60 -9 v 50 q 30 -7 60 9 Z" fill="url(#emb-page)" stroke="#2b4f7d" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M 256 314 q 30 -16 60 -9 v 50 q -30 -7 -60 9 Z" fill="url(#emb-page)" stroke="#2b4f7d" stroke-width="4" stroke-linejoin="round"/>
+          <line x1="256" y1="314" x2="256" y2="364" stroke="#2b4f7d" stroke-width="4"/>
+        </g>
+      </svg></div>
+      <h1 id="home-title">HSS認定試験</h1>
+      <div class="subtitle" id="home-subtitle">株式会社ヒラノ</div>
+    </div>
+    <div class="entry-card kind-confirm fade-in-delay" id="entry-confirm" tabindex="0" role="button" aria-label="受験意志確認">
+      <div class="card-head">
+        <span class="card-step" aria-hidden="true">1</span>
+        <span class="card-badge badge-confirm" id="badge-confirm">受験意志確認</span>
+      </div>
+      <h2 id="entry-confirm-title">受験意志を回答する</h2>
+      <div class="card-desc" id="entry-confirm-desc">試験を受ける意志の確認です。氏名を入力し、「はい」で回答してください。</div>
+      <div class="card-meta">
+        <span id="meta-confirm-a">📋 意志確認</span>
+        <span id="meta-confirm-b">🔓 パスワード不要</span>
+      </div>
+      <span class="card-arrow">→</span>
+    </div>
+    <div class="entry-card kind-demo fade-in-delay2" id="entry-demo" tabindex="0" role="button" aria-label="デモ問題">
+      <div class="card-head">
+        <span class="card-step" aria-hidden="true">2</span>
+        <span class="card-badge badge-demo" id="badge-demo">デモ問題</span>
+      </div>
+      <h2 id="entry-demo-title">デモ問題を受験する（練習用）</h2>
+      <div class="card-desc" id="entry-demo-desc">本試験の流れを体験できる練習用のデモです。全5問。終了後に正解と解説が表示されます。結果はどこにも送信されません。</div>
+      <div class="card-meta">
+        <span id="meta-demo-q">📝 5問</span>
+        <span id="meta-demo-t">⏱ 5分</span>
+        <span id="meta-demo-p">📖 解説つき</span>
+      </div>
+      <span class="card-arrow">→</span>
+    </div>
+    <div class="entry-card kind-exam fade-in-delay2" id="entry-exam" tabindex="0" role="button" aria-label="本試験">
+      <div class="card-head">
+        <span class="card-step" aria-hidden="true">3</span>
+        <span class="card-badge badge-exam" id="badge-exam">本試験</span>
+      </div>
+      <h2 id="entry-exam-title">HSS認定 本試験を受験する</h2>
+      <div class="card-desc" id="entry-exam-desc">HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。</div>
+      <div class="resume-waiting" id="resume-waiting" style="display:none"></div>
+      <div class="card-meta">
+        <span id="meta-q">📝 60問</span>
+        <span id="meta-t">⏱ 60分</span>
+        <span id="meta-p">🎯 70%合格</span>
+      </div>
+      <span class="card-arrow">→</span>
+    </div>
+    <div class="lang-note fade-in-delay2" id="lang-note">🌐 日本語・English・Tiếng Việt・Bahasa Indonesia 対応</div>
+    <div class="footer" id="footer-text">© 株式会社ヒラノ HSS認定制度</div>
+  </div>
+
+  <!-- CONFIRM: NAME INPUT -->
+  <div id="confirm-name-screen" class="screen" role="region" aria-label="受験意志確認 - 氏名入力">
+    <div class="card fade-in">
+      <div class="confirm-inner">
+        <h2 id="confirm-name-title">受験意志確認</h2>
+        <p id="confirm-name-desc">氏名を入力してください。</p>
+        <div class="name-input-group">
+          <label class="name-label" for="confirm-player-name" id="confirm-name-label">氏名（フルネーム）</label>
+          <input class="name-input" type="text" id="confirm-player-name" placeholder="例：山田 太郎" autocomplete="name" aria-required="true" aria-describedby="confirm-name-error">
+          <div class="name-note" id="confirm-name-note">※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。</div>
+          <div class="name-error" id="confirm-name-error" role="alert">氏名を入力してください</div>
+        </div>
+        <button class="start-btn" id="confirm-name-btn">次へ</button>
+        <button class="btn-home" id="confirm-back-btn" style="margin-top:12px;width:100%">戻る</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM: YES -->
+  <div id="confirm-question-screen" class="screen" role="region" aria-label="受験意志確認">
+    <div class="card fade-in">
+      <div class="confirm-inner">
+        <h2 id="confirm-q-title">受験意志確認</h2>
+        <p id="confirm-q-desc" style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:8px">試験を受けますか？</p>
+        <p id="confirm-q-name" style="font-size:0.9rem;color:var(--text-light);margin-bottom:24px"></p>
+        <div class="confirm-buttons">
+          <button class="confirm-btn yes" id="confirm-yes">はい</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM: RESULT -->
+  <div id="confirm-result-screen" class="screen" role="region" aria-label="受験意志確認 - 完了">
+    <div class="card fade-in">
+      <div class="confirm-result" id="confirm-result-content">
+      </div>
+      <button class="btn-home" id="confirm-result-home" style="width:100%;margin-top:16px">ホームに戻る</button>
+    </div>
+  </div>
+
+  <!-- EXAM: PASSWORD -->
+  <div id="password-screen" class="screen" role="region" aria-label="パスワード入力">
+    <div class="card fade-in">
+      <div class="password-inner">
+        <h2 id="password-title">本試験</h2>
+        <p id="password-desc">試験を開始するにはパスワードを入力してください。</p>
+        <div class="name-input-group">
+          <label class="name-label" for="exam-password" id="password-label">パスワード</label>
+          <input class="password-input" type="password" id="exam-password" placeholder="パスワードを入力" autocomplete="off" aria-required="true" aria-describedby="password-error-msg">
+          <div class="password-error" id="password-error-msg" role="alert">パスワードが正しくありません</div>
+        </div>
+        <button class="start-btn" id="password-submit-btn">認証</button>
+        <button class="btn-home" id="password-back-btn" style="margin-top:12px;width:100%">戻る</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM: NAME INPUT -->
+  <div id="exam-name-screen" class="screen" role="region" aria-label="受験者情報入力">
+    <div class="card fade-in">
+      <div class="name-screen-inner">
+        <h2 id="exam-welcome-title">ようこそ</h2>
+        <p id="exam-welcome-desc">HSS認定制度の本試験を行います。<br>氏名を入力してテストを開始してください。</p>
+        <div class="name-input-group">
+          <label class="name-label" for="exam-player-name" id="exam-name-label">氏名（フルネーム）</label>
+          <input class="name-input" type="text" id="exam-player-name" placeholder="例：山田 太郎" autocomplete="name" aria-required="true" aria-describedby="exam-name-error">
+          <div class="name-note" id="exam-name-note">※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。</div>
+          <div class="name-error" id="exam-name-error" role="alert">氏名を入力してください</div>
+        </div>
+        <div class="test-info" id="test-info">
+          <div><strong id="ti-testname-label">テスト名：</strong><span id="ti-testname-value">HSS認定 本試験</span></div>
+          <div><strong id="ti-qcount-label">問題数：</strong><span id="ti-qcount-value">全60問出題</span></div>
+          <div><strong id="ti-format-label">形式：</strong><span id="ti-format-value">四択形式</span></div>
+          <div><strong id="ti-time-label">制限時間：</strong><span id="ti-time-value">60分</span></div>
+          <div><strong id="ti-pass-label">合格基準：</strong><span id="ti-pass-value">正答率70%以上</span></div>
+        </div>
+        <div class="notice-box" id="notice-box">※ 回答中は正解・不正解の表示はされません。<br>※ 前の問題に戻って回答を変更できます。<br>※ 結果は自動的に管理者へ送信されます。<br>※ 制限時間を過ぎると自動的に終了します。<br>※ 試験中にアプリを離れると、回数と時間が記録され管理者へ通知されます。</div>
+        <button class="start-btn" id="exam-start-btn">テストを開始する</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM: QUIZ -->
+  <div id="quiz-screen" class="screen" role="region" aria-label="テスト問題" aria-live="polite">
+    <div class="timer-section" id="timer-section" aria-label="残り時間">
+      <div class="timer-circle-wrap">
+        <svg viewBox="0 0 56 56" aria-hidden="true">
+          <circle class="timer-circle-bg" cx="28" cy="28" r="24"></circle>
+          <circle class="timer-circle-fg" id="timer-circle" cx="28" cy="28" r="24" stroke-dasharray="150.796" stroke-dashoffset="0"></circle>
+        </svg>
+        <div class="timer-circle-text" id="timer-circle-text" aria-hidden="true"></div>
+      </div>
+      <div class="timer-right">
+        <div class="timer-label" id="timer-label">残り時間</div>
+        <div class="timer-display" id="timer-display" role="timer" aria-live="off">60:00</div>
+      </div>
+    </div>
+    <div class="progress-section">
+      <div class="step-indicator">
+        <span class="step-info" id="progress-label">HSS認定 本試験</span>
+        <span class="step-current" id="step-current" aria-live="polite"></span>
+      </div>
+      <div class="step-dots" id="step-dots" aria-hidden="true"></div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar-el">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" id="question-card">
+      <div class="category-badge" id="q-category"></div>
+      <div class="question-section-title" id="q-section-title"></div>
+      <div class="question-label" id="q-label"></div>
+      <div class="video-wrap" id="video-wrap">
+        <video id="q-video" playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback" disableremoteplayback></video>
+        <div class="video-overlay" id="video-overlay">
+          <button class="video-play-btn" id="video-play-btn" type="button">▶ 動画を見る</button>
+          <div class="video-plays" id="video-plays"></div>
+        </div>
+      </div>
+      <div class="video-gate-note" id="video-gate-note">動画を最後まで見ると選択肢が表示されます</div>
+      <div class="options gated" id="q-options" role="radiogroup" aria-label="選択肢"></div>
+      <div class="nav-buttons" id="nav-buttons">
+        <button class="nav-btn" id="prev-btn" type="button" disabled>前へ</button>
+        <button class="nav-btn primary" id="next-btn" type="button" disabled>次へ</button>
+      </div>
+    </div>
+    <div class="keyboard-hint" aria-hidden="true">
+      <kbd class="kbd">1</kbd>-<kbd class="kbd">4</kbd> 選択肢 &nbsp;
+      <kbd class="kbd">Enter</kbd> 次へ
+    </div>
+    <div class="swipe-hint" id="swipe-hint">← スワイプで前後の問題に移動 →</div>
+  </div>
+
+  <!-- EXAM: RESULTS -->
+  <div id="results-screen" class="screen" role="region" aria-label="テスト結果" aria-live="polite">
+    <div class="card results-card fade-in" id="results-card"></div>
+  </div>
+
+</div>
+</div>
+
+<!-- Overlays -->
+<div class="timeout-overlay" id="timeout-overlay" role="alertdialog" aria-modal="true" aria-labelledby="timeout-title">
+  <div class="timeout-card">
+    <h2 id="timeout-title">⏰ 時間切れ</h2>
+    <p id="timeout-msg">制限時間を超過しました。<br>試験を終了します...</p>
+  </div>
+</div>
+<div class="timeout-overlay" id="finish-overlay" role="alertdialog" aria-modal="true" aria-labelledby="finish-title">
+  <div class="timeout-card finish-card">
+    <h2 id="finish-title">試験を終了しますか？</h2>
+    <p class="finish-summary" id="finish-summary"></p>
+    <p class="finish-warn" id="finish-warn"></p>
+    <div class="finish-actions">
+      <!-- 安全な選択肢(見直す)を上・強調に、不可逆操作(終了)を下・控えめに配置（誤タップ防止） -->
+      <button class="btn-review-back" id="finish-no" type="button">戻って見直す</button>
+      <button class="btn-finish-quiet" id="finish-yes" type="button">試験を終了する</button>
+    </div>
+  </div>
+</div>
+<div class="timeout-overlay" id="resume-overlay" role="alertdialog" aria-modal="true" aria-labelledby="resume-title">
+  <div class="timeout-card finish-card">
+    <h2 id="resume-title">試験を再開します</h2>
+    <p class="finish-warn" id="resume-desc"></p>
+    <div class="finish-actions">
+      <button class="btn-review-back" id="resume-btn" type="button">再開する</button>
+      <button class="btn-home" id="resume-later-btn" type="button">あとで（ホームへ戻る）</button>
+    </div>
+  </div>
+</div>
+<div class="away-warning" id="away-warning" role="alert" aria-live="assertive"></div>
+<div class="loading-overlay" id="loading-overlay" role="status" aria-live="polite">
+  <div class="loading-card">
+    <div class="spinner"></div>
+    <p id="loading-msg">送信中...</p>
+    <div class="preload-bar" aria-hidden="true"><div class="preload-fill" id="preload-fill"></div></div>
+    <p id="preload-note" style="font-size:.85rem;opacity:.85;margin-top:8px"></p>
+  </div>
+</div>
+
+<!-- Install Banner (Android) -->
+<div class="install-banner" id="install-banner" role="banner">
+  <div class="install-banner-inner">
+    <div class="install-banner-icon"><img src="icons/icon-192.png" alt="" width="44" height="44" style="border-radius:10px;display:block"></div>
+    <div class="install-banner-text">
+      <div class="install-banner-title" id="install-title">ホーム画面に追加</div>
+      <div class="install-banner-desc" id="install-desc">アプリとしてインストールすると、すぐに起動できます。</div>
+    </div>
+    <div class="install-banner-actions">
+      <button class="install-btn" id="install-btn">追加</button>
+      <button class="install-dismiss" id="install-dismiss" aria-label="閉じる">&times;</button>
+    </div>
+  </div>
+</div>
+
+<!-- iOS Install Guide -->
+<div class="ios-guide-overlay" id="ios-guide" role="dialog" aria-modal="true" aria-labelledby="ios-guide-title">
+  <div class="ios-guide-card">
+    <h3 id="ios-guide-title">📱 ホーム画面に追加</h3>
+    <div class="ios-guide-steps" id="ios-guide-steps">
+      <div><span class="step-num">1</span>画面下の <strong>共有ボタン</strong> <span style="font-size:1.2em">□↑</span> をタップ</div>
+      <div><span class="step-num">2</span><strong>「ホーム画面に追加」</strong> をタップ</div>
+      <div><span class="step-num">3</span>右上の <strong>「追加」</strong> をタップ</div>
+    </div>
+    <div class="ios-guide-arrow">↓</div>
+    <button class="ios-guide-close" id="ios-guide-close">OK</button>
+  </div>
+</div>
+
+<script>
+  var s = document.createElement("script"); s.src = "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js";
+  s.async = true; document.head.appendChild(s);
+</script>
+<script src="config.js"></script>
+<script>
+(function() {
+"use strict";
+
+// ==================== TRANSLATIONS ====================
+var TRANSLATIONS = {
+  ja: {
+    homeTitle: "HSS認定試験", homeSubtitle: "株式会社ヒラノ",
+    badgeConfirm: "受験意志確認", badgeExam: "本試験",
+    entryConfirmTitle: "受験意志を回答する",
+    entryConfirmDesc: "試験を受ける意志の確認です。氏名を入力し、「はい」で回答してください。",
+    entryExamTitle: "HSS認定 本試験を受験する",
+    entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。全{n}問を出題します。",
+    metaQ: "📝 {n}問", metaT: "⏱ {m}分", metaP: "🎯 {r}%合格",
+    langNote: "🌐 日本語・English・Tiếng Việt・Bahasa Indonesia・Español 対応",
+    footer: "© 株式会社ヒラノ HSS認定制度",
+    confirmNameTitle: "受験意志確認", confirmNameDesc: "氏名を入力してください。",
+    nameLabel: "氏名（フルネーム）", namePlaceholder: "例：山田 太郎",
+    nameError: "氏名を入力してください", nextBtn: "次へ", backBtn: "戻る",
+    nameNote: "※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。",
+    confirmQTitle: "受験意志確認", confirmQuestion: "試験を受けますか？",
+    yes: "はい", no: "いいえ",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "回答を送信しました",
+    confirmResultYesMsg: "{name} さんの回答「はい」を管理者へ送信しました。",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "回答を送信しました",
+    confirmResultNoMsg: "{name} さんの回答「いいえ」を管理者へ送信しました。",
+    confirmSending: "送信中...", confirmSendError: "送信に失敗しました。再度お試しください。",
+    homeBtn: "ホームに戻る",
+    passwordTitle: "本試験", passwordDesc: "試験を開始するにはパスワードを入力してください。",
+    passwordLabel: "パスワード", passwordPlaceholder: "パスワードを入力",
+    passwordError: "パスワードが正しくありません", authBtn: "認証",
+    welcomeTitle: "ようこそ",
+    welcomeDesc: "HSS認定制度の本試験を行います。<br>氏名を入力してテストを開始してください。",
+    testName: "テスト名：", testNameValue: "HSS認定 本試験",
+    questionCount: "問題数：", questionCountValue: "全{n}問出題",
+    format: "形式：", formatValue: "四択形式",
+    timeLimit: "制限時間：", timeLimitValue: "{m}分",
+    passCriteria: "合格基準：", passCriteriaValue: "正答率{r}%以上",
+    notice1: "※ 回答中は正解・不正解の表示はされません。",
+    notice2: "※ 前の問題に戻って回答を変更できます。",
+    notice3: "※ 結果は自動的に管理者へ送信されます。",
+    notice4: "※ 制限時間を過ぎると自動的に終了します。",
+    notice5: "※ 試験中にアプリを離れると、回数と時間が記録され管理者へ通知されます。",
+    finishTitle: "試験を終了しますか？",
+    finishSummary: "{total}問中 {answered}問に回答済みです。",
+    finishUnanswered: "未回答が {n}問あります。",
+    finishWarn: "終了すると回答が送信され、あとから変更することはできません。",
+    finishYes: "試験を終了する", finishNo: "戻って見直す",
+    awayWarn: "⚠ 試験中にアプリを離れたことが記録されました（{n}回目・{sec}秒）。この記録は管理者へ送信されます。",
+    awayLabel: "離脱：", awayTimes: "回",
+    correctAnswerLabel: "正解：", explanationLabel: "解説：",
+    // --- デモ問題（練習用）---
+    metaConfirmA: "📋 意志確認", metaConfirmB: "🔓 パスワード不要",
+    badgeDemo: "デモ問題",
+    entryDemoTitle: "デモ問題を受験する（練習用）",
+    entryDemoDesc: "本試験の流れを体験できる練習用のデモです。全{n}問。終了後に正解と解説が表示されます。結果はどこにも送信されません。",
+    metaDemoQ: "📝 {n}問", metaDemoT: "⏱ {m}分", metaDemoP: "📖 解説つき",
+    demoPasswordTitle: "デモ問題",
+    demoWelcomeDesc: "HSS認定試験のデモ問題を行います。<br>氏名を入力してテストを開始してください。",
+    demoTestNameValue: "HSS認定試験 デモ問題",
+    demoQuestionCountValue: "全{n}問出題",
+    demoTimeLimitValue: "{m}分",
+    demoProgressLabel: "HSS認定試験 デモ問題",
+    demoResultTitle: "HSS認定試験 デモ問題｜結果",
+    demoNotice3: "※ デモ問題のため、結果はどこにも送信されません。",
+    demoNotice5: "※ デモ中にアプリを離れると回数と時間が記録され、この画面に表示されます（送信はされません）。",
+    demoAwayWarn: "⚠ アプリを離れたことが記録されました（{n}回目・{sec}秒）。本試験ではこの記録が管理者へ送信されます。",
+    demoFail: "今回は基準に届きませんでした。解説を読んで、もう一度挑戦しましょう。",
+    demoAutoSent: "📄 デモ問題のため、結果は送信されません。この画面で確認してください。",
+    demoFinishWarn: "デモ問題のため、結果はどこにも送信されません。終了すると正解と解説が表示されます。",
+    demoPass: "基準クリアです。本試験でもこの調子で！", demoPerfect: "全問正解です。本試験でもこの調子で！",
+    demoPasswordDesc: "デモ問題を開始するにはパスワードを入力してください。",
+    resumeTitle: "試験を再開します",
+    resumeDesc: "{name}さんの試験のつづきから再開します（残り {time}）。ボタンを押すと再開します。",
+    resumeExpiredDesc: "{name}さんの中断していた試験は、制限時間を過ぎました。ここまでの回答を送信して終了します。",
+    resumeBtn: "再開する", resumeSendBtn: "回答を送信して終了する",
+    resumeLaterBtn: "あとで（ホームへ戻る）",
+    resumeWaiting: "⏸ 再開待ちの試験があります：{name}",
+    resumeClockNote: "この画面で待っている間も試験時間は進みます。",
+    startBtn: "テストを開始する",
+    remainingTime: "残り時間", prev: "前へ", next: "次へ", submit: "提出する",
+    question: "問", progressLabel: "HSS認定 本試験",
+    timeoutTitle: "⏰ 時間切れ", timeoutMsg: "制限時間を超過しました。<br>試験を終了します...",
+    doneTitle: "試験終了しました。", doneMsg: "お疲れ様でした。",
+    doneKeepOpen: "下に「✅ 送信されました」と表示されるまで、アプリを閉じずにお待ちください。",
+    resultTitle: "HSS認定 本試験｜結果", correctRate: "正答率",
+    scoreDetail: "{total}問中 {score}問正解",
+    pass: "合格です。お疲れさまでした。", fail: "",
+    perfect: "満点合格です。素晴らしい！",
+    examinee: "受験者：", examDate: "受験日時：",
+    timeLimitLabel: "制限時間：", elapsed: "所要時間：", timedOut: "（時間切れ）",
+    passCriteriaLabel: "合格基準：", passCriteriaDetail: "正答率{rate}%以上",
+    categoryStats: "カテゴリ別成績", reviewTitle: "回答の振り返り",
+    correct: "○ 正解", incorrect: "× 不正解", unanswered: "未回答", unansweredLabel: "（未回答）",
+    submitNotice: "結果は自動的に管理者へ送信されました。",
+    submitNoticeManual: "結果を管理者へ送信できます。",
+    submitBtn: "結果を送信する", retryBtn: "もう一度挑戦する",
+    processing: "処理中...", sent: "送信完了", sendFailed: "送信失敗",
+    shared: "結果を共有しました。", sendTo: "送信先：",
+    autoSent: "✅ 送信されました",
+    autoSentFail: "⚠ 送信をまだ確認できていません。電波の良い場所でこのアプリをもう一度開くと自動で再送されます。急ぐ場合は下のボタンで手動送信もできます。",
+    excelDownloaded: "Excelファイルを保存しました。下の「メールを開く」を押し、保存されたExcelファイルを添付して送信してください。メールが開かない場合は、ダウンロードフォルダのファイルを手動で添付してください。",
+    openMailBtn: "メールを開く",
+    mailFallbackNote: "メールを開きました。送信できない場合も、電波の良い場所でこのアプリを開き直せば自動で再送されます。",
+    sentProcess: "送信処理を実行しました",
+    skipLink: "本文にスキップ", darkModeToggle: "ダークモード切替",
+    minutes: "分", seconds: "秒",
+    swipeHint: "← スワイプで前後の問題に移動 →",
+    sending: "送信中...", sendingSlow: "順番に送信しています。最大3分ほどかかることがあります。画面はこのままお待ちください。", loadingQuestions: "問題を読み込み中..."
+  },
+  en: {
+    homeTitle: "HSS Certification Exam", homeSubtitle: "Hirano Co., Ltd.",
+    badgeConfirm: "Intention Check", badgeExam: "Main Exam",
+    entryConfirmTitle: "Respond to Exam Intention",
+    entryConfirmDesc: "Confirm your intention to take the exam. Enter your name and respond with Yes.",
+    entryExamTitle: "Take HSS Certification Exam",
+    entryExamDesc: "HSS Certification main exam. Password required. {n} questions.",
+    metaQ: "📝 {n} Questions", metaT: "⏱ {m} min", metaP: "🎯 {r}% to pass",
+    langNote: "🌐 Japanese, English, Vietnamese, Indonesian, Spanish",
+    footer: "© Hirano Co., Ltd. HSS Certification",
+    confirmNameTitle: "Exam Intention Check", confirmNameDesc: "Please enter your name.",
+    nameLabel: "Full Name", namePlaceholder: "e.g. Taro Yamada",
+    nameError: "Please enter your name", nextBtn: "Next", backBtn: "Back",
+    nameNote: "* Enter your name exactly as it appears on your ID card / the roster.",
+    confirmQTitle: "Exam Intention Check", confirmQuestion: "Will you take the exam?",
+    yes: "Yes", no: "No",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Response Submitted",
+    confirmResultYesMsg: "{name}'s response \"Yes\" has been sent to the administrator.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Response Submitted",
+    confirmResultNoMsg: "{name}'s response \"No\" has been sent to the administrator.",
+    confirmSending: "Sending...", confirmSendError: "Failed to send. Please try again.",
+    homeBtn: "Back to Home",
+    passwordTitle: "Main Exam", passwordDesc: "Enter the password to start the exam.",
+    passwordLabel: "Password", passwordPlaceholder: "Enter password",
+    passwordError: "Incorrect password", authBtn: "Authenticate",
+    welcomeTitle: "Welcome",
+    welcomeDesc: "This is the HSS Certification main exam.<br>Enter your name and start the test.",
+    testName: "Test Name:", testNameValue: "HSS Certification Main Exam",
+    questionCount: "Questions:", questionCountValue: "{n} questions",
+    format: "Format:", formatValue: "Multiple choice (4 options)",
+    timeLimit: "Time Limit:", timeLimitValue: "{m} minutes",
+    passCriteria: "Pass Criteria:", passCriteriaValue: "{r}% or higher",
+    notice1: "* Correct/incorrect answers are not shown during the test.",
+    notice2: "* You can go back to change your answers.",
+    notice3: "* Results are automatically sent to the administrator.",
+    notice4: "* The test ends automatically when time is up.",
+    notice5: "* If you leave the app during the test, the number of times and duration are recorded and reported to the administrator.",
+    finishTitle: "Finish the exam?",
+    finishSummary: "You have answered {answered} of {total} questions.",
+    finishUnanswered: "{n} question(s) left unanswered.",
+    finishWarn: "Once you finish, your answers are submitted and cannot be changed.",
+    finishYes: "Finish the exam", finishNo: "Go back and review",
+    awayWarn: "⚠ Leaving the app during the exam was recorded ({n} time(s) so far, {sec} seconds). This record is sent to the administrator.",
+    awayLabel: "Left the app: ", awayTimes: " time(s)",
+    correctAnswerLabel: "Correct answer: ", explanationLabel: "Explanation: ",
+    metaConfirmA: "📋 Intention check", metaConfirmB: "🔓 No password needed",
+    badgeDemo: "Demo Quiz",
+    entryDemoTitle: "Try the demo quiz (practice)",
+    entryDemoDesc: "A practice demo so you can experience the flow of the real exam. {n} questions. Correct answers and explanations are shown at the end. Nothing is sent anywhere.",
+    metaDemoQ: "📝 {n} Questions", metaDemoT: "⏱ {m} min", metaDemoP: "📖 With explanations",
+    demoPasswordTitle: "Demo Quiz",
+    demoWelcomeDesc: "This is the HSS Certification demo quiz.<br>Enter your name and start the test.",
+    demoTestNameValue: "HSS Certification Demo Quiz",
+    demoQuestionCountValue: "{n} questions",
+    demoTimeLimitValue: "{m} minutes",
+    demoProgressLabel: "HSS Certification Demo Quiz",
+    demoResultTitle: "HSS Certification Demo Quiz | Results",
+    demoNotice3: "* This is a demo: results are not sent anywhere.",
+    demoNotice5: "* If you leave the app during the demo, it is counted and shown on this screen (nothing is sent).",
+    demoAwayWarn: "⚠ Leaving the app was recorded ({n} time(s) so far, {sec} seconds). In the real exam this record is sent to the administrator.",
+    demoFail: "Not quite this time. Read the explanations and try again.",
+    demoAutoSent: "📄 Demo quiz: results are not sent. Please review them on this screen.",
+    demoFinishWarn: "This is a demo, so nothing is sent anywhere. After finishing, correct answers and explanations are shown.",
+    demoPass: "You cleared the passing line. Keep it up in the real exam!", demoPerfect: "All answers correct. Keep it up in the real exam!",
+    demoPasswordDesc: "Enter the password to start the demo quiz.",
+    resumeTitle: "Resume the exam",
+    resumeDesc: "Resuming {name}'s exam from where it stopped ({time} remaining). Press the button to continue.",
+    resumeExpiredDesc: "{name}'s interrupted exam has passed the time limit. The answers so far will be submitted.",
+    resumeBtn: "Resume", resumeSendBtn: "Submit answers and finish",
+    resumeLaterBtn: "Later (back to home)",
+    resumeWaiting: "⏸ Exam waiting to resume: {name}",
+    resumeClockNote: "The exam clock keeps running while this screen is open.",
+    startBtn: "Start Test",
+    remainingTime: "Time Remaining", prev: "Previous", next: "Next", submit: "Submit",
+    question: "Q", progressLabel: "HSS Certification Exam",
+    timeoutTitle: "⏰ Time's Up", timeoutMsg: "Time limit exceeded.<br>Ending the exam...",
+    doneTitle: "The exam is complete.", doneMsg: "You have completed the exam. Thank you.",
+    doneKeepOpen: "Please keep the app open until \"✅ Sent\" appears below.",
+    resultTitle: "HSS Certification Exam | Results", correctRate: "Score",
+    scoreDetail: "{score} correct out of {total}",
+    pass: "Passed! Well done.", fail: "",
+    perfect: "Perfect score! Excellent!",
+    examinee: "Examinee:", examDate: "Date:",
+    timeLimitLabel: "Time Limit:", elapsed: "Time Taken:", timedOut: "(Timed out)",
+    passCriteriaLabel: "Pass Criteria:", passCriteriaDetail: "{rate}% or higher",
+    categoryStats: "Results by Category", reviewTitle: "Answer Review",
+    correct: "○ Correct", incorrect: "× Incorrect", unanswered: "Unanswered", unansweredLabel: "(Unanswered)",
+    submitNotice: "Results have been automatically sent to the administrator.",
+    submitNoticeManual: "You can send results to the administrator.",
+    submitBtn: "Send Results", retryBtn: "Try Again",
+    processing: "Processing...", sent: "Sent", sendFailed: "Send Failed",
+    shared: "Results shared.", sendTo: "Sent to:",
+    autoSent: "✅ Sent",
+    autoSentFail: "⚠ Sending is not confirmed yet. Open this app again where the signal is good and it will resend automatically. You can also send manually with the button below.",
+    excelDownloaded: "Excel file saved. Tap \"Open Mail\" below and attach the saved Excel file. If mail does not open, attach the file from your Downloads folder manually.",
+    openMailBtn: "Open Mail",
+    mailFallbackNote: "Mail opened. Even if you cannot send it, the result will be resent automatically when you reopen this app with a good signal.",
+    sentProcess: "Send process completed",
+    skipLink: "Skip to content", darkModeToggle: "Toggle dark mode",
+    minutes: "min", seconds: "sec",
+    swipeHint: "← Swipe to navigate →",
+    sending: "Sending...", sendingSlow: "Sending in turn. This may take up to 3 minutes. Please keep this screen open.", loadingQuestions: "Loading questions..."
+  },
+  vi: {
+    homeTitle: "Kỳ thi Chứng chỉ HSS", homeSubtitle: "Công ty Hirano",
+    badgeConfirm: "Xác nhận ý định", badgeExam: "Thi chính thức",
+    entryConfirmTitle: "Trả lời ý định dự thi",
+    entryConfirmDesc: "Xác nhận bạn dự định tham gia thi. Nhập họ tên và trả lời Có.",
+    entryExamTitle: "Thi chứng chỉ HSS chính thức",
+    entryExamDesc: "Kỳ thi chính thức chứng chỉ HSS. Cần mật khẩu. {n} câu.",
+    metaQ: "📝 {n} câu", metaT: "⏱ {m} phút", metaP: "🎯 Đạt {r}%",
+    langNote: "🌐 Tiếng Nhật, Tiếng Anh, Tiếng Việt, Tiếng Indonesia, Tiếng Tây Ban Nha",
+    footer: "© Công ty Hirano - Chứng chỉ HSS",
+    confirmNameTitle: "Xác nhận ý định thi", confirmNameDesc: "Vui lòng nhập họ tên.",
+    nameLabel: "Họ và tên", namePlaceholder: "Ví dụ: Nguyễn Văn A",
+    nameError: "Vui lòng nhập họ tên", nextBtn: "Tiếp", backBtn: "Quay lại",
+    nameNote: "※ Nhập họ tên đúng như trên thẻ nhân viên / danh sách (kể cả dấu).",
+    confirmQTitle: "Xác nhận ý định thi", confirmQuestion: "Bạn có dự thi không?",
+    yes: "Có", no: "Không",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Đã gửi trả lời",
+    confirmResultYesMsg: "Trả lời \"Có\" của {name} đã gửi cho quản lý.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Đã gửi trả lời",
+    confirmResultNoMsg: "Trả lời \"Không\" của {name} đã gửi cho quản lý.",
+    confirmSending: "Đang gửi...", confirmSendError: "Gửi thất bại. Vui lòng thử lại.",
+    homeBtn: "Về trang chủ",
+    passwordTitle: "Thi chính thức", passwordDesc: "Nhập mật khẩu để bắt đầu thi.",
+    passwordLabel: "Mật khẩu", passwordPlaceholder: "Nhập mật khẩu",
+    passwordError: "Mật khẩu không đúng", authBtn: "Xác thực",
+    welcomeTitle: "Chào mừng",
+    welcomeDesc: "Đây là kỳ thi chính thức chứng chỉ HSS.<br>Nhập họ tên và bắt đầu làm bài.",
+    testName: "Tên bài thi:", testNameValue: "Thi chính thức chứng chỉ HSS",
+    questionCount: "Số câu:", questionCountValue: "{n} câu",
+    format: "Hình thức:", formatValue: "Trắc nghiệm 4 đáp án",
+    timeLimit: "Thời gian:", timeLimitValue: "{m} phút",
+    passCriteria: "Tiêu chuẩn đạt:", passCriteriaValue: "Từ {r}% trở lên",
+    notice1: "※ Đáp án không hiển thị trong khi làm bài.",
+    notice2: "※ Bạn có thể quay lại để thay đổi câu trả lời.",
+    notice3: "※ Kết quả tự động gửi cho quản lý.",
+    notice4: "※ Bài thi tự động kết thúc khi hết giờ.",
+    notice5: "※ Nếu bạn rời khỏi ứng dụng trong khi thi, số lần và thời gian sẽ được ghi lại và báo cho quản trị viên.",
+    finishTitle: "Kết thúc bài thi?",
+    finishSummary: "Bạn đã trả lời {answered} trong {total} câu.",
+    finishUnanswered: "Còn {n} câu chưa trả lời.",
+    finishWarn: "Sau khi kết thúc, câu trả lời sẽ được gửi đi và không thể thay đổi.",
+    finishYes: "Kết thúc bài thi", finishNo: "Quay lại xem lại",
+    awayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Ghi nhận này sẽ được gửi cho quản trị viên.",
+    awayLabel: "Rời khỏi ứng dụng: ", awayTimes: " lần",
+    correctAnswerLabel: "Đáp án đúng: ", explanationLabel: "Giải thích: ",
+    metaConfirmA: "📋 Xác nhận ý định", metaConfirmB: "🔓 Không cần mật khẩu",
+    badgeDemo: "Bản demo",
+    entryDemoTitle: "Làm bài demo (luyện tập)",
+    entryDemoDesc: "Bản demo để trải nghiệm quy trình thi thật. {n} câu. Sau khi kết thúc sẽ hiện đáp án và giải thích. Kết quả không được gửi đi đâu.",
+    metaDemoQ: "📝 {n} câu", metaDemoT: "⏱ {m} phút", metaDemoP: "📖 Có giải thích",
+    demoPasswordTitle: "Bản demo",
+    demoWelcomeDesc: "Đây là bản demo của kỳ thi chứng chỉ HSS.<br>Nhập họ tên để bắt đầu.",
+    demoTestNameValue: "Demo chứng chỉ HSS",
+    demoQuestionCountValue: "{n} câu",
+    demoTimeLimitValue: "{m} phút",
+    demoProgressLabel: "Demo chứng chỉ HSS",
+    demoResultTitle: "Kết quả bản demo HSS",
+    demoNotice3: "※ Bản demo: kết quả không được gửi đi đâu.",
+    demoNotice5: "※ Nếu bạn rời khỏi ứng dụng trong khi làm demo, số lần sẽ được ghi và hiện trên màn hình này (không gửi đi).",
+    demoAwayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Trong kỳ thi thật, ghi nhận này sẽ được gửi cho quản trị viên.",
+    demoFail: "Lần này chưa đạt. Hãy đọc phần giải thích và thử lại.",
+    demoAutoSent: "📄 Bản demo: kết quả không được gửi. Vui lòng xem trên màn hình này.",
+    demoFinishWarn: "Đây là bản demo nên kết quả không được gửi đi đâu. Sau khi kết thúc sẽ hiện đáp án và giải thích.",
+    demoPass: "Bạn đã đạt tiêu chuẩn. Hãy giữ phong độ này trong kỳ thi thật!", demoPerfect: "Đúng tất cả các câu. Hãy giữ phong độ này trong kỳ thi thật!",
+    demoPasswordDesc: "Nhập mật khẩu để bắt đầu bài demo.",
+    resumeTitle: "Tiếp tục bài thi",
+    resumeDesc: "Tiếp tục bài thi của {name} từ chỗ đã dừng (còn {time}). Nhấn nút để tiếp tục.",
+    resumeExpiredDesc: "Bài thi bị gián đoạn của {name} đã quá thời gian. Các câu trả lời sẽ được gửi đi.",
+    resumeBtn: "Tiếp tục", resumeSendBtn: "Gửi câu trả lời và kết thúc",
+    resumeLaterBtn: "Để sau (về trang chủ)",
+    resumeWaiting: "⏸ Có bài thi đang chờ tiếp tục: {name}",
+    resumeClockNote: "Thời gian thi vẫn chạy trong khi màn hình này mở.",
+    startBtn: "Bắt đầu bài thi",
+    remainingTime: "Thời gian còn lại", prev: "Trước", next: "Tiếp", submit: "Nộp bài",
+    question: "Câu", progressLabel: "Thi chứng chỉ HSS",
+    timeoutTitle: "⏰ Hết giờ", timeoutMsg: "Đã hết thời gian.<br>Đang kết thúc bài thi...",
+    doneTitle: "Bài thi đã kết thúc.", doneMsg: "Cảm ơn bạn đã cố gắng.",
+    doneKeepOpen: "Vui lòng giữ ứng dụng mở cho đến khi dòng \"✅ Đã gửi\" hiện ra bên dưới.",
+    resultTitle: "Kết quả thi chứng chỉ HSS", correctRate: "Tỷ lệ đúng",
+    scoreDetail: "Đúng {score}/{total} câu",
+    pass: "Đạt! Xin chúc mừng.", fail: "",
+    perfect: "Điểm tuyệt đối! Xuất sắc!",
+    examinee: "Thí sinh:", examDate: "Ngày thi:",
+    timeLimitLabel: "Thời gian giới hạn:", elapsed: "Thời gian làm bài:", timedOut: "(Hết giờ)",
+    passCriteriaLabel: "Tiêu chuẩn đạt:", passCriteriaDetail: "Từ {rate}% trở lên",
+    categoryStats: "Kết quả theo danh mục", reviewTitle: "Xem lại câu trả lời",
+    correct: "○ Đúng", incorrect: "× Sai", unanswered: "Chưa trả lời", unansweredLabel: "(Chưa trả lời)",
+    submitNotice: "Kết quả đã tự động gửi cho quản lý.",
+    submitNoticeManual: "Bạn có thể gửi kết quả cho quản lý.",
+    submitBtn: "Gửi kết quả", retryBtn: "Làm lại",
+    processing: "Đang xử lý...", sent: "Đã gửi", sendFailed: "Gửi thất bại",
+    shared: "Đã chia sẻ kết quả.", sendTo: "Gửi đến:",
+    autoSent: "✅ Đã gửi",
+    autoSentFail: "⚠ Chưa xác nhận được việc gửi. Hãy mở lại ứng dụng này ở nơi sóng tốt, kết quả sẽ tự động gửi lại. Nếu gấp, bạn cũng có thể gửi thủ công bằng nút bên dưới.",
+    excelDownloaded: "Đã lưu tệp Excel. Nhấn \"Mở email\" bên dưới và đính kèm tệp Excel đã lưu để gửi. Nếu email không mở, hãy đính kèm tệp từ thư mục Tải xuống theo cách thủ công.",
+    openMailBtn: "Mở email",
+    mailFallbackNote: "Đã mở email. Nếu không gửi được, kết quả cũng sẽ tự động gửi lại khi bạn mở lại ứng dụng ở nơi sóng tốt.",
+    sentProcess: "Đã thực hiện gửi",
+    skipLink: "Chuyển đến nội dung", darkModeToggle: "Chế độ tối",
+    minutes: "phút", seconds: "giây",
+    swipeHint: "← Vuốt để chuyển câu →",
+    sending: "Đang gửi...", sendingSlow: "Đang gửi theo thứ tự. Có thể mất tối đa 3 phút. Vui lòng giữ nguyên màn hình này.", loadingQuestions: "Đang tải câu hỏi..."
+  },
+  id: {
+    homeTitle: "Ujian Sertifikasi HSS", homeSubtitle: "PT Hirano",
+    badgeConfirm: "Konfirmasi Niat", badgeExam: "Ujian Utama",
+    entryConfirmTitle: "Konfirmasi Niat Ujian",
+    entryConfirmDesc: "Konfirmasi niat Anda mengikuti ujian. Masukkan nama dan jawab Ya.",
+    entryExamTitle: "Ikuti Ujian Sertifikasi HSS",
+    entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. {n} soal.",
+    metaQ: "📝 {n} Soal", metaT: "⏱ {m} menit", metaP: "🎯 {r}% lulus",
+    langNote: "🌐 Jepang, Inggris, Vietnam, Indonesia, Spanyol",
+    footer: "© PT Hirano Sertifikasi HSS",
+    confirmNameTitle: "Konfirmasi Niat Ujian", confirmNameDesc: "Silakan masukkan nama Anda.",
+    nameLabel: "Nama Lengkap", namePlaceholder: "Contoh: Budi Santoso",
+    nameError: "Silakan masukkan nama", nextBtn: "Berikutnya", backBtn: "Kembali",
+    nameNote: "※ Masukkan nama persis seperti di kartu karyawan / daftar peserta.",
+    confirmQTitle: "Konfirmasi Niat Ujian", confirmQuestion: "Apakah Anda akan mengikuti ujian?",
+    yes: "Ya", no: "Tidak",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Jawaban Terkirim",
+    confirmResultYesMsg: "Jawaban \"Ya\" dari {name} telah dikirim ke administrator.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Jawaban Terkirim",
+    confirmResultNoMsg: "Jawaban \"Tidak\" dari {name} telah dikirim ke administrator.",
+    confirmSending: "Mengirim...", confirmSendError: "Gagal mengirim. Silakan coba lagi.",
+    homeBtn: "Kembali ke Beranda",
+    passwordTitle: "Ujian Utama", passwordDesc: "Masukkan kata sandi untuk memulai ujian.",
+    passwordLabel: "Kata Sandi", passwordPlaceholder: "Masukkan kata sandi",
+    passwordError: "Kata sandi salah", authBtn: "Autentikasi",
+    welcomeTitle: "Selamat Datang",
+    welcomeDesc: "Ini adalah ujian utama sertifikasi HSS.<br>Masukkan nama dan mulai ujian.",
+    testName: "Nama Ujian:", testNameValue: "Ujian Utama Sertifikasi HSS",
+    questionCount: "Jumlah Soal:", questionCountValue: "{n} soal",
+    format: "Format:", formatValue: "Pilihan ganda (4 opsi)",
+    timeLimit: "Batas Waktu:", timeLimitValue: "{m} menit",
+    passCriteria: "Kriteria Lulus:", passCriteriaValue: "{r}% atau lebih",
+    notice1: "※ Jawaban benar/salah tidak ditampilkan selama ujian.",
+    notice2: "※ Anda dapat kembali mengubah jawaban.",
+    notice3: "※ Hasil otomatis dikirim ke administrator.",
+    notice4: "※ Ujian berakhir otomatis saat waktu habis.",
+    notice5: "※ Jika Anda meninggalkan aplikasi selama ujian, jumlah dan durasinya dicatat dan dilaporkan ke administrator.",
+    finishTitle: "Akhiri ujian?",
+    finishSummary: "Anda telah menjawab {answered} dari {total} soal.",
+    finishUnanswered: "Masih ada {n} soal yang belum dijawab.",
+    finishWarn: "Setelah diakhiri, jawaban akan dikirim dan tidak dapat diubah.",
+    finishYes: "Akhiri ujian", finishNo: "Kembali dan periksa",
+    awayWarn: "⚠ Meninggalkan aplikasi selama ujian telah dicatat (ke-{n}, {sec} detik). Catatan ini dikirim ke administrator.",
+    awayLabel: "Meninggalkan aplikasi: ", awayTimes: " kali",
+    correctAnswerLabel: "Jawaban benar: ", explanationLabel: "Penjelasan: ",
+    metaConfirmA: "📋 Konfirmasi niat", metaConfirmB: "🔓 Tanpa kata sandi",
+    badgeDemo: "Demo Ujian",
+    entryDemoTitle: "Coba demo ujian (latihan)",
+    entryDemoDesc: "Demo latihan untuk merasakan alur ujian sebenarnya. {n} soal. Jawaban benar dan penjelasan ditampilkan di akhir. Hasil tidak dikirim ke mana pun.",
+    metaDemoQ: "📝 {n} Soal", metaDemoT: "⏱ {m} menit", metaDemoP: "📖 Dengan penjelasan",
+    demoPasswordTitle: "Demo Ujian",
+    demoWelcomeDesc: "Ini adalah demo ujian sertifikasi HSS.<br>Masukkan nama Anda dan mulai tes.",
+    demoTestNameValue: "Demo Ujian Sertifikasi HSS",
+    demoQuestionCountValue: "{n} soal",
+    demoTimeLimitValue: "{m} menit",
+    demoProgressLabel: "Demo Ujian Sertifikasi HSS",
+    demoResultTitle: "Hasil Demo Ujian HSS",
+    demoNotice3: "※ Versi demo: hasil tidak dikirim ke mana pun.",
+    demoNotice5: "※ Jika Anda meninggalkan aplikasi selama demo, jumlahnya dicatat dan ditampilkan di layar ini (tidak dikirim).",
+    demoAwayWarn: "⚠ Meninggalkan aplikasi telah dicatat (ke-{n}, {sec} detik). Pada ujian sebenarnya catatan ini dikirim ke administrator.",
+    demoFail: "Kali ini belum lulus. Baca penjelasannya dan coba lagi.",
+    demoAutoSent: "📄 Versi demo: hasil tidak dikirim. Silakan lihat di layar ini.",
+    demoFinishWarn: "Ini demo, jadi hasil tidak dikirim ke mana pun. Setelah selesai, jawaban benar dan penjelasan ditampilkan.",
+    demoPass: "Anda mencapai batas lulus. Pertahankan di ujian sebenarnya!", demoPerfect: "Semua jawaban benar. Pertahankan di ujian sebenarnya!",
+    demoPasswordDesc: "Masukkan kata sandi untuk memulai demo.",
+    resumeTitle: "Lanjutkan ujian",
+    resumeDesc: "Melanjutkan ujian {name} dari posisi terakhir (sisa {time}). Tekan tombol untuk melanjutkan.",
+    resumeExpiredDesc: "Ujian {name} yang terputus telah melewati batas waktu. Jawaban sejauh ini akan dikirim.",
+    resumeBtn: "Lanjutkan", resumeSendBtn: "Kirim jawaban dan selesai",
+    resumeLaterBtn: "Nanti (kembali ke beranda)",
+    resumeWaiting: "⏸ Ada ujian menunggu dilanjutkan: {name}",
+    resumeClockNote: "Waktu ujian terus berjalan selama layar ini terbuka.",
+    startBtn: "Mulai Ujian",
+    remainingTime: "Sisa Waktu", prev: "Sebelumnya", next: "Berikutnya", submit: "Kirim",
+    question: "Soal", progressLabel: "Ujian Sertifikasi HSS",
+    timeoutTitle: "⏰ Waktu Habis", timeoutMsg: "Batas waktu terlampaui.<br>Mengakhiri ujian...",
+    doneTitle: "Ujian telah selesai.", doneMsg: "Terima kasih atas kerja kerasnya.",
+    doneKeepOpen: "Mohon biarkan aplikasi tetap terbuka sampai tulisan \"✅ Terkirim\" muncul di bawah.",
+    resultTitle: "Hasil Ujian Sertifikasi HSS", correctRate: "Nilai",
+    scoreDetail: "{score} benar dari {total}",
+    pass: "Lulus! Kerja bagus.", fail: "",
+    perfect: "Nilai sempurna! Luar biasa!",
+    examinee: "Peserta:", examDate: "Tanggal:",
+    timeLimitLabel: "Batas Waktu:", elapsed: "Waktu Pengerjaan:", timedOut: "(Waktu habis)",
+    passCriteriaLabel: "Kriteria Lulus:", passCriteriaDetail: "{rate}% atau lebih",
+    categoryStats: "Hasil per Kategori", reviewTitle: "Tinjauan Jawaban",
+    correct: "○ Benar", incorrect: "× Salah", unanswered: "Belum dijawab", unansweredLabel: "(Belum dijawab)",
+    submitNotice: "Hasil telah otomatis dikirim ke administrator.",
+    submitNoticeManual: "Anda dapat mengirim hasil ke administrator.",
+    submitBtn: "Kirim Hasil", retryBtn: "Coba Lagi",
+    processing: "Memproses...", sent: "Terkirim", sendFailed: "Gagal Kirim",
+    shared: "Hasil dibagikan.", sendTo: "Dikirim ke:",
+    autoSent: "✅ Terkirim",
+    autoSentFail: "⚠ Pengiriman belum terkonfirmasi. Buka kembali aplikasi ini di tempat dengan sinyal bagus, hasil akan dikirim ulang otomatis. Jika mendesak, Anda juga bisa kirim manual dengan tombol di bawah.",
+    excelDownloaded: "File Excel tersimpan. Tekan \"Buka Email\" di bawah dan lampirkan file Excel yang tersimpan. Jika email tidak terbuka, lampirkan file dari folder Unduhan secara manual.",
+    openMailBtn: "Buka Email",
+    mailFallbackNote: "Email terbuka. Jika tidak bisa mengirim, hasil juga akan dikirim ulang otomatis saat Anda membuka kembali aplikasi ini di tempat bersinyal bagus.",
+    sentProcess: "Proses pengiriman selesai",
+    skipLink: "Langsung ke konten", darkModeToggle: "Mode gelap",
+    minutes: "menit", seconds: "detik",
+    swipeHint: "← Geser untuk navigasi →",
+    sending: "Mengirim...", sendingSlow: "Mengirim secara bergiliran. Bisa memakan waktu hingga 3 menit. Mohon biarkan layar ini terbuka.", loadingQuestions: "Memuat soal..."
+  },
+  es: {
+    homeTitle: "Examen de Certificación HSS", homeSubtitle: "Compañía Hirano",
+    badgeConfirm: "Confirmación de intención", badgeExam: "Examen oficial",
+    entryConfirmTitle: "Responder intención de examen",
+    entryConfirmDesc: "Confirmación de su intención de presentar el examen. Escriba su nombre y responda Sí.",
+    entryExamTitle: "Presentar el examen oficial HSS",
+    entryExamDesc: "Examen oficial de certificación HSS. Requiere contraseña. {n} preguntas.",
+    metaQ: "📝 {n} preguntas", metaT: "⏱ {m} min", metaP: "🎯 {r}% para aprobar",
+    langNote: "🌐 Japonés, Inglés, Vietnamita, Indonesio, Español",
+    footer: "© Compañía Hirano - Certificación HSS",
+    confirmNameTitle: "Confirmación de intención", confirmNameDesc: "Escriba su nombre, por favor.",
+    nameLabel: "Nombre completo", namePlaceholder: "Ejemplo: Juan Pérez",
+    nameError: "Escriba su nombre, por favor", nextBtn: "Siguiente", backBtn: "Volver",
+    nameNote: "※ Escriba su nombre exactamente como aparece en su credencial / la lista.",
+    confirmQTitle: "Confirmación de intención", confirmQuestion: "¿Va a presentar el examen?",
+    yes: "Sí", no: "No",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Respuesta enviada",
+    confirmResultYesMsg: "La respuesta \"Sí\" de {name} fue enviada al administrador.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Respuesta enviada",
+    confirmResultNoMsg: "La respuesta \"No\" de {name} fue enviada al administrador.",
+    confirmSending: "Enviando...", confirmSendError: "No se pudo enviar. Intente de nuevo.",
+    homeBtn: "Volver al inicio",
+    passwordTitle: "Examen oficial", passwordDesc: "Ingrese la contraseña para comenzar el examen.",
+    passwordLabel: "Contraseña", passwordPlaceholder: "Ingrese la contraseña",
+    passwordError: "Contraseña incorrecta", authBtn: "Verificar",
+    welcomeTitle: "Bienvenido",
+    welcomeDesc: "Este es el examen oficial de certificación HSS.<br>Escriba su nombre y comience la prueba.",
+    testName: "Nombre del examen:", testNameValue: "Examen oficial de certificación HSS",
+    questionCount: "Preguntas:", questionCountValue: "{n} preguntas",
+    format: "Formato:", formatValue: "Opción múltiple (4 opciones)",
+    timeLimit: "Tiempo límite:", timeLimitValue: "{m} minutos",
+    passCriteria: "Criterio de aprobación:", passCriteriaValue: "{r}% o más",
+    notice1: "※ Las respuestas correctas no se muestran durante el examen.",
+    notice2: "※ Puede volver a preguntas anteriores y cambiar su respuesta.",
+    notice3: "※ Los resultados se envían automáticamente al administrador.",
+    notice4: "※ El examen termina automáticamente cuando se acaba el tiempo.",
+    notice5: "※ Si sale de la aplicación durante el examen, la cantidad de veces y el tiempo se registran y se informan al administrador.",
+    finishTitle: "¿Terminar el examen?",
+    finishSummary: "Ha respondido {answered} de {total} preguntas.",
+    finishUnanswered: "Quedan {n} preguntas sin responder.",
+    finishWarn: "Al terminar, sus respuestas se enviarán y no podrán cambiarse.",
+    finishYes: "Terminar el examen", finishNo: "Volver a revisar",
+    awayWarn: "⚠ Se registró que salió de la aplicación durante el examen (vez n.º {n}, {sec} segundos). Este registro se envía al administrador.",
+    awayLabel: "Salidas de la app: ", awayTimes: " veces",
+    correctAnswerLabel: "Respuesta correcta: ", explanationLabel: "Explicación: ",
+    metaConfirmA: "📋 Confirmación de intención", metaConfirmB: "🔓 Sin contraseña",
+    badgeDemo: "Demo",
+    entryDemoTitle: "Hacer la demo (práctica)",
+    entryDemoDesc: "Demo de práctica para conocer el flujo del examen real. {n} preguntas. Al final se muestran las respuestas correctas y explicaciones. No se envía nada.",
+    metaDemoQ: "📝 {n} preguntas", metaDemoT: "⏱ {m} min", metaDemoP: "📖 Con explicaciones",
+    demoPasswordTitle: "Demo",
+    demoWelcomeDesc: "Esta es la demo del examen de certificación HSS.<br>Escriba su nombre y comience.",
+    demoTestNameValue: "Demo de certificación HSS",
+    demoQuestionCountValue: "{n} preguntas",
+    demoTimeLimitValue: "{m} minutos",
+    demoProgressLabel: "Demo de certificación HSS",
+    demoResultTitle: "Resultado de la demo HSS",
+    demoNotice3: "※ Versión demo: los resultados no se envían a ningún lado.",
+    demoNotice5: "※ Si sale de la aplicación durante la demo, la cantidad se registra y se muestra en esta pantalla (no se envía).",
+    demoAwayWarn: "⚠ Se registró que salió de la aplicación (vez n.º {n}, {sec} segundos). En el examen real este registro se envía al administrador.",
+    demoFail: "Esta vez no alcanzó el criterio. Lea las explicaciones e intente de nuevo.",
+    demoAutoSent: "📄 Versión demo: los resultados no se envían. Revíselos en esta pantalla.",
+    demoFinishWarn: "Como es una demo, los resultados no se envían a ningún lado. Al terminar se muestran las respuestas correctas y explicaciones.",
+    demoPass: "Superó el criterio. ¡Siga así en el examen real!", demoPerfect: "Todas las respuestas correctas. ¡Siga así en el examen real!",
+    demoPasswordDesc: "Ingrese la contraseña para comenzar la demo.",
+    resumeTitle: "Reanudar el examen",
+    resumeDesc: "Se reanuda el examen de {name} desde donde quedó (quedan {time}). Presione el botón para continuar.",
+    resumeExpiredDesc: "El examen interrumpido de {name} superó el tiempo límite. Se enviarán las respuestas registradas hasta ahora.",
+    resumeBtn: "Reanudar", resumeSendBtn: "Enviar respuestas y terminar",
+    resumeLaterBtn: "Después (volver al inicio)",
+    resumeWaiting: "⏸ Hay un examen esperando reanudarse: {name}",
+    resumeClockNote: "El tiempo del examen sigue corriendo mientras esta pantalla está abierta.",
+    startBtn: "Comenzar la prueba",
+    remainingTime: "Tiempo restante", prev: "Anterior", next: "Siguiente", submit: "Entregar",
+    question: "Pregunta ", progressLabel: "Examen oficial HSS",
+    timeoutTitle: "⏰ Tiempo agotado", timeoutMsg: "Se acabó el tiempo.<br>Terminando el examen...",
+    doneTitle: "El examen ha terminado.", doneMsg: "Ha completado el examen. Gracias.",
+    doneKeepOpen: "Mantenga la aplicación abierta hasta que aparezca \"✅ Enviado\" abajo.",
+    resultTitle: "Resultado del examen HSS", correctRate: "Aciertos",
+    scoreDetail: "{score} correctas de {total}",
+    pass: "Aprobado. Felicitaciones.", fail: "",
+    perfect: "¡Puntaje perfecto! Excelente.",
+    examinee: "Examinado:", examDate: "Fecha del examen:",
+    timeLimitLabel: "Tiempo límite:", elapsed: "Tiempo empleado:", timedOut: "(Tiempo agotado)",
+    passCriteriaLabel: "Criterio de aprobación:", passCriteriaDetail: "{rate}% o más",
+    categoryStats: "Resultados por categoría", reviewTitle: "Revisión de respuestas",
+    correct: "○ Correcta", incorrect: "× Incorrecta", unanswered: "Sin responder", unansweredLabel: "(Sin responder)",
+    submitNotice: "Los resultados se enviaron automáticamente al administrador.",
+    submitNoticeManual: "Puede enviar los resultados al administrador.",
+    submitBtn: "Enviar resultados", retryBtn: "Intentar de nuevo",
+    processing: "Procesando...", sent: "Enviado", sendFailed: "Error al enviar",
+    shared: "Resultados compartidos.", sendTo: "Enviar a: ",
+    autoSent: "✅ Enviado",
+    autoSentFail: "⚠ Aún no se pudo confirmar el envío. Abra esta aplicación de nuevo en un lugar con buena señal y se reenviará automáticamente. Si es urgente, también puede enviarlo manualmente con el botón de abajo.",
+    excelDownloaded: "Archivo Excel guardado. Presione \"Abrir correo\" abajo y adjunte el archivo Excel guardado. Si el correo no se abre, adjunte el archivo desde su carpeta de Descargas manualmente.",
+    openMailBtn: "Abrir correo",
+    mailFallbackNote: "Se abrió el correo. Si no puede enviarlo, el resultado también se reenviará automáticamente cuando vuelva a abrir esta aplicación con buena señal.",
+    sentProcess: "Envío ejecutado",
+    skipLink: "Ir al contenido", darkModeToggle: "Modo oscuro",
+    minutes: " min ", seconds: " seg",
+    swipeHint: "← Deslice para cambiar de pregunta →",
+    sending: "Enviando...", sendingSlow: "Enviando por turnos. Puede tardar hasta 3 minutos. Mantenga esta pantalla abierta.", loadingQuestions: "Cargando preguntas..."
+  }
+};
+
+// 現行7カテゴリ体系（questions.json 79問+デモ5問の正）。旧9カテゴリは過去データ互換のため残す
+var CATEGORY_NAMES = {
+  ja: {"繁殖・分娩":"繁殖・分娩","子豚・育成":"子豚・育成","衛生・防疫":"衛生・防疫","飼料・栄養":"飼料・栄養","飼養環境・施設":"飼養環境・施設","肉豚・出荷・肉":"肉豚・出荷・肉","経営理念・行動規範":"経営理念・行動規範",
+       "繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理","社訓":"社訓"},
+  en: {"繁殖・分娩":"Breeding & Farrowing","子豚・育成":"Piglets & Rearing","衛生・防疫":"Hygiene & Biosecurity","飼料・栄養":"Feed & Nutrition","飼養環境・施設":"Environment & Facilities","肉豚・出荷・肉":"Finishing & Shipping","経営理念・行動規範":"Philosophy & Conduct",
+       "繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
+  vi: {"繁殖・分娩":"Sinh sản / Đẻ","子豚・育成":"Heo con / Nuôi dưỡng","衛生・防疫":"Vệ sinh / Phòng dịch","飼料・栄養":"Thức ăn / Dinh dưỡng","飼養環境・施設":"Môi trường / Chuồng trại","肉豚・出荷・肉":"Heo thịt / Xuất chuồng","経営理念・行動規範":"Triết lý / Quy tắc",
+       "繁殖関連":"Sinh sản","子豚管理":"Heo con","衛生管理":"Vệ sinh","飼養管理":"Thức ăn","飼育段階":"Giai đoạn","豚の分類":"Phân loại","施設管理":"Chuồng trại","疾病管理":"Bệnh","社訓":"Phương châm"},
+  es: {"繁殖・分娩":"Reproducción y parto","子豚・育成":"Lechones y cría","衛生・防疫":"Higiene y bioseguridad","飼料・栄養":"Alimento y nutrición","飼養環境・施設":"Ambiente e instalaciones","肉豚・出荷・肉":"Engorde y envío","経営理念・行動規範":"Filosofía y conducta",
+       "繁殖関連":"Reproducción","子豚管理":"Lechones","衛生管理":"Higiene","飼養管理":"Alimento","飼育段階":"Etapas","豚の分類":"Clasificación","施設管理":"Instalaciones","疾病管理":"Enfermedades","社訓":"Lema de la empresa"},
+  id: {"繁殖・分娩":"Reproduksi & Kelahiran","子豚・育成":"Anak Babi & Pembesaran","衛生・防疫":"Kebersihan & Biosekuriti","飼料・栄養":"Pakan & Nutrisi","飼養環境・施設":"Lingkungan & Fasilitas","肉豚・出荷・肉":"Babi Potong & Pengiriman","経営理念・行動規範":"Filosofi & Perilaku",
+       "繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
+};
+
+var CATEGORY_CLASSES = {
+  // 現行7カテゴリ
+  "繁殖・分娩":"cat-breeding","子豚・育成":"cat-piglet","衛生・防疫":"cat-hygiene",
+  "飼料・栄養":"cat-feeding","飼養環境・施設":"cat-facility",
+  "肉豚・出荷・肉":"cat-class","経営理念・行動規範":"cat-motto",
+  // 旧9カテゴリ（互換）
+  "繁殖関連":"cat-breeding","子豚管理":"cat-piglet","衛生管理":"cat-hygiene",
+  "飼養管理":"cat-feeding","飼育段階":"cat-stage","豚の分類":"cat-class",
+  "施設管理":"cat-facility","疾病管理":"cat-disease","社訓":"cat-motto"
+};
+
+// ==================== 動画試験用の追加翻訳（hss-exam-video） ====================
+// 元の TRANSLATIONS に上書き・追加する。元ブロックは hss-exam と同一のため差分がここに集約される。
+var VIDEO_T = {
+  ja: {
+    homeTitle: "HSS動画試験", entryExamTitle: "HSS動画 本試験を受験する",
+    entryExamDesc: "動画を見て答えるHSS認定の本試験です。パスワードが必要です。全{n}問を出題します。",
+    entryDemoDesc: "本試験の流れを体験できる練習用のデモです。全{n}問。動画は何回でも見られます。終了後に正解と解説が表示されます。結果はどこにも送信されません。",
+    testNameValue: "HSS動画 本試験", demoTestNameValue: "HSS動画試験 デモ問題",
+    progressLabel: "HSS動画 本試験", demoProgressLabel: "HSS動画試験 デモ問題",
+    resultTitle: "HSS動画 本試験｜結果", demoResultTitle: "HSS動画試験 デモ問題｜結果",
+    welcomeDesc: "HSS認定の動画試験を行います。<br>氏名を入力してテストを開始してください。",
+    demoWelcomeDesc: "HSS動画試験のデモ問題を行います。<br>氏名を入力してテストを開始してください。",
+    formatValue: "短い動画を見て四択で回答（動画は1問につき{p}回まで）",
+    demoFormatValue: "短い動画を見て四択で回答（動画は何回でも見られます）",
+    notice6: "※ 動画は1問につき{p}回まで見られます。最後まで見ると選択肢が表示されます。",
+    demoNotice6: "※ 動画は何回でも見られます。最後まで見ると選択肢が表示されます。",
+    videoPlay: "▶ 動画を見る", videoResume: "▶ 続きから再生", videoReplay: "↻ もう一度見る",
+    videoPlaysLeft: "あと{n}回見られます", videoPlaysNone: "再生回数の上限に達しました", videoPlaysUnlimited: "何回でも見られます",
+    videoGate: "▶ を押して動画を最後まで見ると、選択肢が表示されます",
+    videoBadge: "動画", videoPlaysLabel: "動画再生：",
+    preparingVideos: "動画を準備しています… {n}/{m}", preparingVideosNote: "電波の良い場所でお待ちください。準備が終わると試験が始まります。",
+    preloadFail: "動画の準備に失敗しました（{n}本）。電波の良い場所で、もう一度「テストを開始する」を押してください。",
+    videoError: "動画を再生できませんでした。ページを再読み込みしてください。"
+  },
+  en: {
+    homeTitle: "HSS Video Exam", entryExamTitle: "Take the HSS Video Exam",
+    entryExamDesc: "HSS certification exam answered by watching short videos. Password required. {n} questions.",
+    entryDemoDesc: "Practice demo of the exam flow. {n} questions. Videos can be replayed freely. Answers and explanations are shown at the end. Nothing is sent.",
+    testNameValue: "HSS Video Exam", demoTestNameValue: "HSS Video Exam Demo",
+    progressLabel: "HSS Video Exam", demoProgressLabel: "HSS Video Exam Demo",
+    resultTitle: "HSS Video Exam | Result", demoResultTitle: "HSS Video Exam Demo | Result",
+    welcomeDesc: "This is the HSS video exam.<br>Enter your name to start.",
+    demoWelcomeDesc: "This is the HSS video exam demo.<br>Enter your name to start.",
+    formatValue: "Watch a short video, then choose 1 of 4 (each video up to {p} times)",
+    demoFormatValue: "Watch a short video, then choose 1 of 4 (unlimited replays)",
+    notice6: "* Each video can be played up to {p} times. Answer choices appear after watching to the end.",
+    demoNotice6: "* Videos can be replayed freely. Answer choices appear after watching to the end.",
+    videoPlay: "▶ Play video", videoResume: "▶ Resume", videoReplay: "↻ Watch again",
+    videoPlaysLeft: "{n} more time(s)", videoPlaysNone: "No replays left", videoPlaysUnlimited: "Unlimited replays",
+    videoGate: "Press ▶ and watch the video to the end to see the answer choices",
+    videoBadge: "Video", videoPlaysLabel: "Video plays:",
+    preparingVideos: "Preparing videos… {n}/{m}", preparingVideosNote: "Please stay where the signal is good. The exam starts when preparation finishes.",
+    preloadFail: "Failed to prepare {n} video(s). Move to a place with good signal and press Start again.",
+    videoError: "The video could not be played. Please reload the page."
+  },
+  vi: {
+    homeTitle: "Bài thi video HSS", entryExamTitle: "Làm bài thi video HSS",
+    entryExamDesc: "Bài thi chứng nhận HSS: xem video ngắn rồi trả lời. Cần mật khẩu. Gồm {n} câu.",
+    entryDemoDesc: "Bài demo để làm quen. {n} câu. Video xem lại không giới hạn. Kết thúc sẽ hiện đáp án và giải thích. Không gửi đi đâu.",
+    testNameValue: "Bài thi video HSS", demoTestNameValue: "Demo bài thi video HSS",
+    progressLabel: "Bài thi video HSS", demoProgressLabel: "Demo bài thi video HSS",
+    resultTitle: "Bài thi video HSS | Kết quả", demoResultTitle: "Demo bài thi video HSS | Kết quả",
+    welcomeDesc: "Đây là bài thi video HSS.<br>Nhập họ tên để bắt đầu.",
+    demoWelcomeDesc: "Đây là demo bài thi video HSS.<br>Nhập họ tên để bắt đầu.",
+    formatValue: "Xem video ngắn rồi chọn 1 trong 4 (mỗi video tối đa {p} lần)",
+    demoFormatValue: "Xem video ngắn rồi chọn 1 trong 4 (xem lại không giới hạn)",
+    notice6: "* Mỗi video xem được tối đa {p} lần. Xem hết video thì các lựa chọn mới hiện ra.",
+    demoNotice6: "* Video xem lại không giới hạn. Xem hết video thì các lựa chọn mới hiện ra.",
+    videoPlay: "▶ Xem video", videoResume: "▶ Xem tiếp", videoReplay: "↻ Xem lại",
+    videoPlaysLeft: "Còn {n} lần", videoPlaysNone: "Đã hết số lần xem", videoPlaysUnlimited: "Xem lại không giới hạn",
+    videoGate: "Bấm ▶ và xem hết video để hiện các lựa chọn",
+    videoBadge: "Video", videoPlaysLabel: "Số lần xem video:",
+    preparingVideos: "Đang chuẩn bị video… {n}/{m}", preparingVideosNote: "Hãy ở nơi có sóng tốt. Chuẩn bị xong thì bài thi bắt đầu.",
+    preloadFail: "Không chuẩn bị được {n} video. Hãy đến nơi có sóng tốt và bấm Bắt đầu lại.",
+    videoError: "Không phát được video. Hãy tải lại trang."
+  },
+  id: {
+    homeTitle: "Ujian Video HSS", entryExamTitle: "Ikuti Ujian Video HSS",
+    entryExamDesc: "Ujian sertifikasi HSS: tonton video pendek lalu jawab. Perlu kata sandi. {n} soal.",
+    entryDemoDesc: "Demo latihan untuk mengenal alur ujian. {n} soal. Video bisa diputar ulang tanpa batas. Jawaban dan penjelasan tampil di akhir. Tidak dikirim ke mana pun.",
+    testNameValue: "Ujian Video HSS", demoTestNameValue: "Demo Ujian Video HSS",
+    progressLabel: "Ujian Video HSS", demoProgressLabel: "Demo Ujian Video HSS",
+    resultTitle: "Ujian Video HSS | Hasil", demoResultTitle: "Demo Ujian Video HSS | Hasil",
+    welcomeDesc: "Ini adalah ujian video HSS.<br>Masukkan nama untuk mulai.",
+    demoWelcomeDesc: "Ini adalah demo ujian video HSS.<br>Masukkan nama untuk mulai.",
+    formatValue: "Tonton video pendek, lalu pilih 1 dari 4 (tiap video maks. {p} kali)",
+    demoFormatValue: "Tonton video pendek, lalu pilih 1 dari 4 (putar ulang tanpa batas)",
+    notice6: "* Tiap video bisa diputar maks. {p} kali. Pilihan jawaban muncul setelah video ditonton sampai habis.",
+    demoNotice6: "* Video bisa diputar ulang tanpa batas. Pilihan jawaban muncul setelah video ditonton sampai habis.",
+    videoPlay: "▶ Putar video", videoResume: "▶ Lanjutkan", videoReplay: "↻ Tonton lagi",
+    videoPlaysLeft: "Sisa {n} kali", videoPlaysNone: "Batas putar ulang habis", videoPlaysUnlimited: "Putar ulang tanpa batas",
+    videoGate: "Tekan ▶ dan tonton video sampai habis untuk melihat pilihan jawaban",
+    videoBadge: "Video", videoPlaysLabel: "Putar video:",
+    preparingVideos: "Menyiapkan video… {n}/{m}", preparingVideosNote: "Tetap di tempat dengan sinyal bagus. Ujian mulai setelah persiapan selesai.",
+    preloadFail: "Gagal menyiapkan {n} video. Pindah ke tempat bersinyal bagus lalu tekan Mulai lagi.",
+    videoError: "Video tidak bisa diputar. Muat ulang halaman."
+  },
+  es: {
+    homeTitle: "Examen en video HSS", entryExamTitle: "Presentar el examen en video HSS",
+    entryExamDesc: "Examen de certificación HSS que se responde viendo videos cortos. Se requiere contraseña. {n} preguntas.",
+    entryDemoDesc: "Demo de práctica para conocer el flujo del examen. {n} preguntas. Los videos se pueden repetir sin límite. Al final se muestran respuestas y explicaciones. No se envía nada.",
+    testNameValue: "Examen en video HSS", demoTestNameValue: "Demo del examen en video HSS",
+    progressLabel: "Examen en video HSS", demoProgressLabel: "Demo del examen en video HSS",
+    resultTitle: "Examen en video HSS | Resultado", demoResultTitle: "Demo del examen en video HSS | Resultado",
+    welcomeDesc: "Este es el examen en video HSS.<br>Ingrese su nombre para comenzar.",
+    demoWelcomeDesc: "Esta es la demo del examen en video HSS.<br>Ingrese su nombre para comenzar.",
+    formatValue: "Vea un video corto y elija 1 de 4 (cada video hasta {p} veces)",
+    demoFormatValue: "Vea un video corto y elija 1 de 4 (repeticiones ilimitadas)",
+    notice6: "* Cada video se puede ver hasta {p} veces. Las opciones aparecen al terminar de verlo.",
+    demoNotice6: "* Los videos se pueden repetir sin límite. Las opciones aparecen al terminar de verlo.",
+    videoPlay: "▶ Ver video", videoResume: "▶ Continuar", videoReplay: "↻ Ver de nuevo",
+    videoPlaysLeft: "Quedan {n} vez/veces", videoPlaysNone: "Sin repeticiones disponibles", videoPlaysUnlimited: "Repeticiones ilimitadas",
+    videoGate: "Presione ▶ y vea el video hasta el final para mostrar las opciones",
+    videoBadge: "Video", videoPlaysLabel: "Reproducciones:",
+    preparingVideos: "Preparando videos… {n}/{m}", preparingVideosNote: "Permanezca donde haya buena señal. El examen comienza al terminar la preparación.",
+    preloadFail: "No se pudieron preparar {n} video(s). Vaya a un lugar con buena señal y presione Comenzar otra vez.",
+    videoError: "No se pudo reproducir el video. Recargue la página."
+  }
+};
+Object.keys(VIDEO_T).forEach(function(l){ TRANSLATIONS[l] = TRANSLATIONS[l] || {}; Object.keys(VIDEO_T[l]).forEach(function(k){ TRANSLATIONS[l][k] = VIDEO_T[l][k]; }); });
+
+// ==================== STATE ====================
+var currentLang = localStorage.getItem("hss_lang") || "ja";
+// 動画出題の状態（hss-exam-video）
+var videoPlays = [];      // 問ごとの再生開始回数（最初から再生した回数。途中再開は数えない）
+var videoWatched = [];    // 問ごとに「最後まで1回見た」か（選択肢の表示ゲート）
+var videoUrls = {};       // 事前読込した動画の objectURL（path → blob URL）
+function maxPlays(){ var v = CONFIG.video || {}; return isDemo() ? (v.maxPlaysDemo | 0) : (v.maxPlaysExam | 0); }   // 0 = 無制限
+// 受験モード: "exam"=HSS認定本試験 / "demo"=練習用デモ問題（旧hss-exam-demoを統合）
+var examMode = "exam";
+var isDemo = function(){ return examMode === "demo"; };
+// 現在のモードの試験設定（問題数・制限時間・合格基準）
+function modeConf(){
+  return isDemo()
+    ? { timeLimit: CONFIG.demo.timeLimit, passRate: CONFIG.demo.passRate }
+    : { timeLimit: CONFIG.test.timeLimit, passRate: CONFIG.test.passRate };
+}
+var allQuestions = [];
+var demoQuestions = [];
+var selectedQuestions = [];
+var shuffledOptions = [];
+var userAnswers = [];
+var currentQuestion = 0;
+var score = 0;
+var answers = [];
+var playerName = "";
+var startTime = null;
+var timerInterval = null;
+var timeRemaining = 0;
+var totalTime = 0;
+var quizLocked = false;
+// 離脱検知（試験中に他アプリ・他タブへ移動したことの記録）
+var AWAY_THRESHOLD_MS = 3000;   // 通知・誤タップ等の短時間離脱は記録しない
+var awayCount = 0;
+var awaySeconds = 0;
+var awayLog = [];
+var awayStartedAt = null;
+var clockAnomaly = false;   // OS時計の巻き戻しを検知したら立てる(完全防止は不可だが「バレる」ようにする)
+var awayWarnTimer = null;
+var wakeLockObj = null;
+var TIMER_RADIUS = 24;
+var TIMER_CIRCUMFERENCE = 2 * Math.PI * TIMER_RADIUS;
+
+// ==================== HELPERS ====================
+function t(key) { return (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) || TRANSLATIONS.ja[key] || key; }
+// モード対応の翻訳取得。デモ中は "demoXxx" キーがあればそちらを優先し、無ければ通常キーへ落ちる。
+function tm(key) {
+  if(isDemo()){
+    var dk = "demo" + key.charAt(0).toUpperCase() + key.slice(1);
+    var v = (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][dk]);
+    if(v === undefined) v = TRANSLATIONS.ja[dk];
+    if(v !== undefined) return v;
+  }
+  return t(key);
+}
+// 設定値({n}問/{m}分/{r}%)を翻訳文字列へ差し込む。UIとCONFIGの乖離を構造的に防ぐ
+function fillNums(str, demoCtx){
+  var n = demoCtx ? (CONFIG.demo.questionCount || 5) : CONFIG.test.questionsPerTest;
+  var m = demoCtx ? CONFIG.demo.timeLimit : CONFIG.test.timeLimit;
+  var r = demoCtx ? CONFIG.demo.passRate : CONFIG.test.passRate;
+  var p = (CONFIG.video && CONFIG.video.maxPlaysExam) | 0;   // {p} = 本試験の動画再生上限
+  return String(str).replace(/\{n\}/g, n).replace(/\{m\}/g, m).replace(/\{r\}/g, r).replace(/\{p\}/g, p);
+}
+function getCatName(cat) { return (CATEGORY_NAMES[currentLang] && CATEGORY_NAMES[currentLang][cat]) || cat; }
+function getCategoryClass(cat) { return CATEGORY_CLASSES[cat] || "cat-breeding"; }
+function getQ(q, field) { if (currentLang === "ja") return q[field]; var langKey = currentLang === "id" ? "ind" : currentLang; if (q[langKey] && q[langKey][field] !== undefined) return q[langKey][field]; return q[field]; }
+function getQOptions(q) { if (currentLang === "ja") return q.options; var langKey = currentLang === "id" ? "ind" : currentLang; if (q[langKey] && q[langKey].options) return q[langKey].options; return q.options; }
+function escHtml(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+function formatDate(d) { return d.getFullYear()+"/"+String(d.getMonth()+1).padStart(2,"0")+"/"+String(d.getDate()).padStart(2,"0")+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
+function shuffle(arr) { var a = arr.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=a[i];a[i]=a[j];a[j]=tmp;} return a; }
+
+var installBannerWanted = false;   // バナー表示条件を満たしているか（表示自体はホーム画面のみ）
+var swReloadPending = false;       // SW更新のリロードを安全な画面まで保留するフラグ
+function showScreen(id) {
+  if(id === "home-screen" && swReloadPending && !sendInFlight){ swReloadPending = false; location.reload(); return; }
+  document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active");});
+  document.getElementById(id).classList.add("active");
+  window.scrollTo(0,0);
+  // インストールバナーはホーム画面限定（試験中の誤タップ・OSプロンプトによる中断を防ぐ）
+  var banner = document.getElementById("install-banner");
+  if(banner){
+    if(id === "home-screen" && installBannerWanted) banner.classList.add("show");
+    else banner.classList.remove("show");
+  }
+}
+
+async function sha256(message) {
+  var msgBuffer = new TextEncoder().encode(message);
+  var hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+  var hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+}
+
+// ==================== THEME ====================
+(function initTheme(){
+  var saved = localStorage.getItem("hss_theme");
+  if(saved==="dark") document.documentElement.setAttribute("data-theme","dark");
+  updateThemeIcon();
+})();
+function updateThemeIcon(){
+  var isDark = document.documentElement.getAttribute("data-theme")==="dark";
+  document.getElementById("theme-toggle").textContent = isDark ? "☀" : "☾";
+}
+document.getElementById("theme-toggle").addEventListener("click",function(){
+  var isDark = document.documentElement.getAttribute("data-theme")==="dark";
+  if(isDark){document.documentElement.removeAttribute("data-theme");localStorage.setItem("hss_theme","light");}
+  else{document.documentElement.setAttribute("data-theme","dark");localStorage.setItem("hss_theme","dark");}
+  updateThemeIcon();
+});
+
+// ==================== LANGUAGE ====================
+document.getElementById("lang-selector").value = currentLang;
+document.getElementById("lang-selector").addEventListener("change",function(){
+  currentLang = this.value;
+  localStorage.setItem("hss_lang", currentLang);
+  applyTranslations();
+  // Re-render current question if quiz is active
+  if(document.getElementById("quiz-screen").classList.contains("active") && selectedQuestions.length > 0 && !quizLocked){
+    renderQuestion();
+  }
+});
+
+// 注意書きをアイコンつきリストとして構築（<br>連結より視覚的に区切れて実習生に読みやすい）
+function noticeHtml(){
+  var icons = ["🎬","🔒","✏️","📤","⏱","📵"];
+  var keys = ["notice6","notice1","notice2","notice3","notice4","notice5"];
+  var html = '<ul>';
+  keys.forEach(function(k,i){
+    var txt = (k === "notice3" || k === "notice5" || k === "notice6") ? tm(k) : t(k);
+    txt = fillNums(String(txt).replace(/^[※*]\s*/, ""), isDemo());
+    html += '<li><span class="ni">'+icons[i]+'</span><span>'+escHtml(txt)+'</span></li>';
+  });
+  return html + '</ul>';
+}
+
+function applyTranslations(){
+  document.documentElement.lang = currentLang;   // SR読み上げエンジンの言語切替(a11y)
+  document.getElementById("home-title").textContent = t("homeTitle");
+  document.getElementById("home-subtitle").textContent = t("homeSubtitle");
+  document.getElementById("badge-confirm").textContent = t("badgeConfirm");
+  document.getElementById("badge-exam").textContent = t("badgeExam");
+  document.getElementById("entry-confirm-title").textContent = t("entryConfirmTitle");
+  document.getElementById("entry-confirm-desc").textContent = t("entryConfirmDesc");
+  document.getElementById("entry-exam-title").textContent = t("entryExamTitle");
+  document.getElementById("entry-exam-desc").textContent = fillNums(t("entryExamDesc"), false);
+  document.getElementById("meta-q").textContent = fillNums(t("metaQ"), false);
+  document.getElementById("meta-t").textContent = fillNums(t("metaT"), false);
+  document.getElementById("meta-p").textContent = fillNums(t("metaP"), false);
+  document.getElementById("meta-confirm-a").textContent = t("metaConfirmA");
+  document.getElementById("meta-confirm-b").textContent = t("metaConfirmB");
+  document.getElementById("badge-demo").textContent = t("badgeDemo");
+  document.getElementById("entry-demo-title").textContent = t("entryDemoTitle");
+  document.getElementById("entry-demo-desc").textContent = fillNums(t("entryDemoDesc"), true);
+  document.getElementById("meta-demo-q").textContent = fillNums(t("metaDemoQ"), true);
+  document.getElementById("meta-demo-t").textContent = fillNums(t("metaDemoT"), true);
+  document.getElementById("meta-demo-p").textContent = t("metaDemoP");
+  document.getElementById("lang-note").textContent = t("langNote");
+  document.getElementById("footer-text").textContent = t("footer");
+  document.getElementById("confirm-name-title").textContent = t("confirmNameTitle");
+  document.getElementById("confirm-name-desc").textContent = t("confirmNameDesc");
+  document.getElementById("confirm-name-label").textContent = t("nameLabel");
+  document.getElementById("confirm-player-name").placeholder = t("namePlaceholder");
+  document.getElementById("confirm-name-error").textContent = t("nameError");
+  document.getElementById("confirm-name-note").textContent = t("nameNote");
+  document.getElementById("exam-name-note").textContent = t("nameNote");
+  document.getElementById("confirm-name-btn").textContent = t("nextBtn");
+  document.getElementById("confirm-back-btn").textContent = t("backBtn");
+  document.getElementById("confirm-q-title").textContent = t("confirmQTitle");
+  document.getElementById("confirm-q-desc").textContent = t("confirmQuestion");
+  document.getElementById("confirm-yes").textContent = t("yes");
+  document.getElementById("confirm-result-home").textContent = t("homeBtn");
+  document.getElementById("password-title").textContent = tm("passwordTitle");
+  document.getElementById("password-desc").textContent = tm("passwordDesc");
+  document.getElementById("password-label").textContent = t("passwordLabel");
+  document.getElementById("exam-password").placeholder = t("passwordPlaceholder");
+  document.getElementById("password-error-msg").textContent = t("passwordError");
+  document.getElementById("password-submit-btn").textContent = t("authBtn");
+  document.getElementById("password-back-btn").textContent = t("backBtn");
+  document.getElementById("exam-welcome-title").textContent = t("welcomeTitle");
+  document.getElementById("exam-welcome-desc").innerHTML = tm("welcomeDesc");
+  document.getElementById("exam-name-label").textContent = t("nameLabel");
+  document.getElementById("exam-player-name").placeholder = t("namePlaceholder");
+  document.getElementById("exam-name-error").textContent = t("nameError");
+  document.getElementById("ti-testname-label").textContent = t("testName");
+  document.getElementById("ti-testname-value").textContent = tm("testNameValue");
+  document.getElementById("ti-qcount-label").textContent = t("questionCount");
+  document.getElementById("ti-qcount-value").textContent = fillNums(tm("questionCountValue"), isDemo());
+  document.getElementById("ti-format-label").textContent = t("format");
+  document.getElementById("ti-format-value").textContent = fillNums(tm("formatValue"), isDemo());
+  document.getElementById("ti-time-label").textContent = t("timeLimit");
+  document.getElementById("ti-time-value").textContent = fillNums(tm("timeLimitValue"), isDemo());
+  document.getElementById("ti-pass-label").textContent = t("passCriteria");
+  document.getElementById("ti-pass-value").textContent = fillNums(t("passCriteriaValue"), isDemo());
+  document.getElementById("notice-box").innerHTML = noticeHtml();
+  document.getElementById("exam-start-btn").textContent = t("startBtn");
+  document.getElementById("timer-label").textContent = t("remainingTime");
+  document.getElementById("progress-label").textContent = tm("progressLabel");
+  document.getElementById("timeout-title").textContent = t("timeoutTitle");
+  document.getElementById("timeout-msg").innerHTML = t("timeoutMsg");
+  document.getElementById("swipe-hint").textContent = t("swipeHint");
+  document.getElementById("skip-link").textContent = t("skipLink");
+  document.getElementById("theme-toggle").setAttribute("aria-label",t("darkModeToggle"));
+  document.getElementById("theme-toggle").setAttribute("title",t("darkModeToggle"));
+  updateResumeBadge();
+}
+applyTranslations();
+
+// ==================== HOME SCREEN NAVIGATION ====================
+document.getElementById("entry-confirm").addEventListener("click",function(){ showScreen("confirm-name-screen"); document.getElementById("confirm-player-name").focus(); });
+document.getElementById("entry-confirm").addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();this.click();}});
+document.getElementById("entry-exam").addEventListener("click",function(){
+  if(_resumeData){ showResumeConfirm(_resumeData); return; }   // 中断中の試験があれば必ず再開確認へ
+  examMode = "exam";
+  applyTranslations();
+  showScreen("password-screen");
+  document.getElementById("exam-password").focus();
+});
+document.getElementById("entry-exam").addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();this.click();}});
+
+// デモ問題（練習用）
+(function(){
+  var card = document.getElementById("entry-demo");
+  if(!CONFIG.demo || !CONFIG.demo.enabled){ card.style.display = "none"; return; }
+  card.addEventListener("click",function(){
+    examMode = "demo";
+    applyTranslations();
+    if(CONFIG.demo.requirePassword){
+      showScreen("password-screen");
+      document.getElementById("exam-password").focus();
+    } else {
+      loadQuestions();
+    }
+  });
+  card.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();this.click();}});
+})();
+
+// ==================== CONFIRM FLOW ====================
+var confirmName = "";
+document.getElementById("confirm-name-btn").addEventListener("click",function(){
+  var input = document.getElementById("confirm-player-name");
+  var name = input.value.trim();
+  if(!name){input.classList.add("error");document.getElementById("confirm-name-error").classList.add("show");input.focus();return;}
+  input.classList.remove("error");document.getElementById("confirm-name-error").classList.remove("show");
+  confirmName = name;
+  document.getElementById("confirm-q-name").textContent = confirmName;
+  showScreen("confirm-question-screen");
+});
+document.getElementById("confirm-player-name").addEventListener("keydown",function(e){
+  if(e.key==="Enter") document.getElementById("confirm-name-btn").click();
+  this.classList.remove("error");document.getElementById("confirm-name-error").classList.remove("show");
+});
+document.getElementById("confirm-back-btn").addEventListener("click",function(){ showScreen("home-screen"); });
+
+function sendConfirmResult(answer){
+  var yesBtn = document.getElementById("confirm-yes");
+  yesBtn.disabled = true;
+
+  var isYes = answer === "yes";
+  var icon = isYes ? t("confirmResultYesIcon") : t("confirmResultNoIcon");
+  var title = isYes ? t("confirmResultYesTitle") : t("confirmResultNoTitle");
+  var msg = isYes ? t("confirmResultYesMsg").replace("{name}", confirmName) : t("confirmResultNoMsg").replace("{name}", confirmName);
+
+  // Show result screen immediately
+  var resultEl = document.getElementById("confirm-result-content");
+  resultEl.textContent = "";
+  var iconDiv = document.createElement("div"); iconDiv.className = "result-icon"; iconDiv.textContent = icon;
+  var h3 = document.createElement("h3"); h3.textContent = title;
+  var p = document.createElement("p"); p.textContent = msg;
+  resultEl.appendChild(iconDiv); resultEl.appendChild(h3); resultEl.appendChild(p);
+  showScreen("confirm-result-screen");
+
+  // 結果はスプレッドシートに確実記録（localStorage保持＋自動再送・重複排除）
+  var resultData = {
+    type: "confirm",
+    name: confirmName,
+    answer: answer,
+    date: formatDate(new Date()),
+    lang: currentLang,
+    submissionId: genSubmissionId("confirm")
+  };
+  reliableSubmit(resultData, { jitter: false });
+}
+document.getElementById("confirm-yes").addEventListener("click",function(){ sendConfirmResult("yes"); });
+document.getElementById("confirm-result-home").addEventListener("click",function(){ showScreen("home-screen"); });
+
+// ==================== PASSWORD FLOW ====================
+document.getElementById("password-submit-btn").addEventListener("click",function(){ verifyPassword(); });
+document.getElementById("exam-password").addEventListener("keydown",function(e){
+  if(e.key==="Enter") verifyPassword();
+  this.classList.remove("error");document.getElementById("password-error-msg").classList.remove("show");
+});
+document.getElementById("password-back-btn").addEventListener("click",function(){ showScreen("home-screen"); });
+
+async function verifyPassword(){
+  var input = document.getElementById("exam-password");
+  var pw = input.value;
+  if(!pw){input.classList.add("error");document.getElementById("password-error-msg").classList.add("show");return;}
+  var hash = await sha256(pw);
+  var expected = isDemo() ? CONFIG.demo.passwordHash : CONFIG.passwordHash;
+  if(hash === expected){
+    input.classList.remove("error");document.getElementById("password-error-msg").classList.remove("show");
+    input.value = "";
+    loadQuestions();
+  } else {
+    input.classList.add("error");
+    document.getElementById("password-error-msg").classList.add("show");
+    input.value = "";
+    input.focus();
+  }
+}
+
+// ==================== LOAD QUESTIONS ====================
+function loadQuestions(){
+  var cached = isDemo() ? demoQuestions : allQuestions;
+  if(cached.length > 0){ showScreen("exam-name-screen"); document.getElementById("exam-player-name").focus(); return; }
+  var file = isDemo() ? CONFIG.demo.questionsFile : "data/questions.json";
+  document.getElementById("loading-msg").textContent = t("loadingQuestions");
+  document.getElementById("loading-overlay").classList.add("show");
+  fetch(file)   // キャッシュバスターは付けない（SWのプリキャッシュと整合させ、オフラインでも開始できるようにする。鮮度はSWの背景更新+CACHE_NAME更新で担保）
+    .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+    .then(function(data){
+      if(isDemo()) demoQuestions = data; else allQuestions = data;
+      document.getElementById("loading-overlay").classList.remove("show");
+      showScreen("exam-name-screen");
+      document.getElementById("exam-player-name").focus();
+    })
+    .catch(function(err){
+      console.error("Failed to load questions:",err);
+      document.getElementById("loading-overlay").classList.remove("show");
+      alert("問題データの読み込みに失敗しました。ページを再読み込みしてください。");
+      showScreen(CONFIG.demo && CONFIG.demo.enabled && isDemo() && !CONFIG.demo.requirePassword ? "home-screen" : "password-screen");
+    });
+}
+
+// ==================== EXAM: NAME & START ====================
+document.getElementById("exam-start-btn").addEventListener("click",function(){ submitExamName(); });
+document.getElementById("exam-player-name").addEventListener("keydown",function(e){
+  if(e.key==="Enter") submitExamName();
+  this.classList.remove("error");document.getElementById("exam-name-error").classList.remove("show");
+});
+
+function submitExamName(){
+  var input = document.getElementById("exam-player-name");
+  var name = input.value.trim();
+  if(!name){input.classList.add("error");document.getElementById("exam-name-error").classList.add("show");input.focus();return;}
+  input.classList.remove("error");document.getElementById("exam-name-error").classList.remove("show");
+  playerName = name;
+  startQuiz();
+}
+
+// ==================== 離脱検知 / 画面ロック抑止 ====================
+// 同一端末で他アプリ・他タブへ移動したことを検知して回数と秒数を記録する。
+// 別端末での検索は原理的に検知できないため、あくまで抑止と事後判断の材料。
+function isExamActive(){
+  return document.getElementById("quiz-screen").classList.contains("active")
+      && selectedQuestions.length > 0 && !quizLocked;
+}
+
+// 自動画面ロックによる誤検知を防ぐ（対応端末のみ・非対応でも動作に影響なし）
+function requestWakeLock(){
+  if(!("wakeLock" in navigator)) return;
+  if(document.visibilityState !== "visible") return;
+  try {
+    navigator.wakeLock.request("screen").then(function(lock){
+      wakeLockObj = lock;
+      lock.addEventListener("release", function(){ wakeLockObj = null; });
+    }).catch(function(){ /* 非対応・拒否時は何もしない */ });
+  } catch(e){ /* noop */ }
+}
+function releaseWakeLock(){
+  if(!wakeLockObj) return;
+  try { wakeLockObj.release(); } catch(e){ /* noop */ }
+  wakeLockObj = null;
+}
+
+function resetAwayTracking(){
+  awayCount = 0; awaySeconds = 0; awayLog = []; awayStartedAt = null;
+  clearTimeout(awayWarnTimer);
+  document.getElementById("away-warning").classList.remove("show");
+}
+
+function showAwayWarning(sec){
+  var el = document.getElementById("away-warning");
+  el.textContent = tm("awayWarn").replace("{n}", awayCount).replace("{sec}", sec);
+  el.classList.add("show");
+  clearTimeout(awayWarnTimer);
+  awayWarnTimer = setTimeout(function(){ el.classList.remove("show"); }, 8000);
+}
+
+document.addEventListener("visibilitychange", function(){
+  if(document.hidden){
+    if(!isExamActive()) return;
+    awayStartedAt = Date.now();
+    saveProgress();   // アプリがこのままkillされても復帰できるよう直前状態を保存
+    return;
+  }
+  // 復帰時：WakeLockはバックグラウンドで解除されるため取り直す
+  if(isExamActive()) requestWakeLock();
+  // awayStartedAtがセットされるのは試験中のhiddenのみなので、ここでの精算は常に正当。
+  // 離脱中に時間切れ等で試験が終わっていた場合はsubmitQuiz側のsettleが先に精算している
+  var sec = settlePendingAway();
+  if(sec > 0 && isExamActive()) showAwayWarning(sec);
+});
+
+function awayLogText(){
+  if(awayLog.length === 0) return "";
+  var parts = awayLog.map(function(a){ return a.cb ? ("⚠時刻逆行(問" + a.q + ")") : ("問" + a.q + "(" + a.sec + "秒)"); });
+  var out = "", used = 0;
+  for(var i = 0; i < parts.length; i++){
+    var piece = (i > 0 ? " / " : "") + parts[i];
+    if(out.length + piece.length > 400){
+      var rest = awayLog.slice(i);
+      var restSec = rest.reduce(function(sum, a){ return sum + a.sec; }, 0);
+      out += " …他" + rest.length + "件(計" + restSec + "秒)";   // 無言切り捨てはしない
+      break;
+    }
+    out += piece;
+  }
+  return out;
+}
+
+// ==================== 進行保護（リロード/戻る/アプリ終了対策） ====================
+// 試験中の進行状態をlocalStorageへ保存し、リロード・誤スワイプ・クラッシュ後に自動復帰する。
+// 残り時間は開始時刻からの実時間で再計算するため、中断による時間稼ぎはできない。
+// 中断していた時間は離脱として計上する（アプリを閉じて調べる抜け道を塞ぐ）。
+var PROGRESS_KEY = "hssv_progress_v1";
+
+function saveProgress(){
+  if(isDemo()) return;   // デモは練習用のため永続化しない（翌日開いて突然「期限切れデモ」に放り込まない）
+  if(quizSubmitted || selectedQuestions.length === 0) return;
+  try{
+    var pool = isDemo() ? demoQuestions : allQuestions;
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+      v: 1,
+      mode: examMode,
+      name: playerName,
+      startEpoch: startTime.getTime(),
+      totalTime: totalTime,
+      qIdx: selectedQuestions.map(function(q){ return pool.indexOf(q); }),
+      opt: shuffledOptions.map(function(opts, i){ return opts.map(function(o){ return selectedQuestions[i].options.indexOf(o); }); }),
+      ua: userAnswers,
+      cur: currentQuestion,
+      vp: videoPlays, vw: videoWatched,
+      awayCount: awayCount, awaySeconds: awaySeconds, awayLog: awayLog,
+      clockAnomaly: clockAnomaly,
+      lastSeen: Date.now()
+    }));
+  }catch(e){ /* 容量超過等は諦める（機能自体は継続） */ }
+}
+function clearProgress(){ try{ localStorage.removeItem(PROGRESS_KEY); }catch(e){} }
+
+function tryResume(){
+  var raw; try{ raw = localStorage.getItem(PROGRESS_KEY); }catch(e){ return; }
+  if(!raw) return;
+  var p; try{ p = JSON.parse(raw); }catch(e){ clearProgress(); return; }
+  if(!p || p.v !== 1 || !Array.isArray(p.qIdx) || !p.startEpoch){ clearProgress(); return; }
+  if(p.mode === "demo"){ clearProgress(); return; }   // デモの進行は復元しない
+  examMode = "exam";
+  var file = isDemo() ? CONFIG.demo.questionsFile : "data/questions.json";
+  document.getElementById("loading-msg").textContent = t("loadingQuestions");
+  document.getElementById("loading-overlay").classList.add("show");
+  fetch(file)
+    .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(function(data){
+      if(isDemo()) demoQuestions = data; else allQuestions = data;
+      var pool = isDemo() ? demoQuestions : allQuestions;
+      selectedQuestions = p.qIdx.map(function(i){ return pool[i]; });
+      if(selectedQuestions.length === 0 || selectedQuestions.some(function(q){ return !q; })){
+        // 問題データが更新されて復元不能: 破棄してホームへ（採点不能な中途データを残さない）
+        clearProgress(); selectedQuestions = [];
+        document.getElementById("loading-overlay").classList.remove("show");
+        return;
+      }
+      shuffledOptions = selectedQuestions.map(function(q, i){
+        var order = (Array.isArray(p.opt) && Array.isArray(p.opt[i])) ? p.opt[i] : null;
+        if(order && order.every(function(oi){ return q.options[oi] !== undefined; })) return order.map(function(oi){ return q.options[oi]; });
+        return shuffle(q.options.slice());
+      });
+      userAnswers = (Array.isArray(p.ua) && p.ua.length === selectedQuestions.length) ? p.ua : new Array(selectedQuestions.length).fill(null);
+      videoPlays = (Array.isArray(p.vp) && p.vp.length === selectedQuestions.length) ? p.vp.map(function(x){ return x | 0; }) : new Array(selectedQuestions.length).fill(0);
+      videoWatched = (Array.isArray(p.vw) && p.vw.length === selectedQuestions.length) ? p.vw.map(function(x){ return x === true; }) : new Array(selectedQuestions.length).fill(false);
+      // 回答済みの問は当然「見た」扱い（保存形式が古くても回答済み問の選択肢を再び隠さない）
+      userAnswers.forEach(function(a, i){ if(a !== null) videoWatched[i] = true; });
+      currentQuestion = Math.min(Math.max(0, p.cur | 0), selectedQuestions.length - 1);
+      playerName = String(p.name || "");
+      awayCount = p.awayCount | 0; awaySeconds = p.awaySeconds | 0;
+      awayLog = Array.isArray(p.awayLog) ? p.awayLog : [];
+      // 中断していた時間を離脱として計上（3秒閾値は通常の離脱と同一基準）
+      var gapMs = Date.now() - (p.lastSeen || p.startEpoch);
+      if(gapMs < 0){
+        // 時計が過去に戻っている＝OS時計の巻き戻し(試験時間の延長工作)を検知。
+        // 完全防止は不可能だが、記録に残して管理者が判別できるようにする
+        clockAnomaly = true;
+        awayCount++;
+        awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+      } else if(gapMs >= AWAY_THRESHOLD_MS){
+        var gapSec = Math.round(gapMs / 1000);
+        awayCount++; awaySeconds += gapSec;
+        awayLog.push({ q: currentQuestion + 1, sec: gapSec });
+      }
+      if(p.clockAnomaly) clockAnomaly = true;   // 過去に検知済みなら引き継ぐ
+      quizLocked = false; quizSubmitted = false; score = 0; answers = [];
+      startTime = new Date(p.startEpoch);
+      totalTime = p.totalTime | 0;
+      document.getElementById("loading-overlay").classList.remove("show");
+      applyTranslations();
+      // 無断で再開・送信しない: 誰の試験か・何が起きるかを明示した確認画面を必ず挟む
+      // （共有端末で別人が開いた場合や、翌日に突然「時間切れ」が出る事故を防ぐ）
+      showResumeConfirm(p);
+    })
+    .catch(function(){
+      // 読み込み失敗: progressは残す（次回オンライン時に再開できる）
+      document.getElementById("loading-overlay").classList.remove("show");
+    });
+}
+window.addEventListener("load", function(){ try{ tryResume(); }catch(e){} });
+
+// ホームの本試験カードに「再開待ち」を表示（共有端末で試験官・本人が気づけるように）
+function updateResumeBadge(){
+  var el = document.getElementById("resume-waiting");
+  if(!el) return;
+  if(_resumeData){
+    el.textContent = t("resumeWaiting").replace("{name}", _resumeData.name || "");
+    el.style.display = "inline-block";
+  } else {
+    el.style.display = "none";
+  }
+}
+
+// 復帰確認画面: 「再開する」を押すまでタイマーも送信も動かさない
+// （残り時間は開始時刻からの実時間で計算するため、この画面で待っても時間は稼げない）
+// 「あとで」でホームへ戻れる（進行は保持）。共有端末でも他の機能（意志確認・デモ）が使える。
+// 進行の破棄機能は意図的に置かない: 期限が切れれば「送信して終了」で必ず端末は解放され、
+// 無警告で答案を破棄できる導線のほうが事故になるため。
+var _resumeData = null;
+function showResumeConfirm(p){
+  _resumeData = p;
+  var expired = (totalTime - Math.floor((Date.now() - p.startEpoch) / 1000)) <= 0;
+  document.getElementById("resume-title").textContent = t("resumeTitle");
+  var remain = Math.max(0, totalTime - Math.floor((Date.now() - p.startEpoch) / 1000));
+  var mm = Math.floor(remain / 60), ss = remain % 60;
+  var desc = expired
+    ? t("resumeExpiredDesc").replace("{name}", playerName)
+    : t("resumeDesc").replace("{name}", playerName).replace("{time}", mm + ":" + String(ss).padStart(2, "0")) + " " + t("resumeClockNote");
+  document.getElementById("resume-desc").textContent = desc;
+  var btn = document.getElementById("resume-btn");
+  btn.textContent = expired ? t("resumeSendBtn") : t("resumeBtn");
+  var laterBtn = document.getElementById("resume-later-btn");
+  laterBtn.textContent = t("resumeLaterBtn");
+  laterBtn.onclick = function(){
+    document.getElementById("resume-overlay").classList.remove("show");
+    updateResumeBadge();
+    showScreen("home-screen");
+  };
+  document.getElementById("resume-overlay").classList.add("show");
+  btn.focus();
+  btn.onclick = function(){
+    document.getElementById("resume-overlay").classList.remove("show");
+    var elapsed = Math.floor((Date.now() - p.startEpoch) / 1000);
+    timeRemaining = Math.max(0, totalTime - elapsed);
+    if(timeRemaining <= 0){
+      // 期限切れ: 保存済みの回答をそのまま採点・送信して終了（時間切れ扱い）
+      submitQuiz();
+    } else {
+      // 再開時も動画を手元にそろえてから出題する（失敗した分は再生時にネットワーク直読みへフォールバック）
+      preloadVideos(selectedQuestions).then(function(){
+        buildStepDots();
+        showScreen("quiz-screen");
+        renderQuestion();
+        pushExamGuard();
+        startTimer();
+        requestWakeLock();
+      });
+    }
+  };
+}
+
+// リロード・タブ閉じの直前警告（試験中/送信未完了中のみ）
+window.addEventListener("beforeunload", function(e){
+  if(isExamActive()){ saveProgress(); }   // lastSeenを最新化（リロード自体の数秒を離脱と誤計上しない）
+  if(isExamActive() || sendInFlight){ e.preventDefault(); e.returnValue = ""; }
+});
+// Android戻るジェスチャー対策: 試験中は履歴を1段積み、popstateで積み直して離脱を防ぐ
+function pushExamGuard(){ try{ history.pushState({ hssExam: true }, ""); }catch(e){} }
+window.addEventListener("popstate", function(){
+  if(isExamActive()){ pushExamGuard(); }
+});
+
+// ==================== 終了確認 ====================
+// 全問終えても、このダイアログで「試験を終了する」を押すまで採点・送信は行わない。
+function openFinishConfirm(){
+  if(quizLocked) return;
+  var total = selectedQuestions.length;
+  var answered = userAnswers.filter(function(a){ return a !== null; }).length;
+  var unanswered = total - answered;
+  document.getElementById("finish-title").textContent = t("finishTitle");
+  var summary = escHtml(t("finishSummary").replace("{answered}", answered).replace("{total}", total));
+  if(unanswered > 0){
+    summary += '<br><span class="finish-unanswered">' + escHtml(t("finishUnanswered").replace("{n}", unanswered)) + '</span>';
+  }
+  document.getElementById("finish-summary").innerHTML = summary;
+  document.getElementById("finish-warn").textContent = tm("finishWarn");
+  document.getElementById("finish-yes").textContent = t("finishYes");
+  document.getElementById("finish-no").textContent = t("finishNo");
+  document.getElementById("finish-overlay").classList.add("show");
+  document.getElementById("finish-no").focus();
+}
+function closeFinishConfirm(){
+  document.getElementById("finish-overlay").classList.remove("show");
+}
+document.getElementById("finish-yes").addEventListener("click", function(){
+  closeFinishConfirm();
+  submitQuiz();
+});
+document.getElementById("finish-no").addEventListener("click", closeFinishConfirm);
+
+// ==================== QUIZ ENGINE ====================
+function startQuiz(){
+  currentQuestion = 0; score = 0; answers = []; quizLocked = false; quizSubmitted = false;
+  clockAnomaly = false;
+  resetAwayTracking();
+  if(isDemo()){
+    // デモ: 固定問を順序シャッフルのみ（ランダム抽出なし）
+    selectedQuestions = shuffle(demoQuestions.slice());
+  } else {
+    selectedQuestions = selectExamQuestions(allQuestions, CONFIG.test.questionsPerTest);
+  }
+  userAnswers = new Array(selectedQuestions.length).fill(null);
+  shuffledOptions = selectedQuestions.map(function(q){ return shuffle(q.options.slice()); });
+  videoPlays = new Array(selectedQuestions.length).fill(0);
+  videoWatched = new Array(selectedQuestions.length).fill(false);
+  totalTime = modeConf().timeLimit * 60;
+  // 動画を全部そろえてから時計を動かす（通信待ちを試験時間から除く）
+  preloadVideos(selectedQuestions).then(function(res){
+    if(res.failed.length > 0){
+      document.getElementById("loading-overlay").classList.remove("show");
+      selectedQuestions = [];
+      alert(t("preloadFail").replace("{n}", res.failed.length));
+      return;
+    }
+    timeRemaining = totalTime;
+    startTime = new Date();
+    buildStepDots();
+    showScreen("quiz-screen");
+    renderQuestion();
+    startTimer();
+    requestWakeLock();
+    pushExamGuard();
+    saveProgress();
+  });
+}
+
+// 出題ルール（hss-exam-video）: required=true は必ず出題し、残りをプールからランダムに補充して n 問にする。
+// プールが n 問以下なら全問出題。順序は毎回シャッフル。verify_logic.js と同一ロジックにすること。
+function selectExamQuestions(pool, n){
+  var fixed = pool.filter(function(q){ return q.required === true; });
+  var rest = pool.filter(function(q){ return q.required !== true; });
+  var need = Math.max(0, (n | 0) - fixed.length);
+  return shuffle(fixed.concat(shuffle(rest).slice(0, need)));
+}
+
+// ==================== 動画の事前読込（hss-exam-video） ====================
+// 各動画を fetch→Blob→objectURL にして手元に置く。理由:
+//  (1) 出題中に通信が切れても最後まで受験できる
+//  (2) <video> の Range リクエストを Service Worker が中途半端にキャッシュする事故を避ける
+//  (3) 準備完了までタイマーを止め、通信待ちを試験時間に含めない
+function preloadVideos(qs){
+  var paths = [];
+  qs.forEach(function(q){ if(q.video && paths.indexOf(q.video) < 0 && !videoUrls[q.video]) paths.push(q.video); });
+  var total = paths.length, done = 0, failed = [];
+  var msgEl = document.getElementById("loading-msg");
+  var overlay = document.getElementById("loading-overlay");
+  var bar = document.getElementById("preload-fill");
+  function progress(){
+    msgEl.textContent = t("preparingVideos").replace("{n}", done).replace("{m}", total);
+    if(bar) bar.style.width = (total ? Math.round(done / total * 100) : 100) + "%";
+  }
+  if(total === 0) return Promise.resolve({ failed: [] });
+  overlay.classList.add("show");
+  var note = document.getElementById("preload-note");
+  if(note) note.textContent = t("preparingVideosNote");
+  progress();
+  // 同時4本まで（会場Wi-Fiで数十台が一斉に始めても詰まりにくい数）
+  var idx = 0;
+  function worker(){
+    if(idx >= paths.length) return Promise.resolve();
+    var p = paths[idx++];
+    return fetch(p, { cache: "force-cache" })
+      .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.blob(); })
+      .then(function(b){ if(b.size === 0) throw new Error("empty"); videoUrls[p] = URL.createObjectURL(b); })
+      .catch(function(){ failed.push(p); })
+      .then(function(){ done++; progress(); return worker(); });
+  }
+  var workers = []; for(var i = 0; i < 4; i++) workers.push(worker());
+  return Promise.all(workers).then(function(){
+    if(failed.length === 0) overlay.classList.remove("show");
+    if(note) note.textContent = "";
+    if(bar) bar.style.width = "0%";
+    return { failed: failed };
+  });
+}
+
+// ==================== 動画の再生・ゲート（hss-exam-video） ====================
+var _videoBound = false;
+var _videoState = "idle";   // idle | playing | paused | ended
+function playsLeftText(){
+  var mp = maxPlays();
+  if(mp <= 0) return t("videoPlaysUnlimited");
+  var left = Math.max(0, mp - (videoPlays[currentQuestion] | 0));
+  return left > 0 ? t("videoPlaysLeft").replace("{n}", left) : t("videoPlaysNone");
+}
+function canStartPlay(){ var mp = maxPlays(); return mp <= 0 || (videoPlays[currentQuestion] | 0) < mp; }
+function setOptionsGate(){
+  var gated = !videoWatched[currentQuestion];
+  document.getElementById("q-options").classList.toggle("gated", gated);
+  var note = document.getElementById("video-gate-note");
+  note.classList.toggle("hidden", !gated);
+  note.textContent = t("videoGate");
+}
+function updateVideoOverlay(){
+  var ov = document.getElementById("video-overlay");
+  var btn = document.getElementById("video-play-btn");
+  var pl = document.getElementById("video-plays");
+  if(_videoState === "playing"){ ov.classList.add("hidden"); return; }
+  ov.classList.remove("hidden");
+  if(_videoState === "paused"){ btn.textContent = t("videoResume"); btn.disabled = false; }
+  else if(videoWatched[currentQuestion] || _videoState === "ended"){ btn.textContent = t("videoReplay"); btn.disabled = !canStartPlay(); }
+  else { btn.textContent = t("videoPlay"); btn.disabled = !canStartPlay(); }
+  pl.textContent = playsLeftText();
+}
+function bindVideoOnce(){
+  if(_videoBound) return; _videoBound = true;
+  var v = document.getElementById("q-video");
+  var btn = document.getElementById("video-play-btn");
+  btn.addEventListener("click", function(){
+    if(quizLocked) return;
+    if(_videoState === "paused"){ v.play().catch(function(){}); return; }   // 途中再開は回数に数えない
+    if(!canStartPlay()) return;
+    videoPlays[currentQuestion] = (videoPlays[currentQuestion] | 0) + 1;
+    try{ v.currentTime = 0; }catch(e){}
+    var p = v.play();
+    if(p && p.catch) p.catch(function(){ _videoState = "paused"; updateVideoOverlay(); });
+    saveProgress();
+  });
+  v.addEventListener("play", function(){ _videoState = "playing"; updateVideoOverlay(); });
+  v.addEventListener("pause", function(){ if(!v.ended){ _videoState = "paused"; updateVideoOverlay(); } });
+  v.addEventListener("ended", function(){
+    _videoState = "ended";
+    if(!videoWatched[currentQuestion]){
+      videoWatched[currentQuestion] = true;
+      renderOptions();     // ゲート解除＝ここで初めて選択肢を描く
+      setOptionsGate();
+    }
+    updateVideoOverlay();
+    saveProgress();
+  });
+  v.addEventListener("error", function(){ _videoState = "paused"; updateVideoOverlay(); document.getElementById("video-plays").textContent = t("videoError"); });
+  // 早送り封じ: controls無し・ダブルタップ等でシークされたら先頭以外は戻す（最後まで見る＝ゲートの意味を守る）
+  var lastT = 0;
+  v.addEventListener("timeupdate", function(){ if(!v.seeking) lastT = v.currentTime; });
+  v.addEventListener("seeking", function(){ if(v.currentTime > lastT + 1.5){ try{ v.currentTime = lastT; }catch(e){} } });
+  // 試験中に画面を離れた時は動画も止める（離脱検知と整合。戻れば「続きから再生」）
+  document.addEventListener("visibilitychange", function(){ if(document.hidden && !v.paused){ v.pause(); } });
+}
+function renderVideo(q){
+  bindVideoOnce();
+  var wrap = document.getElementById("video-wrap");
+  var v = document.getElementById("q-video");
+  _videoState = "idle";
+  if(!q.video){
+    // 動画なし問題（互換）: ゲートを外してテキスト問題として出す
+    wrap.style.display = "none";
+    videoWatched[currentQuestion] = true;
+    return;
+  }
+  wrap.style.display = "";
+  var src = videoUrls[q.video] || q.video;
+  if(v.getAttribute("data-src") !== src){
+    v.pause();
+    v.setAttribute("data-src", src);
+    v.src = src;
+    v.load();
+  } else {
+    v.pause(); try{ v.currentTime = 0; }catch(e){}
+  }
+  updateVideoOverlay();
+}
+
+function buildStepDots(){
+  var dots = document.getElementById("step-dots");
+  var html = "";
+  for(var i=0;i<selectedQuestions.length;i++){
+    html += '<div class="step-dot" id="dot-'+i+'" data-index="'+i+'"></div>';
+  }
+  dots.innerHTML = html;
+  document.querySelectorAll(".step-dot").forEach(function(dot){
+    dot.addEventListener("click",function(){
+      if(quizLocked) return;
+      currentQuestion = parseInt(this.getAttribute("data-index"));
+      renderQuestion();
+    });
+  });
+}
+
+function updateStepDots(){
+  for(var i=0;i<selectedQuestions.length;i++){
+    var dot = document.getElementById("dot-"+i);
+    if(!dot) continue;
+    dot.className = "step-dot";
+    if(userAnswers[i] !== null) dot.classList.add("answered");
+    if(i === currentQuestion) dot.classList.add("current");
+  }
+}
+
+function startTimer(){
+  clearInterval(timerInterval);
+  var timerStartedAt = Date.now();
+  var timerStartRemaining = timeRemaining;
+  updateTimerDisplay();
+  timerInterval = setInterval(function(){
+    var elapsed = Math.floor((Date.now() - timerStartedAt) / 1000);
+    if(elapsed < 0){
+      // 画面を前面に保ったままOS時計を巻き戻された(resume/hidden経路を通らない第3の経路)。
+      // 残り時間は増やさず、基準点を張り直して痕跡を残す
+      clockAnomaly = true;
+      awayCount++;
+      awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+      timerStartedAt = Date.now();
+      timerStartRemaining = timeRemaining;
+      elapsed = 0;
+    }
+    timeRemaining = Math.max(0, timerStartRemaining - elapsed);
+    updateTimerDisplay();
+    if(timeRemaining <= 0){ clearInterval(timerInterval); onTimeout(); }
+  }, 250);
+}
+
+function updateTimerDisplay(){
+  var mins = Math.floor(Math.max(0,timeRemaining)/60);
+  var secs = Math.max(0,timeRemaining)%60;
+  var display = document.getElementById("timer-display");
+  var circle = document.getElementById("timer-circle");
+  var circleText = document.getElementById("timer-circle-text");
+  display.textContent = String(mins).padStart(2,"0")+":"+String(secs).padStart(2,"0");
+  circleText.textContent = mins+"m";
+  var progress = Math.min(1, timeRemaining / totalTime);
+  circle.style.strokeDashoffset = TIMER_CIRCUMFERENCE * (1 - progress);
+  display.className = "timer-display";
+  circle.setAttribute("class","timer-circle-fg");
+  circleText.className = "timer-circle-text";
+  if(timeRemaining <= 60){ display.classList.add("danger"); circle.classList.add("danger"); circleText.classList.add("danger"); }
+  else if(timeRemaining <= totalTime * 0.25){ display.classList.add("warning"); circle.classList.add("warning"); circleText.classList.add("warning"); }
+}
+
+function onTimeout(){
+  quizLocked = true;
+  closeFinishConfirm();   // 確認ダイアログ表示中でも時間切れは強制終了
+  document.querySelectorAll(".option-btn").forEach(function(b){b.disabled=true;});
+  document.getElementById("timeout-overlay").classList.add("show");
+  setTimeout(function(){ document.getElementById("timeout-overlay").classList.remove("show"); submitQuiz(); }, 2500);
+}
+
+function renderQuestion(){
+  var q = selectedQuestions[currentQuestion];
+  var total = selectedQuestions.length;
+  document.getElementById("step-current").textContent = (currentQuestion+1)+" / "+total;
+  var answeredCount = userAnswers.filter(function(a){return a!==null;}).length;
+  document.getElementById("progress-fill").style.width = (answeredCount/total)*100+"%";
+  document.getElementById("progress-bar-el").setAttribute("aria-valuenow", Math.round((answeredCount/total)*100));
+  updateStepDots();
+  var badge = document.getElementById("q-category");
+  badge.textContent = getCatName(q.category);
+  badge.className = "category-badge "+getCategoryClass(q.category);
+  document.getElementById("q-section-title").textContent = t("question")+(currentQuestion+1);
+  document.getElementById("q-label").textContent = getQ(q,"question");
+  renderVideo(q);
+  // 選択肢は「動画を最後まで見た」問だけ描画する（DOMにも置かない＝キー操作や開発者ツールで先に選べない）
+  if(videoWatched[currentQuestion]) renderOptions(); else document.getElementById("q-options").innerHTML = "";
+  setOptionsGate();
+  var card = document.getElementById("question-card");
+  card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
+  updateNavButtons();
+  saveProgress();
+}
+
+function renderOptions(){
+  var q = selectedQuestions[currentQuestion];
+  var jaOpts = shuffledOptions[currentQuestion];
+  var optHTML = "";
+  var currentAnswer = userAnswers[currentQuestion];
+  jaOpts.forEach(function(jaOpt,i){
+    var origIdx = q.options.indexOf(jaOpt);
+    var langKey = currentLang === "id" ? "ind" : currentLang;
+    var displayOpt = (currentLang !== "ja" && q[langKey] && q[langKey].options) ? q[langKey].options[origIdx] : jaOpt;
+    var sel = (currentAnswer === i) ? " selected" : "";
+    var checked = (currentAnswer === i) ? "true" : "false";
+    optHTML += '<button class="option-btn'+sel+'" data-index="'+i+'" role="radio" aria-checked="'+checked+'" tabindex="0"><span class="option-letter">'+String.fromCharCode(65+i)+'</span><span>'+escHtml(displayOpt)+'</span></button>';
+  });
+  document.getElementById("q-options").innerHTML = optHTML;
+  document.querySelectorAll(".option-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){ selectAnswer(this, parseInt(this.getAttribute("data-index"))); });
+  });
+}
+
+function selectAnswer(btn, selectedIndex){
+  if(quizLocked) return;
+  userAnswers[currentQuestion] = selectedIndex;
+  document.querySelectorAll(".option-btn").forEach(function(b){b.classList.remove("selected");b.setAttribute("aria-checked","false");});
+  btn.classList.add("selected"); btn.setAttribute("aria-checked","true");
+  updateStepDots();
+  var answeredCount = userAnswers.filter(function(a){return a!==null;}).length;
+  document.getElementById("progress-fill").style.width = (answeredCount/selectedQuestions.length)*100+"%";
+  updateNavButtons();
+  saveProgress();
+}
+
+function updateNavButtons(){
+  var prevBtn = document.getElementById("prev-btn");
+  var nextBtn = document.getElementById("next-btn");
+  prevBtn.disabled = (currentQuestion === 0);
+  prevBtn.textContent = t("prev");
+  var isLast = (currentQuestion === selectedQuestions.length - 1);
+  if(isLast){
+    nextBtn.textContent = t("submit");
+    nextBtn.className = "nav-btn primary";
+    nextBtn.disabled = false;
+  } else {
+    nextBtn.textContent = t("next");
+    nextBtn.className = "nav-btn primary";
+    nextBtn.disabled = (userAnswers[currentQuestion] === null);
+  }
+  var parent = prevBtn.parentNode;
+  var newPrev = prevBtn.cloneNode(true);
+  var newNext = nextBtn.cloneNode(true);
+  parent.replaceChild(newPrev, prevBtn);
+  parent.replaceChild(newNext, parent.lastElementChild);
+  newPrev.addEventListener("click",function(){goPrev();});
+  newNext.addEventListener("click",function(){
+    if(currentQuestion === selectedQuestions.length - 1) openFinishConfirm();
+    else goNext();
+  });
+}
+
+function goNext(){ if(currentQuestion < selectedQuestions.length-1){currentQuestion++;renderQuestion();} }
+function goPrev(){ if(currentQuestion > 0){currentQuestion--;renderQuestion();} }
+
+// Keyboard
+document.addEventListener("keydown",function(e){
+  if(!document.getElementById("quiz-screen").classList.contains("active")) return;
+  if(quizLocked) return;
+  // オーバーレイ表示中はクイズへのキー入力を通さない（回答書換や開閉チャタリングを防ぐ）
+  if(["finish-overlay","timeout-overlay","resume-overlay"].some(function(id){
+    var el = document.getElementById(id); return el && el.classList.contains("show");
+  })) return;
+  var btns = document.querySelectorAll(".option-btn");
+  if(btns.length === 0) return;
+  if(e.key>="1" && e.key<="9"){var idx=parseInt(e.key)-1;if(idx<btns.length){btns[idx].click();e.preventDefault();}}
+  if(e.key==="Enter" && userAnswers[currentQuestion]!==null){
+    if(currentQuestion===selectedQuestions.length-1) openFinishConfirm();
+    else goNext();
+    e.preventDefault();
+  }
+});
+
+// Swipe
+(function(){
+  var sx=0,sy=0,ex=0,ey=0,minD=50,maxV=100;
+  var qs = document.getElementById("quiz-screen");
+  qs.addEventListener("touchstart",function(e){sx=e.changedTouches[0].screenX;sy=e.changedTouches[0].screenY;},{passive:true});
+  qs.addEventListener("touchend",function(e){
+    ex=e.changedTouches[0].screenX;ey=e.changedTouches[0].screenY;
+    var dx=ex-sx,dy=Math.abs(ey-sy);
+    if(Math.abs(dx)<minD||dy>maxV) return;
+    if(quizLocked||!qs.classList.contains("active")) return;
+    if(dx<0 && currentQuestion<selectedQuestions.length-1 && userAnswers[currentQuestion]!==null) goNext();
+    else if(dx>0 && currentQuestion>0) goPrev();
+  },{passive:true});
+})();
+
+// ==================== SUBMIT QUIZ ====================
+var quizSubmitted = false;   // submitQuizの再入防止（終了確認クリックと時間切れの競合による二重送信を防ぐ）
+var sendInFlight = false;    // 結果送信中フラグ（送信完了前の離脱をbeforeunloadで警告する）
+
+// 離脱中のまま試験が終わるケース（時間切れをまたぐ離脱＝最も疑わしい長時間離脱）を
+// 取りこぼさないよう、未精算の離脱をロック前に計上する
+function settlePendingAway(){
+  if(awayStartedAt === null) return 0;
+  var ms = Date.now() - awayStartedAt;
+  awayStartedAt = null;
+  if(ms < 0){   // 離脱中に時計が巻き戻された
+    clockAnomaly = true;
+    awayCount++;
+    awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+    return 0;
+  }
+  if(ms < AWAY_THRESHOLD_MS) return 0;
+  var sec = Math.round(ms / 1000);
+  awayCount++;
+  awaySeconds += sec;
+  awayLog.push({ q: currentQuestion + 1, sec: sec });
+  return sec;
+}
+
+function submitQuiz(){
+  if(quizSubmitted) return;
+  quizSubmitted = true;
+  clearProgress();
+  _resumeData = null;
+  updateResumeBadge();
+  settlePendingAway();
+  quizLocked = true;
+  clearInterval(timerInterval);
+  releaseWakeLock();
+  clearTimeout(awayWarnTimer);
+  document.getElementById("away-warning").classList.remove("show");
+  score = 0;
+  answers = [];
+  for(var i=0;i<selectedQuestions.length;i++){
+    var q = selectedQuestions[i];
+    var uaIdx = userAnswers[i];
+    var jaSelectedOpt = (uaIdx !== null) ? shuffledOptions[i][uaIdx] : null;
+    var isCorrect = (jaSelectedOpt === q.answer);
+    if(isCorrect) score++;
+    answers.push({
+      userAnswerIndex: uaIdx,
+      userAnswer: jaSelectedOpt || "（未回答）",
+      correctAnswer: q.answer,
+      question: q.question,
+      category: q.category,
+      correct: jaSelectedOpt ? isCorrect : false,
+      explanation: q.explanation,
+      questionIndex: i,
+      video: q.video || "",
+      plays: videoPlays[i] | 0
+    });
+  }
+  finishQuiz();
+}
+
+function finishQuiz(){
+  showScreen("results-screen");
+  var total = selectedQuestions.length;
+  var pct = Math.round((score/total)*100);
+  var endTime = new Date();
+  var elapsed = Math.max(0, Math.round((endTime - startTime)/1000));
+  var elapsedMin = Math.floor(elapsed/60);
+  var elapsedSec = elapsed%60;
+  var timedOut = timeRemaining <= 0;
+
+  var html;
+  if(isDemo()){
+    // デモ: 練習用なので正答率・合否・カテゴリ別成績・正解と解説まで表示する
+    html = buildDemoResultHtml(total, pct, elapsedMin, elapsedSec, timedOut);
+  } else {
+    // 本試験: 受験者には合否・正答率・振り返りを一切表示しない（採点結果は管理者へ送信のみ）
+    html = '<div class="exam-done"><div class="exam-done-icon">✅</div>';
+    html += '<h3 class="exam-done-title">'+escHtml(t("doneTitle"))+'</h3>';
+    html += '<p class="exam-done-msg">'+escHtml(t("doneMsg"))+'</p>';
+    html += '<p class="exam-done-keep">'+escHtml(t("doneKeepOpen"))+'</p></div>';
+  }
+
+  html += '<div class="submit-notice" id="submit-notice">'+escHtml(isDemo() ? tm("autoSent") : t("sending"))+'</div>';
+  html += '<div class="results-actions">';
+  html += '<button class="btn-submit" id="submit-btn" style="display:none">'+escHtml(t("submitBtn"))+'</button>';
+  // retry button removed
+  html += '<button class="btn-home" id="results-home-btn">'+escHtml(t("homeBtn"))+'</button>';
+  html += '</div>';
+
+  var card = document.getElementById("results-card");
+  card.innerHTML = html;
+  card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
+
+  // retry button removed
+  document.getElementById("results-home-btn").addEventListener("click",function(){ showScreen("home-screen"); });
+
+  // デモは結果をどこにも送信しない
+  if(isDemo()) return;
+  autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec);
+}
+
+// デモ問題の結果画面（正答率・合否・カテゴリ別・正解と解説）
+function buildDemoResultHtml(total, pct, elapsedMin, elapsedSec, timedOut){
+  var passRate = modeConf().passRate;
+  var passed = pct >= passRate;
+  var msg = passed ? tm("pass") : tm("fail");
+  if(pct === 100) msg = tm("perfect");
+
+  var html = '<div class="question-section-title">'+escHtml(tm("resultTitle"))+'</div>';
+  html += '<div class="score-circle '+(passed ? "score-pass" : "score-fail")+'"><div class="score-pct">'+pct+'%</div><div class="score-label">'+escHtml(t("correctRate"))+'</div></div>';
+  html += '<div class="score-detail">'+escHtml(t("scoreDetail").replace("{total}",total).replace("{score}",score))+'</div>';
+  html += '<div class="score-msg">'+escHtml(msg)+'</div>';
+  html += '<div class="results-meta">';
+  html += '<div><strong>'+escHtml(t("examinee"))+'</strong>'+escHtml(playerName)+'</div>';
+  html += '<div><strong>'+escHtml(t("examDate"))+'</strong>'+formatDate(startTime)+'</div>';
+  html += '<div><strong>'+escHtml(t("timeLimitLabel"))+'</strong>'+modeConf().timeLimit+t("minutes")+'</div>';
+  html += '<div><strong>'+escHtml(t("elapsed"))+'</strong>'+elapsedMin+t("minutes")+String(elapsedSec).padStart(2,"0")+t("seconds");
+  if(timedOut) html += ' <span style="color:var(--danger);font-weight:700;">'+escHtml(t("timedOut"))+'</span>';
+  html += '</div>';
+  html += '<div><strong>'+escHtml(t("passCriteriaLabel"))+'</strong>'+t("passCriteriaDetail").replace("{rate}",passRate)+'</div>';
+  if(awayCount > 0){
+    html += '<div><strong>'+escHtml(t("awayLabel"))+'</strong>'+awayCount+t("awayTimes")+' / '+awaySeconds+t("seconds")+'</div>';
+  }
+  html += '<div><strong>'+escHtml(t("videoPlaysLabel"))+'</strong>'+videoPlays.reduce(function(s,x){ return s+(x|0); },0)+t("awayTimes")+'</div>';
+  html += '</div>';
+
+  // カテゴリ別成績
+  var catStats = {};
+  answers.forEach(function(a){if(!catStats[a.category])catStats[a.category]={correct:0,total:0};catStats[a.category].total++;if(a.correct)catStats[a.category].correct++;});
+  html += '<div class="category-stats"><h3>'+escHtml(t("categoryStats"))+'</h3>';
+  Object.keys(catStats).forEach(function(cat){
+    var s=catStats[cat];var catPct=Math.round((s.correct/s.total)*100);
+    var fillClass=catPct>=70?"good":(catPct>=50?"mid":"bad");
+    html += '<div class="cat-stat-row"><span class="cat-stat-name">'+escHtml(getCatName(cat))+'</span><div class="cat-stat-bar"><div class="cat-stat-fill '+fillClass+'" style="width:'+catPct+'%"><span class="cat-stat-pct">'+catPct+'%</span></div></div><span class="cat-stat-score">'+s.correct+'/'+s.total+'</span></div>';
+  });
+  html += '</div>';
+
+  // 振り返り（正解と解説つき＝デモの目玉）
+  html += '<div class="review-section"><h3>'+escHtml(t("reviewTitle"))+'</h3>';
+  answers.forEach(function(a,i){
+    var q = selectedQuestions[a.questionIndex];
+    var displayQuestion = getQ(q,"question");
+    var itemClass="review-correct";var mark='<span class="correct-mark">'+escHtml(t("correct"))+'</span>';
+    if(a.userAnswer==="（未回答）"){itemClass="review-unanswered";mark='<span class="wrong-mark">'+escHtml(t("unanswered"))+'</span>';}
+    else if(!a.correct){itemClass="review-wrong";mark='<span class="wrong-mark">'+escHtml(t("incorrect"))+'</span>';}
+    var langKey = currentLang === "id" ? "ind" : currentLang;
+    var ansIdx = q.options.indexOf(a.correctAnswer);
+    var displayAnswer = (currentLang !== "ja" && q[langKey] && q[langKey].options && ansIdx >= 0)
+      ? q[langKey].options[ansIdx] : a.correctAnswer;
+    var displayExpl = getQ(q, "explanation") || "";
+    html += '<div class="review-item '+itemClass+'"><div class="review-q">'+escHtml(t("question"))+(i+1)+'（'+escHtml(getCatName(a.category))+'）：'+escHtml(displayQuestion)+'</div><div class="review-a">'+mark+'</div>';
+    html += '<div class="review-answer"><strong>'+escHtml(t("correctAnswerLabel"))+'</strong>'+escHtml(displayAnswer)+'</div>';
+    if(displayExpl) html += '<div class="review-expl">'+escHtml(t("explanationLabel"))+escHtml(displayExpl)+'</div>';
+    html += '</div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
+  var total = selectedQuestions.length;
+  var passOrFail = pct >= CONFIG.test.passRate ? "合格" : "不合格";
+  var dateStr = formatDate(startTime);
+
+  var resultData = {
+    type: "exam",
+    name: playerName,
+    date: dateStr,
+    score: score,
+    total: total,
+    percentage: pct,
+    passRate: CONFIG.test.passRate,
+    result: passOrFail,
+    timeLimit: CONFIG.test.timeLimit,
+    elapsed: elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒",
+    timedOut: timedOut,
+    lang: currentLang,
+    awayCount: awayCount,
+    awaySeconds: awaySeconds,
+    awayDetail: awayLogText(),
+    videoPlaysTotal: videoPlays.reduce(function(s,x){ return s + (x|0); }, 0),
+    videoPlaysDetail: videoPlays.map(function(x,i){ return (i+1)+":"+(x|0); }).join(" "),
+    answers: answers.map(function(a,i){
+      return {
+        num: i+1,
+        category: a.category,
+        question: a.question,
+        userAnswer: a.userAnswer,
+        correctAnswer: a.correctAnswer,
+        correct: a.correct,
+        video: a.video,
+        plays: a.plays
+      };
+    })
+  };
+
+  resultData.submissionId = genSubmissionId("exam");
+  var notice = document.getElementById("submit-notice");
+  sendInFlight = true;
+  // 時間切れ組は最大180秒のジッターで分散送信されるため、無言の「送信中...」で
+  // 固まったと誤認されないよう、待ち時間の目安を明示する
+  notice.textContent = timedOut ? t("sendingSlow") : t("sending");
+  reliableSubmit(resultData, { jitterMax: timedOut ? 180000 : SUBMIT_JITTER_MS, onStatus: function(state){
+    if(state === "sending") notice.textContent = timedOut ? t("sendingSlow") : t("sending");
+    else if(state === "done") notice.textContent = t("autoSent");
+  }}).then(function(success){
+    sendInFlight = false;
+    if(success){ notice.textContent = t("autoSent"); notice.classList.add("sent-ok"); }
+    else { showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); }
+  }).catch(function(){
+    sendInFlight = false;
+    showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec);
+  });
+}
+
+function showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec){
+  var keep = document.querySelector(".exam-done-keep");
+  if(keep) keep.style.display = "none";   // 「✅が出るまで待て」と「開き直せば再送」の同時表示を避ける
+  document.getElementById("submit-notice").innerHTML = escHtml(t("autoSentFail"));
+  var btn = document.getElementById("submit-btn");
+  btn.style.display = "block";
+  // onclick方式: downloadAndMailtoが後からハンドラを差し替える（addEventListenerだと二重登録になる）
+  btn.onclick = function(){ manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); };
+}
+
+function manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec){
+  var btn = document.getElementById("submit-btn");
+  if(btn.disabled) return;
+  btn.disabled = true; btn.textContent = t("processing");
+  var total = selectedQuestions.length;
+  var subject = CONFIG.email.subjectExam.replace("{name}", playerName);
+  // メール本文は要約のみ（mailto URLの実用上限≈2KBを超えないため。全回答はExcel側にのみ載せる）
+  // 得点・合否・正解・正誤は受験者の端末に残るため一切含めない（管理者側で採点する）
+  var body = "HSS認定 本試験 受験記録（未採点・管理者採点用）\n================================\n";
+  body += "受験者名："+playerName+"\n受験日時："+dateStr+"\n";
+  body += "所要時間："+elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"+(timedOut?"（時間切れ）":"")+"\n";
+  body += "離脱："+awayCount+"回 / 計"+awaySeconds+"秒"+(awayLogText()?"（"+awayLogText()+"）":"")+"\n";
+  body += "================================\n";
+  body += "※ 自動送信に失敗した受験記録です。回答内容は、端末にダウンロードされた\n";
+  body += "  Excelファイルをこのメールに添付して送ってください。\n";
+  body += "※ 添付が難しい場合も、受験者が電波の良い場所でアプリを開き直せば自動再送されます。\n";
+
+  // Excel generation + mailto fallback
+  generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec, btn);
+}
+
+function generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec, btn){
+  var total = selectedQuestions.length;
+  var fileName = "HSS_本試験_"+playerName+"_"+startTime.getFullYear()+String(startTime.getMonth()+1).padStart(2,"0")+String(startTime.getDate()).padStart(2,"0")+".xlsx";
+
+  if(typeof XLSX !== "undefined"){
+    try {
+      // 受験者の端末に保存されるファイルのため、得点・合否・正解・正誤は含めない（管理者採点用の記録のみ）
+      var wb = XLSX.utils.book_new();
+      var s1 = [["HSS認定 本試験 受験記録（未採点・管理者採点用）"],["株式会社ヒラノ HSS認定制度"],[],
+        ["受験者名",playerName],["受験日時",dateStr],
+        ["制限時間",CONFIG.test.timeLimit+"分"],["所要時間",elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"],
+        ["時間切れ",timedOut?"はい":"いいえ"],[],
+        ["離脱回数",awayCount+"回"],["離脱時間合計",awaySeconds+"秒"],["離脱の内訳",awayLogText()||"なし"],[],
+        ["備考","自動送信に失敗したため未採点の記録です。問題マスタと照合して採点してください。"]];
+      var ws1 = XLSX.utils.aoa_to_sheet(s1);ws1["!cols"]=[{wch:18},{wch:50}];
+      XLSX.utils.book_append_sheet(wb,ws1,"受験記録");
+
+      var s2 = [["問番号","カテゴリ","問題","受験者の回答"]];
+      answers.forEach(function(a,i){
+        s2.push([i+1,a.category,a.question,a.userAnswer]);
+      });
+      var ws2 = XLSX.utils.aoa_to_sheet(s2);ws2["!cols"]=[{wch:8},{wch:12},{wch:50},{wch:35}];
+      XLSX.utils.book_append_sheet(wb,ws2,"回答内容");
+
+      var wbOut = XLSX.write(wb,{bookType:"xlsx",type:"array"});
+      var blob = new Blob([wbOut],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+      var file = new File([blob], fileName, {type:blob.type});
+
+      if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
+        navigator.share({title:subject,text:body,files:[file]}).then(function(){
+          btn.textContent = t("sent");
+          document.getElementById("submit-notice").innerHTML = escHtml(t("shared"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
+        }).catch(function(){
+          downloadAndMailto(blob, fileName, subject, body, btn);
+        });
+        return;
+      }
+      downloadAndMailto(blob, fileName, subject, body, btn);
+    } catch(e){ console.error("Excel error:",e); fallbackMailto(subject, body, btn); }
+  } else {
+    fallbackMailto(subject, body, btn);
+  }
+}
+
+function downloadAndMailto(blob, fileName, subject, body, btn){
+  try {
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+    if(isIOS){var r=new FileReader();r.onload=function(){var l=document.createElement("a");l.href=r.result;l.download=fileName;l.style.display="none";document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);},1000);};r.readAsDataURL(blob);}
+    else{var u=URL.createObjectURL(blob);var l=document.createElement("a");l.href=u;l.download=fileName;l.style.display="none";document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);URL.revokeObjectURL(u);},1000);}
+  }catch(e){console.error("Download error:",e);}
+  // 自動でmailtoへ遷移しない（ダウンロード直後の遷移はDL中断の定番。成功と断定もしない）。
+  // ボタンを「メールを開く」に変え、受験者の手動タップで開かせる
+  btn.disabled = false;
+  btn.textContent = t("openMailBtn");
+  btn.onclick = function(){
+    window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  };
+  document.getElementById("submit-notice").innerHTML = escHtml(t("excelDownloaded"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
+}
+
+function fallbackMailto(subject, body, btn){
+  // XLSX未ロード時: 要約メールのみ（回答全文はpendingが次回起動時に自動再送する）
+  window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  btn.disabled = true;
+  btn.textContent = t("sent");
+  document.getElementById("submit-notice").innerHTML = escHtml(t("mailFallbackNote"));
+}
+
+// ==================== WEBHOOK (Google Apps Script) ====================
+// ==================== 確実送信モジュール（150人同時対応） ====================
+// 方針: 送信前にジッターでバースト分散 → POST(no-cors)後にJSONPで記録確認 →
+//       未記録なら自動再送。結果はlocalStorageに保持し、再アクセス時に未達分を再送。
+var SUBMIT_JITTER_MS = 3000;   // 送信前ランダム遅延の最大(ms)。終了時刻は自然に分散するため短くてよい
+var SUBMIT_ATTEMPTS  = 6;      // 最大試行回数
+var PENDING_KEY      = "hssv_pending_v1";   // hss-exam と同一オリジンのため別キー
+
+function genSubmissionId(type){
+  var who = (type === "confirm" ? confirmName : playerName) || "x";
+  return type + "_" + String(who).replace(/\s+/g,"") + "_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+}
+function _delay(ms){ return new Promise(function(res){ setTimeout(res, ms); }); }
+function _randInt(maxMs){ return Math.floor(Math.random()*maxMs); }
+
+function _loadPending(){ try{ return JSON.parse(localStorage.getItem(PENDING_KEY)||"[]"); }catch(e){ return []; } }
+function _savePending(list){ try{ localStorage.setItem(PENDING_KEY, JSON.stringify(list)); }catch(e){} }
+// localStorageに正解テキストを残さない（受験者がDevTools等で読めるため）。
+// 再送時は正解なしで送られ、GAS側の正解列は空になるが許容（採点フラグと検算は保持される）。
+function _stripAnswerKey(p){
+  if(!p || !Array.isArray(p.answers)) return p;
+  var c = JSON.parse(JSON.stringify(p));
+  c.answers.forEach(function(a){ delete a.correctAnswer; });
+  return c;
+}
+function _addPending(p){ var l=_loadPending(); if(!l.some(function(x){return x.submissionId===p.submissionId;})){ l.push(_stripAnswerKey(p)); _savePending(l); } }
+function _removePending(id){ _savePending(_loadPending().filter(function(x){return x.submissionId!==id;})); }
+
+function _postNoCors(payload){
+  if(!CONFIG.email.webhookUrl) return Promise.resolve();
+  return fetch(CONFIG.email.webhookUrl,{
+    method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"},
+    body: JSON.stringify(payload), mode:"no-cors"
+  }).catch(function(){ /* no-cors: 応答は読めない。記録確認はJSONPで行う */ });
+}
+
+// JSONPでサーバーに「このIDは記録済みか」を問い合わせる（CORS制約を回避して応答を読む）
+function _verifyRecorded(id){
+  return new Promise(function(resolve){
+    if(!CONFIG.email.webhookUrl){ resolve(false); return; }
+    var cb = "hsscb_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+    var s = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function(){ finish(false); }, 6000);
+    function finish(val){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(val); }
+    window[cb] = function(res){ finish(!!(res && res.recorded)); };
+    s.onerror = function(){ finish(false); };
+    s.src = CONFIG.email.webhookUrl + "?action=verify&id=" + encodeURIComponent(id) + "&callback=" + cb;
+    document.body.appendChild(s);
+  });
+}
+
+// サーバーが verify(JSONP) に対応した新GASかを判定（応答が返ればtrue）。
+// これにより、GAS未再デプロイ(旧GAS)でも安全に動く＝デプロイ順序に依存しない。
+function _probeVerifySupport(){
+  return new Promise(function(resolve){
+    if(!CONFIG.email.webhookUrl){ resolve(false); return; }
+    var cb = "hssprobe_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+    var s = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function(){ finish(false); }, 6000);
+    function finish(v){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(v); }
+    window[cb] = function(){ finish(true); };   // JSONP応答が返れば新GAS
+    s.onerror = function(){ finish(false); };
+    s.src = CONFIG.email.webhookUrl + "?action=verify&id=__probe__&callback=" + cb;
+    document.body.appendChild(s);
+  });
+}
+var _verifyCapPromise = null;
+// false（=オフライン/弱電波/旧GAS）は永続キャッシュしない。一度の失敗が
+// セッション全体の送信経路を劣化させないよう、次回呼び出しで再probeする。
+function serverSupportsVerify(){
+  if(!_verifyCapPromise){
+    _verifyCapPromise = _probeVerifySupport().then(function(v){
+      if(!v) _verifyCapPromise = null;
+      return v;
+    });
+  }
+  return _verifyCapPromise;
+}
+
+// 確実送信: 新GAS→jitter+リトライ+記録確認。旧GAS→従来どおり1回送信(メール1通/再送なし)。
+function reliableSubmit(payload, opts){
+  opts = opts || {};
+  if(!payload.submissionId) payload.submissionId = genSubmissionId(payload.type);
+  _addPending(payload);
+  var onStatus = opts.onStatus || function(){};
+  var jitter = (opts.jitter !== false);
+  var jitterMax = opts.jitterMax || SUBMIT_JITTER_MS;
+  return (async function(){
+    var supported = await serverSupportsVerify();
+    if(!supported){
+      // 検証応答が得られない（オフライン/弱電波/旧GAS）: 1回だけ送信を試みるが、
+      // 成功と偽らない・pendingも消さない。結果は次回起動時のflushPendingが再送する。
+      onStatus("sending", 1);
+      await _postNoCors(payload);
+      onStatus("unverified", 1);
+      return false;
+    }
+    if(jitter){ await _delay(_randInt(jitterMax)); }
+    for(var attempt=1; attempt<=SUBMIT_ATTEMPTS; attempt++){
+      onStatus("sending", attempt);
+      await _postNoCors(payload);
+      await _delay(1500 + attempt*500);          // サーバー処理を待ってから確認
+      if(await _verifyRecorded(payload.submissionId)){
+        _removePending(payload.submissionId);
+        onStatus("done", attempt);
+        return true;
+      }
+      await _delay(Math.min(1000*Math.pow(2, attempt), 8000)); // 指数バックオフ
+    }
+    onStatus("failed", SUBMIT_ATTEMPTS);
+    return false; // localStorageに残し、次回アクセス時に自動再送
+  })();
+}
+
+// 起動時: 前回未達の結果を自動再送。
+// verify対応GASが確認できた時だけ再送する（メール送信型の旧GASへ再送を連発しないための安全弁）
+function flushPending(){
+  var list = _loadPending();
+  if(list.length === 0) return;
+  serverSupportsVerify().then(function(supported){
+    if(!supported) return;
+    list.forEach(function(p){ reliableSubmit(p, {jitter:false}); });
+  });
+}
+window.addEventListener("load", function(){ try{ flushPending(); }catch(e){} });
+
+// ==================== SERVICE WORKER ====================
+if("serviceWorker" in navigator){
+  window.addEventListener("load",function(){
+    navigator.serviceWorker.register("sw.js").catch(function(err){console.log("SW registration failed:",err);});
+  });
+  // 新しいSWが制御を握ったら1回だけリロードして新版を即反映する
+  // （cache-firstの「1版遅れ」対策。試験中・送信中は絶対にリロードしない）
+  var _swReloaded = false;
+  var _hadController = !!navigator.serviceWorker.controller;  // 初回インストール(制御開始)と更新を区別する
+  // リロードして安全なのは「ホーム画面・オーバーレイなし・入力中でない」時だけ。
+  // それ以外はフラグを立て、ホーム画面へ戻ったタイミングでリロードする（入力中の氏名・PWを消さない）
+  function _safeToReload(){
+    if(isExamActive() || sendInFlight) return false;
+    if(!document.getElementById("home-screen").classList.contains("active")) return false;
+    var overlayOpen = ["finish-overlay","timeout-overlay","resume-overlay"].some(function(id){
+      var el = document.getElementById(id); return el && el.classList.contains("show");
+    });
+    if(overlayOpen) return false;
+    var ae = document.activeElement;
+    if(ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA")) return false;
+    return true;
+  }
+  navigator.serviceWorker.addEventListener("controllerchange", function(){
+    if(_swReloaded || !_hadController) return;
+    if(_safeToReload()){ _swReloaded = true; location.reload(); }
+    else { swReloadPending = true; }
+  });
+}
+
+// ==================== INSTALL BANNER ====================
+(function(){
+  var dismissed = localStorage.getItem("hss_install_dismissed");
+  var isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  if(isStandalone || dismissed) return;
+
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var deferredPrompt = null;
+
+  // Android: capture beforeinstallprompt
+  window.addEventListener("beforeinstallprompt", function(e){
+    e.preventDefault();
+    deferredPrompt = e;
+    showInstallBanner("android");
+  });
+
+  // iOS: show after short delay if not installed
+  if(isIOS){
+    setTimeout(function(){ showInstallBanner("ios"); }, 1500);
+  }
+
+  function showInstallBanner(platform){
+    var banner = document.getElementById("install-banner");
+    var installBtn = document.getElementById("install-btn");
+    var dismissBtn = document.getElementById("install-dismiss");
+
+    // Translate
+    var titles = {ja:"ホーム画面に追加",en:"Add to Home Screen",vi:"Thêm vào Màn hình chính",id:"Tambahkan ke Layar Utama",es:"Agregar a la pantalla de inicio"};
+    var descs = {
+      ja:"アプリとしてインストールすると、すぐに起動できます。",
+      en:"Install as an app for quick access.",
+      vi:"Cài đặt như ứng dụng để truy cập nhanh.",
+      id:"Pasang sebagai aplikasi untuk akses cepat.",
+      es:"Instálela como aplicación para acceso rápido."
+    };
+    document.getElementById("install-title").textContent = titles[currentLang] || titles.ja;
+    document.getElementById("install-desc").textContent = descs[currentLang] || descs.ja;
+
+    var btnTexts = {ja:"追加",en:"Install",vi:"Cài đặt",id:"Pasang",es:"Instalar"};
+    installBtn.textContent = btnTexts[currentLang] || btnTexts.ja;
+
+    installBannerWanted = true;
+    if(document.getElementById("home-screen").classList.contains("active")) banner.classList.add("show");
+
+    installBtn.addEventListener("click", function(){
+      if(platform === "android" && deferredPrompt){
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function(result){
+          deferredPrompt = null;
+          banner.classList.remove("show");
+        });
+      } else if(platform === "ios"){
+        banner.classList.remove("show");
+        showIOSGuide();
+      }
+    });
+
+    dismissBtn.addEventListener("click", function(){
+      banner.classList.remove("show");
+      localStorage.setItem("hss_install_dismissed", "1");
+    });
+  }
+
+  function showIOSGuide(){
+    var guide = document.getElementById("ios-guide");
+    // Translate iOS guide
+    var guideTitles = {ja:"📱 ホーム画面に追加",en:"📱 Add to Home Screen",vi:"📱 Thêm vào Màn hình chính",id:"📱 Tambahkan ke Layar Utama",es:"📱 Agregar a la pantalla de inicio"};
+    document.getElementById("ios-guide-title").textContent = guideTitles[currentLang] || guideTitles.ja;
+
+    var steps = document.getElementById("ios-guide-steps");
+    var stepsData = {
+      ja:['画面下の <strong>共有ボタン</strong> <span style="font-size:1.2em">□↑</span> をタップ','<strong>「ホーム画面に追加」</strong> をタップ','右上の <strong>「追加」</strong> をタップ'],
+      en:['Tap the <strong>Share</strong> button <span style="font-size:1.2em">□↑</span> at the bottom','Tap <strong>"Add to Home Screen"</strong>','Tap <strong>"Add"</strong> in the top right'],
+      vi:['Nhấn nút <strong>Chia sẻ</strong> <span style="font-size:1.2em">□↑</span> ở phía dưới','Nhấn <strong>"Thêm vào Màn hình chính"</strong>','Nhấn <strong>"Thêm"</strong> ở góc trên bên phải'],
+      id:['Ketuk tombol <strong>Bagikan</strong> <span style="font-size:1.2em">□↑</span> di bawah','Ketuk <strong>"Tambahkan ke Layar Utama"</strong>','Ketuk <strong>"Tambahkan"</strong> di kanan atas'],
+      es:['Toque el botón <strong>Compartir</strong> <span style="font-size:1.2em">□↑</span> en la parte inferior','Toque <strong>"Agregar a pantalla de inicio"</strong>','Toque <strong>"Agregar"</strong> arriba a la derecha']
+    };
+    var lang = stepsData[currentLang] ? currentLang : "ja";
+    var stepsHtml = "";
+    stepsData[lang].forEach(function(s, i){
+      stepsHtml += '<div><span class="step-num">'+(i+1)+'</span>'+s+'</div>';
+    });
+    steps.innerHTML = stepsHtml;
+
+    guide.classList.add("show");
+
+    document.getElementById("ios-guide-close").addEventListener("click", function(){
+      guide.classList.remove("show");
+      localStorage.setItem("hss_install_dismissed", "1");
+    });
+
+    guide.addEventListener("click", function(e){
+      if(e.target === guide){
+        guide.classList.remove("show");
+        localStorage.setItem("hss_install_dismissed", "1");
+      }
+    });
+  }
+})();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "demo01",
+    "video": "videos/dummy-demo01.mp4",
+    "category": "繁殖・分娩",
+    "question": "【仮問題1】動画の作業で、正しくないのはどれですか？",
+    "options": [
+      "【仮】誤っている手順A",
+      "【仮】正しい手順B",
+      "【仮】正しい手順C",
+      "【仮】正しい手順D"
+    ],
+    "answer": "【仮】誤っている手順A",
+    "explanation": "【仮】解説1。本物の動画ができたらここに根拠を書く。",
+    "placeholder": true,
+    "en": {
+      "question": "[Placeholder 1] Which action in the video is NOT correct?",
+      "options": [
+        "[TBD] wrong step A",
+        "[TBD] correct step B",
+        "[TBD] correct step C",
+        "[TBD] correct step D"
+      ]
+    }
+  },
+  {
+    "id": "demo02",
+    "video": "videos/dummy-demo02.mp4",
+    "category": "子豚・育成",
+    "question": "【仮問題2】動画の豚に見られる異常はどれですか？",
+    "options": [
+      "【仮】異常なし",
+      "【仮】異常の候補B",
+      "【仮】異常の候補C",
+      "【仮】異常の候補D"
+    ],
+    "answer": "【仮】異常の候補B",
+    "explanation": "【仮】解説2。本物の動画ができたらここに根拠を書く。",
+    "placeholder": true,
+    "en": {
+      "question": "[Placeholder 2] What abnormality is seen in the pig in the video?",
+      "options": [
+        "[TBD] nothing abnormal",
+        "[TBD] candidate B",
+        "[TBD] candidate C",
+        "[TBD] candidate D"
+      ]
+    }
+  },
+  {
+    "id": "demo03",
+    "video": "videos/dummy-demo03.mp4",
+    "category": "衛生・防疫",
+    "question": "【仮問題3】動画の場面で、次にすべき行動はどれですか？",
+    "options": [
+      "【仮】行動A",
+      "【仮】行動B",
+      "【仮】行動C",
+      "【仮】行動D"
+    ],
+    "answer": "【仮】行動C",
+    "explanation": "【仮】解説3。本物の動画ができたらここに根拠を書く。",
+    "placeholder": true,
+    "en": {
+      "question": "[Placeholder 3] In the situation shown, what should be done next?",
+      "options": [
+        "[TBD] action A",
+        "[TBD] action B",
+        "[TBD] action C",
+        "[TBD] action D"
+      ]
+    }
+  }
+]
