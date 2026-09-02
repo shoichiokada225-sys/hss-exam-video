@@ -12,7 +12,6 @@
     ],
     "answer": "処置がすんだ印をつけるため",
     "explanation": "青いスプレーの印は「処置がすんだ」しるしです。印を見て、まだの豚とすんだ豚を見分けます。",
-    "placeholder": true,
     "en": {
       "question": "Why is blue spray put on the piglet's head in the video?",
       "options": [
@@ -54,7 +53,6 @@
     ],
     "answer": "鼻をワイヤーでおさえて（保定して）、首から血をとっている",
     "explanation": "鼻にワイヤーをかけて豚を動かないようにし（鼻保定）、首から注射器で血をとっています（採血）。",
-    "placeholder": true,
     "en": {
       "question": "What is being done to the pig in the video?",
       "options": [
@@ -96,7 +94,6 @@
     ],
     "answer": "豚舎用の長靴にはきかえた",
     "explanation": "入口で豚舎用の長靴にはきかえてから中に入っています。外の汚れを持ち込まないためです。",
-    "placeholder": true,
     "en": {
       "question": "What did the person do before entering the pig house?",
       "options": [

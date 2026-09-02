@@ -12,7 +12,6 @@
     ],
     "answer": "長靴をはきかえている",
     "explanation": "豚舎の入口で、外で使う長靴と豚舎の中で使う長靴を分けています。外の汚れ（病気のもと）を豚舎に持ち込まないためです。",
-    "placeholder": true,
     "en": {
       "question": "What is the person in the video doing before entering the pig house?",
       "options": [
@@ -54,7 +53,6 @@
     ],
     "answer": "使い捨て手袋",
     "explanation": "注射などの作業の前に使い捨て手袋を着けます。手の汚れを薬や豚につけないため、また薬が手につかないためです。",
-    "placeholder": true,
     "en": {
       "question": "What is the person in the video putting on before the work?",
       "options": [
@@ -96,7 +94,6 @@
     ],
     "answer": "注射器を組み立てている",
     "explanation": "注射の前に注射器と針を組み立てて準備をしています。針がゆるんでいないか確認します。",
-    "placeholder": true,
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -138,7 +135,6 @@
     ],
     "answer": "薬のびんから注射器に薬を吸っている",
     "explanation": "薬のびんに針をさして、注射器に薬を吸い上げています。決められた量を正確に吸います。",
-    "placeholder": true,
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -180,7 +176,6 @@
     ],
     "answer": "注射をして、赤いスプレーで印をつけている",
     "explanation": "子豚に注射をしたあと、赤いスプレーで印をつけています。印は「注射がすんだ」しるしです。",
-    "placeholder": true,
     "en": {
       "question": "What is being done to the piglets in the video?",
       "options": [
@@ -222,7 +217,6 @@
     ],
     "answer": "注射がすんだ豚を見分けるため",
     "explanation": "印がないと、同じ豚に2回注射したり、注射をしていない豚を見のがしたりします。印を見て「まだの豚」だけに注射します。",
-    "placeholder": true,
     "en": {
       "question": "Why is red spray put on the piglet after the injection?",
       "options": [
@@ -264,7 +258,6 @@
     ],
     "answer": "赤い印がない子豚",
     "explanation": "赤い印がついている豚は注射がすんでいます。印のない豚をさがして注射します。",
-    "placeholder": true,
     "en": {
       "question": "In the pen shown, which piglets have NOT been injected yet?",
       "options": [
@@ -306,7 +299,6 @@
     ],
     "answer": "母豚の豚舎で、注射の薬を吸っている",
     "explanation": "ストール（1頭ずつの柵）に入った母豚のとなりで、小さいびん（バイアル）から注射器に薬を吸っています。",
-    "placeholder": true,
     "en": {
       "question": "Where is the video taken, and what is being done?",
       "options": [
@@ -348,7 +340,6 @@
     ],
     "answer": "片手で子豚をおさえて、もう片方の手で注射している",
     "explanation": "子豚が動くと針が折れたり、ちがう場所に刺さったりします。片手でしっかりおさえて（保定して）から注射します。",
-    "placeholder": true,
     "en": {
       "question": "How is the piglet being injected in the video?",
       "options": [
@@ -390,7 +381,6 @@
     ],
     "answer": "使ったあとの注射器を分解して洗っている",
     "explanation": "使った注射器はそのままにせず、分解して洗い、きれいにしてから片づけます。よごれた注射器は病気を広げます。",
-    "placeholder": true,
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -432,7 +422,6 @@
     ],
     "answer": "使い捨ての白い防護服と長靴",
     "explanation": "外から来た人（獣医など）は、白い使い捨ての防護服（つなぎ）と長靴を着けて豚舎に入ります。外の病気を持ち込まず、持ち出さないためです。",
-    "placeholder": true,
     "en": {
       "question": "What is the person in the video wearing?",
       "options": [
@@ -474,7 +463,6 @@
     ],
     "answer": "豚が動かないようにおさえる（保定する）ため",
     "explanation": "鼻にワイヤーをかける道具（鼻保定器・スネア）です。大きい豚は手ではおさえられないので、採血や注射のときに使います。",
-    "placeholder": true,
     "en": {
       "question": "What is the tool on the pig's snout in the video for?",
       "options": [
@@ -516,7 +504,6 @@
     ],
     "answer": "首から血をとっている（採血）",
     "explanation": "鼻保定をした豚の首から注射器で血をとっています。血は病気の検査に使います。",
-    "placeholder": true,
     "en": {
       "question": "What is being done to the pig in the video?",
       "options": [
@@ -558,7 +545,6 @@
     ],
     "answer": "死んだ子豚。原因を調べるために体を開く（解剖）",
     "explanation": "死んだ子豚をならべて、獣医が体を開いて死んだ原因を調べます（剖検）。手袋と防護服をつけて行います。",
-    "placeholder": true,
     "en": {
       "question": "What is lying on the floor in the video, and what happens next?",
       "options": [
@@ -600,7 +586,6 @@
     ],
     "answer": "母豚が1頭ずつ柵に入っている豚舎（ストール）",
     "explanation": "母豚が1頭ずつ入る柵（ストール）がならぶ豚舎です。上に青い給餌器（えさの入れもの）があります。",
-    "placeholder": true,
     "en": {
       "question": "Which kind of pig house is shown in the video?",
       "options": [
@@ -642,7 +627,6 @@
     ],
     "answer": "母豚からはなれた子豚（離乳子豚）",
     "explanation": "小さい子豚がたくさん入っている豚舎です。丸い給餌器があり、母豚はいません。母豚からはなれた（離乳した）子豚の豚舎です。",
-    "placeholder": true,
     "en": {
       "question": "Which pigs are in the house shown in the video?",
       "options": [
@@ -684,7 +668,6 @@
     ],
     "answer": "えさ（飼料）をためるタンク",
     "explanation": "豚舎の外に立っている大きなタンクは飼料タンク（サイロ）です。トラックで運ばれたえさをためて、豚舎の中に送ります。",
-    "placeholder": true,
     "en": {
       "question": "What is the large tank shown in the video?",
       "options": [
@@ -725,8 +708,7 @@
       "車の中で、薬を数えている"
     ],
     "answer": "事務所で、薬のびんから注射器に薬を吸っている",
-    "explanation": "きれいな場所（事務所）で、薬のびんに針をさして注射器に薬を吸っています。",
-    "placeholder": true,
+    "explanation": "きれいな場所（事務所）で、薬のびんに針をさして注射器に薬を吸っています。ほこりや汚れの少ない場所で準備します。",
     "en": {
       "question": "Where is the video taken, and what is being done?",
       "options": [
@@ -768,7 +750,6 @@
     ],
     "answer": "外の汚れを豚舎の中に持ち込まないため",
     "explanation": "入口で「外用」と「中用」の長靴をはきかえます。汚れた長靴で中に入ると、外の病気を豚舎に持ち込みます。",
-    "placeholder": true,
     "en": {
       "question": "The video shows the entrance of a pig house. Why are the white boots and the dirty boots kept separately?",
       "options": [
@@ -810,7 +791,6 @@
     ],
     "answer": "防護服を着て、豚舎の中を歩いて豚を見て回っている",
     "explanation": "防護服と長靴を着けた人が通路を歩いて、豚のようすを見て回っています（見回り）。元気がない豚や具合の悪い豚がいないか確認します。",
-    "placeholder": true,
     "en": {
       "question": "What is the person in the video doing?",
       "options": [
@@ -852,7 +832,6 @@
     ],
     "answer": "母豚と生まれた子豚がいる分娩舎",
     "explanation": "分娩柵（母豚が入る柵）のまわりに小さい子豚がいて、子豚用の給餌皿があります。母豚と生まれた子豚がいる分娩舎です。",
-    "placeholder": true,
     "en": {
       "question": "Which kind of pig house is shown in the video?",
       "options": [
@@ -894,7 +873,6 @@
     ],
     "answer": "1つの豚房に何頭もまとめて入っている",
     "explanation": "1つの豚房に大きい豚が何頭もまとめて入っています（群飼）。母豚を1頭ずつ入れるストールとはちがいます。",
-    "placeholder": true,
     "en": {
       "question": "How are the pigs in the video kept?",
       "options": [
@@ -936,7 +914,6 @@
     ],
     "answer": "注射器を道具のケースにしまっている",
     "explanation": "使い終わった注射器を道具のケースに戻しています。床や柵の上に置きっぱなしにすると、汚れたり、なくしたり、豚がかんだりします。",
-    "placeholder": true,
     "en": {
       "question": "What is being done after the injection in the video?",
       "options": [
@@ -978,7 +955,6 @@
     ],
     "answer": "床がぬれていてすべりやすいので、足もとを見てゆっくり歩く",
     "explanation": "通路の床がぬれています。ぬれた床はすべりやすく、転んでけがをします。急がず、足もとを見て歩きます。",
-    "placeholder": true,
     "en": {
       "question": "What should you be careful about when walking in the aisle shown?",
       "options": [
@@ -1020,7 +996,6 @@
     ],
     "answer": "豚舎に入る前、農場の道を歩くときから",
     "explanation": "外から来た人は、豚舎に入る前、農場の敷地を歩くときから防護服と長靴を着けています。豚舎の前で着るのではなく、農場に入るときに着ます。",
-    "placeholder": true,
     "en": {
       "question": "Since when has the person in the video been wearing the coverall?",
       "options": [
@@ -1061,8 +1036,7 @@
       "豚を運ぶ所"
     ],
     "answer": "使った道具を洗う所",
-    "explanation": "水道と桶、かごがある洗い場です。使った道具をここで洗います。（社長確認: この場所の実際の用途）",
-    "placeholder": true,
+    "explanation": "水道と桶、かごがある洗い場です。使った道具をここで洗います。",
     "en": {
       "question": "What is the place in the video used for?",
       "options": [
@@ -1104,7 +1078,6 @@
     ],
     "answer": "背中",
     "explanation": "赤いスプレーは子豚の背中にかけています。背中は上から見えるので、群れの中でも印がすぐ分かります。",
-    "placeholder": true,
     "en": {
       "question": "Where on the piglet is the red spray applied in the video?",
       "options": [
@@ -1146,7 +1119,6 @@
     ],
     "answer": "手ではおさえられない大きい豚",
     "explanation": "動画の豚は大きく、手や体でおさえることができません。だから鼻にワイヤーをかける道具（鼻保定器）で動かないようにします。小さい子豚は手でおさえます。",
-    "placeholder": true,
     "en": {
       "question": "Which pigs are restrained with a wire snare on the snout, as in the video?",
       "options": [
@@ -1188,7 +1160,6 @@
     ],
     "answer": "汚れが残っていないか",
     "explanation": "長靴の裏（底）を見て、汚れがないか確認しています。長靴の底のみぞには汚れがたまりやすく、病気のもとを運びます。",
-    "placeholder": true,
     "en": {
       "question": "What is the person checking by looking at the sole of the boot?",
       "options": [
@@ -1230,7 +1201,6 @@
     ],
     "answer": "病気の検査",
     "explanation": "とった血は病気の検査に使います。豚が病気にかかっていないか、ワクチンが効いているかを調べます。",
-    "placeholder": true,
     "en": {
       "question": "What is the blood taken from the pig in the video used for?",
       "options": [

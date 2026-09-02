@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """2026-09-02 ウェアラブルカメラ素材(raw/)から作った第1版の問題(本試験20+デモ3)を tools/questions.xlsx に書く。
-言語: ja + en + vi + id（es は空=日本語表示）。placeholder=1 は「未監修」の意味（社長・獣医の確認が済んだら 0 にする）。
+言語: ja + en + vi + id（es は空=日本語表示）。2026-09-02 社長判断: 全問を試験に採用(剖検・採血含む)、q18事務所での吸い上げ/q26洗い場は正しい、同一動画への複数問(q27〜q30)は許容 → placeholder=0。
 既存の questions.xlsx は --force で上書き。以後の修正は Excel を直接編集して build_from_xlsx.py。
 """
 import sys
@@ -126,7 +126,7 @@ Q = [
       "vi": ("Bồn lớn trong video là gì?", ["Bồn chứa thức ăn", "Bồn chứa nước", "Bồn chứa phân", "Bồn chứa gas"]),
       "id": ("Tangki besar dalam video itu apa?", ["Tangki penyimpan pakan", "Tangki penyimpan air", "Tangki penyimpan kotoran", "Tangki penyimpan gas"])}),
     ("q18", "衛生・防疫", 1,
-     "きれいな場所（事務所）で、薬のびんに針をさして注射器に薬を吸っています。",
+     "きれいな場所（事務所）で、薬のびんに針をさして注射器に薬を吸っています。ほこりや汚れの少ない場所で準備します。",
      {"ja": ("動画では、どこで何をしていますか？", ["事務所で、薬のびんから注射器に薬を吸っている", "豚舎で、豚に注射している", "台所で、薬を水にとかしている", "車の中で、薬を数えている"]),
       "en": ("Where is the video taken, and what is being done?", ["In the office, drawing medicine from a bottle into a syringe", "In the pig house, injecting a pig", "In a kitchen, dissolving medicine in water", "In a car, counting medicine"]),
       "vi": ("Video quay ở đâu và đang làm gì?", ["Ở văn phòng, hút thuốc từ lọ vào ống tiêm", "Ở chuồng, tiêm cho heo", "Ở bếp, hòa thuốc vào nước", "Trong xe, đếm thuốc"]),
@@ -175,7 +175,7 @@ Q = [
       "vi": ("Người trong video mặc đồ bảo hộ từ khi nào?", ["Từ trước khi vào chuồng, ngay khi đi trên đường trong trại", "Chỉ sau khi vào trong chuồng", "Chỉ ngay trước khi chạm vào heo", "Không mặc"]),
       "id": ("Sejak kapan orang dalam video memakai baju pelindung?", ["Sebelum masuk kandang, sudah sejak berjalan di jalan peternakan", "Hanya setelah masuk kandang", "Hanya sesaat sebelum menyentuh babi", "Tidak memakai"])}),
     ("q26", "衛生・防疫", 1,
-     "水道と桶、かごがある洗い場です。使った道具をここで洗います。（社長確認: この場所の実際の用途）",
+     "水道と桶、かごがある洗い場です。使った道具をここで洗います。",
      {"ja": ("動画の場所は何をする所ですか？", ["使った道具を洗う所", "豚にえさをやる所", "薬をしまう所", "豚を運ぶ所"]),
       "en": ("What is the place in the video used for?", ["Washing used tools", "Feeding pigs", "Storing medicine", "Loading pigs"]),
       "vi": ("Nơi trong video dùng để làm gì?", ["Rửa dụng cụ đã dùng", "Cho heo ăn", "Cất thuốc", "Chuyển heo"]),
@@ -234,7 +234,7 @@ def row(item):
     qid, cat, ans, expl, langs = item
     ja_q, ja_o = langs["ja"]
     assert len(ja_o) == 4
-    r = [qid, f"videos/{VIDEO_OF.get(qid, qid)}.mp4", cat, 0, 1, ja_q, *ja_o, ans, expl]
+    r = [qid, f"videos/{VIDEO_OF.get(qid, qid)}.mp4", cat, 0, 0, ja_q, *ja_o, ans, expl]   # placeholder=0: 2026-09-02 社長判断で全問採用
     for lang in ("en", "vi", "id", "es"):
         if lang in langs:
             q, o = langs[lang]
