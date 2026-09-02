@@ -27,7 +27,7 @@ var CONFIG = {
     // ⚠️ 空のまま＝どこにも記録されない（結果画面に手動送信ボタンが出る）。
     //    本番前に gas/Code.gs を「新しい」GASプロジェクトとしてデプロイし、その /exec URL を入れる。
     //    hss-exam(学科)のGASを流用すると同じスプレッドシートに混ざるので流用しない。
-    webhookUrl: "",
+    webhookUrl: "https://script.google.com/macros/s/AKfycbyRaRv_bsOlFCuaQh9p4jJY-qfVeOl4MX8rbMqLMr7bVbYirNJeVnyYBpxKcS1pXmky/exec",
     adminEmail: "so@oikk.co.jp",
     subjectExam: "【HSS動画試験】結果通知 - {name}",
     subjectConfirm: "【HSS動画試験】受験意志確認 - {name}",

@@ -1,6 +1,6 @@
 // hss-exam-video Service Worker
 // index.html / config.js / data/*.json を変えたら CACHE_NAME を必ず上げる（README§当日運用）
-var CACHE_NAME = "hss-exam-video-v5";
+var CACHE_NAME = "hss-exam-video-v6";
 var ASSETS = [
   "./",
   "./index.html",
