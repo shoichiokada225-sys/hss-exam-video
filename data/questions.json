@@ -1645,42 +1645,42 @@
     "id": "q39",
     "video": "videos/q39.mp4",
     "category": "繁殖・分娩",
-    "question": "帳面の「種雄番号」の欄に、数字が2つや3つ書いてあります。何を表していますか？",
+    "question": "帳面の「種雄番号」の欄には、何を書きますか？",
     "options": [
-      "2〜3回の種付けで使った雄（精液）の番号",
+      "種付けに使った雄（精液）の番号",
       "生まれた子豚と死んだ子豚の数",
       "その母豚が何回目のお産か",
       "1日のえさの量（kg）"
     ],
-    "answer": "2〜3回の種付けで使った雄（精液）の番号",
-    "explanation": "種付けは1回の発情で2〜3回行い、そのたびに使った雄（精液）の番号を書きます。",
+    "answer": "種付けに使った雄（精液）の番号",
+    "explanation": "種付けのたびに、使った雄（精液）の番号を「種雄番号」の欄に書きます。あとで受胎や成績をふり返るときに使います。",
     "placeholder": true,
     "level": "中級",
     "group": "M021",
     "en": {
-      "question": "In the \"boar number\" column, there are two or three numbers in a row. What do they mean?",
+      "question": "What do you write in the \"boar number\" column of the record book?",
       "options": [
-        "The boar (semen) number used for each of 2–3 breedings",
-        "The number of piglets born and the number that died",
-        "Which birth this is for the sow",
-        "The daily feed amount in kg"
+        "The number of the boar (semen) used for mating",
+        "The number of piglets born and died",
+        "How many litters the sow has had",
+        "The daily feed amount (kg)"
       ]
     },
     "vi": {
-      "question": "Trong cột \"số heo đực\" có 2 hoặc 3 con số trên một dòng. Chúng có nghĩa gì?",
+      "question": "Cột \"số heo đực\" trong sổ ghi chép dùng để ghi gì?",
       "options": [
-        "Số heo đực (tinh) đã dùng cho 2–3 lần phối",
-        "Số heo con sinh ra và số con chết",
-        "Heo nái đẻ lứa thứ mấy",
+        "Số của heo đực (tinh) đã dùng để phối",
+        "Số heo con sinh ra và số heo con chết",
+        "Heo nái này đẻ lứa thứ mấy",
         "Lượng cám mỗi ngày (kg)"
       ]
     },
     "ind": {
-      "question": "Di kolom \"nomor pejantan\" ada 2 atau 3 angka dalam satu baris. Apa artinya?",
+      "question": "Apa yang ditulis di kolom \"nomor pejantan\" pada buku catatan?",
       "options": [
-        "Nomor pejantan (semen) untuk 2–3 kali kawin",
-        "Jumlah anak babi lahir dan yang mati",
-        "Paritas induk (beranak ke berapa)",
+        "Nomor pejantan (semen) yang dipakai untuk kawin",
+        "Jumlah anak babi yang lahir dan yang mati",
+        "Induk ini beranak untuk yang ke berapa",
         "Jumlah pakan per hari (kg)"
       ]
     }
@@ -1689,43 +1689,43 @@
     "id": "q40",
     "video": "videos/q40.mp4",
     "category": "繁殖・分娩",
-    "question": "帳面の交配月日に「pm」と書き足した日付があります。何を表していますか？",
+    "question": "種付けの記録には、日付だけでなく午前・午後（時刻）も書きます。なぜですか？",
     "options": [
-      "午後に種付けした",
-      "薬を打った",
-      "母豚が死んだ",
-      "分娩した"
+      "次の種付けをする時間を決めるため（時間の間かくが大切）",
+      "えさをやる時間を決めるため",
+      "母豚の体重を計算するため",
+      "出荷する日を決めるため"
     ],
-    "answer": "午後に種付けした",
-    "explanation": "種付けは時間が大切なので、日付だけでなく午前か午後かも記録します。「pm」は午後に種付けしたという意味です。",
+    "answer": "次の種付けをする時間を決めるため（時間の間かくが大切）",
+    "explanation": "種付けは1回目から12〜16時間ほどあけて次を行います。時間の間かくが大切なので、日付だけでなく午前か午後かも記録します。",
     "placeholder": true,
     "level": "中級",
     "group": "M034",
     "en": {
-      "question": "Some breeding dates have \"pm\" written after them. What does \"pm\" mean?",
+      "question": "In mating records, you write not only the date but also AM/PM (the time). Why?",
       "options": [
-        "The sow was bred in the afternoon",
-        "Medicine was given",
-        "The sow died",
-        "The sow farrowed"
+        "To decide the time of the next insemination (the interval matters)",
+        "To decide the feeding time",
+        "To calculate the sow's weight",
+        "To decide the shipping date"
       ]
     },
     "vi": {
-      "question": "Có ngày phối được ghi thêm chữ \"pm\". \"pm\" nghĩa là gì?",
+      "question": "Khi ghi sổ phối giống, ngoài ngày còn ghi sáng/chiều (giờ). Vì sao?",
       "options": [
-        "Phối vào buổi chiều",
-        "Đã tiêm thuốc",
-        "Heo nái đã chết",
-        "Heo nái đã đẻ"
+        "Để quyết định giờ phối lần tiếp theo (khoảng cách thời gian rất quan trọng)",
+        "Để quyết định giờ cho ăn",
+        "Để tính cân nặng heo nái",
+        "Để quyết định ngày xuất chuồng"
       ]
     },
     "ind": {
-      "question": "Ada tanggal kawin yang diberi tulisan \"pm\". Apa arti \"pm\"?",
+      "question": "Pada catatan kawin, selain tanggal juga ditulis pagi/sore (jam). Mengapa?",
       "options": [
-        "Dikawinkan pada sore hari",
-        "Sudah diberi obat",
-        "Induk sudah mati",
-        "Induk sudah beranak"
+        "Untuk menentukan jam kawin berikutnya (jarak waktunya penting)",
+        "Untuk menentukan jam pemberian pakan",
+        "Untuk menghitung berat induk",
+        "Untuk menentukan tanggal jual"
       ]
     }
   },
@@ -2261,43 +2261,43 @@
     "id": "q53",
     "video": "videos/q53.mp4",
     "category": "繁殖・分娩",
-    "question": "種付け（人工授精）の回数と間隔で、マニュアルで標準とされているのはどれですか？",
+    "question": "人工授精を1回目にしたあと、2回目はどのくらいあけて行いますか？",
     "options": [
-      "2回。2回目は1回目の12〜16時間後",
-      "1回だけ。2回目はしない",
-      "2回。2回目は1回目の1週間後",
-      "5回。毎日1回ずつ5日間"
+      "12〜16時間後（半日ほどあと）",
+      "1時間後（すぐに）",
+      "1週間後",
+      "1か月後"
     ],
-    "answer": "2回。2回目は1回目の12〜16時間後",
-    "explanation": "マニュアルでは2回交配が標準で、2回目は1回目から12〜16時間後に行います。",
+    "answer": "12〜16時間後（半日ほどあと）",
+    "explanation": "2回目の授精は1回目から12〜16時間後が目安です。回数（2回か3回か）は農場のルールに従います。",
     "placeholder": true,
-    "level": "上級",
+    "level": "中級",
     "group": "M041",
     "en": {
-      "question": "According to the manual, what is the standard number and timing of inseminations?",
+      "question": "After the first artificial insemination, how long do you wait before the second one?",
       "options": [
-        "Twice; the 2nd is 12–16 hours after the 1st",
-        "Only once; no 2nd time",
-        "Twice; the 2nd is one week after the 1st",
-        "Five times; once a day for 5 days"
+        "12 to 16 hours later (about half a day)",
+        "1 hour later (right away)",
+        "1 week later",
+        "1 month later"
       ]
     },
     "vi": {
-      "question": "Theo sổ tay, số lần phối (thụ tinh nhân tạo) và khoảng cách tiêu chuẩn là gì?",
+      "question": "Sau khi thụ tinh nhân tạo lần 1, cách bao lâu thì làm lần 2?",
       "options": [
-        "2 lần; lần 2 cách lần 1 từ 12–16 giờ",
-        "Chỉ 1 lần; không phối lần 2",
-        "2 lần; lần 2 cách lần 1 một tuần",
-        "5 lần; mỗi ngày 1 lần trong 5 ngày"
+        "Sau 12–16 giờ (khoảng nửa ngày)",
+        "Sau 1 giờ (ngay lập tức)",
+        "Sau 1 tuần",
+        "Sau 1 tháng"
       ]
     },
     "ind": {
-      "question": "Menurut manual, berapa kali dan jarak kawin suntik (IB) yang standar?",
+      "question": "Setelah inseminasi buatan pertama, berapa lama menunggu sebelum yang kedua?",
       "options": [
-        "2 kali; yang ke-2 12–16 jam setelah yang pertama",
-        "Hanya 1 kali; tidak ada yang ke-2",
-        "2 kali; yang ke-2 seminggu setelah yang pertama",
-        "5 kali; sehari sekali selama 5 hari"
+        "12–16 jam kemudian (kira-kira setengah hari)",
+        "1 jam kemudian (langsung)",
+        "1 minggu kemudian",
+        "1 bulan kemudian"
       ]
     }
   },
@@ -2349,7 +2349,7 @@
     "id": "q55",
     "video": "videos/q55.mp4",
     "category": "衛生・防疫",
-    "question": "分娩予定日が1月1日の母豚です。「分娩予定の2〜4週間前」に打つワクチンは、いつごろ打ちますか？",
+    "question": "あるワクチンは「分娩予定の2〜4週間前に打つ」と決められているとします。分娩予定日が1月1日の母豚なら、いつごろ打ちますか？",
     "options": [
       "12月4日〜18日ごろ",
       "1月1日の当日",
@@ -2357,35 +2357,35 @@
       "9月ごろ（交配のころ）"
     ],
     "answer": "12月4日〜18日ごろ",
-    "explanation": "分娩予定日からさかのぼってワクチンの日を決めます。例として大腸菌ワクチンは分娩予定の2〜4週間前です（実際は農場の獣医師が決めたプログラムに従う）。",
+    "explanation": "1月1日から2週間前は12月18日、4週間前は12月4日です。実際にいつ何を打つかは、農場の獣医師が決めたプログラムに従います。",
     "placeholder": true,
     "level": "上級",
     "group": "M009",
     "en": {
-      "question": "A sow's expected farrowing date is January 1. When should a vaccine given \"2-4 weeks before farrowing\" be given?",
+      "question": "Suppose a vaccine must be given \"2 to 4 weeks before the expected farrowing date\". If a sow is due on January 1, about when do you give it?",
       "options": [
-        "Around December 4-18",
-        "On January 1",
-        "Around January 15-29",
-        "Around September (when she was bred)"
+        "Around December 4 to 18",
+        "On January 1 itself",
+        "Around January 15 to 29",
+        "Around September (at mating)"
       ]
     },
     "vi": {
-      "question": "Heo nái có ngày dự kiến đẻ là 1/1. Vắc-xin tiêm \"2-4 tuần trước khi đẻ\" thì tiêm khoảng khi nào?",
+      "question": "Giả sử một loại vắc-xin được quy định \"tiêm trước ngày đẻ dự kiến 2–4 tuần\". Heo nái dự kiến đẻ ngày 1/1 thì tiêm vào khoảng nào?",
       "options": [
-        "Khoảng ngày 4-18/12",
+        "Khoảng ngày 4–18 tháng 12",
         "Đúng ngày 1/1",
-        "Khoảng ngày 15-29/1",
-        "Khoảng tháng 9 (lúc phối)"
+        "Khoảng ngày 15–29 tháng 1",
+        "Khoảng tháng 9 (lúc phối giống)"
       ]
     },
     "ind": {
-      "question": "Perkiraan beranak induk ini tanggal 1 Januari. Vaksin yang diberikan \"2-4 minggu sebelum beranak\" diberikan kapan?",
+      "question": "Misalkan sebuah vaksin ditentukan \"diberikan 2–4 minggu sebelum tanggal perkiraan beranak\". Jika induk diperkirakan beranak 1 Januari, kira-kira kapan divaksin?",
       "options": [
-        "Sekitar 4-18 Desember",
-        "Tepat 1 Januari",
-        "Sekitar 15-29 Januari",
-        "Sekitar September (saat dikawinkan)"
+        "Sekitar 4–18 Desember",
+        "Tepat tanggal 1 Januari",
+        "Sekitar 15–29 Januari",
+        "Sekitar September (saat kawin)"
       ]
     }
   },
@@ -3492,44 +3492,44 @@
   {
     "id": "q81",
     "video": "videos/q81.mp4",
-    "category": "肉豚・出荷・肉",
-    "question": "豚の体に、かまれたような傷がたくさんあります。多い原因はどれですか？",
+    "category": "衛生・防疫",
+    "question": "豚の体に傷やかさぶたがたくさんあるのを見つけました。どうしますか？",
     "options": [
-      "ほかの豚とのけんか（せまい・過密など）",
-      "えさの食べすぎ（太りすぎなど）",
-      "水の飲みすぎ（おなかの冷えなど）",
-      "日光の当たりすぎ（日焼けなど）"
+      "上司に知らせて、けんかや過密（せまさ）がないか群れの様子も確かめる",
+      "そのままにして、しばらく様子を見る",
+      "水をかけて洗い流せばよい",
+      "えさの量を減らす"
     ],
-    "answer": "ほかの豚とのけんか（せまい・過密など）",
-    "explanation": "体の傷が多いのは、けんか（闘争）のサインのことが多く、過密などのストレスが原因になります。",
+    "answer": "上司に知らせて、けんかや過密（せまさ）がないか群れの様子も確かめる",
+    "explanation": "体の傷が多いのは、けんか（闘争）や過密のサインのことが多い異常です。すぐに上司に報告し、群れの様子も確かめます。",
     "placeholder": true,
     "level": "中級",
     "group": "T0162",
     "en": {
-      "question": "A pig has many bite-like wounds on its body. What is a common cause?",
+      "question": "You find a pig with many wounds and scabs on its body. What do you do?",
       "options": [
-        "Fighting with other pigs (crowding, too little space)",
-        "Eating too much feed (getting too fat)",
-        "Drinking too much water (cold stomach)",
-        "Too much sunlight (sunburn)"
+        "Tell your supervisor and also check the group for fighting or overcrowding",
+        "Leave it and just watch for a while",
+        "Just rinse it off with water",
+        "Reduce the amount of feed"
       ]
     },
     "vi": {
-      "question": "Trên mình heo có nhiều vết thương như bị cắn. Nguyên nhân thường gặp là gì?",
+      "question": "Bạn thấy một con heo có nhiều vết thương và vảy trên mình. Bạn làm gì?",
       "options": [
-        "Cắn nhau với heo khác (chuồng chật, nuôi quá dày)",
-        "Ăn quá nhiều (bị béo phì)",
-        "Uống quá nhiều nước (lạnh bụng)",
-        "Phơi nắng quá nhiều (cháy nắng)"
+        "Báo cấp trên và kiểm tra cả đàn xem có đánh nhau hay quá chật không",
+        "Để vậy, theo dõi thêm một thời gian",
+        "Chỉ cần xịt nước rửa sạch",
+        "Giảm lượng cám"
       ]
     },
     "ind": {
-      "question": "Babi ini banyak luka seperti bekas gigitan. Apa penyebab yang sering terjadi?",
+      "question": "Anda menemukan babi dengan banyak luka dan koreng di badannya. Apa yang Anda lakukan?",
       "options": [
-        "Berkelahi dengan babi lain (sempit, terlalu padat)",
-        "Makan terlalu banyak (kegemukan)",
-        "Minum terlalu banyak (perut dingin)",
-        "Terlalu banyak kena matahari (terbakar matahari)"
+        "Lapor ke atasan dan periksa juga kelompoknya, apakah ada perkelahian atau terlalu padat",
+        "Dibiarkan dulu, diamati beberapa waktu",
+        "Cukup disiram air sampai bersih",
+        "Mengurangi jumlah pakan"
       ]
     }
   },
@@ -3537,38 +3537,38 @@
     "id": "q82",
     "video": "videos/q82.mp4",
     "category": "繁殖・分娩",
-    "question": "母豚のカードの「死亡」のらんには、何を書きますか？",
+    "question": "分娩のあと、子豚が死にました。記録（カードや帳面）に何を書きますか？",
     "options": [
-      "子豚が死んだ日と頭数",
+      "死んだ日と頭数",
       "母豚の体重",
       "えさの量",
       "薬の名前"
     ],
-    "answer": "子豚が死んだ日と頭数",
-    "explanation": "カードの「死亡」らんには、子豚が死んだ日と頭数を書きます。写真のカードでは11頭から7頭に減っています。",
+    "answer": "死んだ日と頭数",
+    "explanation": "子豚が死んだら、死んだ日と頭数を記録します。写真のカードでも、日付ごとに減った頭数が書かれています。",
     "placeholder": true,
     "level": "初級",
     "group": "T0098",
     "en": {
-      "question": "What is written in the \"deaths\" column of the sow card?",
+      "question": "After farrowing, a piglet died. What do you write in the record (card or book)?",
       "options": [
-        "The date and number of piglets that died",
+        "The date and the number of piglets that died",
         "The sow's weight",
         "The amount of feed",
-        "The name of the medicine"
+        "The name of a medicine"
       ]
     },
     "vi": {
-      "question": "Trong cột \"chết\" trên thẻ heo nái, ghi gì?",
+      "question": "Sau khi đẻ, có heo con chết. Bạn ghi gì vào sổ (thẻ hoặc sổ ghi chép)?",
       "options": [
-        "Ngày và số heo con bị chết",
+        "Ngày chết và số con chết",
         "Cân nặng heo nái",
-        "Lượng thức ăn",
+        "Lượng cám",
         "Tên thuốc"
       ]
     },
     "ind": {
-      "question": "Apa yang ditulis di kolom \"mati\" pada kartu induk?",
+      "question": "Setelah beranak, ada anak babi yang mati. Apa yang ditulis di catatan (kartu atau buku)?",
       "options": [
         "Tanggal dan jumlah anak babi yang mati",
         "Berat induk",
@@ -3801,43 +3801,43 @@
     "id": "q88",
     "video": "videos/q88.mp4",
     "category": "子豚・育成",
-    "question": "動画の床にある黄色いものは何ですか？",
+    "question": "動画の床に黄色いものがあります。子豚の糞（ふん）の色で、ふつう（正常）なのはどれですか？",
     "options": [
-      "子豚のやわらかい糞（下痢）",
-      "子豚にあげたえさの粉",
-      "床にまいた消毒の粉",
-      "床にこぼれた母豚の乳"
+      "茶色〜こげ茶色",
+      "黄色",
+      "緑色",
+      "黒色（血がまじる）"
     ],
-    "answer": "子豚のやわらかい糞（下痢）",
-    "explanation": "床の黄色くやわらかいものは子豚の下痢の糞です。黄色い糞は異常のサインです。",
+    "answer": "茶色〜こげ茶色",
+    "explanation": "ふつうの糞は茶色〜こげ茶色です。黄色・緑色・黒色の糞や、水のような糞は異常のサインなので報告します。",
     "placeholder": true,
     "level": "中級",
     "group": "T0407",
     "en": {
-      "question": "What is the yellow thing on the floor in the video?",
+      "question": "There is something yellow on the floor in the video. Which color of piglet feces is normal?",
       "options": [
-        "Soft piglet feces (diarrhea)",
-        "Feed powder given to the piglets",
-        "Disinfectant powder spread on the floor",
-        "Sow's milk spilled on the floor"
+        "Brown to dark brown",
+        "Yellow",
+        "Green",
+        "Black (with blood)"
       ]
     },
     "vi": {
-      "question": "Thứ màu vàng trên sàn trong video là gì?",
+      "question": "Trên sàn trong video có thứ màu vàng. Phân heo con màu nào là bình thường?",
       "options": [
-        "Phân lỏng của heo con (tiêu chảy)",
-        "Bột cám cho heo con ăn",
-        "Bột sát trùng rắc trên sàn",
-        "Sữa nái đổ trên sàn"
+        "Màu nâu đến nâu sẫm",
+        "Màu vàng",
+        "Màu xanh lá",
+        "Màu đen (có lẫn máu)"
       ]
     },
     "ind": {
-      "question": "Benda kuning di lantai dalam video itu apa?",
+      "question": "Di lantai pada video ada sesuatu berwarna kuning. Warna kotoran anak babi yang normal adalah?",
       "options": [
-        "Kotoran lembek anak babi (diare)",
-        "Bubuk pakan untuk anak babi",
-        "Bubuk disinfektan yang ditabur di lantai",
-        "Susu induk yang tumpah di lantai"
+        "Cokelat sampai cokelat tua",
+        "Kuning",
+        "Hijau",
+        "Hitam (bercampur darah)"
       ]
     }
   },
@@ -4813,43 +4813,43 @@
     "id": "q111",
     "video": "videos/q111.mp4",
     "category": "衛生・防疫",
-    "question": "豚舎の間の通路に、白い粉がまかれています。この白い粉は何のためですか？",
+    "question": "豚舎と豚舎の間の通路に、消石灰（白い粉）をまいてあります。何のためですか？",
     "options": [
-      "消石灰で、地面を消毒するため",
-      "雪が積もったため",
-      "豚のえさがこぼれたため",
-      "すべり止めの砂"
+      "地面のウイルスや菌を消毒するため",
+      "すべり止めのため",
+      "豚のえさにするため",
+      "地面を白くしてきれいに見せるため"
     ],
-    "answer": "消石灰で、地面を消毒するため",
-    "explanation": "通路の白い粉は消石灰です。強いアルカリで、地面のウイルスや菌を消毒します。",
+    "answer": "地面のウイルスや菌を消毒するため",
+    "explanation": "消石灰は強いアルカリで、地面のウイルスや菌を消毒します。農場の出入口や通路によく使います。",
     "placeholder": true,
     "level": "中級",
     "group": "T0753",
     "en": {
-      "question": "White powder has been spread on the path between barns. What is it for?",
+      "question": "Slaked lime (white powder) has been spread on the path between pig houses. What is it for?",
       "options": [
-        "It is slaked lime, used to disinfect the ground",
-        "Snow has piled up",
-        "Pig feed was spilled",
-        "Sand to prevent slipping"
+        "To disinfect viruses and germs on the ground",
+        "To stop people from slipping",
+        "To use as pig feed",
+        "To make the ground look white and clean"
       ]
     },
     "vi": {
-      "question": "Bột trắng được rải trên lối đi giữa các chuồng. Bột này để làm gì?",
+      "question": "Trên lối đi giữa các chuồng có rải vôi tôi (bột trắng). Để làm gì?",
       "options": [
-        "Là vôi bột, dùng để sát trùng mặt đất",
-        "Là tuyết rơi",
-        "Là cám heo bị đổ",
-        "Là cát chống trơn"
+        "Để khử trùng vi-rút và vi khuẩn trên mặt đất",
+        "Để chống trơn trượt",
+        "Để làm thức ăn cho heo",
+        "Để mặt đất trắng nhìn cho sạch"
       ]
     },
     "ind": {
-      "question": "Bubuk putih ditaburkan di jalan antar kandang. Untuk apa bubuk putih itu?",
+      "question": "Di jalan antar kandang ditaburkan kapur mati (bubuk putih). Untuk apa?",
       "options": [
-        "Kapur mati (kapur padam) untuk disinfeksi tanah",
-        "Salju yang menumpuk",
-        "Pakan babi yang tumpah",
-        "Pasir anti licin"
+        "Untuk mendisinfeksi virus dan kuman di tanah",
+        "Agar tidak licin",
+        "Untuk pakan babi",
+        "Agar tanah terlihat putih dan bersih"
       ]
     }
   },
@@ -5165,43 +5165,43 @@
     "id": "q119",
     "video": "videos/q119.mp4",
     "category": "子豚・育成",
-    "question": "子豚が保温灯の下に集まって重なっています。これは何のサインですか？",
+    "question": "子豚がランプ（保温灯）の真下で重なり合って寝ているとします。マニュアルではどう判断しますか？",
     "options": [
-      "寒い。保温を強くする",
+      "とても寒い。ランプを下げるなど保温を強くする",
       "暑い。ランプを消す",
       "おなかがすいている。えさを増やす",
-      "ねむいだけ。何もしない"
+      "ちょうどよい。何もしない"
     ],
-    "answer": "寒い。保温を強くする",
-    "explanation": "子豚がランプの下で重なり合うのは寒いサインです。ランプを下げるなど、保温を強くします。",
+    "answer": "とても寒い。ランプを下げるなど保温を強くする",
+    "explanation": "ランプの真下で重なり合うのは「非常に寒い」サインです。すぐにランプを下げ、追加の保温を考えます。",
     "placeholder": true,
     "level": "上級",
     "group": "T1193",
     "en": {
-      "question": "Piglets are crowding and piling up under the heat lamp. What does this tell you?",
+      "question": "Suppose piglets are sleeping piled on top of each other right under the heat lamp. How does the manual say to judge this?",
       "options": [
-        "They are cold. Increase the heating",
-        "They are hot. Turn off the lamp",
-        "They are hungry. Give more feed",
-        "They are just sleepy. Do nothing"
+        "Very cold. Lower the lamp or add more warmth",
+        "Hot. Turn off the lamp",
+        "Hungry. Give more feed",
+        "Just right. Do nothing"
       ]
     },
     "vi": {
-      "question": "Heo con chen chúc, nằm chồng lên nhau dưới đèn sưởi. Đây là dấu hiệu gì?",
+      "question": "Giả sử heo con nằm chồng lên nhau ngay dưới đèn sưởi. Theo sổ tay thì đánh giá thế nào?",
       "options": [
-        "Heo bị lạnh. Tăng sưởi ấm",
-        "Heo bị nóng. Tắt đèn",
-        "Heo đói. Cho thêm cám",
-        "Heo chỉ buồn ngủ. Không cần làm gì"
+        "Rất lạnh. Hạ thấp đèn hoặc tăng thêm sưởi ấm",
+        "Nóng. Tắt đèn",
+        "Đói. Cho thêm cám",
+        "Vừa phải. Không cần làm gì"
       ]
     },
     "ind": {
-      "question": "Anak babi berkumpul dan bertumpuk di bawah lampu pemanas. Ini tanda apa?",
+      "question": "Misalkan anak babi tidur bertumpuk tepat di bawah lampu pemanas. Menurut buku panduan, bagaimana menilainya?",
       "options": [
-        "Kedinginan. Tambah penghangat",
-        "Kepanasan. Matikan lampu",
+        "Sangat dingin. Turunkan lampu atau tambah penghangat",
+        "Panas. Matikan lampu",
         "Lapar. Tambah pakan",
-        "Hanya mengantuk. Tidak perlu apa-apa"
+        "Pas. Tidak perlu apa-apa"
       ]
     }
   },
@@ -6089,43 +6089,43 @@
     "id": "q140",
     "video": "videos/q140.mp4",
     "category": "衛生・防疫",
-    "question": "白い粉は消石灰です。よく効かせるために大切なことは何ですか？",
+    "question": "踏み込み消毒に消石灰（白い粉）を使うとき、よく効かせるために大切なことは何ですか？",
     "options": [
       "水分があること（乾いた粉だけでは効きにくい）",
       "完全に乾かしておくこと",
-      "月に1回だけ入れること",
+      "月に1回だけ入れかえること",
       "上から砂をかけること"
     ],
     "answer": "水分があること（乾いた粉だけでは効きにくい）",
-    "explanation": "消石灰は、水分がないと効き目が弱くなります。粉のままより、水でといて使うほうがよく効きます。",
+    "explanation": "消石灰は水分がないと効き目が弱くなります。粉のままより、水でといて使うほうがよく効きます。",
     "placeholder": true,
     "level": "中級",
     "group": "T0989",
     "en": {
-      "question": "The white powder is slaked lime. What is important to make it work well?",
+      "question": "When using slaked lime (white powder) for a foot dip, what is important to make it work well?",
       "options": [
-        "It needs moisture (dry powder alone works poorly)",
+        "It must have moisture (dry powder alone works poorly)",
         "Keep it completely dry",
-        "Put it in only once a month",
+        "Change it only once a month",
         "Cover it with sand"
       ]
     },
     "vi": {
-      "question": "Bột trắng là vôi tôi. Điều gì quan trọng để vôi có tác dụng tốt?",
+      "question": "Khi dùng vôi tôi (bột trắng) để khử trùng ủng, điều gì quan trọng để vôi có tác dụng tốt?",
       "options": [
-        "Phải có độ ẩm (bột khô thì kém tác dụng)",
-        "Giữ thật khô",
-        "Mỗi tháng chỉ rắc một lần",
+        "Phải có nước (bột khô không thì kém tác dụng)",
+        "Giữ cho khô hoàn toàn",
+        "Chỉ thay mỗi tháng một lần",
         "Rải cát lên trên"
       ]
     },
     "ind": {
-      "question": "Bubuk putih itu kapur mati. Apa yang penting agar ampuh?",
+      "question": "Saat memakai kapur mati (bubuk putih) untuk celup sepatu bot, apa yang penting agar bekerja dengan baik?",
       "options": [
-        "Harus ada air/lembap (bubuk kering saja kurang ampuh)",
-        "Dijaga benar-benar kering",
-        "Diisi sebulan sekali saja",
-        "Ditutup pasir di atasnya"
+        "Harus ada air/lembap (bubuk kering saja kurang bekerja)",
+        "Dijaga tetap kering sepenuhnya",
+        "Diganti hanya sebulan sekali",
+        "Ditutup pasir dari atas"
       ]
     }
   },
@@ -6573,7 +6573,7 @@
     "id": "q151",
     "video": "videos/q151.mp4",
     "category": "繁殖・分娩",
-    "question": "左の母豚の外陰部（おしり）は赤く腫れています。これは何のサインですか？",
+    "question": "動画のような母豚で、外陰部（おしり）が赤く腫れていたら、何のサインですか？",
     "options": [
       "発情のサイン",
       "寒いサイン",
@@ -6581,34 +6581,34 @@
       "眠いサイン"
     ],
     "answer": "発情のサイン",
-    "explanation": "外陰部が赤く腫れるのは発情のサインです。",
+    "explanation": "外陰部が腫れて赤くなるのは発情のサインです。気づいたら発情確認（背圧テスト）につなげます。",
     "placeholder": true,
     "level": "中級",
     "group": "T0131@6",
     "en": {
-      "question": "The left sow's vulva is red and swollen. What is this a sign of?",
+      "question": "In a sow like the one in the video, if the vulva is red and swollen, what is it a sign of?",
       "options": [
-        "Heat (estrus)",
-        "Being cold",
-        "Eating too much",
-        "Being sleepy"
+        "A sign of heat (estrus)",
+        "A sign of being cold",
+        "A sign of overeating",
+        "A sign of being sleepy"
       ]
     },
     "vi": {
-      "question": "Âm hộ của heo nái bên trái đỏ và sưng. Đây là dấu hiệu gì?",
+      "question": "Với heo nái như trong video, nếu âm hộ sưng đỏ thì đó là dấu hiệu gì?",
       "options": [
-        "Dấu hiệu động dục",
+        "Dấu hiệu lên giống (động dục)",
         "Dấu hiệu bị lạnh",
         "Dấu hiệu ăn quá nhiều",
         "Dấu hiệu buồn ngủ"
       ]
     },
     "ind": {
-      "question": "Vulva induk di sebelah kiri merah dan bengkak. Ini tanda apa?",
+      "question": "Pada induk seperti di video, jika vulva merah dan bengkak, itu tanda apa?",
       "options": [
         "Tanda birahi",
         "Tanda kedinginan",
-        "Tanda makan terlalu banyak",
+        "Tanda kebanyakan makan",
         "Tanda mengantuk"
       ]
     }
@@ -6881,43 +6881,43 @@
     "id": "q158",
     "video": "videos/q158.mp4",
     "category": "繁殖・分娩",
-    "question": "交配のファイルがのっているこの機械（インキュベーター）で保管するものは？",
+    "question": "動画の機械が精液を保管するインキュベーターだとします。精液をこの機械に入れておくのはなぜですか？",
     "options": [
-      "精液",
-      "ワクチン",
-      "豚のえさ",
-      "死んだ子豚"
+      "温度を一定に保つため",
+      "精液をこおらせるため",
+      "精液を消毒するため",
+      "精液に光を当てるため"
     ],
-    "answer": "精液",
-    "explanation": "精液は、温度を一定に保つ機械（インキュベーター）で保管します。",
+    "answer": "温度を一定に保つため",
+    "explanation": "精液は温度の変化に弱いので、温度を一定に保てるインキュベーターで保管します。",
     "placeholder": true,
     "level": "中級",
     "group": "T0134@3",
     "en": {
-      "question": "This machine (incubator) with the breeding files on top is used to store what?",
+      "question": "Suppose the machine in the video is an incubator for storing semen. Why is semen kept in this machine?",
       "options": [
-        "Semen",
-        "Vaccines",
-        "Pig feed",
-        "Dead piglets"
+        "To keep the temperature constant",
+        "To freeze the semen",
+        "To disinfect the semen",
+        "To expose the semen to light"
       ]
     },
     "vi": {
-      "question": "Chiếc máy này (tủ ấm) có đặt sổ phối giống ở trên, dùng để bảo quản gì?",
+      "question": "Giả sử máy trong video là tủ bảo quản tinh (tủ ấm). Vì sao tinh được giữ trong máy này?",
       "options": [
-        "Tinh dịch",
-        "Vắc-xin",
-        "Thức ăn cho heo",
-        "Heo con chết"
+        "Để giữ nhiệt độ ổn định",
+        "Để làm đông tinh",
+        "Để khử trùng tinh",
+        "Để chiếu sáng cho tinh"
       ]
     },
     "ind": {
-      "question": "Mesin ini (inkubator) dengan map catatan kawin di atasnya dipakai untuk menyimpan apa?",
+      "question": "Misalkan mesin di video adalah inkubator penyimpan semen. Mengapa semen disimpan di mesin ini?",
       "options": [
-        "Semen",
-        "Vaksin",
-        "Pakan babi",
-        "Anak babi mati"
+        "Agar suhunya tetap stabil",
+        "Untuk membekukan semen",
+        "Untuk mendisinfeksi semen",
+        "Agar semen terkena cahaya"
       ]
     }
   },
@@ -7937,42 +7937,42 @@
     "id": "q182",
     "video": "videos/q182.mp4",
     "category": "繁殖・分娩",
-    "question": "母豚の背中に書いてある緑の数字は何のためですか？",
+    "question": "母豚の背中に緑の数字が書いてあります。これは何のためですか？",
     "options": [
-      "豚を1頭ずつ見分けるため",
+      "豚を見分けるための印（マーキング）",
       "豚の体重を書いたもの",
       "豚の値段を書いたもの",
       "かざり"
     ],
-    "answer": "豚を1頭ずつ見分けるため",
-    "explanation": "背中の数字で、豚を1頭ずつ見分けます。",
+    "answer": "豚を見分けるための印（マーキング）",
+    "explanation": "背中の数字はマーキングスプレーで書いた印です。豚を見分けたり、作業ずみかを分かるようにしたりするために使います。",
     "placeholder": true,
     "level": "初級",
     "group": "T0201@2",
     "en": {
-      "question": "What are the green numbers on the sows' backs for?",
+      "question": "There are green numbers written on the sows' backs. What are they for?",
       "options": [
-        "To tell each pig apart",
+        "A mark to tell the pigs apart (marking)",
         "The pig's weight",
         "The pig's price",
         "Decoration"
       ]
     },
     "vi": {
-      "question": "Những con số màu xanh lá trên lưng heo nái dùng để làm gì?",
+      "question": "Trên lưng heo nái có ghi số màu xanh lá. Để làm gì?",
       "options": [
-        "Để phân biệt từng con heo",
-        "Ghi cân nặng của heo",
-        "Ghi giá tiền của heo",
-        "Để trang trí"
+        "Dấu để phân biệt heo (đánh dấu)",
+        "Ghi cân nặng heo",
+        "Ghi giá heo",
+        "Trang trí"
       ]
     },
     "ind": {
-      "question": "Untuk apa angka hijau di punggung induk?",
+      "question": "Di punggung induk babi ada angka hijau. Untuk apa?",
       "options": [
-        "Untuk membedakan setiap babi",
-        "Berat badan babi",
-        "Harga babi",
+        "Tanda untuk membedakan babi (penandaan)",
+        "Menulis berat babi",
+        "Menulis harga babi",
         "Hiasan"
       ]
     }
@@ -8033,7 +8033,7 @@
       "母豚の体重をはかっている"
     ],
     "answer": "両手で母豚の背中を押している",
-    "explanation": "母豚の背中に両手を置いて体重をかけて押すのは「背圧テスト」で、発情しているかを確かめる作業です。",
+    "explanation": "両手で母豚の背中を押しています。このように背中に体重をかけて押す動きは、発情を確かめる「背圧テスト」でも使います。",
     "placeholder": true,
     "level": "初級",
     "group": "T0618@0",
@@ -8051,17 +8051,17 @@
       "options": [
         "Dùng hai tay ấn lên lưng heo nái",
         "Tiêm cho heo nái",
-        "Tắm cho heo nái",
+        "Tắm rửa cho heo nái",
         "Cân heo nái"
       ]
     },
     "ind": {
-      "question": "Apa yang dilakukan orang dalam video pada induk babi?",
+      "question": "Apa yang dilakukan orang di video pada induk babi?",
       "options": [
         "Menekan punggung induk dengan kedua tangan",
-        "Menyuntik induk babi",
-        "Memandikan induk babi",
-        "Menimbang induk babi"
+        "Menyuntik induk",
+        "Memandikan induk",
+        "Menimbang induk"
       ]
     }
   },
@@ -10753,7 +10753,7 @@
     "id": "q246",
     "video": "videos/q246.mp4",
     "category": "飼養環境・施設",
-    "question": "動画は夏の豚舎です。カーテンを上まで大きく開けているのはなぜですか？",
+    "question": "動画は夏の豚舎です。横の窓（カーテン）を大きく開けているのはなぜですか？",
     "options": [
       "風をたくさん入れて、豚舎の暑さをやわらげるため",
       "豚舎の中を暗くするため",
@@ -10761,34 +10761,34 @@
       "雨水を中に入れるため"
     ],
     "answer": "風をたくさん入れて、豚舎の暑さをやわらげるため",
-    "explanation": "夏は換気を最大にするため、カーテンを大きく開けて風をたくさん入れます。",
+    "explanation": "夏は換気を最大にするため、横のカーテンや窓を大きく開けて風をたくさん入れます。",
     "placeholder": true,
     "level": "中級",
     "group": "W15@18",
     "en": {
-      "question": "This is a pig house in summer. Why is the curtain rolled up wide open?",
+      "question": "The video shows a pig house in summer. Why are the side windows (curtains) opened wide?",
       "options": [
-        "To let in lots of air and reduce the heat in the pig house",
-        "To make the inside of the pig house darker",
-        "To make it easier to let the pigs outside",
+        "To let in a lot of air and ease the heat in the pig house",
+        "To make the pig house dark",
+        "To let the pigs go outside easily",
         "To let rainwater in"
       ]
     },
     "vi": {
-      "question": "Video là chuồng heo vào mùa hè. Vì sao bạt được cuộn lên, mở rộng hết?",
+      "question": "Video là chuồng heo vào mùa hè. Vì sao cửa sổ bên hông (rèm) được mở rộng?",
       "options": [
-        "Để gió vào nhiều, giảm nóng trong chuồng",
-        "Để trong chuồng tối hơn",
-        "Để dễ thả heo ra ngoài",
+        "Để đón nhiều gió, làm dịu cái nóng trong chuồng",
+        "Để chuồng tối hơn",
+        "Để heo dễ ra ngoài",
         "Để nước mưa vào trong"
       ]
     },
     "ind": {
-      "question": "Video ini kandang saat musim panas. Mengapa tirai digulung dan dibuka lebar?",
+      "question": "Video menunjukkan kandang babi di musim panas. Mengapa jendela samping (tirai) dibuka lebar?",
       "options": [
         "Agar banyak angin masuk dan panas di kandang berkurang",
-        "Agar di dalam kandang lebih gelap",
-        "Agar babi mudah dikeluarkan",
+        "Agar kandang menjadi gelap",
+        "Agar babi mudah keluar",
         "Agar air hujan masuk"
       ]
     }
@@ -12293,7 +12293,7 @@
     "id": "q281",
     "video": "videos/q281.mp4",
     "category": "飼養環境・施設",
-    "question": "動画で、豚房の設備のまわりの床がぬれています。まず確かめることは何ですか？",
+    "question": "動画のように、豚房の水飲みのまわりの床がいつもぬれています。まず確かめることは何ですか？",
     "options": [
       "水もれや、水の出すぎがないか",
       "豚の体重が減っていないか",
@@ -12301,35 +12301,35 @@
       "えさの袋の数が足りているか"
     ],
     "answer": "水もれや、水の出すぎがないか",
-    "explanation": "床がいつも濡れているのは、水もれや水の出すぎのサイン。ぬれた床は衛生が悪くなる。",
+    "explanation": "床がいつもぬれているのは、水もれや水の出すぎのサインです。ぬれた床は衛生が悪くなるので、まず飲水器を確かめます。",
     "placeholder": true,
     "level": "上級",
     "group": "W22@138.5",
     "en": {
-      "question": "In the video, the floor around the equipment in the pen is wet. What do you check first?",
+      "question": "As in the video, the floor around the drinker in the pen is always wet. What do you check first?",
       "options": [
-        "Whether water is leaking or coming out too much",
-        "Whether the pigs have lost weight",
+        "Whether there is a leak or too much water flow",
+        "Whether the pigs are losing weight",
         "Whether the fan is running",
-        "Whether there are enough feed bags"
+        "Whether there are enough bags of feed"
       ]
     },
     "vi": {
-      "question": "Trong video, nền chuồng quanh thiết bị trong ô bị ướt. Trước tiên cần kiểm tra gì?",
+      "question": "Như trong video, sàn quanh máng uống trong ô chuồng lúc nào cũng ướt. Bạn kiểm tra gì trước tiên?",
       "options": [
-        "Có rò nước hoặc nước ra quá nhiều không",
+        "Có rò rỉ nước hay nước chảy quá mạnh không",
         "Heo có bị sụt cân không",
         "Quạt thông gió có chạy không",
         "Số bao cám có đủ không"
       ]
     },
     "ind": {
-      "question": "Dalam video, lantai di sekitar peralatan di kandang basah. Apa yang dicek dulu?",
+      "question": "Seperti di video, lantai di sekitar tempat minum di kandang selalu basah. Apa yang diperiksa lebih dulu?",
       "options": [
-        "Apakah ada kebocoran air atau air keluar terlalu banyak",
+        "Apakah ada kebocoran atau air keluar terlalu banyak",
         "Apakah berat babi turun",
         "Apakah kipas berputar",
-        "Apakah karung pakan cukup"
+        "Apakah jumlah karung pakan cukup"
       ]
     }
   },
