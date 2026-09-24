@@ -32,6 +32,8 @@
   .judge label { font-size:.9rem; cursor:pointer; padding:6px 12px; border-radius:8px; border:1px solid var(--line); }
   .judge input[type=radio] { margin-right:4px; }
   .judge textarea { flex:1 1 260px; min-height:44px; font-size:.9rem; padding:6px 8px; border:1px solid var(--line); border-radius:8px; font-family:inherit; }
+  .lv { display:inline-block; font-size:.75rem; padding:2px 8px; border-radius:999px; margin-left:6px; font-weight:700; }
+  .lv-初級 { background:#e3f4ea; color:#1f7a45; } .lv-中級 { background:#fff1d6; color:#8a5a00; } .lv-上級 { background:#fbe3e3; color:#a02828; }
   .note { color:#fff; font-size:.85rem; opacity:.85; }
 </style>
 </head>
@@ -40,6 +42,9 @@
   <h1>HSS動画試験 監修ページ</h1>
   <span class="stat" id="stat"></span>
   <select id="filter"><option value="">すべて</option><option value="none">未判定</option><option value="ok">OK</option><option value="fix">修正</option><option value="del">削除</option></select>
+  <select id="flevel"><option value="">難易度: すべて</option><option>初級</option><option>中級</option><option>上級</option></select>
+  <select id="fcat"><option value="">カテゴリ: すべて</option></select>
+  <select id="fph"><option value="">監修: すべて</option><option value="1">未監修だけ</option><option value="0">監修済だけ</option></select>
   <button id="export">判定をダウンロード(JSON)</button>
   <button id="clear">判定を消す</button>
   <span class="note">判定はこの端末のブラウザに自動保存。ダウンロードしたJSONを <code>python tools/apply_review.py review-*.json</code> で Excel に反映。</span>
@@ -65,10 +70,14 @@
   }
   function render(){
     var f = document.getElementById("filter").value;
+    var fl = document.getElementById("flevel").value, fc = document.getElementById("fcat").value, fp = document.getElementById("fph").value;
     var main = document.getElementById("main"); main.innerHTML = "";
     all.forEach(function(q){
       var st = (state[q.id]||{}).status || "none";
       if(f && f!==st) return;
+      if(fl && q.level!==fl) return;
+      if(fc && q.category!==fc) return;
+      if(fp && (q.placeholder?"1":"0")!==fp) return;
       var card = document.createElement("section");
       card.className = "q st-"+st; card.dataset.id = q.id;
       var lang = (state[q.id]||{}).lang || "ja";
@@ -80,6 +89,7 @@
         '<div><video src="'+esc(q.video)+'" controls loop playsinline preload="none"></video>'+
         '<div class="meta">'+esc(q.video)+(q.placeholder?' ・ <b>未監修</b>':' ・ 監修済')+(q.required?' ・ 必出':'')+'</div></div>'+
         '<div><span class="qid">'+esc(q.id)+'</span><span class="cat">'+esc(q.category)+'</span>'+
+        (q.level?'<span class="lv lv-'+esc(q.level)+'">'+esc(q.level)+'</span>':'')+
         (q._set==="demo"?'<span class="cat">デモ</span>':'')+
         '<div class="langs">'+langBtns+'</div>'+
         '<div class="qtext">'+esc(t.question)+(t.fallback?' <small style="color:#c73a3a">(未翻訳: 日本語表示)</small>':'')+'</div>'+
@@ -96,7 +106,7 @@
     });
     updateStat();
   }
-  document.getElementById("filter").addEventListener("change", render);
+  ["filter","flevel","fcat","fph"].forEach(function(id){ document.getElementById(id).addEventListener("change", render); });
   document.getElementById("export").addEventListener("click", function(){
     var out = { exportedAt: new Date().toISOString(), items: all.map(function(q){ var s=state[q.id]||{}; return { id:q.id, set:q._set, status:s.status||"", memo:s.memo||"" }; }) };
     var blob = new Blob([JSON.stringify(out,null,2)], {type:"application/json"});
@@ -107,7 +117,10 @@
   Promise.all([fetch("data/questions.json").then(function(r){return r.json();}), fetch("data/demo-questions.json").then(function(r){return r.json();})])
     .then(function(res){
       res[0].forEach(function(q){ q._set="exam"; }); res[1].forEach(function(q){ q._set="demo"; });
-      all = res[0].concat(res[1]); render();
+      all = res[0].concat(res[1]);
+      var fc = document.getElementById("fcat");
+      all.map(function(q){ return q.category; }).filter(function(c,i,a){ return c && a.indexOf(c)===i; }).forEach(function(c){ var o=document.createElement("option"); o.value=c; o.textContent=c; fc.appendChild(o); });
+      render();
     })
     .catch(function(e){ document.getElementById("main").innerHTML = '<p style="color:#fff">問題データを読めません: '+esc(e)+'（file:// では動きません。python -m http.server などで開いてください）</p>'; });
 })();

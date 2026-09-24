@@ -4,9 +4,29 @@
 学科試験 `~/hss-exam/` の土台（5言語・GAS記録・離脱検知・進行保存・Service Worker）を複製し、**動画出題**を足したもの。
 hss-exam には一切手を入れていない（別リポジトリ・別GAS・別スプレッドシート）。
 
-- 公開予定URL: https://shoichiokada225-sys.github.io/hss-exam-video/ （未デプロイ）
+- 公開URL: https://shoichiokada225-sys.github.io/hss-exam-video/ （2026-09-02 公開。master へ push = 即反映）
 - 現状（2026-09-02）: **第2版・内容確定**。ウェアラブルカメラ素材（2026-08-07撮影・24本41分）から5秒クリップ26本を切り出し、本試験30問＋デモ3問を ja/en/vi/id で作成。**社長判断で全問採用**（`placeholder=0`。剖検・採血を含む／q18・q26は実態どおり／同一動画への複数問は許容）。動画は無音
-- 本番までの残り: 新GASデプロイ→`webhookUrl` 設定、GitHub Pages 公開、実機で再生確認
+- **第3版（2026-09-24）**: 問題プールを **304問**（既存30＋新規274・初級/中級/上級つき）に拡充。毎回30問をランダム出題。新規274問は **未監修（placeholder=1）** → 社長が review.html で監修してから本番へ。詳細は下の「第3版の作り方」
+- 本番までの残り: 第3版の監修（review.html）→ `validate.py --release` PASS → push、実機で再生確認
+
+## 第3版の作り方（2026-09-24・q31〜）
+
+素材は PC 上の元ファイルを直接読む（書き込まない）。作業場所は `raw/v2/`（git管理外）。
+
+```
+raw/v2/prep.py          ← 素材台帳 manifest.json（素材ID→元ファイル）とコンタクトシート sheets/ を作る
+   │  素材ID: T####=高橋さん写真集(~/Desktop/02_写真/高橋さん_養豚写真集/分類済・社長判断で公開可) / W##=ウェアラブル(~/Movies/FinalCut素材/ウェアラブルカメラ)
+   │          M###=睦沢ストール写真 / I###=2026-09-16 iPhone写真（どちらも種付野帳）
+   ▼ 作問エージェント（raw/v2/BRIEF.md）→ drafts/*.json
+   ▼ 検証エージェント（raw/v2/VERIFY.md・実物の映像と swine-manual を照合）→ verified/*.json（keep/fix/drop）
+   ▼ 統合審査（担当横断の重複・選択肢の長さの偏り）
+python3 tools/make_questions_v3.py   ← verified/*.json を questions.xlsx に追記（placeholder=1）＋切り出し台帳 tools/clips_v2.json
+python3 tools/cut_clips_v2.py        ← videos/q31.mp4 … を生成（動画=start から5秒、5秒未満は0.5倍スロー＋静止、写真=5秒ズーム、
+                                        縦長は拡大して上から下へ流す、rotate で横倒し素材を正立）
+python3 tools/build_from_xlsx.py     ← data/*.json（level 列も出力。review.html で難易度・カテゴリ・未監修の絞り込み）
+```
+
+xlsx の追加列: `level`（初級/中級/上級）・`source`（swine-manual の根拠）・`scene`（何が写っているか）・`media`（素材ID@秒）・`check_note`（【社長確認】の論点と作問/検証メモ）。
 
 ## 素材から5秒動画を作る（第1版の作り方）
 
@@ -76,7 +96,7 @@ data/questions.json / data/demo-questions.json
 
 - [ ] `config.js` の `webhookUrl` に **新しいGAS** の /exec を設定（`gas/DEPLOY.md`）。学科版のGASを流用しない
 - [ ] `python validate.py --release` が PASS
-- [ ] `node tests/e2e.js` が全OK
+- [ ] `node tests/e2e.js` / `node tests/review-e2e.js` が全OK（テストは Windows/Mac 両対応。環境は tests/_env.js）
 - [ ] 実機（iPhone Safari / Android Chrome）で1問だけ再生確認。特に **音の有無**（動画に音声を残すならマナーモードで聞こえないことを受験者案内に書く）
 - [ ] 会場Wi-Fiで受験人数分の同時ダウンロードに耐えるか（30問×2MB=60MB/人が目安。20人なら1.2GB）
 - [ ] 通しテスト1人分 → スプレッドシートに列が埋まるか → `purgeTestRows`

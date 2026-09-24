@@ -2,10 +2,8 @@
 // 実行: node tests/prod-smoke.js [URL]
 const fs = require('fs'); const path = require('path'); const os = require('os');
 const URL_BASE = process.argv[2] || 'https://shoichiokada225-sys.github.io/hss-exam-video/';
-const puppeteer = require(path.join(os.homedir(), 'elearn-e2e-tmp', 'node_modules', 'puppeteer-core'));
-const base = path.join(os.homedir(), '.cache', 'puppeteer', 'chrome');
-const ver = fs.readdirSync(base).filter(d => d.startsWith('win64-')).sort().reverse()[0];
-const CHROME = path.join(base, ver, 'chrome-win64', 'chrome.exe');
+const { puppeteer, findChrome } = require('./_env');
+const CHROME = findChrome();
 let ok = 0, ng = 0; const log = [];
 const check = (n, c, x) => { if (c) ok++; else ng++; log.push((c ? 'OK  ' : 'NG  ') + n + (c || x === undefined ? '' : '  <- ' + JSON.stringify(x))); };
 const sleep = ms => new Promise(r => setTimeout(r, ms));

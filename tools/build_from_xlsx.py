@@ -78,6 +78,8 @@ def rows_to_questions(ws, sheet_label):
             q["required"] = True
         if g("placeholder") in TRUTHY:
             q["placeholder"] = True
+        if "level" in idx and g("level"):
+            q["level"] = g("level")  # 初級/中級/上級（第3版から。review.html の絞り込みに使う）
         for suf, key in LANGS:
             tq = g(f"question_{suf}")
             topts = [g(f"opt{i}_{suf}") for i in range(1, len(opts) + 1)]
