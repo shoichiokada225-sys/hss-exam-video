@@ -156,7 +156,7 @@ def cut_video(src, start, dst, rotate=0, anchor=None):
     subprocess.run(cmd, check=True)
 
 
-def cut_image(src, focus, dst, rotate=0):
+def cut_image(src, focus, dst, rotate=0, anchor=None):
     # HEIC/回転情報を sips+PIL で焼き込んだ JPEG にしてから ffmpeg へ
     from PIL import Image, ImageOps
 
@@ -183,6 +183,8 @@ def cut_image(src, focus, dst, rotate=0):
             z = f"if(lt(on,{t0}),1,if(lt(on,{t1}),1+{zmax - 1:.4f}*(on-{t0})/{t1 - t0},{zmax:.4f}))"
             x = "iw/2-(iw/zoom/2)"
             y = f"(ih-ih/zoom)*if(lt(on,{t1}),0,min(1,(on-{t1})/{n - t1 - FPS // 3}))"
+            if anchor in ("top", "center", "bottom"):  # 流さずに寄せた位置で固定（主題が上や中央に偏っている写真）
+                y = {"top": "0", "center": "(ih-ih/zoom)/2", "bottom": "ih-ih/zoom"}[anchor]
         else:
             z = f"1+0.15*on/{n}"
             x, y = PAN.get(focus or "center", PAN["center"])
@@ -219,7 +221,7 @@ def make(c):
         return f"SKIP 元素材なし {c['video']} {src}"
     try:
         if c["kind"] == "image":
-            cut_image(src, c.get("focus"), dst, c.get("rotate") or 0)
+            cut_image(src, c.get("focus"), dst, c.get("rotate") or 0, c.get("anchor"))
         else:
             cut_video(src, float(c.get("start") or 0), dst, c.get("rotate") or 0, c.get("anchor"))
     except subprocess.CalledProcessError as e:

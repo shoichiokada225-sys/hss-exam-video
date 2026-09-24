@@ -13344,5 +13344,2469 @@
         "Boleh, kalau disuntik obat hari itu"
       ]
     }
+  },
+  {
+    "id": "q306",
+    "video": "videos/q306.mp4",
+    "category": "飼料・栄養",
+    "question": "えさの袋やバケツを使う前に、ラベルでまず確かめることはどれですか？",
+    "options": [
+      "どの豚のためのえさか",
+      "袋やバケツの色",
+      "袋の大きさ",
+      "作った会社の住所"
+    ],
+    "answer": "どの豚のためのえさか",
+    "explanation": "飼料はステージごとに種類がちがいます。まちがえないよう、ラベルで「どの豚用か」を確かめてから使います。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1079@0",
+    "en": {
+      "question": "Before using a feed bag or bucket, what should you check on the label first?",
+      "options": [
+        "Which pigs the feed is for",
+        "The color of the bag or bucket",
+        "The size of the bag",
+        "The address of the company that made it"
+      ]
+    },
+    "vi": {
+      "question": "Trước khi dùng bao hoặc xô thức ăn, cần xem trên nhãn điều gì trước tiên?",
+      "options": [
+        "Thức ăn này dành cho heo nào",
+        "Màu của bao hoặc xô",
+        "Kích thước của bao",
+        "Địa chỉ công ty sản xuất"
+      ]
+    },
+    "ind": {
+      "question": "Sebelum memakai karung atau ember pakan, apa yang pertama kali harus dicek di label?",
+      "options": [
+        "Pakan ini untuk babi yang mana",
+        "Warna karung atau ember",
+        "Ukuran karung",
+        "Alamat perusahaan pembuatnya"
+      ]
+    }
+  },
+  {
+    "id": "q307",
+    "video": "videos/q307.mp4",
+    "category": "飼料・栄養",
+    "question": "カップに入っているえさは、どんな形ですか？",
+    "options": [
+      "細かい粉のえさ（マッシュ）",
+      "丸いつぶに固めたえさ（ペレット）",
+      "水とまぜた液体のえさ",
+      "牧草などの草"
+    ],
+    "answer": "細かい粉のえさ（マッシュ）",
+    "explanation": "カップのえさは細かい粉のままのえさです。粉状の飼料を「マッシュ」といいます。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1146",
+    "en": {
+      "question": "What form is the feed in the cup?",
+      "options": [
+        "Fine powder feed (mash)",
+        "Feed pressed into small pellets",
+        "Liquid feed mixed with water",
+        "Grass such as hay"
+      ]
+    },
+    "vi": {
+      "question": "Thức ăn trong cốc có dạng gì?",
+      "options": [
+        "Thức ăn dạng bột mịn (cám bột)",
+        "Thức ăn ép thành viên (cám viên)",
+        "Thức ăn lỏng trộn với nước",
+        "Cỏ khô"
+      ]
+    },
+    "ind": {
+      "question": "Pakan di dalam gelas berbentuk apa?",
+      "options": [
+        "Pakan bubuk halus (mash)",
+        "Pakan yang dipadatkan jadi butiran (pelet)",
+        "Pakan cair yang dicampur air",
+        "Rumput atau jerami"
+      ]
+    }
+  },
+  {
+    "id": "q308",
+    "video": "videos/q308.mp4",
+    "category": "飼料・栄養",
+    "question": "ふたを開けた給餌器の中のえさは、どんな形ですか？",
+    "options": [
+      "小さなつぶのえさ（ペレット・クランブル）",
+      "細かい粉のえさ（マッシュ）",
+      "水とまぜた液体のえさ",
+      "牧草などの草"
+    ],
+    "answer": "小さなつぶのえさ（ペレット・クランブル）",
+    "explanation": "給餌器の中のえさは、小さなつぶに固めたえさです。つぶのえさを「ペレット」、ペレットを細かくくだいたものを「クランブル」といいます。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1133",
+    "en": {
+      "question": "The lid of the feeder is open. What form is the feed inside?",
+      "options": [
+        "Feed in small grains (pellets or crumbles)",
+        "Fine powder feed (mash)",
+        "Liquid feed mixed with water",
+        "Grass such as hay"
+      ]
+    },
+    "vi": {
+      "question": "Nắp máng ăn đang mở. Thức ăn bên trong có dạng gì?",
+      "options": [
+        "Thức ăn dạng hạt nhỏ (cám viên hoặc cám mảnh)",
+        "Thức ăn dạng bột mịn (cám bột)",
+        "Thức ăn lỏng trộn với nước",
+        "Cỏ khô"
+      ]
+    },
+    "ind": {
+      "question": "Tutup tempat pakan sedang terbuka. Pakan di dalamnya berbentuk apa?",
+      "options": [
+        "Pakan berbentuk butiran kecil (pelet atau crumble)",
+        "Pakan bubuk halus (mash)",
+        "Pakan cair yang dicampur air",
+        "Rumput atau jerami"
+      ]
+    }
+  },
+  {
+    "id": "q309",
+    "video": "videos/q309.mp4",
+    "category": "飼料・栄養",
+    "question": "粉のえさ（マッシュ）とくらべて、つぶのえさ（ペレット）のよいところはどれですか？",
+    "options": [
+      "食べやすく、飛び散りにくい",
+      "値段がいちばん安い",
+      "水を飲まなくてもよくなる",
+      "病気の薬がいらなくなる"
+    ],
+    "answer": "食べやすく、飛び散りにくい",
+    "explanation": "ペレットは食べやすく食い込みがよく、粉のえさより飛び散りにくいのが長所です（そのかわり加工の費用は高い）。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1133",
+    "en": {
+      "question": "Compared with powder feed (mash), what is good about pellet feed?",
+      "options": [
+        "It is easy to eat and does not scatter much",
+        "It is the cheapest feed",
+        "Pigs no longer need to drink water",
+        "Pigs no longer need medicine"
+      ]
+    },
+    "vi": {
+      "question": "So với cám bột, cám viên có ưu điểm gì?",
+      "options": [
+        "Heo dễ ăn và ít bị rơi vãi",
+        "Giá rẻ nhất",
+        "Heo không cần uống nước nữa",
+        "Heo không cần thuốc nữa"
+      ]
+    },
+    "ind": {
+      "question": "Dibandingkan pakan bubuk (mash), apa kelebihan pakan pelet?",
+      "options": [
+        "Mudah dimakan dan tidak mudah tercecer",
+        "Harganya paling murah",
+        "Babi tidak perlu minum air lagi",
+        "Babi tidak perlu obat lagi"
+      ]
+    }
+  },
+  {
+    "id": "q310",
+    "video": "videos/q310.mp4",
+    "category": "飼料・栄養",
+    "question": "動画の青いカップは、何に使う道具ですか？",
+    "options": [
+      "えさの量をはかる",
+      "豚に水を飲ませる",
+      "消毒液を入れる",
+      "豚の血を入れる"
+    ],
+    "answer": "えさの量をはかる",
+    "explanation": "青いカップは、えさの量をはかる計量カップです。決められた量を正しくあげるために使います。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1143",
+    "en": {
+      "question": "What is the blue cup in the video used for?",
+      "options": [
+        "Measuring the amount of feed",
+        "Giving water to pigs",
+        "Holding disinfectant",
+        "Holding pig blood"
+      ]
+    },
+    "vi": {
+      "question": "Cái cốc màu xanh trong video dùng để làm gì?",
+      "options": [
+        "Đong lượng thức ăn",
+        "Cho heo uống nước",
+        "Đựng thuốc sát trùng",
+        "Đựng máu heo"
+      ]
+    },
+    "ind": {
+      "question": "Gelas biru dalam video dipakai untuk apa?",
+      "options": [
+        "Menakar jumlah pakan",
+        "Memberi minum babi",
+        "Wadah cairan disinfektan",
+        "Wadah darah babi"
+      ]
+    }
+  },
+  {
+    "id": "q311",
+    "video": "videos/q311.mp4",
+    "category": "飼料・栄養",
+    "question": "動画の右側に積んである緑色の袋は、何の袋ですか？",
+    "options": [
+      "えさ（飼料）の袋",
+      "消毒薬の袋",
+      "ごみの袋",
+      "豚舎の床にしくおがくずの袋"
+    ],
+    "answer": "えさ（飼料）の袋",
+    "explanation": "袋に「飼料」と書いてあり、えさ（配合飼料）の袋です。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1167",
+    "en": {
+      "question": "What are the green bags piled up on the right side of the video?",
+      "options": [
+        "Bags of feed",
+        "Bags of disinfectant",
+        "Garbage bags",
+        "Bags of sawdust for the floor"
+      ]
+    },
+    "vi": {
+      "question": "Những bao màu xanh lá xếp chồng bên phải video là bao gì?",
+      "options": [
+        "Bao thức ăn (cám)",
+        "Bao thuốc sát trùng",
+        "Bao rác",
+        "Bao mùn cưa lót chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Karung hijau yang ditumpuk di sebelah kanan video itu karung apa?",
+      "options": [
+        "Karung pakan",
+        "Karung disinfektan",
+        "Kantong sampah",
+        "Karung serbuk gergaji untuk lantai kandang"
+      ]
+    }
+  },
+  {
+    "id": "q312",
+    "video": "videos/q312.mp4",
+    "category": "飼料・栄養",
+    "question": "えさの袋を置いておくとき、正しい置き方はどれですか？",
+    "options": [
+      "パレット（台）の上に置き、かべや床からはなす",
+      "床の上に直接置く",
+      "日がよく当たる外に置く",
+      "水道のそばのぬれた場所に置く"
+    ],
+    "answer": "パレット（台）の上に置き、かべや床からはなす",
+    "explanation": "袋のえさは湿気をさけるため、パレット（台）の上に置き、かべや床からはなして、日が当たらない場所に置きます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1167",
+    "en": {
+      "question": "What is the correct way to store feed bags?",
+      "options": [
+        "Put them on a pallet, away from the wall and floor",
+        "Put them directly on the floor",
+        "Put them outside in the sunshine",
+        "Put them in a wet place near the water tap"
+      ]
+    },
+    "vi": {
+      "question": "Cách cất bao thức ăn nào là đúng?",
+      "options": [
+        "Đặt trên pallet (kệ kê), cách xa tường và sàn",
+        "Đặt thẳng xuống sàn",
+        "Để ngoài trời chỗ nắng",
+        "Để chỗ ướt gần vòi nước"
+      ]
+    },
+    "ind": {
+      "question": "Bagaimana cara menyimpan karung pakan yang benar?",
+      "options": [
+        "Taruh di atas palet, jauh dari dinding dan lantai",
+        "Taruh langsung di lantai",
+        "Taruh di luar yang kena sinar matahari",
+        "Taruh di tempat basah dekat keran air"
+      ]
+    }
+  },
+  {
+    "id": "q313",
+    "video": "videos/q313.mp4",
+    "category": "飼料・栄養",
+    "question": "えさの袋がたくさんあります。どの順番で使いますか？",
+    "options": [
+      "先に届いた古い袋から使う",
+      "新しく届いた袋から使う",
+      "上にある袋から、いつでも好きに使う",
+      "大きい袋から使う"
+    ],
+    "answer": "先に届いた古い袋から使う",
+    "explanation": "袋のえさは「先入れ先出し」で、先に届いた古いものから使います。古い飼料が残ると品質が落ちます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1167",
+    "en": {
+      "question": "There are many feed bags. In what order should you use them?",
+      "options": [
+        "Use the older bags that arrived first",
+        "Use the newest bags first",
+        "Use whichever bag is on top",
+        "Use the biggest bags first"
+      ]
+    },
+    "vi": {
+      "question": "Có nhiều bao thức ăn. Nên dùng theo thứ tự nào?",
+      "options": [
+        "Dùng bao cũ nhập trước",
+        "Dùng bao mới nhập trước",
+        "Bao nào ở trên thì dùng trước",
+        "Dùng bao to trước"
+      ]
+    },
+    "ind": {
+      "question": "Ada banyak karung pakan. Dipakai dengan urutan bagaimana?",
+      "options": [
+        "Pakai karung lama yang datang lebih dulu",
+        "Pakai karung yang baru datang dulu",
+        "Pakai karung yang ada di atas saja",
+        "Pakai karung yang besar dulu"
+      ]
+    }
+  },
+  {
+    "id": "q314",
+    "video": "videos/q314.mp4",
+    "category": "飼料・栄養",
+    "question": "給餌器の中のえさを見るとき、使わずにすぐ上司に知らせなければならないのはどれですか？",
+    "options": [
+      "緑や白の粉のようなカビが見える",
+      "いつもと同じ色とにおい",
+      "袋から入れたばかりのえさ",
+      "えさが給餌器の半分まで入っている"
+    ],
+    "answer": "緑や白の粉のようなカビが見える",
+    "explanation": "カビ（緑や白の粉のようなもの）、異臭、変色、虫、固まりは品質が落ちたサインです。使わずに上司に報告します。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1179",
+    "en": {
+      "question": "When you check the feed inside a feeder, which one means you must not use it and must tell your supervisor right away?",
+      "options": [
+        "You see green or white powdery mold",
+        "It has its usual color and smell",
+        "It was just poured from the bag",
+        "The feeder is half full"
+      ]
+    },
+    "vi": {
+      "question": "Khi kiểm tra thức ăn trong máng, trường hợp nào phải ngừng dùng và báo ngay cho cấp trên?",
+      "options": [
+        "Thấy mốc màu xanh hoặc trắng như bột",
+        "Màu và mùi vẫn như mọi ngày",
+        "Thức ăn vừa đổ từ bao vào",
+        "Thức ăn còn một nửa máng"
+      ]
+    },
+    "ind": {
+      "question": "Saat memeriksa pakan di tempat pakan, kondisi mana yang berarti pakan tidak boleh dipakai dan harus segera dilaporkan ke atasan?",
+      "options": [
+        "Terlihat jamur hijau atau putih seperti bubuk",
+        "Warna dan baunya seperti biasa",
+        "Pakan baru dituang dari karung",
+        "Pakan terisi setengah tempat pakan"
+      ]
+    }
+  },
+  {
+    "id": "q315",
+    "video": "videos/q315.mp4",
+    "category": "飼料・栄養",
+    "question": "画面の右上、遠くに小さく見える白いタンクは、えさ（飼料）をためるタンクです。タンクの中のえさの残りは、どのくらいごとに確かめますか？",
+    "options": [
+      "毎日",
+      "1週間に1回",
+      "1か月に1回",
+      "えさが出なくなってから"
+    ],
+    "answer": "毎日",
+    "explanation": "飼料タンクの残量は毎日確認し、なくなる前に注文します。えさが切れると豚の成長が止まります。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0240",
+    "en": {
+      "question": "The small white tanks far away at the top right of the screen are feed tanks. How often do you check how much feed is left in the tank?",
+      "options": [
+        "Every day",
+        "Once a week",
+        "Once a month",
+        "Only after feed stops coming out"
+      ]
+    },
+    "vi": {
+      "question": "Các bồn màu trắng nhỏ ở xa, phía trên bên phải màn hình, là bồn chứa thức ăn. Bao lâu kiểm tra lượng thức ăn còn lại trong bồn một lần?",
+      "options": [
+        "Mỗi ngày",
+        "Mỗi tuần 1 lần",
+        "Mỗi tháng 1 lần",
+        "Khi thức ăn không ra nữa mới kiểm tra"
+      ]
+    },
+    "ind": {
+      "question": "Tangki putih kecil yang terlihat jauh di kanan atas layar adalah tangki pakan. Seberapa sering Anda memeriksa sisa pakan di dalam tangki?",
+      "options": [
+        "Setiap hari",
+        "Seminggu sekali",
+        "Sebulan sekali",
+        "Setelah pakan tidak keluar lagi"
+      ]
+    }
+  },
+  {
+    "id": "q316",
+    "video": "videos/q316.mp4",
+    "category": "飼料・栄養",
+    "question": "飼料タンクの中に入って、そうじをします。必ず守ることはどれですか？",
+    "options": [
+      "2人以上で行い、換気をしてから入る",
+      "1人で、すばやく入る",
+      "えさが残っている間に入る",
+      "ふたを閉めて中を暗くしてから入る"
+    ],
+    "answer": "2人以上で行い、換気をしてから入る",
+    "explanation": "タンクの中は酸素が足りなくなる（酸欠）危険があります。中に入る作業は必ず2人以上で、換気をしてから行います。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0240",
+    "en": {
+      "question": "You need to go inside a feed tank to clean it. What must you always do?",
+      "options": [
+        "Work with two or more people and ventilate before going in",
+        "Go in alone and quickly",
+        "Go in while feed is still inside",
+        "Close the lid so it is dark inside"
+      ]
+    },
+    "vi": {
+      "question": "Cần vào bên trong bồn thức ăn để vệ sinh. Điều gì bắt buộc phải làm?",
+      "options": [
+        "Làm từ 2 người trở lên và thông gió trước khi vào",
+        "Vào một mình thật nhanh",
+        "Vào khi trong bồn vẫn còn thức ăn",
+        "Đóng nắp cho tối rồi mới vào"
+      ]
+    },
+    "ind": {
+      "question": "Anda harus masuk ke dalam tangki pakan untuk membersihkannya. Apa yang wajib dilakukan?",
+      "options": [
+        "Kerjakan minimal 2 orang dan beri ventilasi dulu sebelum masuk",
+        "Masuk sendirian dengan cepat",
+        "Masuk saat pakan masih ada di dalam",
+        "Tutup tangki supaya gelap baru masuk"
+      ]
+    }
+  },
+  {
+    "id": "q317",
+    "video": "videos/q317.mp4",
+    "category": "飼料・栄養",
+    "question": "給餌器やタンクに「まだえさがあるのに、えさが出てこない」ときは、まず何をうたがいますか？",
+    "options": [
+      "中でえさが固まって、下に落ちなくなっている（ブリッジ）",
+      "豚が水を飲みすぎている",
+      "えさの色が変わった",
+      "豚舎の温度が低すぎる"
+    ],
+    "answer": "中でえさが固まって、下に落ちなくなっている（ブリッジ）",
+    "explanation": "中でえさが固まってアーチのようになり、下に落ちなくなる現象を「ブリッジ」といいます。湿気の多い時期に起きやすく、えさ切れの原因になります。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0911@0",
+    "en": {
+      "question": "The feeder or tank still has feed, but no feed comes out. What should you suspect first?",
+      "options": [
+        "The feed has caked inside and cannot fall down (bridging)",
+        "The pigs are drinking too much water",
+        "The color of the feed has changed",
+        "The barn temperature is too low"
+      ]
+    },
+    "vi": {
+      "question": "Máng hoặc bồn vẫn còn thức ăn nhưng thức ăn không chảy ra. Trước tiên nên nghi ngờ điều gì?",
+      "options": [
+        "Thức ăn bị vón cục bên trong nên không rơi xuống được (hiện tượng bắc cầu)",
+        "Heo uống quá nhiều nước",
+        "Màu thức ăn bị đổi",
+        "Nhiệt độ chuồng quá thấp"
+      ]
+    },
+    "ind": {
+      "question": "Tempat pakan atau tangki masih berisi pakan, tetapi pakan tidak keluar. Apa yang pertama dicurigai?",
+      "options": [
+        "Pakan menggumpal di dalam sehingga tidak bisa turun (bridging)",
+        "Babi terlalu banyak minum",
+        "Warna pakan berubah",
+        "Suhu kandang terlalu rendah"
+      ]
+    }
+  },
+  {
+    "id": "q318",
+    "video": "videos/q318.mp4",
+    "category": "飼料・栄養",
+    "question": "母豚のえさの目安は「1kg＋子豚1頭あたり0.5kg」です。子豚を10頭育てている母豚では、乳をいちばん多く出すころ、1日に何kgが目安ですか？",
+    "options": [
+      "6.0kg",
+      "3.0kg",
+      "11.0kg",
+      "1.5kg"
+    ],
+    "answer": "6.0kg",
+    "explanation": "泌乳ピークのえさの目安は「1kg＋子豚1頭あたり0.5kg」です。子豚10頭なら 1＋10×0.5＝6.0kg です。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0983",
+    "en": {
+      "question": "The guide for sow feed is \"1 kg + 0.5 kg for each piglet.\" For a sow nursing 10 piglets, about how many kg per day at peak milk production?",
+      "options": [
+        "6.0 kg",
+        "3.0 kg",
+        "11.0 kg",
+        "1.5 kg"
+      ]
+    },
+    "vi": {
+      "question": "Công thức cho heo nái ăn là \"1 kg + 0,5 kg cho mỗi heo con\". Heo nái đang nuôi 10 heo con, vào lúc cho sữa nhiều nhất thì mỗi ngày cho ăn khoảng bao nhiêu kg?",
+      "options": [
+        "6,0 kg",
+        "3,0 kg",
+        "11,0 kg",
+        "1,5 kg"
+      ]
+    },
+    "ind": {
+      "question": "Patokan pakan induk adalah \"1 kg + 0,5 kg per ekor anak babi\". Induk yang menyusui 10 ekor anak, saat produksi susu paling banyak, berapa kg pakan per hari?",
+      "options": [
+        "6,0 kg",
+        "3,0 kg",
+        "11,0 kg",
+        "1,5 kg"
+      ]
+    }
+  },
+  {
+    "id": "q319",
+    "video": "videos/q319.mp4",
+    "category": "飼料・栄養",
+    "question": "子豚を産んだその日の母豚には、えさをどうあげますか？",
+    "options": [
+      "少しの量から始めて、毎日少しずつ増やす",
+      "乳が出るように、いきなりたくさんあげる",
+      "3日間、えさをまったくあげない",
+      "子豚用のえさをあげる"
+    ],
+    "answer": "少しの量から始めて、毎日少しずつ増やす",
+    "explanation": "分娩当日は1.0〜1.5kgの少しの量から始め、毎日少しずつ増やします。いきなり大量にあげると消化不良になり、乳の量が減ります。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0333",
+    "en": {
+      "question": "How should you feed a sow on the day she gives birth?",
+      "options": [
+        "Start with a small amount and increase a little each day",
+        "Give a lot right away so she makes milk",
+        "Give no feed at all for 3 days",
+        "Give her piglet feed"
+      ]
+    },
+    "vi": {
+      "question": "Heo nái vừa đẻ trong ngày thì cho ăn thế nào?",
+      "options": [
+        "Bắt đầu với lượng ít rồi tăng dần mỗi ngày",
+        "Cho ăn thật nhiều ngay để có sữa",
+        "Không cho ăn gì trong 3 ngày",
+        "Cho ăn cám của heo con"
+      ]
+    },
+    "ind": {
+      "question": "Bagaimana memberi pakan induk pada hari ia beranak?",
+      "options": [
+        "Mulai dari jumlah sedikit, lalu ditambah sedikit demi sedikit setiap hari",
+        "Langsung beri banyak supaya susunya keluar",
+        "Tidak diberi pakan sama sekali selama 3 hari",
+        "Beri pakan anak babi"
+      ]
+    }
+  },
+  {
+    "id": "q320",
+    "video": "videos/q320.mp4",
+    "category": "飼料・栄養",
+    "question": "えさが届かず、農場のえさが足りなくなりそうです。いちばん先にえさをあげる豚はどれですか？",
+    "options": [
+      "乳をあげている母豚と子豚",
+      "出荷前の肥育豚",
+      "妊娠している母豚",
+      "雄豚（種豚）"
+    ],
+    "answer": "乳をあげている母豚と子豚",
+    "explanation": "えさが足りないときは、飢えに弱い泌乳中の母豚と子豚を最優先にします。肥育豚は1日程度の減量なら影響が比較的小さいです。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0343",
+    "en": {
+      "question": "Feed has not been delivered and the farm may run short. Which pigs should get feed first?",
+      "options": [
+        "Nursing sows and their piglets",
+        "Finishing pigs before shipment",
+        "Pregnant sows",
+        "Boars"
+      ]
+    },
+    "vi": {
+      "question": "Thức ăn chưa được giao, trại sắp thiếu thức ăn. Ưu tiên cho heo nào ăn trước?",
+      "options": [
+        "Heo nái đang nuôi con và heo con",
+        "Heo thịt sắp xuất chuồng",
+        "Heo nái đang mang thai",
+        "Heo đực giống"
+      ]
+    },
+    "ind": {
+      "question": "Pakan belum datang dan peternakan hampir kehabisan pakan. Babi mana yang diberi pakan paling dulu?",
+      "options": [
+        "Induk yang sedang menyusui dan anak-anaknya",
+        "Babi potong yang akan dikirim",
+        "Induk yang bunting",
+        "Babi pejantan"
+      ]
+    }
+  },
+  {
+    "id": "q321",
+    "video": "videos/q321.mp4",
+    "category": "飼料・栄養",
+    "question": "動画のえさ皿の中のえさは、どんなようすですか？",
+    "options": [
+      "水でぬれて、どろどろになっている",
+      "かわいた粉のまま、きれいに入っている",
+      "えさがまったく入っていない",
+      "つぶのえさが山盛りになっている"
+    ],
+    "answer": "水でぬれて、どろどろになっている",
+    "explanation": "皿のえさに水が入って、どろどろにぬれています。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0196",
+    "en": {
+      "question": "What does the feed in the feeding pan in the video look like?",
+      "options": [
+        "It is wet and mushy with water",
+        "It is dry powder and clean",
+        "There is no feed at all",
+        "It is piled high with pellets"
+      ]
+    },
+    "vi": {
+      "question": "Thức ăn trong khay ăn ở video trông như thế nào?",
+      "options": [
+        "Bị ướt nước, nhão nhoét",
+        "Là bột khô, sạch sẽ",
+        "Hoàn toàn không có thức ăn",
+        "Cám viên đầy ắp"
+      ]
+    },
+    "ind": {
+      "question": "Seperti apa pakan di dalam wadah pakan pada video?",
+      "options": [
+        "Basah kena air dan jadi lembek",
+        "Bubuk kering dan bersih",
+        "Tidak ada pakan sama sekali",
+        "Pelet menumpuk penuh"
+      ]
+    }
+  },
+  {
+    "id": "q322",
+    "video": "videos/q322.mp4",
+    "category": "飼料・栄養",
+    "question": "えさ皿のえさが水でぬれて、どろどろになっています。どうしますか？",
+    "options": [
+      "古いえさを取りのぞき、皿をきれいにしてから新しいえさを入れる",
+      "上から新しいえさを足す",
+      "かわくまで、そのままにしておく",
+      "取り出して、ほかの豚房の豚にあげる"
+    ],
+    "answer": "古いえさを取りのぞき、皿をきれいにしてから新しいえさを入れる",
+    "explanation": "ぬれて古くなったえさは菌がふえやすく、再利用しません。取りのぞいて皿をきれいにしてから、新しいえさを入れます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0196",
+    "en": {
+      "question": "The feed in the pan is wet and mushy. What should you do?",
+      "options": [
+        "Remove the old feed, clean the pan, then add fresh feed",
+        "Add new feed on top",
+        "Leave it until it dries",
+        "Take it out and give it to pigs in another pen"
+      ]
+    },
+    "vi": {
+      "question": "Thức ăn trong khay bị ướt, nhão nhoét. Phải làm gì?",
+      "options": [
+        "Bỏ thức ăn cũ, rửa sạch khay rồi mới cho thức ăn mới",
+        "Đổ thêm thức ăn mới lên trên",
+        "Để yên cho đến khi khô",
+        "Lấy ra cho heo ở ô chuồng khác ăn"
+      ]
+    },
+    "ind": {
+      "question": "Pakan di wadah basah dan jadi lembek. Apa yang harus dilakukan?",
+      "options": [
+        "Buang pakan lama, bersihkan wadah, lalu isi pakan baru",
+        "Tambah pakan baru di atasnya",
+        "Biarkan sampai kering",
+        "Ambil dan berikan ke babi di kandang lain"
+      ]
+    }
+  },
+  {
+    "id": "q323",
+    "video": "videos/q323.mp4",
+    "category": "飼料・栄養",
+    "question": "離乳して離乳舎に来たばかり（1週間以内）の子豚には、えさをどうあげますか？",
+    "options": [
+      "少しずつ、1日に何回にも分けてあげる",
+      "1日1回、たくさんまとめてあげる",
+      "2〜3日に1回だけあげる",
+      "母豚用のえさをあげる"
+    ],
+    "answer": "少しずつ、1日に何回にも分けてあげる",
+    "explanation": "離乳した直後（入舎〜7日目）は、消化の負担を減らすため少しずつ1日4〜5回に分けてあげます。「少量ずつ、こまめに」が基本です。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0801",
+    "en": {
+      "question": "How should you feed piglets that were just weaned and moved to the nursery (within 1 week)?",
+      "options": [
+        "Give small amounts, several times a day",
+        "Give a lot once a day",
+        "Feed only once every 2–3 days",
+        "Give them sow feed"
+      ]
+    },
+    "vi": {
+      "question": "Heo con vừa cai sữa, mới chuyển sang chuồng cai sữa (trong vòng 1 tuần) thì cho ăn thế nào?",
+      "options": [
+        "Cho ăn ít một, chia làm nhiều lần trong ngày",
+        "Mỗi ngày cho ăn 1 lần thật nhiều",
+        "2–3 ngày mới cho ăn 1 lần",
+        "Cho ăn cám của heo nái"
+      ]
+    },
+    "ind": {
+      "question": "Bagaimana memberi pakan anak babi yang baru disapih dan baru masuk kandang sapih (kurang dari 1 minggu)?",
+      "options": [
+        "Sedikit-sedikit, dibagi beberapa kali sehari",
+        "Sekali sehari dalam jumlah banyak",
+        "Hanya sekali tiap 2–3 hari",
+        "Beri pakan induk"
+      ]
+    }
+  },
+  {
+    "id": "q324",
+    "video": "videos/q324.mp4",
+    "category": "飼料・栄養",
+    "question": "離乳したばかりの子豚にあげるえさ（プレスターター）の特徴はどれですか？",
+    "options": [
+      "乳の成分が入っていて、消化しやすい",
+      "いちばん値段が安い",
+      "繊維が多く、おなかがいっぱいになりやすい",
+      "脂肪をつけるための出荷前のえさ"
+    ],
+    "answer": "乳の成分が入っていて、消化しやすい",
+    "explanation": "離乳直後に使うプレスターターは、乳の成分が入っていて消化しやすく、子豚がよく食べるように作られています。いちばん品質が高く、値段も高いえさです。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1181",
+    "en": {
+      "question": "What is special about the feed for just-weaned piglets (pre-starter)?",
+      "options": [
+        "It contains milk ingredients and is easy to digest",
+        "It is the cheapest feed",
+        "It has a lot of fiber to make pigs feel full",
+        "It is a pre-shipment feed for adding fat"
+      ]
+    },
+    "vi": {
+      "question": "Thức ăn cho heo con vừa cai sữa (cám tập ăn) có đặc điểm gì?",
+      "options": [
+        "Có thành phần sữa, dễ tiêu hóa",
+        "Giá rẻ nhất",
+        "Nhiều chất xơ, heo mau no",
+        "Là cám vỗ béo trước khi xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Apa ciri pakan untuk anak babi yang baru disapih (pre-starter)?",
+      "options": [
+        "Mengandung bahan susu dan mudah dicerna",
+        "Harganya paling murah",
+        "Banyak serat supaya cepat kenyang",
+        "Pakan penggemukan sebelum dikirim"
+      ]
+    }
+  },
+  {
+    "id": "q325",
+    "video": "videos/q325.mp4",
+    "category": "飼料・栄養",
+    "question": "離乳舎で、次にえさをあげる時間になっても、えさ箱にえさが残っていました。正しい対応はどれですか？",
+    "options": [
+      "次のえさを10〜20%減らし、体調の悪い子豚がいないかも確かめる",
+      "次のえさを2倍に増やす",
+      "何もしないで、同じ量をあげ続ける",
+      "残ったえさを新しいえさにまぜて使う"
+    ],
+    "answer": "次のえさを10〜20%減らし、体調の悪い子豚がいないかも確かめる",
+    "explanation": "次の給餌までえさが残っているのは量が多いサインです。次回を10〜20%減らし、体調の悪い子豚がいないかも確かめます。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T1074@0",
+    "en": {
+      "question": "In the nursery, feed is still left in the feeder when it is time for the next feeding. What is the correct action?",
+      "options": [
+        "Reduce the next feeding by 10–20% and also check for sick piglets",
+        "Double the next feeding",
+        "Do nothing and keep giving the same amount",
+        "Mix the leftover feed with new feed"
+      ]
+    },
+    "vi": {
+      "question": "Ở chuồng cai sữa, đến giờ cho ăn lần sau mà trong máng vẫn còn thức ăn. Cách xử lý đúng là gì?",
+      "options": [
+        "Giảm lần sau 10–20% và kiểm tra xem có heo con nào không khỏe không",
+        "Tăng gấp đôi lần sau",
+        "Không làm gì, vẫn cho ăn lượng như cũ",
+        "Trộn thức ăn thừa vào thức ăn mới"
+      ]
+    },
+    "ind": {
+      "question": "Di kandang sapih, saat waktunya memberi pakan lagi, pakan di tempat pakan masih tersisa. Tindakan yang benar adalah?",
+      "options": [
+        "Kurangi pakan berikutnya 10–20% dan cek apakah ada anak babi yang sakit",
+        "Gandakan pakan berikutnya",
+        "Tidak melakukan apa-apa, tetap beri jumlah yang sama",
+        "Campur sisa pakan dengan pakan baru"
+      ]
+    }
+  },
+  {
+    "id": "q326",
+    "video": "videos/q326.mp4",
+    "category": "飼料・栄養",
+    "question": "動画のような肥育舎で、えさを次の種類に切り替えます。正しいやり方はどれですか？",
+    "options": [
+      "5〜7日かけて、古いえさと新しいえさをまぜながら少しずつ変える",
+      "ある日から全部いっぺんに新しいえさにする",
+      "1日えさを止めてから新しいえさにする",
+      "古いえさと新しいえさを1日ごとに交代であげる"
+    ],
+    "answer": "5〜7日かけて、古いえさと新しいえさをまぜながら少しずつ変える",
+    "explanation": "えさを急に変えると消化不良や下痢になります。肥育舎では5〜7日かけて、古いえさと新しいえさをまぜながら少しずつ切り替えます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0897@0",
+    "en": {
+      "question": "In a finishing barn like the one in the video, you are changing to the next type of feed. What is the correct way?",
+      "options": [
+        "Change little by little over 5–7 days, mixing old and new feed",
+        "Switch all at once to the new feed one day",
+        "Stop feeding for a day, then give the new feed",
+        "Alternate old and new feed every other day"
+      ]
+    },
+    "vi": {
+      "question": "Ở chuồng heo thịt như trong video, cần đổi sang loại cám tiếp theo. Cách làm đúng là gì?",
+      "options": [
+        "Đổi dần trong 5–7 ngày, trộn cám cũ với cám mới",
+        "Đổi hết sang cám mới ngay trong một ngày",
+        "Ngừng cho ăn 1 ngày rồi mới cho cám mới",
+        "Ngày cám cũ, ngày cám mới luân phiên"
+      ]
+    },
+    "ind": {
+      "question": "Di kandang penggemukan seperti di video, pakan akan diganti ke jenis berikutnya. Cara yang benar adalah?",
+      "options": [
+        "Ganti sedikit demi sedikit selama 5–7 hari sambil mencampur pakan lama dan baru",
+        "Langsung ganti semua ke pakan baru dalam satu hari",
+        "Hentikan pakan satu hari, lalu beri pakan baru",
+        "Pakan lama dan baru diberikan bergantian tiap hari"
+      ]
+    }
+  },
+  {
+    "id": "q327",
+    "video": "videos/q327.mp4",
+    "category": "飼料・栄養",
+    "question": "豚が水を十分に飲めないと、えさを食べる量はどうなりますか？",
+    "options": [
+      "へる",
+      "ふえる",
+      "変わらない",
+      "2倍になる"
+    ],
+    "answer": "へる",
+    "explanation": "「水を飲まなければ、エサも食べない」。飲む水が減ると、えさを食べる量も同じように減ります。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0684",
+    "en": {
+      "question": "If pigs cannot drink enough water, what happens to the amount of feed they eat?",
+      "options": [
+        "It goes down",
+        "It goes up",
+        "It stays the same",
+        "It doubles"
+      ]
+    },
+    "vi": {
+      "question": "Nếu heo không được uống đủ nước thì lượng thức ăn heo ăn sẽ thế nào?",
+      "options": [
+        "Giảm xuống",
+        "Tăng lên",
+        "Không thay đổi",
+        "Tăng gấp đôi"
+      ]
+    },
+    "ind": {
+      "question": "Jika babi tidak bisa minum cukup air, bagaimana jumlah pakan yang dimakannya?",
+      "options": [
+        "Berkurang",
+        "Bertambah",
+        "Tetap sama",
+        "Menjadi dua kali lipat"
+      ]
+    }
+  },
+  {
+    "id": "q328",
+    "video": "videos/q328.mp4",
+    "category": "飼料・栄養",
+    "question": "肥育豚が、えさを100kg食べて、体重が40kgふえました。飼料要求率（FCR＝食べたえさ÷ふえた体重）はいくつですか？",
+    "options": [
+      "2.5",
+      "0.4",
+      "60",
+      "140"
+    ],
+    "answer": "2.5",
+    "explanation": "FCR＝食べたえさ÷ふえた体重。100kg÷40kg＝2.5です。数字が小さいほど、少ないえさで太れる優秀な豚です。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0046",
+    "en": {
+      "question": "A finishing pig ate 100 kg of feed and gained 40 kg. What is its feed conversion ratio (FCR = feed eaten ÷ weight gained)?",
+      "options": [
+        "2.5",
+        "0.4",
+        "60",
+        "140"
+      ]
+    },
+    "vi": {
+      "question": "Một con heo thịt ăn 100 kg thức ăn và tăng 40 kg. Hệ số chuyển hóa thức ăn (FCR = thức ăn đã ăn ÷ trọng lượng tăng) là bao nhiêu?",
+      "options": [
+        "2,5",
+        "0,4",
+        "60",
+        "140"
+      ]
+    },
+    "ind": {
+      "question": "Seekor babi potong makan 100 kg pakan dan beratnya naik 40 kg. Berapa rasio konversi pakannya (FCR = pakan yang dimakan ÷ pertambahan berat)?",
+      "options": [
+        "2,5",
+        "0,4",
+        "60",
+        "140"
+      ]
+    }
+  },
+  {
+    "id": "q329",
+    "video": "videos/q329.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "動画の左上にいる大きな豚は、何をしていますか？",
+    "options": [
+      "えさ箱に頭を入れて、えさを食べている",
+      "横になって寝ている",
+      "ほかの豚とけんかしている",
+      "水をあびている"
+    ],
+    "answer": "えさ箱に頭を入れて、えさを食べている",
+    "explanation": "左の豚は、えさ箱に頭を入れてえさを食べています。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0686",
+    "en": {
+      "question": "What is the big pig at the top left of the video doing?",
+      "options": [
+        "Eating with its head in the feeder",
+        "Lying down asleep",
+        "Fighting with another pig",
+        "Taking a shower of water"
+      ]
+    },
+    "vi": {
+      "question": "Con heo lớn ở phía trên bên trái trong video đang làm gì?",
+      "options": [
+        "Đang chúi đầu vào máng để ăn",
+        "Đang nằm ngủ",
+        "Đang đánh nhau với con khác",
+        "Đang tắm nước"
+      ]
+    },
+    "ind": {
+      "question": "Apa yang sedang dilakukan babi besar di kiri atas dalam video?",
+      "options": [
+        "Memasukkan kepala ke tempat pakan dan sedang makan",
+        "Berbaring tidur",
+        "Berkelahi dengan babi lain",
+        "Sedang mandi air"
+      ]
+    }
+  },
+  {
+    "id": "q330",
+    "video": "videos/q330.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷の準備では、出荷する豚の体にスプレーで印をつけます。何のためですか？",
+    "options": [
+      "出荷する豚をまちがえないため",
+      "豚の体を消毒するため",
+      "豚をきれいに見せるため",
+      "豚の体温を下げるため"
+    ],
+    "answer": "出荷する豚をまちがえないため",
+    "explanation": "出荷の数日前に、出荷する豚にスプレーで印をつけます。出荷する豚をまちがえないためです。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0686",
+    "en": {
+      "question": "When preparing for shipment, the pigs to be shipped are marked with spray paint. Why?",
+      "options": [
+        "So you do not ship the wrong pigs",
+        "To disinfect the pigs",
+        "To make the pigs look nice",
+        "To cool the pigs down"
+      ]
+    },
+    "vi": {
+      "question": "Khi chuẩn bị xuất chuồng, người ta xịt sơn đánh dấu lên heo sẽ xuất. Để làm gì?",
+      "options": [
+        "Để không xuất nhầm heo",
+        "Để sát trùng cho heo",
+        "Để heo trông đẹp hơn",
+        "Để hạ nhiệt cho heo"
+      ]
+    },
+    "ind": {
+      "question": "Saat persiapan pengiriman, babi yang akan dikirim diberi tanda dengan cat semprot. Untuk apa?",
+      "options": [
+        "Supaya tidak salah mengirim babi",
+        "Untuk mendisinfeksi babi",
+        "Supaya babi terlihat bagus",
+        "Untuk menurunkan suhu tubuh babi"
+      ]
+    }
+  },
+  {
+    "id": "q331",
+    "video": "videos/q331.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "動画の豚房の奥にいる豚たちは、何をしていますか？",
+    "options": [
+      "横になって休んでいる",
+      "えさを食べている",
+      "走り回っている",
+      "トラックに乗っている"
+    ],
+    "answer": "横になって休んでいる",
+    "explanation": "奥の豚たちは、すのこの上で横になって休んでいます。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0749",
+    "en": {
+      "question": "What are the pigs at the back of the pen in the video doing?",
+      "options": [
+        "Lying down and resting",
+        "Eating feed",
+        "Running around",
+        "Getting on a truck"
+      ]
+    },
+    "vi": {
+      "question": "Những con heo ở phía trong ô chuồng trong video đang làm gì?",
+      "options": [
+        "Đang nằm nghỉ",
+        "Đang ăn",
+        "Đang chạy lung tung",
+        "Đang lên xe tải"
+      ]
+    },
+    "ind": {
+      "question": "Apa yang dilakukan babi-babi di bagian belakang kandang dalam video?",
+      "options": [
+        "Berbaring beristirahat",
+        "Sedang makan",
+        "Berlarian",
+        "Naik ke truk"
+      ]
+    }
+  },
+  {
+    "id": "q332",
+    "video": "videos/q332.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷の前の日、肥育豚に対してすることはどれですか？",
+    "options": [
+      "えさは止めるが、水は止めない",
+      "水は止めるが、えさはいつもどおりあげる",
+      "えさも水も止める",
+      "えさをいつもより多くあげる"
+    ],
+    "answer": "えさは止めるが、水は止めない",
+    "explanation": "出荷の前は、えさを止めます（輸送中の嘔吐やよごれを防ぐため）。でも、水は脱水を防ぐため絶対に止めません。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0749",
+    "en": {
+      "question": "On the day before shipment, what do you do for the finishing pigs?",
+      "options": [
+        "Stop the feed, but do not stop the water",
+        "Stop the water, but give feed as usual",
+        "Stop both feed and water",
+        "Give more feed than usual"
+      ]
+    },
+    "vi": {
+      "question": "Ngày trước khi xuất chuồng, cần làm gì với heo thịt?",
+      "options": [
+        "Ngừng cho ăn nhưng không ngừng nước uống",
+        "Ngừng nước nhưng vẫn cho ăn như thường",
+        "Ngừng cả thức ăn và nước",
+        "Cho ăn nhiều hơn mọi ngày"
+      ]
+    },
+    "ind": {
+      "question": "Sehari sebelum pengiriman, apa yang dilakukan pada babi potong?",
+      "options": [
+        "Pakan dihentikan, tetapi air minum tidak dihentikan",
+        "Air dihentikan, tetapi pakan diberikan seperti biasa",
+        "Pakan dan air sama-sama dihentikan",
+        "Pakan diberikan lebih banyak dari biasa"
+      ]
+    }
+  },
+  {
+    "id": "q333",
+    "video": "videos/q333.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷のとき、えさを止めるのは出荷の何時間前からが目安ですか？",
+    "options": [
+      "12〜18時間前",
+      "1時間前",
+      "3日前",
+      "1週間前"
+    ],
+    "answer": "12〜18時間前",
+    "explanation": "出荷の12〜18時間前からえさを止めます（前の日の夕方の給餌を止めるのが基本）。水は止めません。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0747",
+    "en": {
+      "question": "About how many hours before shipment should you stop feeding?",
+      "options": [
+        "12–18 hours before",
+        "1 hour before",
+        "3 days before",
+        "1 week before"
+      ]
+    },
+    "vi": {
+      "question": "Khi xuất chuồng, nên ngừng cho ăn trước khoảng bao nhiêu giờ?",
+      "options": [
+        "Trước 12–18 giờ",
+        "Trước 1 giờ",
+        "Trước 3 ngày",
+        "Trước 1 tuần"
+      ]
+    },
+    "ind": {
+      "question": "Saat pengiriman, pakan dihentikan kira-kira berapa jam sebelumnya?",
+      "options": [
+        "12–18 jam sebelumnya",
+        "1 jam sebelumnya",
+        "3 hari sebelumnya",
+        "1 minggu sebelumnya"
+      ]
+    }
+  },
+  {
+    "id": "q334",
+    "video": "videos/q334.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "「ロース」「バラ」「モモ」は、何の名前ですか？",
+    "options": [
+      "豚肉の部位（体のどこの肉か）の名前",
+      "豚の品種の名前",
+      "えさの種類の名前",
+      "豚の病気の名前"
+    ],
+    "answer": "豚肉の部位（体のどこの肉か）の名前",
+    "explanation": "ロース・バラ・モモは、豚肉の部位（体のどの場所の肉か）の名前です。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0021",
+    "en": {
+      "question": "What are \"loin,\" \"belly,\" and \"ham\"?",
+      "options": [
+        "Names of cuts of pork (which part of the body the meat is from)",
+        "Names of pig breeds",
+        "Names of feed types",
+        "Names of pig diseases"
+      ]
+    },
+    "vi": {
+      "question": "\"Thăn\", \"ba chỉ\", \"đùi\" là tên của cái gì?",
+      "options": [
+        "Tên các phần thịt heo (thịt ở phần nào của cơ thể)",
+        "Tên giống heo",
+        "Tên loại thức ăn",
+        "Tên bệnh của heo"
+      ]
+    },
+    "ind": {
+      "question": "\"Has (loin)\", \"samcan (belly)\", dan \"paha (ham)\" adalah nama apa?",
+      "options": [
+        "Nama bagian daging babi (daging dari bagian tubuh mana)",
+        "Nama ras babi",
+        "Nama jenis pakan",
+        "Nama penyakit babi"
+      ]
+    }
+  },
+  {
+    "id": "q335",
+    "video": "videos/q335.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷の日、豚をトラックまで連れていくときの正しいやり方はどれですか？",
+    "options": [
+      "静かに、ゆっくり、豚のペースで進ませる",
+      "大声を出して走らせる",
+      "棒でたたいて急がせる",
+      "豚房の豚を全部いっぺんに追い出す"
+    ],
+    "answer": "静かに、ゆっくり、豚のペースで進ませる",
+    "explanation": "出荷の積み込みは「静かに、ゆっくり、豚のペースで」。急かしたり、たたいたり、大声を出したりしません。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1028@0",
+    "en": {
+      "question": "On shipping day, what is the correct way to move pigs to the truck?",
+      "options": [
+        "Move them quietly and slowly, at the pigs' own pace",
+        "Shout and make them run",
+        "Hit them with a stick to hurry them",
+        "Drive all the pigs out of the pen at once"
+      ]
+    },
+    "vi": {
+      "question": "Ngày xuất chuồng, cách lùa heo lên xe tải đúng là gì?",
+      "options": [
+        "Lùa nhẹ nhàng, từ từ, theo tốc độ của heo",
+        "La to cho heo chạy",
+        "Dùng gậy đánh cho heo đi nhanh",
+        "Lùa hết heo trong ô ra một lúc"
+      ]
+    },
+    "ind": {
+      "question": "Pada hari pengiriman, bagaimana cara yang benar menggiring babi ke truk?",
+      "options": [
+        "Dengan tenang, pelan-pelan, sesuai kecepatan babi",
+        "Berteriak supaya babi berlari",
+        "Memukul dengan tongkat supaya cepat",
+        "Menggiring semua babi di kandang sekaligus"
+      ]
+    }
+  },
+  {
+    "id": "q336",
+    "video": "videos/q336.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷の直前に、豚を追い回したり、暑い所に置いたりすると、肉はどうなりやすいですか？",
+    "options": [
+      "色がうすく、やわらかく、水っぽい肉になる",
+      "色が赤く、ちょうどよい肉になる",
+      "脂肪が多い、あまい肉になる",
+      "肉には何も変わりはない"
+    ],
+    "answer": "色がうすく、やわらかく、水っぽい肉になる",
+    "explanation": "出荷直前に追い回す・たたく・暑い所に置くなどの急なストレスは、色がうすく水っぽい「PSE肉」の原因になります。暗くかたい肉（DFD肉）は長い時間のストレスが原因です。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T1027",
+    "en": {
+      "question": "If pigs are chased around or kept in a hot place just before shipment, what tends to happen to the meat?",
+      "options": [
+        "It becomes pale, soft, and watery",
+        "It becomes nicely red and just right",
+        "It becomes fatty and sweet",
+        "Nothing changes in the meat"
+      ]
+    },
+    "vi": {
+      "question": "Nếu ngay trước khi xuất chuồng mà rượt đuổi heo hoặc để heo ở chỗ nóng thì thịt dễ bị làm sao?",
+      "options": [
+        "Thịt bị nhạt màu, mềm nhũn, rỉ nước",
+        "Thịt đỏ đẹp, vừa phải",
+        "Thịt nhiều mỡ, ngọt hơn",
+        "Thịt không thay đổi gì"
+      ]
+    },
+    "ind": {
+      "question": "Jika tepat sebelum pengiriman babi dikejar-kejar atau ditaruh di tempat panas, daging cenderung jadi seperti apa?",
+      "options": [
+        "Warnanya pucat, lembek, dan berair",
+        "Warnanya merah bagus dan pas",
+        "Banyak lemak dan terasa manis",
+        "Tidak ada perubahan pada daging"
+      ]
+    }
+  },
+  {
+    "id": "q337",
+    "video": "videos/q337.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷のときに乱暴にあつかって、豚の体にあざができました。肉にはどんな問題がありますか？",
+    "options": [
+      "あざの部分は切りとって捨てるので、とれる肉がへる",
+      "あざの部分がいちばん高く売れる",
+      "肉がやわらかくなって、おいしくなる",
+      "問題はない"
+    ],
+    "answer": "あざの部分は切りとって捨てるので、とれる肉がへる",
+    "explanation": "あざ（打撲）のある部分は切りとって捨てるので、とれる肉がへります。乱暴にあつかったり、せまい通路でぶつけたりしないことが大切です。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0687",
+    "en": {
+      "question": "Rough handling during shipment left bruises on a pig. What is the problem for the meat?",
+      "options": [
+        "The bruised parts are cut off and thrown away, so less meat is obtained",
+        "The bruised parts sell for the highest price",
+        "The meat becomes softer and tastier",
+        "There is no problem"
+      ]
+    },
+    "vi": {
+      "question": "Khi xuất chuồng, do đối xử thô bạo nên heo bị bầm tím. Thịt sẽ bị vấn đề gì?",
+      "options": [
+        "Phần bị bầm phải cắt bỏ nên lượng thịt thu được giảm",
+        "Phần bị bầm bán được giá cao nhất",
+        "Thịt mềm và ngon hơn",
+        "Không có vấn đề gì"
+      ]
+    },
+    "ind": {
+      "question": "Karena ditangani dengan kasar saat pengiriman, tubuh babi jadi memar. Apa masalahnya bagi daging?",
+      "options": [
+        "Bagian yang memar dipotong dan dibuang, jadi daging yang didapat berkurang",
+        "Bagian memar dijual paling mahal",
+        "Daging jadi lebih empuk dan enak",
+        "Tidak ada masalah"
+      ]
+    }
+  },
+  {
+    "id": "q338",
+    "video": "videos/q338.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "耳標の番号や出荷の記録を、正しく残しておくのはなぜですか？",
+    "options": [
+      "どこの農場から、いつ出荷された豚か、あとで追えるようにするため",
+      "豚の体重をふやすため",
+      "豚を静かにさせるため",
+      "えさ代を安くするため"
+    ],
+    "answer": "どこの農場から、いつ出荷された豚か、あとで追えるようにするため",
+    "explanation": "耳標の番号や出荷の記録があると、「この肉はどこの農場から、いつ出荷された豚か」をあとで追えます（トレーサビリティ）。問題が起きたときに原因をすぐ調べられます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0900",
+    "en": {
+      "question": "Why must ear tag numbers and shipping records be kept correctly?",
+      "options": [
+        "So you can later trace which farm the pig came from and when it was shipped",
+        "To make pigs gain weight",
+        "To keep pigs calm",
+        "To lower feed costs"
+      ]
+    },
+    "vi": {
+      "question": "Tại sao phải ghi chép đúng số thẻ tai và hồ sơ xuất chuồng?",
+      "options": [
+        "Để sau này truy được heo từ trại nào, xuất chuồng khi nào",
+        "Để heo tăng cân",
+        "Để heo yên tĩnh",
+        "Để giảm tiền thức ăn"
+      ]
+    },
+    "ind": {
+      "question": "Mengapa nomor anting telinga dan catatan pengiriman harus disimpan dengan benar?",
+      "options": [
+        "Supaya nanti bisa dilacak babi dari peternakan mana dan kapan dikirim",
+        "Supaya berat babi bertambah",
+        "Supaya babi tenang",
+        "Supaya biaya pakan lebih murah"
+      ]
+    }
+  },
+  {
+    "id": "q339",
+    "video": "videos/q339.mp4",
+    "category": "肉豚・出荷・肉",
+    "question": "出荷の直前に、豚が興奮して暴れています。どうしますか？",
+    "options": [
+      "10〜15分待って落ち着かせてから、静かに誘導し直す",
+      "大声でしかって、すぐに積み込む",
+      "電気ショッカーをたくさん使って積み込む",
+      "暴れている豚を棒でたたいておとなしくさせる"
+    ],
+    "answer": "10〜15分待って落ち着かせてから、静かに誘導し直す",
+    "explanation": "興奮したまま積み込むとPSE肉のリスクが大きく上がります。10〜15分待って落ち着かせてから、静かに誘導し直します。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T0748",
+    "en": {
+      "question": "Right before shipment, a pig is excited and struggling. What should you do?",
+      "options": [
+        "Wait 10–15 minutes to let it calm down, then guide it again quietly",
+        "Scold it loudly and load it right away",
+        "Use the electric prod many times to load it",
+        "Hit it with a stick to make it quiet"
+      ]
+    },
+    "vi": {
+      "question": "Ngay trước khi xuất chuồng, heo bị kích động và vùng vẫy. Phải làm gì?",
+      "options": [
+        "Đợi 10–15 phút cho heo bình tĩnh rồi lùa lại nhẹ nhàng",
+        "La mắng to rồi đưa lên xe ngay",
+        "Dùng dùi điện nhiều lần để đưa lên xe",
+        "Dùng gậy đánh cho heo yên"
+      ]
+    },
+    "ind": {
+      "question": "Tepat sebelum pengiriman, babi gelisah dan meronta. Apa yang harus dilakukan?",
+      "options": [
+        "Tunggu 10–15 menit sampai tenang, lalu giring lagi dengan tenang",
+        "Bentak dengan keras lalu langsung naikkan ke truk",
+        "Pakai alat kejut listrik berkali-kali untuk menaikkan",
+        "Pukul dengan tongkat supaya diam"
+      ]
+    }
+  },
+  {
+    "id": "q340",
+    "video": "videos/q340.mp4",
+    "category": "子豚・育成",
+    "question": "母豚のそばで寝ている小さな豚は、どれですか？",
+    "options": [
+      "母豚の乳を飲んで育っている子豚（哺乳子豚）",
+      "母豚からはなれた子豚（離乳子豚）",
+      "出荷まで育てている豚（肥育豚）",
+      "種付けに使う雄の豚（種雄豚）"
+    ],
+    "answer": "母豚の乳を飲んで育っている子豚（哺乳子豚）",
+    "explanation": "分娩舎には母豚と、母豚の乳を飲んで育つ子豚（哺乳子豚）がいます。離乳すると子豚は離乳舎へ移ります。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0594",
+    "en": {
+      "question": "What are the small pigs sleeping next to the sow?",
+      "options": [
+        "Piglets that still drink the sow's milk (suckling piglets)",
+        "Piglets already separated from the sow (weaned piglets)",
+        "Pigs raised until shipping (finishing pigs)",
+        "Male pigs used for breeding (boars)"
+      ]
+    },
+    "vi": {
+      "question": "Những con heo nhỏ đang ngủ cạnh heo nái là heo gì?",
+      "options": [
+        "Heo con còn bú sữa mẹ (heo con theo mẹ)",
+        "Heo con đã tách mẹ (heo cai sữa)",
+        "Heo nuôi đến khi xuất chuồng (heo thịt)",
+        "Heo đực dùng để phối giống (heo nọc)"
+      ]
+    },
+    "ind": {
+      "question": "Babi kecil yang tidur di dekat induk itu babi apa?",
+      "options": [
+        "Anak babi yang masih menyusu induk (anak babi menyusu)",
+        "Anak babi yang sudah dipisah dari induk (babi sapih)",
+        "Babi yang dipelihara sampai dijual (babi penggemukan)",
+        "Babi jantan untuk kawin (pejantan)"
+      ]
+    }
+  },
+  {
+    "id": "q341",
+    "video": "videos/q341.mp4",
+    "category": "子豚・育成",
+    "question": "このような子豚を母豚からはなす（離乳する）のは、生まれてからだいたい何日目ですか？",
+    "options": [
+      "21〜28日目",
+      "3〜5日目",
+      "60〜70日目",
+      "150日目ごろ"
+    ],
+    "answer": "21〜28日目",
+    "explanation": "子豚はふつう生まれてから21〜28日目に母豚からはなします（離乳）。そのあと離乳舎へ移ります。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0594",
+    "en": {
+      "question": "About how many days after birth are piglets like these separated from the sow (weaned)?",
+      "options": [
+        "Day 21–28",
+        "Day 3–5",
+        "Day 60–70",
+        "Around day 150"
+      ]
+    },
+    "vi": {
+      "question": "Heo con như thế này được tách mẹ (cai sữa) vào khoảng ngày thứ mấy sau khi sinh?",
+      "options": [
+        "Ngày 21–28",
+        "Ngày 3–5",
+        "Ngày 60–70",
+        "Khoảng ngày 150"
+      ]
+    },
+    "ind": {
+      "question": "Anak babi seperti ini dipisah dari induk (disapih) kira-kira pada hari ke berapa setelah lahir?",
+      "options": [
+        "Hari ke-21–28",
+        "Hari ke-3–5",
+        "Hari ke-60–70",
+        "Sekitar hari ke-150"
+      ]
+    }
+  },
+  {
+    "id": "q342",
+    "video": "videos/q342.mp4",
+    "category": "繁殖・分娩",
+    "question": "母豚のおなかの乳頭（おっぱい）は、ふつう何個くらいありますか？",
+    "options": [
+      "12〜16個",
+      "4〜6個",
+      "8個くらい",
+      "24〜30個"
+    ],
+    "answer": "12〜16個",
+    "explanation": "母豚の乳頭はふつう12〜16個あります。子豚が乳をよく飲めるよう、乳頭が硬くなっていないかも毎日見ます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0181",
+    "en": {
+      "question": "How many teats does a sow usually have?",
+      "options": [
+        "12–16",
+        "4–6",
+        "About 8",
+        "24–30"
+      ]
+    },
+    "vi": {
+      "question": "Heo nái thường có bao nhiêu núm vú?",
+      "options": [
+        "12–16 núm",
+        "4–6 núm",
+        "Khoảng 8 núm",
+        "24–30 núm"
+      ]
+    },
+    "ind": {
+      "question": "Induk babi biasanya punya berapa puting susu?",
+      "options": [
+        "12–16 buah",
+        "4–6 buah",
+        "Sekitar 8 buah",
+        "24–30 buah"
+      ]
+    }
+  },
+  {
+    "id": "q343",
+    "video": "videos/q343.mp4",
+    "category": "飼養環境・施設",
+    "question": "豚が横向きに体を伸ばし、重なり合わずに寝ています。部屋の温度はどう考えますか？",
+    "options": [
+      "ちょうどよい",
+      "寒すぎる",
+      "暑すぎる",
+      "空気が汚れている"
+    ],
+    "answer": "ちょうどよい",
+    "explanation": "横向きに伸びて、適度にはなれて寝ていれば温度はちょうどよいです。重なり合って寝ていれば寒い、極端にバラバラなら暑いサインです。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0121",
+    "en": {
+      "question": "The pigs are sleeping on their sides, stretched out, not piled up. What does this say about the room temperature?",
+      "options": [
+        "It is about right",
+        "It is too cold",
+        "It is too hot",
+        "The air is dirty"
+      ]
+    },
+    "vi": {
+      "question": "Heo nằm nghiêng, duỗi thẳng người, không chồng lên nhau. Nhiệt độ chuồng thế nào?",
+      "options": [
+        "Vừa phải",
+        "Quá lạnh",
+        "Quá nóng",
+        "Không khí bị bẩn"
+      ]
+    },
+    "ind": {
+      "question": "Babi tidur miring dengan badan terjulur dan tidak bertumpuk. Bagaimana suhu ruangannya?",
+      "options": [
+        "Sudah pas",
+        "Terlalu dingin",
+        "Terlalu panas",
+        "Udaranya kotor"
+      ]
+    }
+  },
+  {
+    "id": "q344",
+    "video": "videos/q344.mp4",
+    "category": "繁殖・分娩",
+    "question": "赤茶色（赤褐色）の毛は、どの品種の特徴ですか？",
+    "options": [
+      "デュロック",
+      "ランドレース",
+      "大ヨークシャー",
+      "LW（ランドレースと大ヨークシャーをかけ合わせた豚）"
+    ],
+    "answer": "デュロック",
+    "explanation": "赤茶色〜茶色の体の品種はデュロックです。ランドレースと大ヨークシャーは白い豚です。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0190",
+    "en": {
+      "question": "Reddish-brown hair is a feature of which breed?",
+      "options": [
+        "Duroc",
+        "Landrace",
+        "Large White (Yorkshire)",
+        "LW (Landrace × Large White cross)"
+      ]
+    },
+    "vi": {
+      "question": "Lông màu nâu đỏ là đặc điểm của giống heo nào?",
+      "options": [
+        "Duroc",
+        "Landrace",
+        "Yorkshire (Large White)",
+        "LW (lai Landrace × Yorkshire)"
+      ]
+    },
+    "ind": {
+      "question": "Bulu cokelat kemerahan adalah ciri babi jenis apa?",
+      "options": [
+        "Duroc",
+        "Landrace",
+        "Large White (Yorkshire)",
+        "LW (silangan Landrace × Large White)"
+      ]
+    }
+  },
+  {
+    "id": "q345",
+    "video": "videos/q345.mp4",
+    "category": "繁殖・分娩",
+    "question": "三元交配（LWD）で、デュロックはどう使われますか？",
+    "options": [
+      "LWの母豚に最後にかける雄（止め雄）",
+      "ランドレースとかけ合わせる母豚の母方",
+      "LW母豚をつくるときの父（雄）",
+      "肉豚を産む母豚"
+    ],
+    "answer": "LWの母豚に最後にかける雄（止め雄）",
+    "explanation": "三元交配では、LWの母豚に最後にデュロックの雄をかけて、肉豚（LWD）をつくります。デュロックは「止め雄」です。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0190",
+    "en": {
+      "question": "How is the Duroc used in three-way crossing (LWD)?",
+      "options": [
+        "As the final sire mated to LW sows (terminal boar)",
+        "As the dam line mated with Landrace",
+        "As the sire used to produce LW sows",
+        "As the sow that gives birth to market pigs"
+      ]
+    },
+    "vi": {
+      "question": "Trong lai ba máu (LWD), giống Duroc được dùng thế nào?",
+      "options": [
+        "Làm heo đực phối cuối cùng với nái LW (đực cuối)",
+        "Làm dòng mẹ để phối với Landrace",
+        "Làm heo bố để tạo ra nái LW",
+        "Làm heo nái đẻ ra heo thịt"
+      ]
+    },
+    "ind": {
+      "question": "Dalam persilangan tiga bangsa (LWD), Duroc dipakai sebagai apa?",
+      "options": [
+        "Pejantan terakhir untuk induk LW (pejantan terminal)",
+        "Garis induk yang dikawinkan dengan Landrace",
+        "Pejantan untuk membuat induk LW",
+        "Induk yang melahirkan babi potong"
+      ]
+    }
+  },
+  {
+    "id": "q346",
+    "video": "videos/q346.mp4",
+    "category": "繁殖・分娩",
+    "question": "動画の大きな豚は、どれですか？",
+    "options": [
+      "子豚を産む母豚",
+      "出荷前の肥育豚",
+      "離乳子豚",
+      "哺乳子豚"
+    ],
+    "answer": "子豚を産む母豚",
+    "explanation": "おなかに乳房が発達した大きな雌豚は、子豚を産む母豚です。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0604@0",
+    "en": {
+      "question": "What are the big pigs in the video?",
+      "options": [
+        "Sows that give birth to piglets",
+        "Finishing pigs before shipping",
+        "Weaned piglets",
+        "Suckling piglets"
+      ]
+    },
+    "vi": {
+      "question": "Những con heo lớn trong video là heo gì?",
+      "options": [
+        "Heo nái đẻ ra heo con",
+        "Heo thịt sắp xuất chuồng",
+        "Heo cai sữa",
+        "Heo con theo mẹ"
+      ]
+    },
+    "ind": {
+      "question": "Babi besar di video ini babi apa?",
+      "options": [
+        "Induk babi yang melahirkan anak",
+        "Babi penggemukan yang siap dijual",
+        "Babi sapih",
+        "Anak babi menyusu"
+      ]
+    }
+  },
+  {
+    "id": "q347",
+    "video": "videos/q347.mp4",
+    "category": "繁殖・分娩",
+    "question": "動画の豚が母豚だと分かるのは、体のどこを見ればよいですか？",
+    "options": [
+      "おなかの乳頭（乳房）が大きく発達している",
+      "耳が立っている",
+      "体が茶色い",
+      "しっぽが短い"
+    ],
+    "answer": "おなかの乳頭（乳房）が大きく発達している",
+    "explanation": "母豚は乳頭がよく発達しています（ふつう12〜16個）。雄や若い豚では乳頭は小さいです。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0604@0",
+    "en": {
+      "question": "Which body part tells you these pigs are sows?",
+      "options": [
+        "The teats (udder) on the belly are well developed",
+        "The ears stand up",
+        "The body is brown",
+        "The tail is short"
+      ]
+    },
+    "vi": {
+      "question": "Nhìn vào đâu để biết đây là heo nái?",
+      "options": [
+        "Núm vú (bầu vú) dưới bụng phát triển to",
+        "Tai dựng đứng",
+        "Thân màu nâu",
+        "Đuôi ngắn"
+      ]
+    },
+    "ind": {
+      "question": "Dari bagian tubuh mana kita tahu babi ini induk?",
+      "options": [
+        "Puting susu (ambing) di perut berkembang besar",
+        "Telinganya tegak",
+        "Badannya cokelat",
+        "Ekornya pendek"
+      ]
+    }
+  },
+  {
+    "id": "q348",
+    "video": "videos/q348.mp4",
+    "category": "繁殖・分娩",
+    "question": "動画の豚舎では、母豚はどのように飼われていますか？",
+    "options": [
+      "何頭かいっしょに1つの豚房で（群飼い）",
+      "1頭ずつ柵の中で（ストール）",
+      "子豚といっしょに分娩柵の中で",
+      "外の運動場に放して"
+    ],
+    "answer": "何頭かいっしょに1つの豚房で（群飼い）",
+    "explanation": "1つの豚房に何頭もまとめて飼う方法を群飼いといいます。1頭ずつ柵に入れる方法はストール飼いです。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0557@3.5",
+    "en": {
+      "question": "How are the sows kept in this barn?",
+      "options": [
+        "Several together in one pen (group housing)",
+        "One by one in stalls",
+        "With piglets in farrowing crates",
+        "Let loose in an outdoor yard"
+      ]
+    },
+    "vi": {
+      "question": "Trong chuồng này, heo nái được nuôi thế nào?",
+      "options": [
+        "Nhiều con chung một ô (nuôi nhóm)",
+        "Mỗi con một ô cũi (chuồng cá thể)",
+        "Cùng heo con trong cũi đẻ",
+        "Thả ra sân vận động ngoài trời"
+      ]
+    },
+    "ind": {
+      "question": "Di kandang ini, induk babi dipelihara dengan cara apa?",
+      "options": [
+        "Beberapa ekor bersama dalam satu pen (kandang kelompok)",
+        "Satu per satu di dalam stall",
+        "Bersama anaknya di kandang beranak",
+        "Dilepas di halaman luar"
+      ]
+    }
+  },
+  {
+    "id": "q349",
+    "video": "videos/q349.mp4",
+    "category": "子豚・育成",
+    "question": "動画の子豚たちは、どんな様子ですか？",
+    "options": [
+      "元気に歩き回っている",
+      "重なり合ってふるえている",
+      "横にたおれて動かない",
+      "口を開けてハアハア息をしている"
+    ],
+    "answer": "元気に歩き回っている",
+    "explanation": "子豚は四本足でしっかり立って、元気に歩き回っています。正常な様子です。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0462@0",
+    "en": {
+      "question": "How do the piglets look?",
+      "options": [
+        "Walking around actively",
+        "Piled up and shivering",
+        "Lying on their side, not moving",
+        "Panting with their mouths open"
+      ]
+    },
+    "vi": {
+      "question": "Những con heo con này trông thế nào?",
+      "options": [
+        "Đi lại khỏe mạnh",
+        "Nằm chồng lên nhau và run",
+        "Nằm nghiêng, không cử động",
+        "Há miệng thở hổn hển"
+      ]
+    },
+    "ind": {
+      "question": "Bagaimana keadaan anak-anak babi ini?",
+      "options": [
+        "Berjalan ke sana kemari dengan sehat",
+        "Bertumpuk dan menggigil",
+        "Terbaring miring, tidak bergerak",
+        "Terengah-engah dengan mulut terbuka"
+      ]
+    }
+  },
+  {
+    "id": "q350",
+    "video": "videos/q350.mp4",
+    "category": "子豚・育成",
+    "question": "見回りのとき、元気な豚のサインはどれですか？",
+    "options": [
+      "目が澄んでいて、まわりに反応する",
+      "鼻がかわいてカサカサしている",
+      "群れからはなれてじっとしている",
+      "えさを見ても近づかない"
+    ],
+    "answer": "目が澄んでいて、まわりに反応する",
+    "explanation": "元気な豚は目が澄んでいてまわりに反応し、鼻がしっとりしています。群れからはなれてじっとしているのは異常のサインです。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0462@0",
+    "en": {
+      "question": "During checks, which is a sign of a healthy pig?",
+      "options": [
+        "Clear eyes and reacts to its surroundings",
+        "Dry, cracked snout",
+        "Stays still away from the group",
+        "Does not come near even when it sees feed"
+      ]
+    },
+    "vi": {
+      "question": "Khi đi kiểm tra, dấu hiệu nào cho thấy heo khỏe?",
+      "options": [
+        "Mắt trong, phản ứng với xung quanh",
+        "Mũi khô, nứt nẻ",
+        "Đứng yên, tách khỏi đàn",
+        "Thấy cám cũng không lại gần"
+      ]
+    },
+    "ind": {
+      "question": "Saat keliling, mana tanda babi yang sehat?",
+      "options": [
+        "Matanya jernih dan bereaksi pada sekitarnya",
+        "Hidungnya kering pecah-pecah",
+        "Diam saja memisah dari kelompok",
+        "Tidak mendekat walau melihat pakan"
+      ]
+    }
+  },
+  {
+    "id": "q351",
+    "video": "videos/q351.mp4",
+    "category": "子豚・育成",
+    "question": "動画のような離乳舎の子豚は、体重が何kgくらいになると肥育舎へ移りますか？",
+    "options": [
+      "約30kg",
+      "約7kg",
+      "約60kg",
+      "約115kg"
+    ],
+    "answer": "約30kg",
+    "explanation": "離乳舎では離乳直後から体重約30kgまで育て、そのあと肥育舎へ移します。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1090",
+    "en": {
+      "question": "At about what body weight do nursery piglets like these move to the finishing barn?",
+      "options": [
+        "About 30 kg",
+        "About 7 kg",
+        "About 60 kg",
+        "About 115 kg"
+      ]
+    },
+    "vi": {
+      "question": "Heo con ở chuồng cai sữa như thế này được chuyển sang chuồng heo thịt khi nặng khoảng bao nhiêu kg?",
+      "options": [
+        "Khoảng 30 kg",
+        "Khoảng 7 kg",
+        "Khoảng 60 kg",
+        "Khoảng 115 kg"
+      ]
+    },
+    "ind": {
+      "question": "Anak babi di kandang sapih seperti ini dipindah ke kandang penggemukan saat beratnya kira-kira berapa kg?",
+      "options": [
+        "Sekitar 30 kg",
+        "Sekitar 7 kg",
+        "Sekitar 60 kg",
+        "Sekitar 115 kg"
+      ]
+    }
+  },
+  {
+    "id": "q352",
+    "video": "videos/q352.mp4",
+    "category": "子豚・育成",
+    "question": "分娩舎の子豚です。子豚について正しいものはどれですか？",
+    "options": [
+      "生まれたときから毛が生えていて、目も開いている",
+      "生まれて数日は目が開いていない",
+      "生まれたときは毛が生えていない",
+      "生まれたときは歯がない"
+    ],
+    "answer": "生まれたときから毛が生えていて、目も開いている",
+    "explanation": "子豚は生まれたときから毛が生えていて、目も開いています。歯もあります。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0068",
+    "en": {
+      "question": "This is a piglet in the farrowing barn. Which is true about piglets?",
+      "options": [
+        "From birth they have hair and their eyes are open",
+        "Their eyes stay closed for a few days after birth",
+        "They have no hair at birth",
+        "They have no teeth at birth"
+      ]
+    },
+    "vi": {
+      "question": "Đây là heo con ở chuồng đẻ. Điều nào đúng về heo con?",
+      "options": [
+        "Mới sinh đã có lông và mắt đã mở",
+        "Mắt nhắm vài ngày sau khi sinh",
+        "Lúc mới sinh chưa có lông",
+        "Lúc mới sinh chưa có răng"
+      ]
+    },
+    "ind": {
+      "question": "Ini anak babi di kandang beranak. Mana yang benar tentang anak babi?",
+      "options": [
+        "Sejak lahir sudah berbulu dan matanya terbuka",
+        "Matanya tertutup beberapa hari setelah lahir",
+        "Saat lahir belum berbulu",
+        "Saat lahir belum punya gigi"
+      ]
+    }
+  },
+  {
+    "id": "q353",
+    "video": "videos/q353.mp4",
+    "category": "飼養環境・施設",
+    "question": "動画の青い道具は、何をはかる道具ですか？",
+    "options": [
+      "pH（酸性かアルカリ性か）",
+      "温度",
+      "豚の体重",
+      "空気の二酸化炭素"
+    ],
+    "answer": "pH（酸性かアルカリ性か）",
+    "explanation": "青い道具はpH計で、水などが酸性かアルカリ性かをはかります。飲み水の水質検査にもpHの項目があります。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0260",
+    "en": {
+      "question": "What does the blue tool measure?",
+      "options": [
+        "pH (acidic or alkaline)",
+        "Temperature",
+        "Pig body weight",
+        "Carbon dioxide in the air"
+      ]
+    },
+    "vi": {
+      "question": "Dụng cụ màu xanh này dùng để đo gì?",
+      "options": [
+        "Độ pH (chua hay kiềm)",
+        "Nhiệt độ",
+        "Cân nặng của heo",
+        "Khí CO2 trong không khí"
+      ]
+    },
+    "ind": {
+      "question": "Alat biru ini untuk mengukur apa?",
+      "options": [
+        "pH (asam atau basa)",
+        "Suhu",
+        "Berat badan babi",
+        "Karbon dioksida di udara"
+      ]
+    }
+  },
+  {
+    "id": "q354",
+    "video": "videos/q354.mp4",
+    "category": "飼養環境・施設",
+    "question": "作業場の壁にある赤い箱には、何が入っていますか？",
+    "options": [
+      "消火器",
+      "救急箱",
+      "ワクチン",
+      "電気のブレーカー"
+    ],
+    "answer": "消火器",
+    "explanation": "赤い箱には消火器が入っています。火事のときにすぐ使えるよう、場所を覚えておきます。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1165",
+    "en": {
+      "question": "What is in the red box on the workshop wall?",
+      "options": [
+        "A fire extinguisher",
+        "A first-aid kit",
+        "Vaccines",
+        "An electrical breaker"
+      ]
+    },
+    "vi": {
+      "question": "Trong hộp màu đỏ trên tường phòng làm việc có gì?",
+      "options": [
+        "Bình chữa cháy",
+        "Hộp cứu thương",
+        "Vắc-xin",
+        "Cầu dao điện"
+      ]
+    },
+    "ind": {
+      "question": "Apa isi kotak merah di dinding ruang kerja?",
+      "options": [
+        "Alat pemadam kebakaran (APAR)",
+        "Kotak P3K",
+        "Vaksin",
+        "Pemutus listrik (breaker)"
+      ]
+    }
+  },
+  {
+    "id": "q355",
+    "video": "videos/q355.mp4",
+    "category": "飼養環境・施設",
+    "question": "消火器の点検で確認することは、どれですか？",
+    "options": [
+      "置いてある場所と使用期限",
+      "中の粉の色",
+      "毎日の重さ",
+      "だれも使えないように鍵がかかっているか"
+    ],
+    "answer": "置いてある場所と使用期限",
+    "explanation": "消火器は、置いてある場所と使用期限を点検で確認します。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1165",
+    "en": {
+      "question": "What do you check when inspecting a fire extinguisher?",
+      "options": [
+        "Where it is placed and its expiry date",
+        "The color of the powder inside",
+        "Its weight every day",
+        "That it is locked so no one can use it"
+      ]
+    },
+    "vi": {
+      "question": "Khi kiểm tra bình chữa cháy, cần xem gì?",
+      "options": [
+        "Vị trí đặt và hạn sử dụng",
+        "Màu bột bên trong",
+        "Cân nặng mỗi ngày",
+        "Có khóa lại để không ai dùng được không"
+      ]
+    },
+    "ind": {
+      "question": "Saat memeriksa alat pemadam kebakaran, apa yang dicek?",
+      "options": [
+        "Tempat penyimpanan dan tanggal kedaluwarsanya",
+        "Warna bubuk di dalamnya",
+        "Beratnya setiap hari",
+        "Apakah dikunci supaya tidak ada yang memakai"
+      ]
+    }
+  },
+  {
+    "id": "q356",
+    "video": "videos/q356.mp4",
+    "category": "衛生・防疫",
+    "question": "ストールの上に置いてある銀色のバッグは、何ですか？",
+    "options": [
+      "中の物を冷たいまま運ぶ保冷バッグ",
+      "ごみを入れる袋",
+      "豚のえさ入れ",
+      "作業服を入れる袋"
+    ],
+    "answer": "中の物を冷たいまま運ぶ保冷バッグ",
+    "explanation": "銀色のバッグは保冷バッグです。ワクチンなど冷やしておく物を、冷たいまま豚舎へ運びます。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T0135",
+    "en": {
+      "question": "What is the silver bag placed on the stall?",
+      "options": [
+        "A cooler bag to carry things while keeping them cold",
+        "A garbage bag",
+        "A feed container for pigs",
+        "A bag for work clothes"
+      ]
+    },
+    "vi": {
+      "question": "Túi màu bạc đặt trên ô chuồng là gì?",
+      "options": [
+        "Túi giữ lạnh để mang đồ mà vẫn giữ lạnh",
+        "Túi đựng rác",
+        "Đồ đựng cám cho heo",
+        "Túi đựng quần áo lao động"
+      ]
+    },
+    "ind": {
+      "question": "Tas perak yang ditaruh di atas stall itu apa?",
+      "options": [
+        "Tas pendingin untuk membawa barang tetap dingin",
+        "Kantong sampah",
+        "Tempat pakan babi",
+        "Tas pakaian kerja"
+      ]
+    }
+  },
+  {
+    "id": "q357",
+    "video": "videos/q357.mp4",
+    "category": "衛生・防疫",
+    "question": "ワクチンを保冷バッグやクーラーボックスに入れて運ぶのは、なぜですか？",
+    "options": [
+      "温度が上がると、ワクチンの効き目がなくなるから",
+      "ビンが重くならないようにするため",
+      "豚にワクチンを見せないため",
+      "ワクチンをこおらせるため"
+    ],
+    "answer": "温度が上がると、ワクチンの効き目がなくなるから",
+    "explanation": "ワクチンは温度が上がると効き目がなくなります。冷蔵庫から出したら、使う直前まで保冷して運びます。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T0135",
+    "en": {
+      "question": "Why are vaccines carried in a cooler bag or cooler box?",
+      "options": [
+        "Because vaccines lose their effect if they get warm",
+        "To keep the bottles from getting heavy",
+        "So the pigs cannot see the vaccine",
+        "To freeze the vaccine"
+      ]
+    },
+    "vi": {
+      "question": "Tại sao phải để vắc-xin trong túi giữ lạnh hoặc thùng đá khi mang đi?",
+      "options": [
+        "Vì nhiệt độ tăng thì vắc-xin mất tác dụng",
+        "Để chai không bị nặng",
+        "Để heo không nhìn thấy vắc-xin",
+        "Để làm đông đá vắc-xin"
+      ]
+    },
+    "ind": {
+      "question": "Kenapa vaksin dibawa dalam tas pendingin atau cool box?",
+      "options": [
+        "Karena vaksin tidak manjur lagi kalau suhunya naik",
+        "Supaya botolnya tidak berat",
+        "Supaya babi tidak melihat vaksin",
+        "Untuk membekukan vaksin"
+      ]
+    }
+  },
+  {
+    "id": "q358",
+    "video": "videos/q358.mp4",
+    "category": "衛生・防疫",
+    "question": "動画では、2つのビンをつないで何をしていますか？",
+    "options": [
+      "ワクチンを溶解液でとかしている",
+      "消毒液を水でうすめている",
+      "とった血を検査している",
+      "古い薬を捨てている"
+    ],
+    "answer": "ワクチンを溶解液でとかしている",
+    "explanation": "溶解液のビンをワクチンのビンにつないで、ワクチンをとかしています。生ワクチンは使う直前にとかします。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1104",
+    "en": {
+      "question": "What is being done by connecting the two bottles?",
+      "options": [
+        "Dissolving a vaccine with its diluent",
+        "Diluting disinfectant with water",
+        "Testing collected blood",
+        "Throwing away old medicine"
+      ]
+    },
+    "vi": {
+      "question": "Nối hai chai lại với nhau như vậy là đang làm gì?",
+      "options": [
+        "Pha vắc-xin bằng dung dịch pha",
+        "Pha loãng thuốc sát trùng với nước",
+        "Xét nghiệm máu đã lấy",
+        "Đổ bỏ thuốc cũ"
+      ]
+    },
+    "ind": {
+      "question": "Dua botol disambungkan begini untuk apa?",
+      "options": [
+        "Melarutkan vaksin dengan cairan pelarutnya",
+        "Mengencerkan disinfektan dengan air",
+        "Memeriksa darah yang diambil",
+        "Membuang obat lama"
+      ]
+    }
+  },
+  {
+    "id": "q359",
+    "video": "videos/q359.mp4",
+    "category": "衛生・防疫",
+    "question": "生ワクチンをとかしたら、いつまでに使い切りますか？",
+    "options": [
+      "2時間以内",
+      "その日のうち",
+      "3日以内",
+      "1週間以内"
+    ],
+    "answer": "2時間以内",
+    "explanation": "生ワクチンは、とかしてから2時間以内に使い切ります。余ったら捨てます。必要な量だけとかします。",
+    "placeholder": true,
+    "level": "上級",
+    "group": "T1104",
+    "en": {
+      "question": "Once a live vaccine is dissolved, by when must it be used up?",
+      "options": [
+        "Within 2 hours",
+        "Within the same day",
+        "Within 3 days",
+        "Within 1 week"
+      ]
+    },
+    "vi": {
+      "question": "Sau khi pha vắc-xin sống, phải dùng hết trong thời gian bao lâu?",
+      "options": [
+        "Trong vòng 2 giờ",
+        "Trong ngày hôm đó",
+        "Trong vòng 3 ngày",
+        "Trong vòng 1 tuần"
+      ]
+    },
+    "ind": {
+      "question": "Setelah vaksin hidup dilarutkan, harus habis dipakai dalam berapa lama?",
+      "options": [
+        "Dalam 2 jam",
+        "Pada hari itu juga",
+        "Dalam 3 hari",
+        "Dalam 1 minggu"
+      ]
+    }
+  },
+  {
+    "id": "q360",
+    "video": "videos/q360.mp4",
+    "category": "子豚・育成",
+    "question": "動画では、子豚の口に何をしていますか？",
+    "options": [
+      "とがった歯（犬歯）を切っている",
+      "口から注射をしている",
+      "薬を飲ませている",
+      "体温をはかっている"
+    ],
+    "answer": "とがった歯（犬歯）を切っている",
+    "explanation": "子豚の口を開けて、とがった歯（犬歯）を切っています（歯切り）。農場によっては、けずる方法もあります。",
+    "placeholder": true,
+    "level": "初級",
+    "group": "T1221",
+    "en": {
+      "question": "What is being done to the piglet's mouth?",
+      "options": [
+        "Clipping its sharp teeth (needle teeth)",
+        "Giving an injection in the mouth",
+        "Giving it oral medicine",
+        "Taking its temperature"
+      ]
+    },
+    "vi": {
+      "question": "Người ta đang làm gì ở miệng heo con?",
+      "options": [
+        "Cắt răng nanh nhọn",
+        "Tiêm vào miệng",
+        "Cho uống thuốc",
+        "Đo thân nhiệt"
+      ]
+    },
+    "ind": {
+      "question": "Apa yang dilakukan pada mulut anak babi?",
+      "options": [
+        "Memotong gigi taringnya yang tajam",
+        "Menyuntik lewat mulut",
+        "Memberi obat minum",
+        "Mengukur suhu tubuh"
+      ]
+    }
+  },
+  {
+    "id": "q361",
+    "video": "videos/q361.mp4",
+    "category": "子豚・育成",
+    "question": "子豚の歯を切るのは、なぜですか？",
+    "options": [
+      "母豚の乳頭や、ほかの子豚をきずつけないため",
+      "えさを食べやすくするため",
+      "病気の検査をするため",
+      "子豚を見分ける印にするため"
+    ],
+    "answer": "母豚の乳頭や、ほかの子豚をきずつけないため",
+    "explanation": "子豚の犬歯はするどく、母豚の乳頭や同じ腹の子豚をきずつけます。それを防ぐために歯を切ります（必要な場合のみ・農場の方針による）。",
+    "placeholder": true,
+    "level": "中級",
+    "group": "T1221",
+    "en": {
+      "question": "Why are piglets' teeth clipped?",
+      "options": [
+        "To stop them hurting the sow's teats and other piglets",
+        "To make it easier to eat feed",
+        "To test for disease",
+        "To use as a mark to tell piglets apart"
+      ]
+    },
+    "vi": {
+      "question": "Tại sao phải cắt răng heo con?",
+      "options": [
+        "Để không làm tổn thương vú heo mẹ và heo con khác",
+        "Để dễ ăn cám hơn",
+        "Để xét nghiệm bệnh",
+        "Để làm dấu phân biệt heo con"
+      ]
+    },
+    "ind": {
+      "question": "Kenapa gigi anak babi dipotong?",
+      "options": [
+        "Supaya tidak melukai puting induk dan anak babi lain",
+        "Supaya lebih mudah makan pakan",
+        "Untuk memeriksa penyakit",
+        "Sebagai tanda untuk membedakan anak babi"
+      ]
+    }
   }
 ]

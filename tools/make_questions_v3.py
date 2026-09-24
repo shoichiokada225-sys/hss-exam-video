@@ -11,7 +11,8 @@
 - 追加列: level(初級/中級/上級) / source(根拠) / scene(何が写っているか) / media(素材ID@秒) / check_note(【社長確認】・作問/検証メモ)
 - 何度実行しても同じ結果になる（media+問題文が同じ行は追記しない）
 
-使い方:  python3 tools/make_questions_v3.py [--dry-run]
+使い方:  python3 tools/make_questions_v3.py [担当名 ...] [--dry-run]
+         例: python3 tools/make_questions_v3.py g1 g2   # 追加分だけ取り込む（初回取り込み後は必ず担当名を指定）
 """
 import json
 import sys
@@ -53,13 +54,15 @@ def check_note(it):
     return " / ".join(parts)
 
 
-def load_items():
+def load_items(only=None):
     man = {
         m["id"]: m
         for m in json.loads((V2 / "manifest.json").read_text(encoding="utf-8"))
     }
     items = []
     for f in sorted((V2 / "verified").glob("*.json")):
+        if only and f.stem not in only:
+            continue
         for it in json.loads(f.read_text(encoding="utf-8")):
             if it.get("verdict", "keep") == "drop":
                 continue
@@ -94,7 +97,9 @@ def load_items():
 
 def main():
     dry = "--dry-run" in sys.argv
-    items = load_items()
+    # 担当名を指定するとその verified だけ取り込む（取り込み後に xlsx 側で直した問いを、古い版で二重に追記しないため）
+    only = [a for a in sys.argv[1:] if not a.startswith("--")] or None
+    items = load_items(only)
     wb = load_workbook(XLSX)
     ws = wb["本試験"]
     head = [c.value for c in ws[1]]
