@@ -80,6 +80,8 @@ def rows_to_questions(ws, sheet_label):
             q["placeholder"] = True
         if "level" in idx and g("level"):
             q["level"] = g("level")  # 初級/中級/上級（第3版から。review.html の絞り込みに使う）
+        if "group" in idx and g("group"):
+            q["group"] = g("group")  # 同じ場面の問いは1回の試験に1問だけ（index.html selectExamQuestions）
         for suf, key in LANGS:
             tq = g(f"question_{suf}")
             topts = [g(f"opt{i}_{suf}") for i in range(1, len(opts) + 1)]

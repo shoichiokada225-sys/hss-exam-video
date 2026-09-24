@@ -30,9 +30,20 @@ except (AttributeError, ValueError):
 ROOT = Path(__file__).resolve().parent.parent
 V2 = ROOT / "raw" / "v2"
 LEDGER = ROOT / "tools" / "clips_v2.json"
-EXTRA = ["level", "source", "scene", "media", "check_note"]
+EXTRA = ["level", "source", "scene", "media", "check_note", "group"]
 LEVELS = ("初級", "中級", "上級")
 HOME = str(Path.home())
+
+
+def scene_group(media):
+    """同じ場面の問いをまとめる鍵。中身が同じ別IDの素材(md5一致)は代表IDにそろえる"""
+    base, _, at = media.partition("@")
+    dups = V2 / "work" / "lead" / "md5_dups.json"
+    if dups.exists():
+        for g in json.loads(dups.read_text(encoding="utf-8")):
+            if base in g:
+                base = sorted(g)[0]
+    return base + (f"@{at}" if at else "")
 
 
 def check_note(it):
@@ -135,6 +146,7 @@ def main():
             "scene": it.get("scene", ""),
             "media": media,
                 "check_note": check_note(it),
+                "group": scene_group(media),
         }
         for i in range(4):
             vals[f"opt{i + 1}_ja"] = it["ja"]["opts"][i]

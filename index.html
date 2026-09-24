@@ -2018,7 +2018,7 @@ function startQuiz(){
     // デモ: 固定問を順序シャッフルのみ（ランダム抽出なし）
     selectedQuestions = shuffle(demoQuestions.slice());
   } else {
-    selectedQuestions = selectExamQuestions(allQuestions, CONFIG.test.questionsPerTest);
+    selectedQuestions = selectExamQuestions(allQuestions, CONFIG.test.questionsPerTest, CONFIG.test.levelMix);
   }
   userAnswers = new Array(selectedQuestions.length).fill(null);
   shuffledOptions = selectedQuestions.map(function(q){ return shuffle(q.options.slice()); });
@@ -2047,11 +2047,30 @@ function startQuiz(){
 
 // 出題ルール（hss-exam-video）: required=true は必ず出題し、残りをプールからランダムに補充して n 問にする。
 // プールが n 問以下なら全問出題。順序は毎回シャッフル。verify_logic.js と同一ロジックにすること。
-function selectExamQuestions(pool, n){
-  var fixed = pool.filter(function(q){ return q.required === true; });
-  var rest = pool.filter(function(q){ return q.required !== true; });
-  var need = Math.max(0, (n | 0) - fixed.length);
-  return shuffle(fixed.concat(shuffle(rest).slice(0, need)));
+// 出題ルール（verify_logic.js に同一ロジックの写しあり。変えるときは両方）
+//  1) required=true は必ず出す
+//  2) 同じ場面（group。無ければ動画ファイル）からは1回に1問だけ … 同じ映像の連続や、ある問の文が別の問の答えを含む事故を防ぐ
+//  3) CONFIG.test.levelMix があれば難易度ごとの問数をそろえる … 受験者ごとに難しさが変わらないように（公平性）
+//  4) 足りなければ残りから補い、それでも足りなければ場面の重複を許す
+function selectExamQuestions(pool, n, mix){
+  n = n | 0;
+  var out = [], used = {}, cnt = {};
+  function key(q){ return q.group || q.video || q.id; }
+  function take(q, force){
+    if(out.length >= n || out.indexOf(q) >= 0) return false;
+    if(used[key(q)] && !force) return false;
+    used[key(q)] = true; out.push(q); cnt[q.level] = (cnt[q.level] || 0) + 1; return true;
+  }
+  pool.filter(function(q){ return q.required === true; }).forEach(function(q){ take(q, true); });
+  var rest = shuffle(pool.filter(function(q){ return q.required !== true; }));
+  if(mix){
+    Object.keys(mix).forEach(function(lv){
+      rest.forEach(function(q){ if(q.level === lv && (cnt[lv] || 0) < mix[lv]) take(q); });
+    });
+  }
+  rest.forEach(function(q){ take(q); });
+  rest.forEach(function(q){ take(q, true); });
+  return shuffle(out);
 }
 
 // ==================== 動画の事前読込（hss-exam-video） ====================

@@ -12,6 +12,8 @@
     ],
     "answer": "長靴をはきかえている",
     "explanation": "豚舎の入口で、外で使う長靴と豚舎の中で使う長靴を分けています。外の汚れ（病気のもと）を豚舎に持ち込まないためです。",
+    "level": "初級",
+    "group": "q01",
     "en": {
       "question": "What is the person in the video doing before entering the pig house?",
       "options": [
@@ -53,6 +55,8 @@
     ],
     "answer": "使い捨て手袋",
     "explanation": "注射などの作業の前に使い捨て手袋を着けます。手の汚れを薬や豚につけないため、また薬が手につかないためです。",
+    "level": "初級",
+    "group": "q02",
     "en": {
       "question": "What is the person in the video putting on before the work?",
       "options": [
@@ -94,6 +98,8 @@
     ],
     "answer": "注射器を組み立てている",
     "explanation": "注射の前に注射器と針を組み立てて準備をしています。針がゆるんでいないか確認します。",
+    "level": "初級",
+    "group": "q03",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -135,6 +141,8 @@
     ],
     "answer": "薬のびんから注射器に薬を吸っている",
     "explanation": "薬のびんに針をさして、注射器に薬を吸い上げています。決められた量を正確に吸います。",
+    "level": "初級",
+    "group": "q04",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -176,6 +184,8 @@
     ],
     "answer": "注射をして、赤いスプレーで印をつけている",
     "explanation": "子豚に注射をしたあと、赤いスプレーで印をつけています。印は「注射がすんだ」しるしです。",
+    "level": "初級",
+    "group": "q05",
     "en": {
       "question": "What is being done to the piglets in the video?",
       "options": [
@@ -217,6 +227,8 @@
     ],
     "answer": "注射がすんだ豚を見分けるため",
     "explanation": "印がないと、同じ豚に2回注射したり、注射をしていない豚を見のがしたりします。印を見て「まだの豚」だけに注射します。",
+    "level": "中級",
+    "group": "q06",
     "en": {
       "question": "Why is red spray put on the piglet after the injection?",
       "options": [
@@ -258,6 +270,8 @@
     ],
     "answer": "赤い印がない子豚",
     "explanation": "赤い印がついている豚は注射がすんでいます。印のない豚をさがして注射します。",
+    "level": "中級",
+    "group": "q07",
     "en": {
       "question": "In the pen shown, which piglets have NOT been injected yet?",
       "options": [
@@ -299,6 +313,8 @@
     ],
     "answer": "母豚の豚舎で、注射の薬を吸っている",
     "explanation": "ストール（1頭ずつの柵）に入った母豚のとなりで、小さいびん（バイアル）から注射器に薬を吸っています。",
+    "level": "初級",
+    "group": "q08",
     "en": {
       "question": "Where is the video taken, and what is being done?",
       "options": [
@@ -340,6 +356,8 @@
     ],
     "answer": "片手で子豚をおさえて、もう片方の手で注射している",
     "explanation": "子豚が動くと針が折れたり、ちがう場所に刺さったりします。片手でしっかりおさえて（保定して）から注射します。",
+    "level": "初級",
+    "group": "q09",
     "en": {
       "question": "How is the piglet being injected in the video?",
       "options": [
@@ -381,6 +399,8 @@
     ],
     "answer": "使ったあとの注射器を分解して洗っている",
     "explanation": "使った注射器はそのままにせず、分解して洗い、きれいにしてから片づけます。よごれた注射器は病気を広げます。",
+    "level": "初級",
+    "group": "q10",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -422,6 +442,8 @@
     ],
     "answer": "使い捨ての白い防護服と長靴",
     "explanation": "外から来た人（獣医など）は、白い使い捨ての防護服（つなぎ）と長靴を着けて豚舎に入ります。外の病気を持ち込まず、持ち出さないためです。",
+    "level": "初級",
+    "group": "q11",
     "en": {
       "question": "What is the person in the video wearing?",
       "options": [
@@ -463,6 +485,8 @@
     ],
     "answer": "豚が動かないようにおさえる（保定する）ため",
     "explanation": "鼻にワイヤーをかける道具（鼻保定器・スネア）です。大きい豚は手ではおさえられないので、採血や注射のときに使います。",
+    "level": "中級",
+    "group": "q12",
     "en": {
       "question": "What is the tool on the pig's snout in the video for?",
       "options": [
@@ -504,6 +528,8 @@
     ],
     "answer": "首から血をとっている（採血）",
     "explanation": "鼻保定をした豚の首から注射器で血をとっています。血は病気の検査に使います。",
+    "level": "初級",
+    "group": "q13",
     "en": {
       "question": "What is being done to the pig in the video?",
       "options": [
@@ -545,6 +571,8 @@
     ],
     "answer": "死んだ子豚。原因を調べるために体を開く（解剖）",
     "explanation": "死んだ子豚をならべて、獣医が体を開いて死んだ原因を調べます（剖検）。手袋と防護服をつけて行います。",
+    "level": "中級",
+    "group": "q14",
     "en": {
       "question": "What is lying on the floor in the video, and what happens next?",
       "options": [
@@ -586,6 +614,8 @@
     ],
     "answer": "母豚が1頭ずつ柵に入っている豚舎（ストール）",
     "explanation": "母豚が1頭ずつ入る柵（ストール）がならぶ豚舎です。上に青い給餌器（えさの入れもの）があります。",
+    "level": "初級",
+    "group": "q15",
     "en": {
       "question": "Which kind of pig house is shown in the video?",
       "options": [
@@ -627,6 +657,8 @@
     ],
     "answer": "母豚からはなれた子豚（離乳子豚）",
     "explanation": "小さい子豚がたくさん入っている豚舎です。丸い給餌器があり、母豚はいません。母豚からはなれた（離乳した）子豚の豚舎です。",
+    "level": "初級",
+    "group": "q16",
     "en": {
       "question": "Which pigs are in the house shown in the video?",
       "options": [
@@ -668,6 +700,8 @@
     ],
     "answer": "えさ（飼料）をためるタンク",
     "explanation": "豚舎の外に立っている大きなタンクは飼料タンク（サイロ）です。トラックで運ばれたえさをためて、豚舎の中に送ります。",
+    "level": "初級",
+    "group": "q17",
     "en": {
       "question": "What is the large tank shown in the video?",
       "options": [
@@ -709,6 +743,8 @@
     ],
     "answer": "事務所で、薬のびんから注射器に薬を吸っている",
     "explanation": "きれいな場所（事務所）で、薬のびんに針をさして注射器に薬を吸っています。ほこりや汚れの少ない場所で準備します。",
+    "level": "初級",
+    "group": "q18",
     "en": {
       "question": "Where is the video taken, and what is being done?",
       "options": [
@@ -750,6 +786,8 @@
     ],
     "answer": "外の汚れを豚舎の中に持ち込まないため",
     "explanation": "入口で「外用」と「中用」の長靴をはきかえます。汚れた長靴で中に入ると、外の病気を豚舎に持ち込みます。",
+    "level": "中級",
+    "group": "q19",
     "en": {
       "question": "The video shows the entrance of a pig house. Why are the white boots and the dirty boots kept separately?",
       "options": [
@@ -791,6 +829,8 @@
     ],
     "answer": "防護服を着て、豚舎の中を歩いて豚を見て回っている",
     "explanation": "防護服と長靴を着けた人が通路を歩いて、豚のようすを見て回っています（見回り）。元気がない豚や具合の悪い豚がいないか確認します。",
+    "level": "初級",
+    "group": "q20",
     "en": {
       "question": "What is the person in the video doing?",
       "options": [
@@ -832,6 +872,8 @@
     ],
     "answer": "母豚と生まれた子豚がいる分娩舎",
     "explanation": "分娩柵（母豚が入る柵）のまわりに小さい子豚がいて、子豚用の給餌皿があります。母豚と生まれた子豚がいる分娩舎です。",
+    "level": "初級",
+    "group": "q21",
     "en": {
       "question": "Which kind of pig house is shown in the video?",
       "options": [
@@ -873,6 +915,8 @@
     ],
     "answer": "1つの豚房に何頭もまとめて入っている",
     "explanation": "1つの豚房に大きい豚が何頭もまとめて入っています（群飼）。母豚を1頭ずつ入れるストールとはちがいます。",
+    "level": "初級",
+    "group": "q22",
     "en": {
       "question": "How are the pigs in the video kept?",
       "options": [
@@ -914,6 +958,8 @@
     ],
     "answer": "注射器を道具のケースにしまっている",
     "explanation": "使い終わった注射器を道具のケースに戻しています。床や柵の上に置きっぱなしにすると、汚れたり、なくしたり、豚がかんだりします。",
+    "level": "初級",
+    "group": "q23",
     "en": {
       "question": "What is being done after the injection in the video?",
       "options": [
@@ -955,6 +1001,8 @@
     ],
     "answer": "床がぬれていてすべりやすいので、足もとを見てゆっくり歩く",
     "explanation": "通路の床がぬれています。ぬれた床はすべりやすく、転んでけがをします。急がず、足もとを見て歩きます。",
+    "level": "中級",
+    "group": "q24",
     "en": {
       "question": "What should you be careful about when walking in the aisle shown?",
       "options": [
@@ -996,6 +1044,8 @@
     ],
     "answer": "豚舎に入る前、農場の道を歩くときから",
     "explanation": "外から来た人は、豚舎に入る前、農場の敷地を歩くときから防護服と長靴を着けています。豚舎の前で着るのではなく、農場に入るときに着ます。",
+    "level": "中級",
+    "group": "q25",
     "en": {
       "question": "Since when has the person in the video been wearing the coverall?",
       "options": [
@@ -1037,6 +1087,8 @@
     ],
     "answer": "使った道具を洗う所",
     "explanation": "水道と桶、かごがある洗い場です。使った道具をここで洗います。",
+    "level": "初級",
+    "group": "q26",
     "en": {
       "question": "What is the place in the video used for?",
       "options": [
@@ -1078,6 +1130,8 @@
     ],
     "answer": "背中",
     "explanation": "赤いスプレーは子豚の背中にかけています。背中は上から見えるので、群れの中でも印がすぐ分かります。",
+    "level": "初級",
+    "group": "q06",
     "en": {
       "question": "Where on the piglet is the red spray applied in the video?",
       "options": [
@@ -1119,6 +1173,8 @@
     ],
     "answer": "手ではおさえられない大きい豚",
     "explanation": "動画の豚は大きく、手や体でおさえることができません。だから鼻にワイヤーをかける道具（鼻保定器）で動かないようにします。小さい子豚は手でおさえます。",
+    "level": "中級",
+    "group": "q12",
     "en": {
       "question": "Which pigs are restrained with a wire snare on the snout, as in the video?",
       "options": [
@@ -1160,6 +1216,8 @@
     ],
     "answer": "汚れが残っていないか",
     "explanation": "長靴の裏（底）を見て、汚れがないか確認しています。長靴の底のみぞには汚れがたまりやすく、病気のもとを運びます。",
+    "level": "中級",
+    "group": "q01",
     "en": {
       "question": "What is the person checking by looking at the sole of the boot?",
       "options": [
@@ -1201,6 +1259,8 @@
     ],
     "answer": "病気の検査",
     "explanation": "とった血は病気の検査に使います。豚が病気にかかっていないか、ワクチンが効いているかを調べます。",
+    "level": "中級",
+    "group": "q13",
     "en": {
       "question": "What is the blood taken from the pig in the video used for?",
       "options": [
@@ -1244,6 +1304,7 @@
     "explanation": "題名は「繁殖豚種付野帳」。どの母豚にいつ種付け（交配）したかを書き、分娩予定日などを管理する記録です。",
     "placeholder": true,
     "level": "初級",
+    "group": "M001",
     "en": {
       "question": "What is this notebook in the video used to record?",
       "options": [
@@ -1287,6 +1348,7 @@
     "explanation": "分娩予定日は、子豚が生まれる予定の日です。交配日に114日を足して書きます。",
     "placeholder": true,
     "level": "初級",
+    "group": "M013",
     "en": {
       "question": "What is written in the \"expected farrowing date\" column of this notebook?",
       "options": [
@@ -1330,6 +1392,7 @@
     "explanation": "産次は、その母豚が何回目のお産かを表します。",
     "placeholder": true,
     "level": "初級",
+    "group": "M034",
     "en": {
       "question": "What does the \"parity\" column in this notebook show?",
       "options": [
@@ -1373,6 +1436,7 @@
     "explanation": "「初」は初産（しょさん）、つまり初めてお産をする母豚です。初産豚は再発情のサインが出にくいのでエコーも必ず使います。",
     "placeholder": true,
     "level": "初級",
+    "group": "I013",
     "en": {
       "question": "In the \"parity\" column, what kind of sow is marked \"初\" (first)?",
       "options": [
@@ -1416,6 +1480,7 @@
     "explanation": "母豚番号は、母豚1頭ずつにつけた番号です。番号で記録するので、どの母豚のことかが後から分かります。",
     "placeholder": true,
     "level": "初級",
+    "group": "M019",
     "en": {
       "question": "What is written in the \"sow number\" column?",
       "options": [
@@ -1459,6 +1524,7 @@
     "explanation": "8月9日に114日を足すと12月1日です。月をまたぐ計算はまちがいやすいので、カレンダーや早見表で確かめます。",
     "placeholder": true,
     "level": "中級",
+    "group": "M041",
     "en": {
       "question": "A sow was bred on August 9. What is her expected farrowing date?",
       "options": [
@@ -1502,6 +1568,7 @@
     "explanation": "妊娠の確認は1回だけでなく、交配後35日ごろにもう一度行います。見落としを防ぎ、1回目で分からなかった母豚を判定するためです。",
     "placeholder": true,
     "level": "中級",
+    "group": "M003",
     "en": {
       "question": "Why does the \"pregnancy check\" column have two parts, \"1st\" and \"2nd\"?",
       "options": [
@@ -1545,6 +1612,7 @@
     "explanation": "妊娠の時期によって母豚に必要な栄養が変わるので、えさの量を段階的に変えます。",
     "placeholder": true,
     "level": "中級",
+    "group": "M007",
     "en": {
       "question": "Why is the \"feed amount\" column divided into day 30, 60, 80 and 100?",
       "options": [
@@ -1588,6 +1656,7 @@
     "explanation": "種付けは1回の発情で2〜3回行い、そのたびに使った雄（精液）の番号を書きます。",
     "placeholder": true,
     "level": "中級",
+    "group": "M021",
     "en": {
       "question": "In the \"boar number\" column, there are two or three numbers in a row. What do they mean?",
       "options": [
@@ -1631,6 +1700,7 @@
     "explanation": "種付けは時間が大切なので、日付だけでなく午前か午後かも記録します。「pm」は午後に種付けしたという意味です。",
     "placeholder": true,
     "level": "中級",
+    "group": "M034",
     "en": {
       "question": "Some breeding dates have \"pm\" written after them. What does \"pm\" mean?",
       "options": [
@@ -1674,6 +1744,7 @@
     "explanation": "交配日の記録が抜けると分娩予定日が計算できません。交配したその日に書きます。",
     "placeholder": true,
     "level": "中級",
+    "group": "M017",
     "en": {
       "question": "When should the breeding date be written in the notebook?",
       "options": [
@@ -1717,6 +1788,7 @@
     "explanation": "分娩予定日はあくまで予定で、実際は前後2〜3日ずれることがふつうです。予定日だけでなく母豚の様子も見ます。",
     "placeholder": true,
     "level": "中級",
+    "group": "I009",
     "en": {
       "question": "Usually, how far is the actual farrowing day from the expected date in the notebook?",
       "options": [
@@ -1760,6 +1832,7 @@
     "explanation": "判定に迷ったら無理に決めず「保留」にして、5〜7日後にもう一度検査します。",
     "placeholder": true,
     "level": "中級",
+    "group": "I015",
     "en": {
       "question": "During a pregnancy check, you cannot tell if the sow is pregnant. What do you do?",
       "options": [
@@ -1803,6 +1876,7 @@
     "explanation": "月や年をまたぐ計算はまちがいやすいので、カレンダーや分娩予定早見表で確かめます。",
     "placeholder": true,
     "level": "中級",
+    "group": "I019",
     "en": {
       "question": "How do you avoid mistakes when the expected farrowing date goes into the next month or year?",
       "options": [
@@ -1846,6 +1920,7 @@
     "explanation": "分娩舎へは分娩予定日の5〜7日前に移します。1月1日が予定なら12月25〜27日ごろです。",
     "placeholder": true,
     "level": "上級",
+    "group": "M034",
     "en": {
       "question": "A sow's expected farrowing date is January 1. When should she be moved to the farrowing barn?",
       "options": [
@@ -1889,6 +1964,7 @@
     "explanation": "母豚の発情は約21日ごとに来るので、再発情チェックは交配後18〜24日に行います。4月27日なら5月15日〜21日ごろです。",
     "placeholder": true,
     "level": "上級",
+    "group": "M029",
     "en": {
       "question": "A sow was bred on April 27. When should you check her for return to heat using a boar?",
       "options": [
@@ -1932,6 +2008,7 @@
     "explanation": "1回目のエコー検査は交配後21〜28日に行います。",
     "placeholder": true,
     "level": "上級",
+    "group": "M009",
     "en": {
       "question": "How many days after breeding is the first pregnancy check (ultrasound) done?",
       "options": [
@@ -1975,6 +2052,7 @@
     "explanation": "エコーで妊娠と判定しても、あとで空胎と分かることがあります。交配後35日目までは再発情チェックを続けます。",
     "placeholder": true,
     "level": "上級",
+    "group": "M023",
     "en": {
       "question": "An ultrasound showed the sow is pregnant. What should you keep doing until about 35 days after breeding?",
       "options": [
@@ -2018,6 +2096,7 @@
     "explanation": "妊娠していなかった（再発情した）母豚は、交配舎に戻してもう一度種付けします。",
     "placeholder": true,
     "level": "上級",
+    "group": "I001",
     "en": {
       "question": "A pregnancy check shows the sow is not pregnant. What do you do?",
       "options": [
@@ -2061,6 +2140,7 @@
     "explanation": "再交配したら、古い分娩予定日は二重線で消し、新しい交配日から114日を数え直して書きます。",
     "placeholder": true,
     "level": "上級",
+    "group": "M005",
     "en": {
       "question": "A sow was bred again (re-bred). What do you do with her expected farrowing date?",
       "options": [
@@ -2104,6 +2184,7 @@
     "explanation": "初産の母豚は自分の体もまだ育っているので、経産豚より10〜15%多めにえさをあげます。",
     "placeholder": true,
     "level": "上級",
+    "group": "M025",
     "en": {
       "question": "How much feed does a first-parity sow (\"初\") get compared with sows that have farrowed before?",
       "options": [
@@ -2147,6 +2228,7 @@
     "explanation": "妊娠後期（75〜100日）は胎児が急に大きくなるので、えさを1日2.5〜3.5kgに段階的に増やします。",
     "placeholder": true,
     "level": "上級",
+    "group": "M011",
     "en": {
       "question": "About how much feed per day does a sow need at around day 80 of pregnancy (late gestation)?",
       "options": [
@@ -2190,6 +2272,7 @@
     "explanation": "マニュアルでは2回交配が標準で、2回目は1回目から12〜16時間後に行います。",
     "placeholder": true,
     "level": "上級",
+    "group": "M041",
     "en": {
       "question": "According to the manual, what is the standard number and timing of inseminations?",
       "options": [
@@ -2233,6 +2316,7 @@
     "explanation": "受胎率は、種付けした母豚のうち妊娠が確認された割合です。100頭中97頭なら97%です。",
     "placeholder": true,
     "level": "中級",
+    "group": "M033",
     "en": {
       "question": "For example, 100 sows were bred and 97 were confirmed pregnant. What is the conception rate?",
       "options": [
@@ -2276,6 +2360,7 @@
     "explanation": "分娩予定日からさかのぼってワクチンの日を決めます。例として大腸菌ワクチンは分娩予定の2〜4週間前です（実際は農場の獣医師が決めたプログラムに従う）。",
     "placeholder": true,
     "level": "上級",
+    "group": "M009",
     "en": {
       "question": "A sow's expected farrowing date is January 1. When should a vaccine given \"2-4 weeks before farrowing\" be given?",
       "options": [
@@ -2319,6 +2404,7 @@
     "explanation": "子豚といっしょにいる母豚が入る金属の枠は「分娩クレート（分娩柵）」です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0243",
     "en": {
       "question": "What is the metal frame that the sow is in?",
       "options": [
@@ -2362,6 +2448,7 @@
     "explanation": "分娩クレートは、母豚が急に横になったときに子豚を踏みつぶす（圧死）のを防ぐための枠です。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0243",
     "en": {
       "question": "Why is the sow kept in a metal crate in the farrowing house?",
       "options": [
@@ -2405,6 +2492,7 @@
     "explanation": "生まれた子豚はタオルで全身をふいたら、すぐに保温灯の下（32〜35℃の所）へ移します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0012",
     "en": {
       "question": "After drying a newborn piglet with a towel, where do you put it next?",
       "options": [
@@ -2448,6 +2536,7 @@
     "explanation": "入れ終わってもすぐ抜かず1〜2分待ち、ゆっくり回しながら抜きます。授精後30分は母豚を静かにさせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0006",
     "en": {
       "question": "What is the correct thing to do after all the semen has gone in?",
       "options": [
@@ -2491,6 +2580,7 @@
     "explanation": "黄色い先の細長い棒は、人工授精で精液を入れるときに使うカテーテルです。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0200",
     "en": {
       "question": "The long thin sticks in the bin were used for what?",
       "options": [
@@ -2534,6 +2624,7 @@
     "explanation": "カテーテルは1本を1頭の母豚だけに使い、使い回しは絶対にしません。使ったものは決められた方法で捨てます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0200",
     "en": {
       "question": "What is the correct way to use an insemination catheter?",
       "options": [
@@ -2577,6 +2668,7 @@
     "explanation": "水のような下痢は見つけたらすぐ報告します。複数の子豚に出ていれば感染症の可能性があり、下痢の子豚の水を止めると急に弱ります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0114",
     "en": {
       "question": "During your rounds you find watery diarrhea from piglets. What is the correct action?",
       "options": [
@@ -2620,6 +2712,7 @@
     "explanation": "えさが床にこぼれるのは出る量が多すぎるサインです。調整プレートで出る量をしぼります。こぼれたえさはむだになります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0117",
     "en": {
       "question": "The feed pan is heaped full and about to overflow. What do you do?",
       "options": [
@@ -2663,6 +2756,7 @@
     "explanation": "受け皿の表面の50〜70%がえさで覆われ、食べ終わった直後に底が見えるくらいが理想です。山盛りはロスとカビの原因になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0117",
     "en": {
       "question": "How much feed should be in the feeder pan?",
       "options": [
@@ -2706,6 +2800,7 @@
     "explanation": "湿気でえさが固まると出口がふさがり（ブリッジ）、えさが落ちてこなくなります。古いえさはカビの原因にもなるので取り除きます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0107",
     "en": {
       "question": "Feed has caked hard around the feed outlet. What will happen if it is left like this?",
       "options": [
@@ -2749,6 +2844,7 @@
     "explanation": "フィルターがつまると水の出が悪くなります。定期的に外して掃除します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0101",
     "en": {
       "question": "The person is holding a water pipe filter. What happens when it gets clogged with dirt?",
       "options": [
@@ -2792,6 +2888,7 @@
     "explanation": "ネズミのふんやかじり跡を見つけたら報告し、入ってくるすき間や穴をふさぎます。毒餌には素手でさわりません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0092",
     "en": {
       "question": "There are many mouse droppings on the floor. What do you do?",
       "options": [
@@ -2835,6 +2932,7 @@
     "explanation": "フェンスの穴は野生動物の入口になります。毎日の巡回で見つけたら、すぐ報告して早く直します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0090",
     "en": {
       "question": "On your rounds you find a tear or hole in the farm's perimeter fence. What do you do?",
       "options": [
@@ -2878,6 +2976,7 @@
     "explanation": "車のタイヤには他の農場や道路の泥がついています。門で一時停止し、タイヤ・車の下を消毒して記帳します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0047",
     "en": {
       "question": "When a vehicle comes in through the farm gate, what must be done?",
       "options": [
@@ -2921,6 +3020,7 @@
     "explanation": "天井や壁の穴はネズミや野鳥の入口になります。見つけたら報告して、早くふさぎます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0392",
     "en": {
       "question": "There is a hole in the barn ceiling. Why must it be fixed quickly?",
       "options": [
@@ -2964,6 +3064,7 @@
     "explanation": "枝が集まっているのは、鳥が巣を作っているサインかもしれません。野鳥は病気を持ちこむので、報告してネットや入口を点検します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0168",
     "en": {
       "question": "Twigs and straw have collected next to the fan. What could it mean, and what do you do?",
       "options": [
@@ -3007,6 +3108,7 @@
     "explanation": "パッドを水でぬらし、そこを通る空気を冷やして豚舎に入れる暑さ対策の設備です（外気を5〜8℃ほど下げる）。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0100",
     "en": {
       "question": "What are the dark panels (pads) along the side of the barn for?",
       "options": [
@@ -3050,6 +3152,7 @@
     "explanation": "換気扇が汚れると風量が落ち、豚舎の空気が悪くなります。決まった予定で清掃します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0167",
     "en": {
       "question": "If the fan blades and guard stay dirty, what happens?",
       "options": [
@@ -3093,6 +3196,7 @@
     "explanation": "ファンの羽根が汚れると風量が30〜40%も落ちます。夏の前は必ず清掃します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0167",
     "en": {
       "question": "When fan blades get dirty, by about how much does the airflow drop?",
       "options": [
@@ -3136,6 +3240,7 @@
     "explanation": "天井の大きな扇風機（ファン）は、豚舎の空気を動かして、暑さや空気のよごれをへらすためのものです。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0171",
     "en": {
       "question": "What is the big fan hanging from the ceiling for?",
       "options": [
@@ -3179,6 +3284,7 @@
     "explanation": "皮膚の正常な色はピンク〜薄い赤です。広く赤紫色になっているのは異常のサインなので、体温を測って報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0140",
     "en": {
       "question": "Looking at this sow, what abnormal sign should you notice?",
       "options": [
@@ -3222,6 +3328,7 @@
     "explanation": "母豚の正常体温は38.5〜39.5℃で、40.0℃以上は発熱の目安です。異常に気づいたら直腸で体温を測って報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0140",
     "en": {
       "question": "At what rectal temperature or higher do we say a sow has a fever?",
       "options": [
@@ -3265,6 +3372,7 @@
     "explanation": "外陰部からの膿や血液などの分泌物は、流産の兆候のこともあります。印をつけて記録し、すぐに上司・獣医師に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0141",
     "en": {
       "question": "Under the rear of a stalled sow there is brown fluid and a small pink lump. What is the correct action?",
       "options": [
@@ -3308,6 +3416,7 @@
     "explanation": "床の血は、どの母豚から出たかを確かめて印をつけ、報告します。大量の出血は緊急です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0276",
     "en": {
       "question": "You find blood on the floor behind the stalls. What do you do?",
       "options": [
@@ -3351,6 +3460,7 @@
     "explanation": "赤い斑点は皮膚の異常です。自分の判断で治療せず、印をつけて記録し、上司・獣医師に報告します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0160",
     "en": {
       "question": "This pig has red spots on its skin. What should you do first?",
       "options": [
@@ -3394,6 +3504,7 @@
     "explanation": "体の傷が多いのは、けんか（闘争）のサインのことが多く、過密などのストレスが原因になります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0162",
     "en": {
       "question": "A pig has many bite-like wounds on its body. What is a common cause?",
       "options": [
@@ -3437,6 +3548,7 @@
     "explanation": "カードの「死亡」らんには、子豚が死んだ日と頭数を書きます。写真のカードでは11頭から7頭に減っています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0098",
     "en": {
       "question": "What is written in the \"deaths\" column of the sow card?",
       "options": [
@@ -3480,6 +3592,7 @@
     "explanation": "子豚の体の青い印は、マーキングスプレーでつけた番号（印）です。見えやすい背中や肩に書きます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0015",
     "en": {
       "question": "What is the blue marking on the piglet's body?",
       "options": [
@@ -3523,6 +3636,7 @@
     "explanation": "外陰部から赤いかたまりが出ていたら、触らずにすぐ獣医師・先輩を呼びます。自分で戻そうとしてはいけません。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0616",
     "en": {
       "question": "You found this sow. What do you do first?",
       "options": [
@@ -3566,6 +3680,7 @@
     "explanation": "外陰部から血とへその緒が出ているのは、子豚を産んでいる（分娩中の）サインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0569",
     "en": {
       "question": "Blood and a string-like thing are coming out of the sow's rear. What is happening now?",
       "options": [
@@ -3609,6 +3724,7 @@
     "explanation": "子豚はふつう15〜30分おきに生まれます。間隔が長く空いたら難産を疑い、先輩に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0569",
     "en": {
       "question": "During farrowing, how often is a piglet usually born?",
       "options": [
@@ -3652,6 +3768,7 @@
     "explanation": "乳頭を軽くしぼって白い乳が出たら、24時間以内に分娩する可能性が高いです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0558",
     "en": {
       "question": "You gently squeezed a teat of a sow close to farrowing and white milk came out. What does it mean?",
       "options": [
@@ -3695,6 +3812,7 @@
     "explanation": "床の黄色くやわらかいものは子豚の下痢の糞です。黄色い糞は異常のサインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0407",
     "en": {
       "question": "What is the yellow thing on the floor in the video?",
       "options": [
@@ -3738,6 +3856,7 @@
     "explanation": "下痢を見つけたら、どの子豚かを確かめて先輩に報告し、脱水していないか見ます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0407",
     "en": {
       "question": "You found piglet diarrhea. What is the right action?",
       "options": [
@@ -3781,6 +3900,7 @@
     "explanation": "子豚が重なり合って固まって寝ているのは「寒い」サインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0463",
     "en": {
       "question": "The piglets in the video are sleeping piled on top of each other. What does this mean?",
       "options": [
@@ -3824,6 +3944,7 @@
     "explanation": "へそのあたりの丸いふくらみは異常です。見つけたら報告し、大きさの変化を見ていきます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0412",
     "en": {
       "question": "Look at the piglet's belly in the video. What is abnormal?",
       "options": [
@@ -3867,6 +3988,7 @@
     "explanation": "筋肉注射は「耳の付け根のやや後ろの首の筋肉」にします。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0451",
     "en": {
       "question": "In the video a piglet is being injected. Where do you give an intramuscular injection?",
       "options": [
@@ -3910,6 +4032,7 @@
     "explanation": "背中に傷やかさぶたがたくさんあります。ケンカ（かみ傷）や皮膚の異常のサインなので報告します。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0162",
     "en": {
       "question": "What is on the back of the pig in the video?",
       "options": [
@@ -3953,6 +4076,7 @@
     "explanation": "皮膚が紫色になるのは重い病気のサインのことがあります。体温を測り、すぐに農場長・獣医師に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0140",
     "en": {
       "question": "The sow's ears and skin are purple. What do you do?",
       "options": [
@@ -3996,6 +4120,7 @@
     "explanation": "人は指でまぶたを上げて、豚の目を調べています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0715",
     "en": {
       "question": "Which part of the pig is the person checking?",
       "options": [
@@ -4039,6 +4164,7 @@
     "explanation": "目やにが出ている、充血している、くぼんでいるのは異常のサインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0715",
     "en": {
       "question": "When you check a pig's eyes, which is a sign of a problem?",
       "options": [
@@ -4082,6 +4208,7 @@
     "explanation": "ステンレスの器は、豚が水を飲む所（水飲み器）です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0730",
     "en": {
       "question": "What is the stainless steel bowl in the video?",
       "options": [
@@ -4125,6 +4252,7 @@
     "explanation": "この画面は、豚舎の温度を見て換気扇（ファン）を動かす制御盤です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0514",
     "en": {
       "question": "What machine is the screen in the video?",
       "options": [
@@ -4168,6 +4296,7 @@
     "explanation": "この機械は、豚舎の空気（二酸化炭素・温度・湿度など）をはかっています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0177",
     "en": {
       "question": "What is the device in the video measuring?",
       "options": [
@@ -4211,6 +4340,7 @@
     "explanation": "豚舎のCO2の上限は3,000ppmです。動画の1,817ppmは上限より低い値です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0177",
     "en": {
       "question": "What is the upper limit for carbon dioxide (CO2) in a pig barn?",
       "options": [
@@ -4254,6 +4384,7 @@
     "explanation": "パッドに汚れや藻・カルシウムがつくと空気が通りにくくなり、冷やす効果が落ちます。シーズン前後に洗い、ボロボロなら交換します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0166",
     "en": {
       "question": "This is a cooling pad caked with dirt. What happens if it is left like this?",
       "options": [
@@ -4297,6 +4428,7 @@
     "explanation": "子豚の体にとまっている黒い虫はハエです。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0116",
     "en": {
       "question": "What are the black insects on the piglets?",
       "options": [
@@ -4340,6 +4472,7 @@
     "explanation": "ハエは大腸菌やサルモネラなどの病気の菌を運びます。糞を早く片付けて発生を減らします。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0116",
     "en": {
       "question": "Why is it a problem to have many flies in the barn?",
       "options": [
@@ -4383,6 +4516,7 @@
     "explanation": "消毒は「洗浄→乾燥→消毒→乾燥」の順で効きます。ぬれたまま・汚れたままでは効果が落ちます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0728",
     "en": {
       "question": "This is an empty pen washed after the pigs left. What do you do before putting new pigs in?",
       "options": [
@@ -4426,6 +4560,7 @@
     "explanation": "人はホースの水で豚舎の通路を洗っています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0635",
     "en": {
       "question": "What is the person in the video doing?",
       "options": [
@@ -4469,6 +4604,7 @@
     "explanation": "洗うときは上から下へ、天井→壁→仕切り→床の順です。下から洗うと上の汚れが落ちて二度手間になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0635",
     "en": {
       "question": "What is the right order for pressure-washing a barn?",
       "options": [
@@ -4512,6 +4648,7 @@
     "explanation": "金網に穴があいていて、動物が通れます。フェンスの穴や隙間は毎日確認します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0540",
     "en": {
       "question": "This is the fence around the farm. What is the problem?",
       "options": [
@@ -4555,6 +4692,7 @@
     "explanation": "イノシシは豚熱などのウイルスを持っていることがあります。フェンスの穴から入ると、農場にウイルスが持ちこまれるおそれがあります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0540",
     "en": {
       "question": "Why is it dangerous to leave a hole in the fence?",
       "options": [
@@ -4598,6 +4736,7 @@
     "explanation": "フェンス際の掘り返し跡は、野生動物が入ろうとした跡の可能性があります。すぐに報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0534",
     "en": {
       "question": "The ground next to the fence has been dug up by animals. What is the right action?",
       "options": [
@@ -4641,6 +4780,7 @@
     "explanation": "ネズミはサルモネラなどの菌を運び、電気の配線をかじって火事の原因にもなります。駆除と隙間の封鎖が必要です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0547",
     "en": {
       "question": "Why are rats a problem in a pig barn?",
       "options": [
@@ -4684,6 +4824,7 @@
     "explanation": "通路の白い粉は消石灰です。強いアルカリで、地面のウイルスや菌を消毒します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0753",
     "en": {
       "question": "White powder has been spread on the path between barns. What is it for?",
       "options": [
@@ -4727,6 +4868,7 @@
     "explanation": "消石灰は目・皮膚・のどを刺激するので、保護メガネ・マスク・手袋を着けて扱います。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0753",
     "en": {
       "question": "What should you wear when using slaked lime?",
       "options": [
@@ -4770,6 +4912,7 @@
     "explanation": "草を刈って見通しをよくすると、動物が隠れたり近づいたりしにくくなり、侵入の跡にも気づきやすくなります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0754",
     "en": {
       "question": "Grass is growing around the barn. Why do we cut it?",
       "options": [
@@ -4813,6 +4956,7 @@
     "explanation": "豚の発情はおよそ21日ごとに来ます。種付けから21日後に、また発情が来ていないかを確かめます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1044",
     "en": {
       "question": "On the card, the breeding date is 4/22 and the 'return-to-heat check date' is 5/13. How many days after breeding is that?",
       "options": [
@@ -4856,6 +5000,7 @@
     "explanation": "豚の妊娠期間は114日（3か月3週3日）です。交配日に114日を足すと分娩予定日が分かります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1044",
     "en": {
       "question": "On the card, the breeding date is 4/22 and the expected farrowing date is 8/14. How many days is that?",
       "options": [
@@ -4899,6 +5044,7 @@
     "explanation": "ストールの母豚には1頭ずつこの器具がつき、目盛りでえさの量を決めて下に落とします。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1040",
     "en": {
       "question": "What is the blue-green device in the video?",
       "options": [
@@ -4942,6 +5088,7 @@
     "explanation": "生まれたばかりの子豚は寒さに弱いので、保温灯のついた箱の中であたたまります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0959",
     "en": {
       "question": "What is the inside of the wooden box?",
       "options": [
@@ -4985,6 +5132,7 @@
     "explanation": "20℃は母豚にはちょうどよい温度ですが、生まれたばかりの子豚には寒すぎます。保温灯などで子豚の場所を32〜35℃にします。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0961",
     "en": {
       "question": "The thermometer in the farrowing room shows about 20°C. What does this mean for newborn piglets?",
       "options": [
@@ -5028,6 +5176,7 @@
     "explanation": "子豚がランプの下で重なり合うのは寒いサインです。ランプを下げるなど、保温を強くします。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1193",
     "en": {
       "question": "Piglets are crowding and piling up under the heat lamp. What does this tell you?",
       "options": [
@@ -5071,6 +5220,7 @@
     "explanation": "かごを秤にのせ、子豚を入れて体重を量ります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0965",
     "en": {
       "question": "What is the tool in the video used for?",
       "options": [
@@ -5114,6 +5264,7 @@
     "explanation": "生まれたときの子豚の体重は1.3〜1.5kgが目安です。小さい子豚は特に注意して見ます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0965",
     "en": {
       "question": "What is the normal birth weight of a piglet?",
       "options": [
@@ -5157,6 +5308,7 @@
     "explanation": "初乳は子豚が病気から身を守るための大切な母乳です。生後6時間以内に飲ませるのが理想です（遅くとも24時間以内）。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0986",
     "en": {
       "question": "By when should newborn piglets ideally drink colostrum (the first milk)?",
       "options": [
@@ -5200,6 +5352,7 @@
     "explanation": "豚房ごとに、豚が入った日・体重・週ごとの死亡数などを記録して、成績を管理します。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0914",
     "en": {
       "question": "What is written on the sheet under the pen number?",
       "options": [
@@ -5243,6 +5396,7 @@
     "explanation": "画面には豚舎の温度の記録（毎日の最高と最低）が出ています。温度の変化を毎日確認します。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1135",
     "en": {
       "question": "What can you learn from this screen?",
       "options": [
@@ -5286,6 +5440,7 @@
     "explanation": "白い大きな入れ物は給餌器です。中のえさが下の皿に少しずつ出て、豚が自由に食べます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0910",
     "en": {
       "question": "What is the big white container in the pen?",
       "options": [
@@ -5329,6 +5484,7 @@
     "explanation": "鼻で床を掘るのは、豚がにおいを探すふつうの行動（探索行動）です。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1198",
     "en": {
       "question": "The pig is digging the floor with its nose. What kind of behavior is this?",
       "options": [
@@ -5372,6 +5528,7 @@
     "explanation": "耳の色は、ふつうはピンク〜薄い赤です。紫色の耳は異常のサインなので、上司に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1200",
     "en": {
       "question": "Look at this pig's ear color. What should you do?",
       "options": [
@@ -5415,6 +5572,7 @@
     "explanation": "皮膚に赤い点（斑点）がたくさんあるのは異常のサインです。見つけたら上司に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0990",
     "en": {
       "question": "What is concerning about the skin of the piglet in front?",
       "options": [
@@ -5458,6 +5616,7 @@
     "explanation": "糞に虫（寄生虫）がまじっているのは異常です。自分で判断せず、上司に知らせます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1137",
     "en": {
       "question": "There is a long, thin, string-like thing on the manure. What should you do?",
       "options": [
@@ -5501,6 +5660,7 @@
     "explanation": "耳の黄色いものは耳標です。番号で1頭ずつ豚を見分けます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1001",
     "en": {
       "question": "What is the yellow thing on the pig's ear?",
       "options": [
@@ -5544,6 +5704,7 @@
     "explanation": "熱した器具で子豚のしっぽを切っています。これを断尾といいます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1185",
     "en": {
       "question": "What is being done to the piglet in the video?",
       "options": [
@@ -5587,6 +5748,7 @@
     "explanation": "断尾は、豚が大きくなってからの尾かじりを防ぐために、生後1〜7日に行います。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1185",
     "en": {
       "question": "Tail docking is done to prevent what?",
       "options": [
@@ -5630,6 +5792,7 @@
     "explanation": "子豚は体の鉄が少なく、母乳にも鉄が少ないので、鉄剤を注射して貧血を防ぎます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1184",
     "en": {
       "question": "Why is this iron product injected into piglets?",
       "options": [
@@ -5673,6 +5836,7 @@
     "explanation": "鉄剤は生後1〜3日に注射します。遅れると貧血になりやすくなります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1184",
     "en": {
       "question": "When should piglets get the iron injection?",
       "options": [
@@ -5716,6 +5880,7 @@
     "explanation": "カテーテルに精液のボトルをつないで、母豚に精液を入れています（人工授精）。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1192",
     "en": {
       "question": "What is being done to the sow in the video?",
       "options": [
@@ -5759,6 +5924,7 @@
     "explanation": "病気の豚は水を飲む量が減るので、飲み水に薬をまぜても十分な量が入らないことがあります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0920",
     "en": {
       "question": "When giving medicine in drinking water, what should you be careful about?",
       "options": [
@@ -5802,6 +5968,7 @@
     "explanation": "抗生物質は、獣医師の指示どおりに使います。自分の判断で使ってはいけません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1129",
     "en": {
       "question": "Whose instructions do you follow when using antibiotics on pigs?",
       "options": [
@@ -5845,6 +6012,7 @@
     "explanation": "薬を使った豚は、休薬期間が終わるまで出荷できません。肉に薬が残らないようにするためです。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1129",
     "en": {
       "question": "When shipping a pig that was injected with this drug, what must you always follow?",
       "options": [
@@ -5888,6 +6056,7 @@
     "explanation": "連続注射器は使ったあと分解して洗い、ポットのお湯で煮沸消毒してからしまいます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1124",
     "en": {
       "question": "Why are the syringe parts put in the hot water in the pot?",
       "options": [
@@ -5931,6 +6100,7 @@
     "explanation": "消石灰は、水分がないと効き目が弱くなります。粉のままより、水でといて使うほうがよく効きます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0989",
     "en": {
       "question": "The white powder is slaked lime. What is important to make it work well?",
       "options": [
@@ -5974,6 +6144,7 @@
     "explanation": "かごの中はネコです。農場では捕獲器を使って、ネコなどの動物を農場から出します。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0992",
     "en": {
       "question": "What animal is inside the cage?",
       "options": [
@@ -6017,6 +6188,7 @@
     "explanation": "野良猫や野良犬は病気のもとを運びます。農場に入れないように、フェンスを管理し、えさを放置しません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0992",
     "en": {
       "question": "Why must stray cats be kept out of the farm?",
       "options": [
@@ -6060,6 +6232,7 @@
     "explanation": "上から下がっている白い紙はハエ取りのシート（トラップ）です。ハエは病気のもとを運びます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0016",
     "en": {
       "question": "What is the white sheet hanging from above?",
       "options": [
@@ -6103,6 +6276,7 @@
     "explanation": "汚れたバケツはハエの発生源になります。使ったらすぐに洗って、汚れを残さないようにします。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1194",
     "en": {
       "question": "Many flies are on the bucket. What should you do?",
       "options": [
@@ -6146,6 +6320,7 @@
     "explanation": "こぼれたえさはネズミ・カラスなどを呼びよせます。すぐに掃除します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1174",
     "en": {
       "question": "Feed has spilled on the floor. What should you do?",
       "options": [
@@ -6189,6 +6364,7 @@
     "explanation": "換気口の網は、野鳥が豚舎に入るのを防ぎます。破れや穴を見つけたらすぐに報告して直します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0932",
     "en": {
       "question": "Why is a net put over the barn's air openings?",
       "options": [
@@ -6232,6 +6408,7 @@
     "explanation": "母豚のおしりから赤いかたまりが出ていたら、自分で押しこんだりせず、すぐに先輩や獣医師を呼びます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1106",
     "en": {
       "question": "A red mass is coming out from the sow's rear. What do you do first?",
       "options": [
@@ -6275,6 +6452,7 @@
     "explanation": "子豚が産道でつかえて出てこないとき、長い手袋をした手を入れて子豚を引き出す手伝いをします（分娩介助）。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1188",
     "en": {
       "question": "An arm in a long glove is inside the sow's birth canal. What is being done?",
       "options": [
@@ -6318,6 +6496,7 @@
     "explanation": "産道に手を入れる前に、手と腕を洗って消毒し、長手袋をつけ、潤滑剤をたっぷりぬります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1188",
     "en": {
       "question": "What must you do before putting your hand into the birth canal?",
       "options": [
@@ -6361,6 +6540,7 @@
     "explanation": "軽くさわるだけでは正しく判定できません。両手を置いて体重をかけ、しっかり押します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0128@5",
     "en": {
       "question": "How should you press the back when checking for heat?",
       "options": [
@@ -6404,6 +6584,7 @@
     "explanation": "外陰部が赤く腫れるのは発情のサインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0131@6",
     "en": {
       "question": "The left sow's vulva is red and swollen. What is this a sign of?",
       "options": [
@@ -6447,6 +6628,7 @@
     "explanation": "見た目だけで授精すると受胎率が下がります。必ず雄豚を近くにして背圧テストで許容を確かめてから授精します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0131@6",
     "en": {
       "question": "Before inseminating a sow with a red, swollen vulva, what must you always do?",
       "options": [
@@ -6490,6 +6672,7 @@
     "explanation": "糞やおがくずが付いたままカテーテルを入れると、汚れを膣の中に押しこんでしまいます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0132@4",
     "en": {
       "question": "Before AI, the sow's vulva is being wiped. Why?",
       "options": [
@@ -6533,6 +6716,7 @@
     "explanation": "外陰部から細い管（カテーテル）を入れて、精液を子宮に送る人工授精の作業です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0132@35",
     "en": {
       "question": "What is being done to the sow in the video?",
       "options": [
@@ -6576,6 +6760,7 @@
     "explanation": "先端をやや上向き（約45度）にして、ゆっくり回しながら進めます。抵抗があれば少し戻し、無理に押しこみません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0132@35",
     "en": {
       "question": "How should the catheter be inserted?",
       "options": [
@@ -6619,6 +6804,7 @@
     "explanation": "5〜10分かけてゆっくり入れます。強く押すと精液が逆流（バックフロー）します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0132@35",
     "en": {
       "question": "About how long should it take to put the semen in?",
       "options": [
@@ -6662,6 +6848,7 @@
     "explanation": "下から上にふくと汚れを膣の中に押しこみます。上から下へふき、最後に乾いた紙で水気をとります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0306@1",
     "en": {
       "question": "What is the correct way to wipe the sow's vulva?",
       "options": [
@@ -6705,6 +6892,7 @@
     "explanation": "精液は、温度を一定に保つ機械（インキュベーター）で保管します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0134@3",
     "en": {
       "question": "This machine (incubator) with the breeding files on top is used to store what?",
       "options": [
@@ -6748,6 +6936,7 @@
     "explanation": "妊娠中の母豚から胎子が出るのは緊急です。すぐに上の人・獣医師に報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0149@2.5",
     "en": {
       "question": "Behind a sow in a gestation stall, tiny piglets (fetuses) and a red lump are on the floor. What do you do first?",
       "options": [
@@ -6791,6 +6980,7 @@
     "explanation": "原因を調べるため、胎子はビニール袋に入れて冷蔵で保管します。母豚は隔離し、消毒を強化します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0149@2.5",
     "en": {
       "question": "What should be done with the fetuses on the floor?",
       "options": [
@@ -6834,6 +7024,7 @@
     "explanation": "生まれたばかりの子豚は寒さに弱いので、赤外線の保温灯で温めます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0151@3",
     "en": {
       "question": "Why does the piglets' area look red?",
       "options": [
@@ -6877,6 +7068,7 @@
     "explanation": "母豚の頭の前には、えさ箱（給餌器）があります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0075@0",
     "en": {
       "question": "What is in the box in front of the sow's head?",
       "options": [
@@ -6920,6 +7112,7 @@
     "explanation": "子豚用のえさ（餌付け用のえさ）を入れる皿です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0078@2",
     "en": {
       "question": "What is the round yellow dish next to the piglets?",
       "options": [
@@ -6963,6 +7156,7 @@
     "explanation": "健康な皮膚はきれいなピンク色です。かさぶたや傷が多いのは要注意のサインです。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0388@10",
     "en": {
       "question": "What problem can you see on this pig's body?",
       "options": [
@@ -7006,6 +7200,7 @@
     "explanation": "異常を見つけたら、マーキングスプレーで印をつけ、番号・日時・症状を記録して報告します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0388@10",
     "en": {
       "question": "If you find a skin problem like this, what do you do?",
       "options": [
@@ -7049,6 +7244,7 @@
     "explanation": "動かない豚がすべて死んでいるとは限りません。呼吸と反応を確かめて、すぐに報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0521@0.5",
     "en": {
       "question": "A piglet is lying on the floor and does not get up. What is the right action?",
       "options": [
@@ -7092,6 +7288,7 @@
     "explanation": "この子豚は横に倒れたまま動いていません。すぐに気づいて確かめる必要があります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0127@1",
     "en": {
       "question": "What is this piglet doing?",
       "options": [
@@ -7135,6 +7332,7 @@
     "explanation": "死亡豚は記録して、手袋をして決められた場所へ回収します。堆肥に混ぜたり埋めたりすると法令違反になる場合があります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0127@1",
     "en": {
       "question": "If this piglet is dead, what is the correct way to handle it?",
       "options": [
@@ -7178,6 +7376,7 @@
     "explanation": "床にいるのはネズミです。ネズミは病気の菌を豚舎に運びます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0549@3",
     "en": {
       "question": "What is the small gray animal on the floor near the shovel?",
       "options": [
@@ -7221,6 +7420,7 @@
     "explanation": "ネズミのふんやかじったあとは報告し、入り口になるすき間や穴はふさぎます。毒えさには素手でさわりません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0549@3",
     "en": {
       "question": "If you find rat droppings or chew marks, what do you do?",
       "options": [
@@ -7264,6 +7464,7 @@
     "explanation": "6%の次亜塩素酸ナトリウムを0.1%にするには、水10Lに原液167mlです。83mlは0.05%のときの量です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0053@2",
     "en": {
       "question": "You make a 0.1% disinfectant from 6% sodium hypochlorite. How many ml of it go into 10 L of water?",
       "options": [
@@ -7307,6 +7508,7 @@
     "explanation": "作業者が母豚を通路に出して、別の場所へ移動させています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0034@4.5",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -7350,6 +7552,7 @@
     "explanation": "妊娠後期の母豚を走らせると、転んで骨折や流産の原因になります。母豚のペースに合わせます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0034@4.5",
     "en": {
       "question": "When moving a heavily pregnant sow (late pregnancy), what must you NOT do?",
       "options": [
@@ -7393,6 +7596,7 @@
     "explanation": "壁のシャッターと換気扇で、豚舎の汚れた空気を外に出し、空気を入れかえます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0138@5",
     "en": {
       "question": "What are the big louvers (shutters) on the wall, with blades behind them, for?",
       "options": [
@@ -7436,6 +7640,7 @@
     "explanation": "回っているファンに手や物を近づけてはいけません。必ず電源を切ってからそうじします。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0138@5",
     "en": {
       "question": "What must you always do when cleaning the fans and shutters?",
       "options": [
@@ -7479,6 +7684,7 @@
     "explanation": "目がしみるときはアンモニアが25ppmを超えている可能性が高いです。換気を増やすか、糞尿を片付けます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0138@5",
     "en": {
       "question": "Your eyes sting when you enter the barn. What is high, and what do you do?",
       "options": [
@@ -7522,6 +7728,7 @@
     "explanation": "ストールの前の銀色の箱は、えさ箱（給餌器）です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0008@0.5",
     "en": {
       "question": "What is inside the silver box at the back?",
       "options": [
@@ -7565,6 +7772,7 @@
     "explanation": "妊娠前期（0〜75日）は1日2.0〜2.5kgと控えめにします。6〜8kgは泌乳期ピークの量です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0008@0.5",
     "en": {
       "question": "How much feed per day is given to a sow in early pregnancy (up to day 75)?",
       "options": [
@@ -7608,6 +7816,7 @@
     "explanation": "母豚の乳房（乳首の列）を映しています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0550@5",
     "en": {
       "question": "Which part of the sow's body is shown in the video?",
       "options": [
@@ -7651,6 +7860,7 @@
     "explanation": "乳房が赤く腫れて熱を持つ、左右の大きさが極端に違うのは異常のサインです。すぐに報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0550@5",
     "en": {
       "question": "Which udder sign should you report right away?",
       "options": [
@@ -7694,6 +7904,7 @@
     "explanation": "すのこ（スラット）床は、糞や尿が下に落ちるので、床が清潔に保たれます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0077@3",
     "en": {
       "question": "Why is the piglets' floor a slatted floor with gaps?",
       "options": [
@@ -7737,6 +7948,7 @@
     "explanation": "背中の数字で、豚を1頭ずつ見分けます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0201@2",
     "en": {
       "question": "What are the green numbers on the sows' backs for?",
       "options": [
@@ -7780,6 +7992,7 @@
     "explanation": "横になって起き上がれない、呼吸が苦しそう、大量の出血、流産の兆候は緊急なので、すぐに連絡します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0210@5",
     "en": {
       "question": "During a check of the gestation barn, which sow must be reported to the supervisor or vet right away?",
       "options": [
@@ -7823,6 +8036,7 @@
     "explanation": "母豚の背中に両手を置いて体重をかけて押すのは「背圧テスト」で、発情しているかを確かめる作業です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0618@0",
     "en": {
       "question": "What is the person in the video doing to the sow?",
       "options": [
@@ -7866,6 +8080,7 @@
     "explanation": "背圧テストは必ず雄豚が近くにいる状態で行います。雄豚のにおい（フェロモン）がないと、発情していても正しく反応しません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0618@0",
     "en": {
       "question": "When checking heat by pressing the sow's back like in the video, what must be nearby?",
       "options": [
@@ -7909,6 +8124,7 @@
     "explanation": "押しても動かずにガッチリ立つ（スタンディング反応）のは「許容あり」で、授精の準備に入ります。逃げる・しゃがむなら許容なしで翌日再確認です。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0618@0",
     "en": {
       "question": "When you press hard on the back like in the video, the sow stands still without moving. What does this mean?",
       "options": [
@@ -7952,6 +8168,7 @@
     "explanation": "母豚の背中に体重をかけて、じっと立つか（許容）を見るのは発情確認の方法です。発情した母豚は背中に重さがかかっても動きません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0060@3",
     "en": {
       "question": "The person in the video sits on the sow's back. What are they checking?",
       "options": [
@@ -7995,6 +8212,7 @@
     "explanation": "離乳後3〜7日目の母豚は発情が来やすいので、特に注意して観察します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0060@3",
     "en": {
       "question": "When checking heat like in the video, which sows need the closest watching (days after weaning)?",
       "options": [
@@ -8038,6 +8256,7 @@
     "explanation": "おしり（陰部）から赤いかたまりが出て血が出ているのは、すぐに知らせるべき異常です。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0619@4",
     "en": {
       "question": "What problem can you see on the sow in the video?",
       "options": [
@@ -8081,6 +8300,7 @@
     "explanation": "外陰部から赤いかたまりが出ているときは、自分でさわらず、すぐに獣医師（責任者）を呼びます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0619@4",
     "en": {
       "question": "You find a sow like the one in the video. What do you do first?",
       "options": [
@@ -8124,6 +8344,7 @@
     "explanation": "分娩柵（クレート）は母豚の動きを制限して、子豚が母豚の下じきになって死ぬ（圧死）のを防ぎます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0075@2",
     "en": {
       "question": "What is the crate (farrowing crate) around the sow in the video for?",
       "options": [
@@ -8167,6 +8388,7 @@
     "explanation": "分娩舎の母豚エリアの適正温度は18〜20℃です。子豚は保温灯などで別に温めます。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0075@2",
     "en": {
       "question": "In the farrowing room in the video, what room temperature is right for the sow?",
       "options": [
@@ -8210,6 +8432,7 @@
     "explanation": "母豚を移動させるときは、パドルボード（板）で視界をさえぎって方向を決め、ゆっくり進ませます。板でたたいたり音を出したりしません。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0143@3",
     "en": {
       "question": "When moving a sow along the aisle like in the video, which is the right way?",
       "options": [
@@ -8253,6 +8476,7 @@
     "explanation": "人工授精用の精液は、インキュベーター（精液保温器）で17℃前後（16〜18℃）に保ちます。毎朝温度を確認して記録します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0134@8",
     "en": {
       "question": "Suppose the box in the video is an incubator for storing semen. What temperature should it be kept at?",
       "options": [
@@ -8296,6 +8520,7 @@
     "explanation": "インキュベーターが25℃以上になっていたら、精子が大きなダメージを受けているので使用を中止し、上長に報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0134@8",
     "en": {
       "question": "In the morning the semen incubator in the video shows 26°C. What do you do?",
       "options": [
@@ -8339,6 +8564,7 @@
     "explanation": "妊娠中の母豚は、やせすぎも太りすぎもよくないので、体の肥え具合（BCS）に合わせて1頭ずつえさの量を変えます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1041@0",
     "en": {
       "question": "Why do we change the feed amount for each sow with a feeder that has a scale like in the video?",
       "options": [
@@ -8382,6 +8608,7 @@
     "explanation": "分娩舎の子豚は寒さに弱いので、保温ランプで子豚のいる場所だけを温めます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1081@0",
     "en": {
       "question": "What is the red lamp in the video for?",
       "options": [
@@ -8425,6 +8652,7 @@
     "explanation": "保温灯から離れて散らばって寝ていたら暑すぎます。保温灯を上げるかワット数を下げます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1081@0",
     "en": {
       "question": "The piglets are sleeping spread out, away from the heat lamp in the video. What does this mean?",
       "options": [
@@ -8468,6 +8696,7 @@
     "explanation": "生まれて0〜3日の子豚エリアの適正温度は32〜35℃です。母豚エリア（18〜20℃）よりずっと高くします。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1081@0",
     "en": {
       "question": "For piglets 0 to 3 days old, what temperature is right in the warm area like in the video?",
       "options": [
@@ -8511,6 +8740,7 @@
     "explanation": "子豚同士が重なり合って固まっているのは寒いサインです。ヒーターの温度を上げる、保温灯をつけるなどします。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1085@0",
     "en": {
       "question": "In a nursery like the one in the video, the piglets are sleeping piled on top of each other. What does this mean?",
       "options": [
@@ -8554,6 +8784,7 @@
     "explanation": "病気やけがの豚を群れから抜いて別の部屋に移し、ほかの豚にうつさないようにして治療します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0917@0",
     "en": {
       "question": "The sign in the video says 'Pulled pigs / Isolation room'. What is this room for?",
       "options": [
@@ -8597,6 +8828,7 @@
     "explanation": "床に敷いてある茶色いものは、おがくずなどの敷料です。ふん尿を吸い、豚のクッションになります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0901@0",
     "en": {
       "question": "What is spread on the floor of the pen in the video?",
       "options": [
@@ -8640,6 +8872,7 @@
     "explanation": "ホッパーは上にえさをためておき、下の受け皿に自然に落ちてくるので、豚が自分で食べられます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0903@0",
     "en": {
       "question": "What is the big white container in the video?",
       "options": [
@@ -8683,6 +8916,7 @@
     "explanation": "受け皿（トラフ）の表面の50〜70%がえさでおおわれ、食べ終わるとすぐ底が見えるくらいが理想です。山盛りはロスとカビ、空っぽは食べ不足になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0903@0",
     "en": {
       "question": "With a hopper like the one in the video, how much feed should be in the trough?",
       "options": [
@@ -8726,6 +8960,7 @@
     "explanation": "ミストは細かい水を空気中にふき出し、水が蒸発するときに空気を冷やして豚舎を涼しくします。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0970@0",
     "en": {
       "question": "What is the white mist coming from the ceiling in the video for?",
       "options": [
@@ -8769,6 +9004,7 @@
     "explanation": "ミストは舎内の温度を2〜4℃下げる効果があります。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0970@0",
     "en": {
       "question": "How much can mist like in the video lower the barn temperature?",
       "options": [
@@ -8812,6 +9048,7 @@
     "explanation": "ミストは十分な換気と組み合わせて初めて効果が出ます。換気が足りないと湿度が上がり、かえって豚が苦しくなります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0973@1",
     "en": {
       "question": "For the mist in the video to work well, what must it be used together with?",
       "options": [
@@ -8855,6 +9092,7 @@
     "explanation": "壁の大きなファンは換気扇で、豚舎の中の空気を外の新しい空気と入れかえます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0929@0",
     "en": {
       "question": "What are the big fans on the wall in the video?",
       "options": [
@@ -8898,6 +9136,7 @@
     "explanation": "給水器はよごれやすいので、手を入れて中をきれいにし、水がきちんと出るか確かめます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1013@0",
     "en": {
       "question": "What is happening in the video?",
       "options": [
@@ -8941,6 +9180,7 @@
     "explanation": "給水器の確認を忘れると飲水不足になり、えさの食べも悪くなって脱水のおそれがあります。水が出るか・流量は適切かを毎日確認します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T1013@0",
     "en": {
       "question": "When you check drinkers like the one in the video every day, what is most important?",
       "options": [
@@ -8984,6 +9224,7 @@
     "explanation": "青い装置は水道の水に薬を決まった割合で混ぜる飲水投薬の器械で、下のバケツの薬液を吸い上げています。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0921@0",
     "en": {
       "question": "What are the blue device and the bucket below it in the video for?",
       "options": [
@@ -9027,6 +9268,7 @@
     "explanation": "飲水投薬をしている日は、薬の濃度が指示どおりになっているかを確認します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0921@0",
     "en": {
       "question": "On days when medicine is added to water with a device like in the video, what must you check?",
       "options": [
@@ -9070,6 +9312,7 @@
     "explanation": "豚を出したあとの部屋は、まず水で汚れ（ふん・えさかす）を洗い流します。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0053@1",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -9113,6 +9356,7 @@
     "explanation": "洗ったあとはしっかり乾かしてから消毒し、消毒のあとも十分に乾かしてから豚を入れます。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0053@1",
     "en": {
       "question": "You washed the room with water like in the video. What is the right order next?",
       "options": [
@@ -9156,6 +9400,7 @@
     "explanation": "出入口の消毒槽に長靴の底を浸けて、足元の病原体をやっつけます。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0931@0",
     "en": {
       "question": "What is the blue container the person steps into in the video?",
       "options": [
@@ -9199,6 +9444,7 @@
     "explanation": "消毒槽の薬液が汚れていたり少なかったりすると効果が落ちるので、毎朝チェックして交換します。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0931@0",
     "en": {
       "question": "Why do we check the liquid in a footbath like the one in the video every morning?",
       "options": [
@@ -9242,6 +9488,7 @@
     "explanation": "豚舎の開口部の網は、カラスや野鳥が入らないようにするためのものです。鳥は病気を運ぶことがあります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0933@0",
     "en": {
       "question": "What is the net over the barn's air opening (vent) in the video for?",
       "options": [
@@ -9285,6 +9532,7 @@
     "explanation": "フェンスの外にいるのはイノシシです。豚と同じ病気にかかるので、農場にとって大きな危険です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0789@1",
     "en": {
       "question": "What animal is outside the fence in the video?",
       "options": [
@@ -9328,6 +9576,7 @@
     "explanation": "イノシシは豚熱（CSF）やアフリカ豚熱（ASF）のウイルスを持っていることがあり、農場に病気を持ちこむおそれがあります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0789@1",
     "en": {
       "question": "Why is it dangerous when wild boars come near the farm like in the video?",
       "options": [
@@ -9371,6 +9620,7 @@
     "explanation": "フェンスは、イノシシが掘った穴や押し広げた所がないかを確認し、周りの草を刈って見通しをよくしておきます。見つけたら報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0789@1",
     "en": {
       "question": "A wild boar was outside the fence like in the video. Which is the right way to check the fence?",
       "options": [
@@ -9414,6 +9664,7 @@
     "explanation": "給餌器の下にいるのはネズミ（赤ちゃんと親）です。巣を作って増えています。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0790@1",
     "en": {
       "question": "What animals are under the feeder in the video?",
       "options": [
@@ -9457,6 +9708,7 @@
     "explanation": "ネズミは病気の菌を運び、えさを汚します。電気の配線をかじって火事の原因になることもあります。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0790@1",
     "en": {
       "question": "Why is it a problem to have rats in the barn like in the video?",
       "options": [
@@ -9500,6 +9752,7 @@
     "explanation": "ネズミは2cm以上のすき間があれば通れます。壁や床の穴・すき間をふさぎ、ふんやかじり跡を見つけたら報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0790@1",
     "en": {
       "question": "To keep rats like the ones in the video out, gaps in the barn of what size must be closed?",
       "options": [
@@ -9543,6 +9796,7 @@
     "explanation": "こわれた軒やのび放題の草は、ネズミや野生動物の入り口・かくれ場所になります。見つけたら報告し、草刈りと修理をします。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0752@4",
     "en": {
       "question": "What is the problem around the outside of the barn in the video?",
       "options": [
@@ -9586,6 +9840,7 @@
     "explanation": "容器にハエの絵があり、これはハエを退治する薬（殺虫剤）です。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1015@0",
     "en": {
       "question": "What is the product in the video used to kill?",
       "options": [
@@ -9629,6 +9884,7 @@
     "explanation": "ハエ退治の薬（粉）を、トレイの中で水にとかしています。このあとローラーなどで塗って使います。",
     "placeholder": true,
     "level": "初級",
+    "group": "T1021@0",
     "en": {
       "question": "What is being done in the video?",
       "options": [
@@ -9672,6 +9928,7 @@
     "explanation": "汚れた水やふん尿がたまった所から虫（ハエのなかま）がわきます。ふん尿を早く取りのぞき、発生源を減らします。",
     "placeholder": true,
     "level": "上級",
+    "group": "T1030@0",
     "en": {
       "question": "There are many small white insects in the drain water in the video. What should you do?",
       "options": [
@@ -9715,6 +9972,7 @@
     "explanation": "足先のひづめがはがれて血が出ています。脚や蹄の問題は、歩けなくなる原因になります。",
     "placeholder": true,
     "level": "初級",
+    "group": "T0623@0",
     "en": {
       "question": "Where is the pig in the video injured?",
       "options": [
@@ -9758,6 +10016,7 @@
     "explanation": "ひづめのけがは歩けなくなる原因になります。自分で判断せず、すぐに先輩や責任者に報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0623@0",
     "en": {
       "question": "You find a foot injury like the one in the video. What do you do?",
       "options": [
@@ -9801,6 +10060,7 @@
     "explanation": "目の下に茶色い涙のあとがあります。目やにや涙が多いのは異常のサインです。",
     "placeholder": true,
     "level": "中級",
+    "group": "T0080@1",
     "en": {
       "question": "What should you notice on the sow's face in the video?",
       "options": [
@@ -9844,6 +10104,7 @@
     "explanation": "眼に涙などの異常があるときは、アンモニアなどが原因のこともあるので換気を確認し、写真をとって報告します。",
     "placeholder": true,
     "level": "上級",
+    "group": "T0080@1",
     "en": {
       "question": "You see a pig with tears coming from its eyes like in the video. What is the right thing to do?",
       "options": [
@@ -9887,6 +10148,7 @@
     "explanation": "ホッパーは上にえさをためておき、下の皿にえさが落ちて、豚が自分で食べられるしくみです。",
     "placeholder": true,
     "level": "初級",
+    "group": "W01@0",
     "en": {
       "question": "What are the white, round containers in the pig house in the video?",
       "options": [
@@ -9930,6 +10192,7 @@
     "explanation": "スノコ床は、フンや尿がすき間から下に落ちるしくみです。スノコの上に残ったフンは掃除します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@154",
     "en": {
       "question": "The floor of the pen in the video has gaps (slatted floor). What is it for?",
       "options": [
@@ -9973,6 +10236,7 @@
     "explanation": "筋肉注射は、耳のつけ根から指2〜3本うしろの、首の筋肉に打ちます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W01@272.5",
     "en": {
       "question": "Where on the piglet's body is the injection given in the video?",
       "options": [
@@ -10016,6 +10280,7 @@
     "explanation": "首に打てば、注射のあとにはれ（しこり）ができても、値段の高いロースやバラの肉に影響しません。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@272.5",
     "en": {
       "question": "Why is the injection given in the neck?",
       "options": [
@@ -10059,6 +10324,7 @@
     "explanation": "子豚のワクチン接種では、針は1腹ごと（約10頭ごと）に交換します。使い回すと病気がうつり、針も折れやすくなります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W01@200",
     "en": {
       "question": "When injecting many piglets as in the video, how often should the needle be changed?",
       "options": [
@@ -10102,6 +10368,7 @@
     "explanation": "針は作業の前と後に本数を数えて照らし合わせます。1本でも合わないときは、すぐに上司に報告します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@212",
     "en": {
       "question": "After the injection work, you count the needles and one is missing. What should you do?",
       "options": [
@@ -10145,6 +10412,7 @@
     "explanation": "針が体の中に残るのは重大事故です。すぐ上司と獣医師に報告し、その豚に印をつけて見分けられるようにします。出荷のときに特別な対応が必要です。",
     "placeholder": true,
     "level": "上級",
+    "group": "W01@268",
     "en": {
       "question": "During an injection, the needle breaks and stays inside the pig. What is the correct action?",
       "options": [
@@ -10188,6 +10456,7 @@
     "explanation": "注射の前に、ラベルを声に出して読み、薬の名前・量・使用期限を確認します（冷蔵の薬は保管温度も）。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@244",
     "en": {
       "question": "Before drawing medicine into the syringe as in the video, what must you always check?",
       "options": [
@@ -10231,6 +10500,7 @@
     "explanation": "針先を上にして軽くたたき、気泡を上に集めて押し出します。針先から薬が1滴出たらOKです。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@236",
     "en": {
       "question": "After drawing medicine into the syringe, what do you do before injecting the pig?",
       "options": [
@@ -10274,6 +10544,7 @@
     "explanation": "投薬の記録は法律でも決められています。いつ・どの豚に・何の薬を・どれだけ・だれが打ったかを、その場で記録します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W01@252",
     "en": {
       "question": "After injecting pigs, what do you record?",
       "options": [
@@ -10317,6 +10588,7 @@
     "explanation": "離乳子豚は1頭あたり0.25〜0.35m²が目安です。せますぎると尾かじりや成長のおくれ、病気の原因になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W01@28",
     "en": {
       "question": "In a weaner pen like the one in the video, what is the guideline floor space per piglet?",
       "options": [
@@ -10360,6 +10632,7 @@
     "explanation": "出荷できる日＝最後に打った日＋休薬日数。5月1日＋28日＝5月29日です。休薬期間を守らないと法律違反になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W01@130",
     "en": {
       "question": "A pig's last antibiotic injection was on May 1, and the withdrawal period is 28 days. From when can it be shipped?",
       "options": [
@@ -10403,6 +10676,7 @@
     "explanation": "離乳した直後の子豚の豚舎は28〜30℃が目安です。温度計の数字だけでなく、子豚の寝方も見て調整します。",
     "placeholder": true,
     "level": "上級",
+    "group": "W01@8",
     "en": {
       "question": "The video shows a weaner house. What is the guideline temperature right after weaning?",
       "options": [
@@ -10446,6 +10720,7 @@
     "explanation": "カーテン式の豚舎は、カーテンを開けたり閉めたりして、換気と温度を調整します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W02@0",
     "en": {
       "question": "What is the yellow curtain on the side of the pig house in the video for?",
       "options": [
@@ -10489,6 +10764,7 @@
     "explanation": "夏は換気を最大にするため、カーテンを大きく開けて風をたくさん入れます。",
     "placeholder": true,
     "level": "中級",
+    "group": "W15@18",
     "en": {
       "question": "This is a pig house in summer. Why is the curtain rolled up wide open?",
       "options": [
@@ -10532,6 +10808,7 @@
     "explanation": "カーテンの開き具合の目安は、夏の日中で80〜100％です（冬の日中は5〜20％）。実際は豚の様子や温度を見て調整します。",
     "placeholder": true,
     "level": "上級",
+    "group": "W15@30",
     "en": {
       "question": "On a summer day, what is the guideline for how far to open the curtains of a curtain-sided pig house?",
       "options": [
@@ -10575,6 +10852,7 @@
     "explanation": "破れたネットから野鳥が入った例があります。小さな穴でも「あとで」にせず、すぐ報告して直します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W10@34",
     "en": {
       "question": "You find a small hole in the net on a pig house window. What should you do?",
       "options": [
@@ -10618,6 +10896,7 @@
     "explanation": "ファンは豚舎の空気を動かして、暑さや悪い空気を減らします。夏は特に大切です。",
     "placeholder": true,
     "level": "初級",
+    "group": "W14@8",
     "en": {
       "question": "What is the large machine with round blades standing in the aisle in the video?",
       "options": [
@@ -10661,6 +10940,7 @@
     "explanation": "夏にファンが止まると、豚の命にかかわります。すぐ報告し、予備ファンの設置やカーテンを開けて換気を確保します。",
     "placeholder": true,
     "level": "上級",
+    "group": "W14@8",
     "en": {
       "question": "On a hot summer day, one of the fans in the pig house has stopped. What do you do first?",
       "options": [
@@ -10704,6 +10984,7 @@
     "explanation": "ストールでは母豚ごとに給餌量を決めて与えます。上の計量器で1頭ずつ決まった量を量って落とします。",
     "placeholder": true,
     "level": "中級",
+    "group": "W03@8",
     "en": {
       "question": "In the video, what are the blue funnel-shaped containers lined up above the sows' heads for?",
       "options": [
@@ -10747,6 +11028,7 @@
     "explanation": "ストールの母豚は前のエサ箱からえさを食べます。食べ方や残りえさは体調のサインです。",
     "placeholder": true,
     "level": "初級",
+    "group": "W06@3",
     "en": {
       "question": "What are the sows in the video doing?",
       "options": [
@@ -10790,6 +11072,7 @@
     "explanation": "妊娠後期は胎児が大きくなるので、1日2.5〜3.5kgに少しずつ増やします。量は体型（BCS）を見て調整します。",
     "placeholder": true,
     "level": "上級",
+    "group": "W06@3",
     "en": {
       "question": "For a sow in late pregnancy (days 75–100), what is the guideline amount of feed per day?",
       "options": [
@@ -10833,6 +11116,7 @@
     "explanation": "母豚ごとに下げた管理カードに、種付けの日や分娩予定日などを書いておきます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W07@2",
     "en": {
       "question": "In the video, what are the papers hanging above the sows?",
       "options": [
@@ -10876,6 +11160,7 @@
     "explanation": "ストールは1頭ずつ管理しやすく、ケンカがなく、えさの量を1頭ずつ調整できます。運動不足になりやすい点には注意します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W07@14",
     "en": {
       "question": "What is a good point of keeping sows one by one in stalls, as in the video?",
       "options": [
@@ -10919,6 +11204,7 @@
     "explanation": "多くのワクチンは2〜8℃の冷蔵庫で保管します。凍らせると効かなくなります。温度が変わりやすいドアポケットはさけます。",
     "placeholder": true,
     "level": "上級",
+    "group": "W04@30",
     "en": {
       "question": "Where are the vaccines for sows usually stored?",
       "options": [
@@ -10962,6 +11248,7 @@
     "explanation": "母豚のワクチンは、1頭ごとに新しい針に交換します。使い回すと病気を広げます。",
     "placeholder": true,
     "level": "中級",
+    "group": "W04@17",
     "en": {
       "question": "When vaccinating sows, when do you change the needle?",
       "options": [
@@ -11005,6 +11292,7 @@
     "explanation": "体調が悪い母豚に打つと、免疫が十分につかず、体調がさらに悪くなることがあります。回復してから打ちます。",
     "placeholder": true,
     "level": "上級",
+    "group": "W04@17",
     "en": {
       "question": "A sow scheduled for vaccination has a fever and is not eating. What should you do?",
       "options": [
@@ -11048,6 +11336,7 @@
     "explanation": "連続注射器は、作業のあと分解して洗い、煮沸消毒してから保管します。汚れが残ると動きが悪くなり、感染源にもなります。",
     "placeholder": true,
     "level": "中級",
+    "group": "W09@42",
     "en": {
       "question": "After using a metal automatic syringe like the one in the video, what do you do before storing it?",
       "options": [
@@ -11091,6 +11380,7 @@
     "explanation": "哺乳中の子豚（1〜7kg）には、細くて短い針（20G・12mm）を使います。G（ゲージ）の数字が大きいほど針は細くなります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W12@26.5",
     "en": {
       "question": "Which needle is used for suckling piglets (1–7 kg) like the one in the video?",
       "options": [
@@ -11134,6 +11424,7 @@
     "explanation": "生まれたての子豚は自分で体温を保てません。母豚が入れない保温箱（クリープ）であたためます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W13@31.5",
     "en": {
       "question": "In the video, what is the box the piglets are in for?",
       "options": [
@@ -11177,6 +11468,7 @@
     "explanation": "豚を枠の中に入れて体重をはかる道具です。出荷の前などに使います。",
     "placeholder": true,
     "level": "初級",
+    "group": "W19@11",
     "en": {
       "question": "What is the tool with a round dial in the aisle in the video?",
       "options": [
@@ -11220,6 +11512,7 @@
     "explanation": "出荷のときの体重は約110〜120kgが目安です（契約による）。軽すぎても重すぎても評価が下がります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W19@11",
     "en": {
       "question": "What is the guideline body weight for shipping finishing pigs?",
       "options": [
@@ -11263,6 +11556,7 @@
     "explanation": "肥育豚（60〜120kg）は1頭あたり0.7〜1.0m²が目安です。せまいと尾かじりや病気の原因になります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W19@38",
     "en": {
       "question": "What is the guideline floor space per finishing pig (60–120 kg)?",
       "options": [
@@ -11306,6 +11600,7 @@
     "explanation": "豚を入れすぎる（過密）と、尾かじり、成長のおくれ、病気の原因になります。迷ったら広めにとります。",
     "placeholder": true,
     "level": "中級",
+    "group": "W19@38",
     "en": {
       "question": "If too many pigs are put in one pen (overcrowding), what is likely to happen?",
       "options": [
@@ -11349,6 +11644,7 @@
     "explanation": "入口の消毒槽に長靴の底をしっかりつけて、足もとの病原体を豚舎に持ち込まないようにします。",
     "placeholder": true,
     "level": "中級",
+    "group": "W20@40.8",
     "en": {
       "question": "In the video, what is the blue container next to the pig house entrance used for?",
       "options": [
@@ -11392,6 +11688,7 @@
     "explanation": "消毒液は泥やフンで効き目がなくなります。にごっていたらすぐ交換します。長靴の泥は先に落としてから浸けます。",
     "placeholder": true,
     "level": "上級",
+    "group": "W20@40.8",
     "en": {
       "question": "In the morning, you see that the liquid in the boot dip at the pig house entrance is muddy. What should you do?",
       "options": [
@@ -11435,6 +11732,7 @@
     "explanation": "弱い豚がいる清潔な豚舎から先に回り、病原体を持っていることが多い肥育舎は最後にします。",
     "placeholder": true,
     "level": "上級",
+    "group": "W20@126",
     "en": {
       "question": "You check several pig houses in one day. When should you visit a finishing house like the one in the video?",
       "options": [
@@ -11478,6 +11776,7 @@
     "explanation": "肥育舎では、えさ箱（給餌器）にえさを入れておき、豚が自分で食べます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W20@126",
     "en": {
       "question": "What is the square metal box inside the pen in the video?",
       "options": [
@@ -11521,6 +11820,7 @@
     "explanation": "群れから離れる・じっと動かないのは体調不良のサインです。印をつけて記録し、上司に報告します。",
     "placeholder": true,
     "level": "中級",
+    "group": "W20@174",
     "en": {
       "question": "During your rounds, one pig is away from the group and not moving. What should you do?",
       "options": [
@@ -11564,6 +11864,7 @@
     "explanation": "皮膚の赤紫色の斑点は異常のサインです。病名を自分で決めず、獣医師が原因を調べます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W21@24",
     "en": {
       "question": "What condition is the pig in the video in?",
       "options": [
@@ -11607,6 +11908,7 @@
     "explanation": "異常な死亡はすぐに報告します。急な死亡が多いときは家畜保健衛生所への通報も必要です。自分だけで片付けてはいけません。",
     "placeholder": true,
     "level": "上級",
+    "group": "W21@24",
     "en": {
       "question": "During your rounds, you find a dead pig with reddish-purple skin. What do you do first?",
       "options": [
@@ -11650,6 +11952,7 @@
     "explanation": "病原体は服や手につきます。防護服と手袋で自分を守り、ほかの豚舎へ病気を運ばないようにします。",
     "placeholder": true,
     "level": "中級",
+    "group": "W21@24",
     "en": {
       "question": "Why is the person in the video wearing protective clothing and gloves when examining the dead pig?",
       "options": [
@@ -11693,6 +11996,7 @@
     "explanation": "おなかの中の長いくだのような臓器は腸。えさを消化・吸収する。",
     "placeholder": true,
     "level": "初級",
+    "group": "W21@250",
     "en": {
       "question": "In the video, what are the long tube-like organs seen inside the belly?",
       "options": [
@@ -11736,6 +12040,7 @@
     "explanation": "胃の中に残っている黄色いつぶつぶは、豚が食べたえさ。",
     "placeholder": true,
     "level": "初級",
+    "group": "W21@320",
     "en": {
       "question": "In the video, what is the yellow granular material inside the opened stomach?",
       "options": [
@@ -11779,6 +12084,7 @@
     "explanation": "死体に使った道具や場所には病原体がつく。作業のあとは洗って消毒する。",
     "placeholder": true,
     "level": "中級",
+    "group": "W21@252",
     "en": {
       "question": "After the necropsy, what do you do with the cutter and other tools?",
       "options": [
@@ -11822,6 +12128,7 @@
     "explanation": "死体の処理方法は法律で決まっている。埋めたり堆肥に混ぜたりすると法令違反になることがある。農場の決まりどおり保管し、処理業者にわたす。",
     "placeholder": true,
     "level": "上級",
+    "group": "W21@380",
     "en": {
       "question": "What do you do with the pig's body after the necropsy?",
       "options": [
@@ -11865,6 +12172,7 @@
     "explanation": "解剖は2人で行い、1人が豚の足を持って体を支え、もう1人が切っている。",
     "placeholder": true,
     "level": "初級",
+    "group": "W21@438",
     "en": {
       "question": "In the video, besides the person cutting, what is the other person doing?",
       "options": [
@@ -11908,6 +12216,7 @@
     "explanation": "死亡豚は、日時・場所（豚舎・豚房）・発見時の状況などを記録する。原因を調べ、同じ問題を防ぐため。",
     "placeholder": true,
     "level": "中級",
+    "group": "W21@388",
     "en": {
       "question": "When you find a dead pig, what should you record?",
       "options": [
@@ -11951,6 +12260,7 @@
     "explanation": "突然死が出たら、報告のあと、同じ豚房・同じ棟の他の豚の状態を確認する。自己判断で薬を使ったり死体を処分したりしない。",
     "placeholder": true,
     "level": "上級",
+    "group": "W21@448",
     "en": {
       "question": "A pig died suddenly and you reported it. What is important next?",
       "options": [
@@ -11994,6 +12304,7 @@
     "explanation": "床がいつも濡れているのは、水もれや水の出すぎのサイン。ぬれた床は衛生が悪くなる。",
     "placeholder": true,
     "level": "上級",
+    "group": "W22@138.5",
     "en": {
       "question": "In the video, the floor around the equipment in the pen is wet. What do you check first?",
       "options": [
@@ -12037,6 +12348,7 @@
     "explanation": "肥育豚の正常体温は38.5〜39.5℃（直腸温）。40.0℃以上は発熱。",
     "placeholder": true,
     "level": "上級",
+    "group": "W22@84",
     "en": {
       "question": "What is the normal body temperature (rectal) of finishing pigs like those in the video?",
       "options": [
@@ -12080,6 +12392,7 @@
     "explanation": "赤いふたの管は採血管。豚からとった血を入れて検査に送る。",
     "placeholder": true,
     "level": "初級",
+    "group": "W24@10",
     "en": {
       "question": "In the video, what are the red-capped tubes standing in the blue rack for?",
       "options": [
@@ -12123,6 +12436,7 @@
     "explanation": "ゲージ（G）は数字が大きいほど針が細い。20Gは細い針（子豚用）、14Gは太い針（母豚用）。",
     "placeholder": true,
     "level": "上級",
+    "group": "W24@57",
     "en": {
       "question": "About needle thickness (gauge), which is correct?",
       "options": [
@@ -12166,6 +12480,7 @@
     "explanation": "注射器でとった血を、検査に送るための採血管に入れている。",
     "placeholder": true,
     "level": "初級",
+    "group": "W24@60.5",
     "en": {
       "question": "What is happening in the video?",
       "options": [
@@ -12209,6 +12524,7 @@
     "explanation": "使った針が刺さったら、慌てず流水で十分に洗い、消毒して上司に報告。必要なら受診し、事故報告書を書く。",
     "placeholder": true,
     "level": "上級",
+    "group": "W24@62",
     "en": {
       "question": "A used needle pricked your finger. What is correct?",
       "options": [
@@ -12252,6 +12568,7 @@
     "explanation": "使った針はシャープスコンテナ（針専用のかたい容器）に入れる。一般ゴミに絶対に混ぜない。",
     "placeholder": true,
     "level": "中級",
+    "group": "W24@108",
     "en": {
       "question": "Where do you throw away used needles?",
       "options": [
@@ -12295,6 +12612,7 @@
     "explanation": "豚が暴れるのは保定が不十分なことが多い。無理をせず2人で対応するか、先輩に助けを求める。",
     "placeholder": true,
     "level": "中級",
+    "group": "W24@120",
     "en": {
       "question": "A pig is struggling and you cannot restrain or inject it well by yourself. What do you do?",
       "options": [
@@ -12338,6 +12656,7 @@
     "explanation": "鼻の保定は、輪を上あご（鼻の上の部分）にかけて締める。",
     "placeholder": true,
     "level": "中級",
+    "group": "W24@196",
     "en": {
       "question": "When restraining with a snout tool like in the video, where on the pig do you put the loop (wire)?",
       "options": [
@@ -12381,6 +12700,7 @@
     "explanation": "床に敷いてあるのはおがくず（敷料）。ふんや尿を吸い、豚が休んだり鼻で掘ったりできる。",
     "placeholder": true,
     "level": "初級",
+    "group": "W24@235",
     "en": {
       "question": "What is spread on the floor of this barn?",
       "options": [
@@ -12424,6 +12744,7 @@
     "explanation": "敷料は使う前に、カビや湿り、異物がないかを確認する。",
     "placeholder": true,
     "level": "中級",
+    "group": "W24@237",
     "en": {
       "question": "Before putting bedding such as sawdust into the barn, what do you check?",
       "options": [
@@ -12467,6 +12788,7 @@
     "explanation": "人が来ると起き上がって動くのは、元気な正常のようす。人が来ても反応しない豚は要注意。",
     "placeholder": true,
     "level": "中級",
+    "group": "W24@116",
     "en": {
       "question": "When people enter the pen, the pigs stand up and move around. How do you see this?",
       "options": [
@@ -12510,6 +12832,7 @@
     "explanation": "豚房の観察は、まず入口に立って全体を見わたし、豚の動きや雰囲気をつかむことから始めます。",
     "placeholder": true,
     "level": "中級",
+    "group": "W23@2",
     "en": {
       "question": "This is the view from the pen entrance. When you check a pen, what do you do first?",
       "options": [
@@ -12553,6 +12876,7 @@
     "explanation": "高温多湿の梅雨は、床面がいつも以上にベタベタしていないかを確認します。湿気で皮膚のトラブルやカビも増えやすくなります。",
     "placeholder": true,
     "level": "中級",
+    "group": "W23@2",
     "en": {
       "question": "The floor of this barn is sawdust. In the rainy season, what should you especially check on the floor?",
       "options": [
@@ -12596,6 +12920,7 @@
     "explanation": "おがくずの豚房で、たくさんの豚が人（カメラ）のほうへ歩いてきています。",
     "placeholder": true,
     "level": "初級",
+    "group": "W23@30.5",
     "en": {
       "question": "What are the pigs in the video doing?",
       "options": [
@@ -12639,6 +12964,7 @@
     "explanation": "広いおがくず床の豚舎で、出荷まで育てている肥育豚が群れで飼われています。",
     "placeholder": true,
     "level": "初級",
+    "group": "W23@30.5",
     "en": {
       "question": "Which pigs are in this barn?",
       "options": [
@@ -12682,6 +13008,7 @@
     "explanation": "肥育豚は体が大きく、驚くと突進することがあります。静かに声をかけて近づき、壁ぎわに追いこまれないよう逃げ道を確保します。",
     "placeholder": true,
     "level": "上級",
+    "group": "W23@30.5",
     "en": {
       "question": "You enter a pen where many large pigs come close, like in the video. What is correct for your own safety?",
       "options": [
@@ -12725,6 +13052,7 @@
     "explanation": "動画の豚舎は、パイプの骨組みにシートをかけた、かまぼこ形（トンネルのような形）の屋根です。",
     "placeholder": true,
     "level": "初級",
+    "group": "W23@30.5",
     "en": {
       "question": "What shape is the roof of this barn?",
       "options": [
@@ -12768,6 +13096,7 @@
     "explanation": "冬でも最低換気量は必ず守ります。換気を止めるとアンモニアがたまり、呼吸器の病気が多くなります。",
     "placeholder": true,
     "level": "上級",
+    "group": "W23@30.5",
     "en": {
       "question": "On a cold winter day, what happens if you turn off all the fans like the one in the video?",
       "options": [
@@ -12811,6 +13140,7 @@
     "explanation": "異常な豚にマーキングしないと、翌日に同じ豚を見つけられません。マーキングスプレーは見回りでいつも持ち歩きます。",
     "placeholder": true,
     "level": "中級",
+    "group": "W23@34",
     "en": {
       "question": "There is a pig with a blue mark on its back in the video. If you find an abnormal pig but do not spray a mark on it, what happens?",
       "options": [
@@ -12854,6 +13184,7 @@
     "explanation": "わらやおがくずなど、鼻でさぐれる素材は豚の退屈やストレスをへらします。退屈は尾かじりなどの異常行動の原因になります。",
     "placeholder": true,
     "level": "中級",
+    "group": "W23@34",
     "en": {
       "question": "The pen floor in the video is covered with sawdust. Why is bedding like sawdust good for pigs?",
       "options": [
@@ -12897,6 +13228,7 @@
     "explanation": "背中に青い印の豚が、おがくずの豚房ではなく、コンクリートの床の場所に1頭だけでいます。",
     "placeholder": true,
     "level": "初級",
+    "group": "W23@103",
     "en": {
       "question": "Where is the pig with the blue mark on its back?",
       "options": [
@@ -12940,6 +13272,7 @@
     "explanation": "青い印の豚は、コンクリートの床に横向きにたおれ、足をのばしたまま動いていません。",
     "placeholder": true,
     "level": "初級",
+    "group": "W23@284",
     "en": {
       "question": "What is the pig with the blue mark on its back doing?",
       "options": [
@@ -12983,6 +13316,7 @@
     "explanation": "歩けない豚・立てない豚は出荷できません（アニマルウェルフェアと食品衛生法の規定）。",
     "placeholder": true,
     "level": "上級",
+    "group": "W23@284",
     "en": {
       "question": "On your rounds you find a finishing pig that can no longer stand. Can this pig be shipped?",
       "options": [
