@@ -6,3 +6,5 @@ Thumbs.db
 node_modules/
 tests/out/
 raw/
+dist/
+tenants/*.secret.json

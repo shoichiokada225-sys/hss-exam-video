@@ -1,0 +1,8 @@
+{
+  "id": "demo-farm-b",
+  "company": { "ja": "デモB農産株式会社", "en": "Demo B Farms Ltd.", "vi": "Công ty Demo B", "id": "PT Demo B", "es": "Demo B S.A." },
+  "webhookUrl": "https://script.google.com/macros/s/AKfycbDEMOBdemoBdemoBdemoBdemoBdemoB0000000000/exec",
+  "adminEmail": "admin@demo-b.example",
+  "appUrl": "https://demo-b.example/hss-video/",
+  "copyright": { "mode": "hide" }
+}

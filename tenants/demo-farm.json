@@ -1,0 +1,8 @@
+{
+  "id": "demo-farm",
+  "company": { "ja": "デモ畜産株式会社", "en": "Demo Farm Co., Ltd.", "vi": "Công ty Demo Farm", "id": "PT Demo Farm", "es": "Demo Farm S.A." },
+  "webhookUrl": "https://script.google.com/macros/s/AKfycbDEMOFARMdemofarmdemofarmdemofarm000000000/exec",
+  "adminEmail": "admin@demo-farm.example",
+  "appUrl": "https://demo-farm.example/hss-video/",
+  "copyright": { "mode": "hide" }
+}

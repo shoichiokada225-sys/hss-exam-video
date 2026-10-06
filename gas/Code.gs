@@ -10,7 +10,7 @@
  *  - 管理者へは「1日1回のサマリーメール」だけ（時間主導トリガーで sendDailySummary を実行）
  *
  * 【セットアップ手順】
- *  1. Apps Script に貼り付け、ADMIN_EMAIL を確認
+ *  1. Apps Script に貼り付け、ADMIN_EMAIL（スクリプトプロパティ。農場別 GAS はここに宛先を入れる）を確認
  *  2. 「デプロイ」→「新しいデプロイ」→「ウェブアプリ」
  *       実行するユーザー: 自分 / アクセスできるユーザー: 全員
  *     ※ コードを直したら必ず「デプロイを管理」→ 鉛筆 →「新バージョン」で再デプロイ
@@ -25,7 +25,13 @@
 // Code.gsを更新したらこの日付も更新し、再デプロイ後に /exec を開いて version を照合する。
 var CODE_VERSION = "2026-09-02-video2";
 
-var ADMIN_EMAIL = "so@oikk.co.jp";
+// 日次サマリーの宛先。スクリプトプロパティ ADMIN_EMAIL があればそちらが優先（農場ごとの GAS で、コードを書き換えずに宛先を変えられる）。
+// 無ければ従来の値（ヒラノ版の既存デプロイはそのまま動く）
+var ADMIN_EMAIL_DEFAULT = "so@oikk.co.jp";
+function adminEmail_() {
+  try { var v = PropertiesService.getScriptProperties().getProperty("ADMIN_EMAIL"); if (v) return String(v); } catch (e) { /* 既定へ */ }
+  return ADMIN_EMAIL_DEFAULT;
+}
 var SHEET_ID = ""; // 任意: 既存スプレッドシートID。空なら自動作成しIDを保存
 
 // ---- 入力サニタイズ ----
@@ -254,7 +260,7 @@ function sendDailySummary() {
   body += "合格: " + pass + " 名 / 不合格: " + fail + " 名\n\n";
   body += "--- 一覧 ---\n" + (lines.length ? lines.join("\n") : "（本日の受験はありません）") + "\n\n";
   body += "詳細はスプレッドシートをご確認ください:\n" + ss.getUrl() + "\n";
-  MailApp.sendEmail({ to: ADMIN_EMAIL, subject: "【HSS動画試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
+  MailApp.sendEmail({ to: adminEmail_(), subject: "【HSS動画試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
 }
 
 // ---- 記録シートの名前を正す＆中身点検（文字化け修正用・1回実行） ----
