@@ -33,6 +33,10 @@ var CONFIG = {
     subjectConfirm: "【HSS動画試験】受験意志確認 - {name}",
   },
 
+  // === パスワード総当たり対策（端末内） ===
+  // pwMaxTries 回まちがえると pwLockSec 秒ロック。0=無効（既存の本番の既定＝従来どおり）。他農場向けビルドは 5 回/300 秒（tools/build-tenant.mjs）
+  security: { pwMaxTries: 0, pwLockSec: 300 },
+
   // === 試験設定 ===
   test: {
     questionsPerTest: 30,   // 1回の試験で出題する問題数。data/questions.json がこれより多ければ required=true を必ず含めてランダム抽出

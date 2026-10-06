@@ -764,7 +764,7 @@ var TRANSLATIONS = {
     homeBtn: "ホームに戻る",
     passwordTitle: "本試験", passwordDesc: "試験を開始するにはパスワードを入力してください。",
     passwordLabel: "パスワード", passwordPlaceholder: "パスワードを入力",
-    passwordError: "パスワードが正しくありません", authBtn: "認証",
+    passwordError: "パスワードが正しくありません", pwLocked: "試行回数が上限です。{s}秒後にもう一度お試しください", authBtn: "認証",
     welcomeTitle: "ようこそ",
     welcomeDesc: "HSS認定制度の本試験を行います。<br>氏名を入力してテストを開始してください。",
     testName: "テスト名：", testNameValue: "HSS認定 本試験",
@@ -868,7 +868,7 @@ var TRANSLATIONS = {
     homeBtn: "Back to Home",
     passwordTitle: "Main Exam", passwordDesc: "Enter the password to start the exam.",
     passwordLabel: "Password", passwordPlaceholder: "Enter password",
-    passwordError: "Incorrect password", authBtn: "Authenticate",
+    passwordError: "Incorrect password", pwLocked: "Too many attempts. Try again in {s} seconds", authBtn: "Authenticate",
     welcomeTitle: "Welcome",
     welcomeDesc: "This is the HSS Certification main exam.<br>Enter your name and start the test.",
     testName: "Test Name:", testNameValue: "HSS Certification Main Exam",
@@ -971,7 +971,7 @@ var TRANSLATIONS = {
     homeBtn: "Về trang chủ",
     passwordTitle: "Thi chính thức", passwordDesc: "Nhập mật khẩu để bắt đầu thi.",
     passwordLabel: "Mật khẩu", passwordPlaceholder: "Nhập mật khẩu",
-    passwordError: "Mật khẩu không đúng", authBtn: "Xác thực",
+    passwordError: "Mật khẩu không đúng", pwLocked: "Quá số lần thử. Hãy thử lại sau {s} giây", authBtn: "Xác thực",
     welcomeTitle: "Chào mừng",
     welcomeDesc: "Đây là kỳ thi chính thức chứng chỉ HSS.<br>Nhập họ tên và bắt đầu làm bài.",
     testName: "Tên bài thi:", testNameValue: "Thi chính thức chứng chỉ HSS",
@@ -1074,7 +1074,7 @@ var TRANSLATIONS = {
     homeBtn: "Kembali ke Beranda",
     passwordTitle: "Ujian Utama", passwordDesc: "Masukkan kata sandi untuk memulai ujian.",
     passwordLabel: "Kata Sandi", passwordPlaceholder: "Masukkan kata sandi",
-    passwordError: "Kata sandi salah", authBtn: "Autentikasi",
+    passwordError: "Kata sandi salah", pwLocked: "Terlalu banyak percobaan. Coba lagi dalam {s} detik", authBtn: "Autentikasi",
     welcomeTitle: "Selamat Datang",
     welcomeDesc: "Ini adalah ujian utama sertifikasi HSS.<br>Masukkan nama dan mulai ujian.",
     testName: "Nama Ujian:", testNameValue: "Ujian Utama Sertifikasi HSS",
@@ -1177,7 +1177,7 @@ var TRANSLATIONS = {
     homeBtn: "Volver al inicio",
     passwordTitle: "Examen oficial", passwordDesc: "Ingrese la contraseña para comenzar el examen.",
     passwordLabel: "Contraseña", passwordPlaceholder: "Ingrese la contraseña",
-    passwordError: "Contraseña incorrecta", authBtn: "Verificar",
+    passwordError: "Contraseña incorrecta", pwLocked: "Demasiados intentos. Inténtelo de nuevo en {s} segundos", authBtn: "Verificar",
     welcomeTitle: "Bienvenido",
     welcomeDesc: "Este es el examen oficial de certificación HSS.<br>Escriba su nombre y comience la prueba.",
     testName: "Nombre del examen:", testNameValue: "Examen oficial de certificación HSS",
@@ -1686,19 +1686,44 @@ document.getElementById("exam-password").addEventListener("keydown",function(e){
 });
 document.getElementById("password-back-btn").addEventListener("click",function(){ showScreen("home-screen"); });
 
+// パスワード総当たり対策（CONFIG.security.pwMaxTries 回まちがえたら pwLockSec 秒ロック。0=無効＝既存の本番の既定＝従来どおり）。
+// ⚠ 静的アプリなので端末内の制限（localStorage を消せば解除できる）。パスワードの検証自体も端末内のハッシュ照合＝抑止力であり、サーバ側の認証ではない
+var PWFAIL_KEY = "hssv_pwfail_v1";
+function pwFailState(){ try{ return JSON.parse(localStorage.getItem(PWFAIL_KEY)||"{}")||{}; }catch(e){ return {}; } }
+function pwFailSave(o){ try{ localStorage.setItem(PWFAIL_KEY, JSON.stringify(o)); }catch(e){} }
+function pwLockLeft(){
+  var sec = CONFIG.security || {};
+  if(!(sec.pwMaxTries > 0)) return 0;
+  var st = pwFailState(), left = (st.until||0) - Date.now();
+  return left > 0 ? Math.ceil(left/1000) : 0;
+}
 async function verifyPassword(){
   var input = document.getElementById("exam-password");
+  var errEl = document.getElementById("password-error-msg");
+  var sec = CONFIG.security || {};
+  var left = pwLockLeft();
+  if(left > 0){
+    errEl.textContent = t("pwLocked").replace("{s}", left);
+    input.classList.add("error"); errEl.classList.add("show"); input.value = ""; return;
+  }
+  errEl.textContent = t("passwordError");
   var pw = input.value;
-  if(!pw){input.classList.add("error");document.getElementById("password-error-msg").classList.add("show");return;}
+  if(!pw){input.classList.add("error");errEl.classList.add("show");return;}
   var hash = await sha256(pw);
   var expected = isDemo() ? CONFIG.demo.passwordHash : CONFIG.passwordHash;
   if(hash === expected){
-    input.classList.remove("error");document.getElementById("password-error-msg").classList.remove("show");
+    input.classList.remove("error");errEl.classList.remove("show");
     input.value = "";
+    if(sec.pwMaxTries > 0) pwFailSave({});
     loadQuestions();
   } else {
+    if(sec.pwMaxTries > 0){
+      var st = pwFailState(); st.n = (st.n||0) + 1;
+      if(st.n >= sec.pwMaxTries){ st = { n: 0, until: Date.now() + (sec.pwLockSec||300)*1000 }; }
+      pwFailSave(st);
+    }
     input.classList.add("error");
-    document.getElementById("password-error-msg").classList.add("show");
+    errEl.classList.add("show");
     input.value = "";
     input.focus();
   }
