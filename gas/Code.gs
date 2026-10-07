@@ -25,12 +25,16 @@
 // Code.gsを更新したらこの日付も更新し、再デプロイ後に /exec を開いて version を照合する。
 var CODE_VERSION = "2026-09-02-video2";
 
+// 他農場用（テナント版）か。リポの既定は false（既存の本番＝従来どおり ADMIN_EMAIL_DEFAULT へ送る）。
+// tools/build-tenant.mjs が他農場用の Code.gs（<out>.setup/Code.gs）を作るときだけ true にし、ADMIN_EMAIL_DEFAULT を空にする。
+// true の間は、スクリプトプロパティ ADMIN_EMAIL が無ければ日次サマリーを送らない（他農場の受験者名・得点を他社のアドレスへ送らない）
+var TENANT_MODE = false;
 // 日次サマリーの宛先。スクリプトプロパティ ADMIN_EMAIL があればそちらが優先（農場ごとの GAS で、コードを書き換えずに宛先を変えられる）。
-// 無ければ従来の値（ヒラノ版の既存デプロイはそのまま動く）
+// 無ければ従来の値（既存のヒラノのデプロイはそのまま動く。テナント版では空＝送らない）
 var ADMIN_EMAIL_DEFAULT = "so@oikk.co.jp";
 function adminEmail_() {
-  try { var v = PropertiesService.getScriptProperties().getProperty("ADMIN_EMAIL"); if (v) return String(v); } catch (e) { /* 既定へ */ }
-  return ADMIN_EMAIL_DEFAULT;
+  try { var v = PropertiesService.getScriptProperties().getProperty("ADMIN_EMAIL"); if (v) return String(v); } catch (e) { if (TENANT_MODE) return ""; }
+  return TENANT_MODE ? "" : ADMIN_EMAIL_DEFAULT;
 }
 var SHEET_ID = ""; // 任意: 既存スプレッドシートID。空なら自動作成しIDを保存
 
@@ -260,7 +264,9 @@ function sendDailySummary() {
   body += "合格: " + pass + " 名 / 不合格: " + fail + " 名\n\n";
   body += "--- 一覧 ---\n" + (lines.length ? lines.join("\n") : "（本日の受験はありません）") + "\n\n";
   body += "詳細はスプレッドシートをご確認ください:\n" + ss.getUrl() + "\n";
-  MailApp.sendEmail({ to: adminEmail_(), subject: "【HSS動画試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
+  var to = adminEmail_();
+  if (!to) { Logger.log("ADMIN_EMAIL（スクリプトプロパティ）が未設定のため日次サマリーを送りません"); return; }
+  MailApp.sendEmail({ to: to, subject: "【HSS動画試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
 }
 
 // ---- 記録シートの名前を正す＆中身点検（文字化け修正用・1回実行） ----

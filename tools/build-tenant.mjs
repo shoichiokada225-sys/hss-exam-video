@@ -11,6 +11,7 @@
    ・本番には何も送らない */
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -22,6 +23,34 @@ const EXCLUDE = [/^tools\//, /^tests\//, /^tenants\//, /^docs\//, /^gas\//, /^di
 const LANGS = ['ja', 'en', 'vi', 'id', 'es'];
 
 function die(m) { console.error('NG: ' + m); process.exit(2); }
+
+// ---- 出力先の安全確認（既存フォルダを黙って消さない）----
+// 消してよいのは「前回このツールが作った印ファイル（.tenant-build）がある」フォルダだけ。
+// 印が無い既存の空でないフォルダ・ファイル・シンボリックリンク・/・ホーム・リポ・リポの親・一時フォルダそのもの・リポ内（dist/ 以外）は拒否する
+const MARK = '.tenant-build';
+function prepareOut(out, id) {
+  const real = p => { try { return fs.realpathSync(p); } catch { return p; } };
+  const o = path.resolve(out);
+  const ro = fs.existsSync(o) ? real(o) : path.join(real(path.dirname(o)), path.basename(o));
+  const home = real(os.homedir()), root = real(ROOT), tmp = real(os.tmpdir());
+  const dangerous = [path.parse(ro).root, home, root, tmp];
+  if (dangerous.includes(ro)) die('出力先が危険です（/・ホーム・リポ・一時フォルダそのもの）: ' + o);
+  if (root.startsWith(ro + path.sep) || home.startsWith(ro + path.sep)) die('出力先がリポまたはホームの親フォルダです: ' + o);
+  if (ro.startsWith(root + path.sep) && !ro.startsWith(path.join(root, 'dist') + path.sep)) die('リポ内への出力は dist/ 配下だけ: ' + o);
+  if (fs.existsSync(o)) {
+    if (fs.lstatSync(o).isSymbolicLink() || !fs.statSync(o).isDirectory()) die('出力先がフォルダではありません: ' + o);
+    const entries = fs.readdirSync(o);
+    if (entries.length) {
+      const mk = path.join(o, MARK);
+      if (!fs.existsSync(mk) || !fs.readFileSync(mk, 'utf8').startsWith('tenant-build:' + id)) die('出力先は空でなく、前回このツールが作った印（' + MARK + '）もありません。消さずに中止します: ' + o);
+      fs.rmSync(o, { recursive: true, force: true }); // 印のある前回の出力だけを作り直す
+    }
+  }
+  fs.mkdirSync(o, { recursive: true });
+  fs.writeFileSync(path.join(o, MARK), 'tenant-build:' + id + '\n');
+  return o;
+}
+
 const sha = s => crypto.createHash('sha256').update(s).digest('hex');
 
 export function loadTenant(id) {
@@ -54,9 +83,9 @@ function setField(src, re, val, what) {
 export function build(id, outDir, opts) {
   opts = opts || {};
   const { t, pwHash } = loadTenant(id);
-  const out = path.resolve(outDir || path.join(ROOT, 'dist', id));
-  fs.rmSync(out, { recursive: true, force: true }); // dist/<id>/ だけを作り直す
-  fs.mkdirSync(out, { recursive: true });
+  const out0 = path.resolve(outDir || path.join(ROOT, 'dist', id));
+  const out = prepareOut(out0, id);              // 公開用（配る一式）
+  const setup = prepareOut(out0 + '.setup', id);  // 非公開（農場の GAS に貼る Code.gs）。公開ディレクトリには置かない
   let files = execFileSync('git', ['ls-files', '-co', '--exclude-standard'], { cwd: ROOT, encoding: 'utf8' }).split('\n').filter(Boolean)
     .filter(f => !EXCLUDE.some(r => r.test(f))).filter(f => fs.existsSync(path.join(ROOT, f)));
   if (t.contentDir) files = files.filter(f => !/^(data|videos)\//.test(f));
@@ -94,18 +123,28 @@ export function build(id, outDir, opts) {
       fs.cpSync(path.join(cd, sub), path.join(out, sub), { recursive: true, mode: fs.constants.COPYFILE_FICLONE });
     }
   }
+  // 農場専用の GAS（<out>.setup/Code.gs・公開しない別フォルダ）: ヒラノの管理者メールを一切含めず、ADMIN_EMAIL 未設定なら日次サマリーを送らない
+  {
+    let g = fs.readFileSync(path.join(ROOT, 'gas', 'Code.gs'), 'utf8');
+    g = g.replace('var TENANT_MODE = false;', 'var TENANT_MODE = true;').replace(/var ADMIN_EMAIL_DEFAULT = "[^"]*";/, 'var ADMIN_EMAIL_DEFAULT = "";');
+    if (!/var TENANT_MODE = true;/.test(g) || !/var ADMIN_EMAIL_DEFAULT = "";/.test(g)) die('gas/Code.gs の TENANT_MODE / ADMIN_EMAIL_DEFAULT の行が見つかりません');
+    g = g.split('so@oikk.co.jp').join('').split('ヒラノ').join('既存');
+    fs.writeFileSync(path.join(setup, 'Code.gs'), g);
+    fs.writeFileSync(path.join(setup, 'README.txt'), '非公開フォルダ。公開（ホスティング）しないこと。Code.gs を農場の Apps Script に貼り、スクリプトプロパティ ADMIN_EMAIL（日次サマリーの宛先）を入れる。未設定なら日次サマリーは送られない。公開するのは隣の ' + path.basename(out) + '/ だけ。\n');
+  }
   const bad = [];
-  (function walk(d) {
+  const walkDir = function walk(d) {
     for (const n of fs.readdirSync(d)) {
       const p = path.join(d, n);
       if (fs.statSync(p).isDirectory()) { walk(p); continue; }
-      if (!/\.(js|html|json)$/.test(n)) continue;
+      if (!/\.(js|html|json|gs)$/.test(n)) continue;
       const s = fs.readFileSync(p, 'utf8');
-      for (const k of HIRANO) if (s.includes(k)) bad.push(path.relative(out, p) + ' に "' + k.slice(0, 10) + '…"');
-      if (hide && /©/.test(s) && /\.(html|json)$/.test(n)) bad.push(path.relative(out, p) + ' に ©');
+      for (const k of HIRANO) if (s.includes(k)) bad.push(path.relative(path.dirname(d), p) + ' に "' + k.slice(0, 10) + '…"');
+      if (hide && /©/.test(s) && /\.(html|json)$/.test(n)) bad.push(path.relative(path.dirname(d), p) + ' に ©');
     }
-  })(out);
-  if (bad.length) { fs.rmSync(out, { recursive: true, force: true }); die('ヒラノ固有の値が残っています: ' + bad.join(' / ')); }
+  };
+  walkDir(out); walkDir(setup);
+  if (bad.length) { fs.rmSync(out, { recursive: true, force: true }); fs.rmSync(setup, { recursive: true, force: true }); die('ヒラノ固有の値が残っています: ' + bad.join(' / ')); }
   return { out, files: files.length, videos: fs.existsSync(path.join(out, 'videos')) ? fs.readdirSync(path.join(out, 'videos')).length : 0 };
 }
 
