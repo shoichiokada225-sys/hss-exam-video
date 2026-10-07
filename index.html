@@ -1688,9 +1688,10 @@ document.getElementById("password-back-btn").addEventListener("click",function()
 
 // パスワード総当たり対策（CONFIG.security.pwMaxTries 回まちがえたら pwLockSec 秒ロック。0=無効＝既存の本番の既定＝従来どおり）。
 // ⚠ 静的アプリなので端末内の制限（localStorage を消せば解除できる）。パスワードの検証自体も端末内のハッシュ照合＝抑止力であり、サーバ側の認証ではない
-var PWFAIL_KEY = "hssv_pwfail_v1";
-function pwFailState(){ try{ return JSON.parse(localStorage.getItem(PWFAIL_KEY)||"{}")||{}; }catch(e){ return {}; } }
-function pwFailSave(o){ try{ localStorage.setItem(PWFAIL_KEY, JSON.stringify(o)); }catch(e){} }
+var PWFAIL_KEY = "hssv_pwfail_v1";   // 本試験用。デモは別キー（デモで間違えても本試験をロックしない）
+function pwFailKey(){ return isDemo() ? "hssv_pwfail_demo_v1" : PWFAIL_KEY; }
+function pwFailState(){ try{ return JSON.parse(localStorage.getItem(pwFailKey())||"{}")||{}; }catch(e){ return {}; } }
+function pwFailSave(o){ try{ localStorage.setItem(pwFailKey(), JSON.stringify(o)); }catch(e){} }
 function pwLockLeft(){
   var sec = CONFIG.security || {};
   if(!(sec.pwMaxTries > 0)) return 0;

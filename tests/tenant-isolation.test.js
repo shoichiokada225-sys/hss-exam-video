@@ -78,11 +78,46 @@ function serve(root) {
   check('config.js は security 行の追加以外 HEAD と同じ（パスワード・記録先・会社名・メール・appUrl）', JSON.stringify(now) === JSON.stringify(head), { diff: Object.keys(now).filter(k => JSON.stringify(now[k]) !== JSON.stringify(head[k])) });
   check('既定の回数制限は無効（0）', sec && sec.pwMaxTries === 0);
 
-  console.log('[3b] GAS の管理者メール');
-  const gasCode = fs.readFileSync(path.join(ROOT, 'gas', 'Code.gs'), 'utf8');
-  const gasCtx = props => { const c = { PropertiesService: { getScriptProperties: () => ({ getProperty: k => props[k] || null }) } }; vm.createContext(c); vm.runInContext(gasCode, c); return c; };
-  check('GAS: プロパティ未設定なら従来の宛先（ヒラノ版の既存デプロイは変わらない）', gasCtx({}).adminEmail_() === 'so@oikk.co.jp');
-  check('GAS: スクリプトプロパティ ADMIN_EMAIL があればそちらが優先（農場ごとの GAS）', gasCtx({ ADMIN_EMAIL: 'admin@demo-farm.example' }).adminEmail_() === 'admin@demo-farm.example');
+  console.log('[3b] GAS の管理者メール・出力先の安全');
+  const fakeEnv = (props, sent) => ({
+    PropertiesService: { getScriptProperties: () => ({ getProperty: k => { if (k === 'HSSV_SHEET_ID') return 'sheet-1'; if (props === 'throw') throw new Error('props unavailable'); return (props || {})[k] || null; }, setProperty() {} }) },
+    SpreadsheetApp: { openById: () => ({ getSheetByName: () => null, getUrl: () => 'https://sheet.example/' }) },
+    Utilities: { formatDate: () => '2026-10-07' }, Session: { getScriptTimeZone: () => 'Asia/Tokyo' }, Logger: { log() {} },
+    MailApp: { sendEmail: m => sent.push(m) },
+  });
+  const runSummary = (src, props) => { const sent = []; const c = fakeEnv(props, sent); vm.createContext(c); vm.runInContext(src, c); c.sendDailySummary(); return { sent, c }; };
+  const gasRepo = fs.readFileSync(path.join(ROOT, 'gas', 'Code.gs'), 'utf8');
+  const gasTenant = fs.readFileSync(path.join(A + '.setup', 'Code.gs'), 'utf8');
+  check('既定 GAS（ヒラノ）: プロパティ無しは従来どおり so@oikk.co.jp へ送る（動作不変）', runSummary(gasRepo, {}).sent.length === 1 && runSummary(gasRepo, {}).sent[0].to === 'so@oikk.co.jp');
+  check('既定 GAS: ADMIN_EMAIL プロパティがあればそちらへ', runSummary(gasRepo, { ADMIN_EMAIL: 'x@demo-farm.example' }).sent[0].to === 'x@demo-farm.example');
+  check('農場用 GAS: ADMIN_EMAIL 未設定なら日次サマリーを送らない（ヒラノ宛にもならない）', runSummary(gasTenant, {}).sent.length === 0);
+  check('農場用 GAS: プロパティが例外でも送らない', runSummary(gasTenant, 'throw').sent.length === 0);
+  check('農場用 GAS: ADMIN_EMAIL を入れればその宛先へだけ送る', (() => { const r = runSummary(gasTenant, { ADMIN_EMAIL: 'admin@demo-farm.example' }); return r.sent.length === 1 && r.sent[0].to === 'admin@demo-farm.example'; })());
+  check('農場用 GAS のコードにヒラノのメール・名称が一切含まれない', !/oikk|ヒラノ|Hirano/.test(gasTenant) && /var TENANT_MODE = true;/.test(gasTenant) && /var ADMIN_EMAIL_DEFAULT = "";/.test(gasTenant));
+  check('農場用 GAS は公開フォルダに入らず別フォルダ（<out>.setup/）にある', !fs.existsSync(path.join(A, 'gas')) && fs.existsSync(path.join(A + '.setup', 'Code.gs')));
+  {
+    const { spawnSync } = require('child_process');
+    const cli = (args, extraEnv, cwd) => spawnSync('node', [path.join(ROOT, 'tools', 'build-tenant.mjs'), 'demo-farm', '--no-videos', ...args], { cwd: cwd || ROOT, env: Object.assign({}, process.env, { TENANT_EXAM_PASSWORD: 'exam-pw-cli' }, extraEnv || {}), encoding: 'utf8' });
+    const fake = fs.mkdtempSync(path.join(os.tmpdir(), 'hssv-safe-'));
+    const mk = (name, files) => { const d = path.join(fake, name); fs.mkdirSync(d, { recursive: true }); for (const [f, c] of Object.entries(files)) { fs.mkdirSync(path.dirname(path.join(d, f)), { recursive: true }); fs.writeFileSync(path.join(d, f), c); } return d; };
+    const victim = mk('victim', { 'important.txt': 'precious' });
+    check('印の無い既存フォルダは拒否し、中身を消さない（exit 2）', cli(['--out', victim]).status === 2 && fs.readFileSync(path.join(victim, 'important.txt'), 'utf8') === 'precious');
+    const fakeHome = mk('home', { 'Desktop/keep.txt': 'x', '.hidden': 'y' });
+    check('ホームそのものは拒否し、何も消さない', cli(['--out', fakeHome], { HOME: fakeHome }).status === 2 && fs.existsSync(path.join(fakeHome, 'Desktop', 'keep.txt')) && fs.existsSync(path.join(fakeHome, '.hidden')));
+    check('ホーム直下の既存フォルダ（印なし）も拒否', cli(['--out', path.join(fakeHome, 'Desktop')], { HOME: fakeHome }).status === 2 && fs.existsSync(path.join(fakeHome, 'Desktop', 'keep.txt')));
+    const gitLike = mk('repo-like', { '.git/HEAD': 'ref', 'src/a.js': '1' });
+    check('--out . （カレントがリポ風フォルダ）は拒否し .git ごと残る', cli(['--out', '.'], {}, gitLike).status === 2 && fs.existsSync(path.join(gitLike, '.git', 'HEAD')) && fs.existsSync(path.join(gitLike, 'src', 'a.js')));
+    check('--out リポ自身は拒否', cli(['--out', ROOT]).status === 2 && fs.existsSync(path.join(ROOT, '.git')));
+    check('--out リポ内（dist 以外）は拒否', cli(['--out', path.join(ROOT, 'tests')]).status === 2 && fs.existsSync(path.join(ROOT, 'tests', 'e2e.js')));
+    check('--out リポの親フォルダは拒否', cli(['--out', path.dirname(ROOT)]).status === 2 && fs.existsSync(ROOT));
+    const ft = path.join(fake, 'afile'); fs.writeFileSync(ft, 'f');
+    check('--out がファイルなら拒否', cli(['--out', ft]).status === 2 && fs.readFileSync(ft, 'utf8') === 'f');
+    check('存在しない出力先には作れる（印ファイルが付く）', cli(['--out', path.join(fake, 'newout')]).status === 0 && fs.existsSync(path.join(fake, 'newout', '.tenant-build')));
+    fs.writeFileSync(path.join(fake, 'newout', 'stale.txt'), 's');
+    check('印のある前回の出力は作り直せる（古いファイルは消える）', cli(['--out', path.join(fake, 'newout')]).status === 0 && !fs.existsSync(path.join(fake, 'newout', 'stale.txt')));
+    check('空のフォルダには作れる', cli(['--out', mk('empty', {})]).status === 0);
+    fs.rmSync(fake, { recursive: true, force: true });
+  }
 
   console.log('[4] 実ブラウザ');
   const browser = await puppeteer.launch({ executablePath: findChrome(), headless: true, args: ['--no-sandbox'] });
