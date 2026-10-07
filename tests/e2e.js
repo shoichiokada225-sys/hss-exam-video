@@ -1,6 +1,6 @@
 // hss-exam-video 実地テスト（puppeteer-core + Chrome for Testing）
 // 実行: node tests/e2e.js
-// 前提: ~/elearn-e2e-tmp/node_modules/puppeteer-core と ~/.cache/puppeteer/chrome/<ver>/chrome-win64/chrome.exe
+// 前提: tests/_env.js を参照（puppeteer-core と Chrome for Testing。Windows/Mac 両対応）
 // 静的サーバは本スクリプト内で起動する（ポート 8791）
 const fs = require('fs');
 const path = require('path');
@@ -9,14 +9,7 @@ const os = require('os');
 
 const ROOT = path.resolve(__dirname, '..');
 const PORT = 8791;
-const PPT_DIR = path.join(os.homedir(), 'elearn-e2e-tmp', 'node_modules', 'puppeteer-core');
-const puppeteer = require(PPT_DIR);
-function findChrome(){
-  const base = path.join(os.homedir(), '.cache', 'puppeteer', 'chrome');
-  const vers = fs.readdirSync(base).filter(d => d.startsWith('win64-')).sort().reverse();
-  for(const v of vers){ const p = path.join(base, v, 'chrome-win64', 'chrome.exe'); if(fs.existsSync(p)) return p; }
-  throw new Error('Chrome for Testing が見つかりません: ' + base);
-}
+const { puppeteer, findChrome } = require('./_env');   // Mac/Windows 両対応（puppeteer-core と Chrome for Testing の場所は tests/_env.js）
 const MIME = { '.html':'text/html; charset=utf-8', '.js':'text/javascript', '.json':'application/json', '.mp4':'video/mp4', '.png':'image/png', '.svg':'image/svg+xml', '.webmanifest':'application/manifest+json' };
 function serve(){
   return new Promise(res => {

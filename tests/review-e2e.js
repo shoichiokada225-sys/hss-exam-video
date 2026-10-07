@@ -3,10 +3,8 @@
 const fs = require('fs'); const path = require('path'); const http = require('http'); const os = require('os');
 const { execFileSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..');
-const puppeteer = require(path.join(os.homedir(), 'elearn-e2e-tmp', 'node_modules', 'puppeteer-core'));
-const base = path.join(os.homedir(), '.cache', 'puppeteer', 'chrome');
-const ver = fs.readdirSync(base).filter(d => d.startsWith('win64-')).sort().reverse()[0];
-const CHROME = path.join(base, ver, 'chrome-win64', 'chrome.exe');
+const { puppeteer, findChrome } = require('./_env');   // Mac/Windows 両対応
+const CHROME = findChrome();
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.json': 'application/json', '.mp4': 'video/mp4' };
 const srv = http.createServer((req, r) => {
   let u = decodeURIComponent(req.url.split('?')[0]); const fp = path.join(ROOT, u);
@@ -67,7 +65,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
     if (file) {
       const j = JSON.parse(fs.readFileSync(path.join(dl, file), 'utf8'));
       check('JSONに全問+判定', j.items.length === cards && j.items.find(i => i.id === 'q18').memo.includes('要確認'));
-      const out = execFileSync('python', [path.join(ROOT, 'tools', 'apply_review.py'), path.join(dl, file), '--dry-run'], { encoding: 'utf8' });
+      const out = execFileSync(process.platform === 'win32' ? 'python' : 'python3', [path.join(ROOT, 'tools', 'apply_review.py'), path.join(dl, file), '--dry-run'], { encoding: 'utf8' });
       check('apply_review --dry-run が3件を認識', /3件/.test(out) && /q01: ok/.test(out) && /q14: del/.test(out), out.slice(0, 300));
     }
     await p.evaluate(() => localStorage.removeItem('hssv_review_v1'));
